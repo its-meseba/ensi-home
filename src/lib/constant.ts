@@ -1,4 +1,4 @@
-import { env } from '@/env.mjs';
+// import { env } from '@/env.mjs';
 import * as m from '@/paraglide/messages';
 
 export const siteConfig = {
@@ -16,6 +16,8 @@ export const siteConfig = {
     m.meta_keyword_next_auth(),
     m.meta_keyword_prisma(),
   ],
-  url: () => env.APP_URL,
-  googleSiteVerificationId: () => env.GOOGLE_SITE_VERIFICATION_ID || '',
+  // url: () => env.APP_URL,
+  url: () => 'https://ensihome.solace.com.tr',
+  // googleSiteVerificationId: () => env.GOOGLE_SITE_VERIFICATION_ID || '',
+  googleSiteVerificationId: () => '',
 };
