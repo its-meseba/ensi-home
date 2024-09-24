@@ -1,5 +1,6 @@
 {
     "$schema": "https://inlang.com/schema/inlang-message-format",
+    "locale": "en",
     "app_name": "next-starter",
     "sign_in": "Sign in",
     "theme_toggle_label": "theme toggle",
@@ -25,9 +26,21 @@
     "nextjs_starter_template_description": "A Next.js starter template, packed with features like TypeScript, Tailwind CSS, Next-auth, Eslint, Stripe, Paraglide, testing tools and more. Jumpstart your project with efficiency and style.",
     "get_started": "Get Started",
     "github": "Github",
+    "discover": "Discover",
+    "buy": "Buy",
+    "home": "Home",
+    "about_ensi_home": "About Ensi Home",
+    "about_ensi_home_description": "Learn more about Ensi Home.",
     "box": "Box",
     "mobile_app": "Mobile App",
-    "discover": "Discover",
+    "ai_voice_assistant": "AI Voice Assistant",
+    "compatible_smart_devices": "Compatible Smart Devices",
     "support": "Support",
-    "buy": "Buy"
+    "support_description": "Get help and support.",
+    "how_it_works": "How It Works",
+    "faq": "FAQ",
+    "technical_support": "Technical Support",
+    "contact_with_us": "Contact Us"
+
+
 }

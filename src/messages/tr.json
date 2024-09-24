@@ -1,5 +1,6 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
+  "locale": "tr",
   "app_name": "next-starter",
   "sign_in": "Giriş yap",
   "theme_toggle_label": "tema değiştir",
@@ -25,9 +26,19 @@
   "nextjs_starter_template_description": "TypeScript, Tailwind CSS, Next-auth, Eslint, Stripe, Paraglide, test araçları ve daha fazlası gibi özelliklerle dolu bir Next.js başlangıç şablonu. Projenizi verimlilik ve stil ile başlatın.",
   "get_started": "Başla",
   "github": "Github",
+  "discover": "Keşfet",
+  "buy": "Satın Al",
+  "home": "Ana Sayfa",
+  "about_ensi_home": "Ensi Home Hakkında",
+  "about_ensi_home_description": "Ensi Home hakkında daha fazla bilgi edinin.",
   "box": "Kutu",
   "mobile_app": "Mobil Uygulama",
-  "discover": "Keşfet",
+  "ai_voice_assistant": "AI Sesli Asistan",
+  "compatible_smart_devices": "Uyumlu Akıllı Cihazlar",
   "support": "Destek",
-  "buy": "Satın Al"
+  "support_description": "Yardım ve destek alın.",
+  "how_it_works": "Nasıl Çalışır",
+  "faq": "SSS",
+  "technical_support": "Teknik Destek",
+  "contact_with_us": "Bize Ulaşın"
 }
