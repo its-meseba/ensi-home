@@ -86,7 +86,7 @@ export const NewNavbar = () => {
     <header
       className={`fixed w-full transition-transform duration-300 ${
         visible ? 'translate-y-0' : '-translate-y-full'
-      }`}
+      } z-50`}
     >
       <div className="bg-background fixed left-0 top-0 z-40 w-full">
         <div className="container relative mx-auto flex min-h-20 flex-row items-center gap-4 lg:grid lg:grid-cols-3">

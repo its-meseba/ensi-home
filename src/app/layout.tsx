@@ -56,7 +56,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <body className={cn('min-h-screen font-sans', fonts)}>
           <ThemeProvider attribute="class">
             <NewNavbar />
-            {children}
+            <main className="pt-20">{children}</main>
             <ThemeSwitcher className="absolute bottom-5 right-5 z-10" />
             <Footer />
             <Toaster />
