@@ -53,6 +53,8 @@ export const Case1 = ({ title, logos, interval }: Case1Props) => {
                     <Image
                       src={logo}
                       alt={`Logo ${index + 1}`}
+                      width={100}
+                      height={100}
                       className="size-full object-contain"
                     />
                   </div>

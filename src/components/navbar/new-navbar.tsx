@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Menu, MoveRight, X } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { LanguageSwitcher } from './language-switcher';
@@ -82,6 +83,8 @@ export const NewNavbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
+  const smallScreen = window.innerWidth < 768; // Define smallScreen based on window width
+
   return (
     <header
       className={`fixed w-full transition-transform duration-300 ${
@@ -97,9 +100,9 @@ export const NewNavbar = () => {
                   <NavigationMenuItem key={item.title}>
                     {item.href ? (
                       <>
-                        <NavigationMenuLink>
+                        <Link href={item.href}>
                           <Button variant="ghost">{item.title}</Button>
-                        </NavigationMenuLink>
+                        </Link>
                       </>
                     ) : (
                       <>
@@ -140,16 +143,29 @@ export const NewNavbar = () => {
               </NavigationMenuList>
             </NavigationMenu>
           </div>
-          <div className="flex lg:justify-center">
-            <p className="font-semibold">Ensi Home</p>
-          </div>
+          <Link href="/">
+            <div className="flex lg:justify-center">
+              <Image
+                src={
+                  smallScreen
+                    ? '/images/logo/small.svg'
+                    : '/images/logo/full.svg'
+                }
+                alt="Ensi Home"
+                layout="responsive"
+                width={1000}
+                height={100}
+                className="transition-all duration-500 ease-in-out"
+              />
+            </div>
+          </Link>
           <div className="flex w-full justify-end gap-4">
-            <Button variant="ghost" className="hidden md:inline">
-              {m.contact_with_us()}
-            </Button>
+            <Link href="/contact" className="hidden md:inline">
+              <Button variant="outline">{m.contact_with_us()}</Button>
+            </Link>
             <div className="hidden border-r md:inline"></div>
-            <Button variant="outline">{m.sign_in()}</Button>
-            <Button>{m.get_started()}</Button>
+            {/* <Button variant="outline">{m.sign_in()}</Button> */}
+            {/* <Button>{m.get_started()}</Button> */}
             <LanguageSwitcher />
           </div>
           <div className="flex w-12 shrink items-end justify-end lg:hidden">

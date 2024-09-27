@@ -1,14 +1,53 @@
-import { Button } from '@/components/ui/button';
+// import { IntroHeaderWithModel } from '@/components/common/intro-header';
+import { IntroFeatureWithModel } from '@/components/common/intro-feature'; // Import IntroFeatureWithModel component
+import { Case1 } from '@/components/common/sliding-cases';
+
+const logos = [
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  '/images/logo/small.svg',
+  // Add more logo paths as needed
+];
 
 export default function BoxPage() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="mb-6 text-4xl font-bold">Ensi Home Box</h1>
-      <p className="mb-6 text-lg">
-        Discover the power of our central hub, the brain of your smart home
-        system.
-      </p>
-      <Button>Learn More About Box</Button>
+    <div>
+      <IntroFeatureWithModel
+        platform="Smart Home"
+        title="Unlock Your Home's Potential"
+        description="Experience the future of home automation with Ensi Home Box."
+        checkPoints={[
+          {
+            title: 'Seamless Integration',
+            description: 'Integrate all your smart devices effortlessly.',
+          },
+          {
+            title: 'Voice Control',
+            description: 'Control your home with just your voice.',
+          },
+          {
+            title: 'Real-time Monitoring',
+            description: "Stay informed about your home's status in real-time.",
+          },
+        ]}
+        modelUrl="/assets/models/ensi-home-box.glb" // Add the model URL
+      />
+      <Case1
+        title="Our Partners"
+        logos={logos}
+        interval={3000} // Adjust the interval as needed
+      />
     </div>
   );
 }

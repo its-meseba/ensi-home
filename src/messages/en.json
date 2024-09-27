@@ -40,7 +40,10 @@
     "how_it_works": "How It Works",
     "faq": "FAQ",
     "technical_support": "Technical Support",
-    "contact_with_us": "Contact Us"
+    "contact_with_us": "Contact Us",
+    "faq_section": {
+        
+    }
 
 
 }
