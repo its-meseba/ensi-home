@@ -1,10 +1,11 @@
-import { IntroFeature } from '@/components/common/intro-feature'; // Import IntroFeature
+import { IntroFeatureWithRiveModel } from '@/components/common/intro-feature'; // Import IntroFeature
+import AiAssistant from '@/components/pages/box/ai-assistant';
 import { Button } from '@/components/ui/button';
 
 export default function DiscoverPage() {
   return (
     <div className="container mx-auto px-4 py-16">
-      <IntroFeature
+      <IntroFeatureWithRiveModel
         platform="AI Voice Assistant"
         title="Voice Control at Your Fingertips"
         description="Experience seamless voice control with Ensi Home."
@@ -15,9 +16,9 @@ export default function DiscoverPage() {
             description: 'Works with your favorite devices.',
           },
         ]}
-        imageUrl="/path/to/image.jpg" // Provide the correct image URL
       />
       <Button>Start Discovering</Button>
+      <AiAssistant />
     </div>
   );
 }

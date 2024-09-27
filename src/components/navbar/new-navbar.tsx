@@ -83,8 +83,6 @@ export const NewNavbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
-  const smallScreen = window.innerWidth < 768; // Define smallScreen based on window width
-
   return (
     <header
       className={`fixed w-full transition-transform duration-300 ${
@@ -146,14 +144,10 @@ export const NewNavbar = () => {
           <Link href="/">
             <div className="flex lg:justify-center">
               <Image
-                src={
-                  smallScreen
-                    ? '/images/logo/small.svg'
-                    : '/images/logo/full.svg'
-                }
+                src="/images/logo/full.svg"
                 alt="Ensi Home"
                 layout="responsive"
-                width={1000}
+                width={100}
                 height={100}
                 className="transition-all duration-500 ease-in-out"
               />
