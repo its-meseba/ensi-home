@@ -119,8 +119,10 @@ export const IntroFeatureWithModel = ({
             ))}
           </div>
         </div>
-        <div className="bg-muted flex aspect-square items-center justify-center rounded-md border border-gray-300">
-          <GLTFViewer modelUrl={modelUrl} />
+        <div className="relative flex aspect-square items-center justify-center rounded-md border border-gray-300 bg-gray-200 bg-opacity-50 backdrop-blur-md">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <GLTFViewer modelUrl={modelUrl} />
+          </div>
         </div>
       </div>
     </div>

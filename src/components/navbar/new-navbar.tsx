@@ -143,16 +143,32 @@ export const NewNavbar = () => {
           </div>
           <Link href="/">
             <div className="flex lg:justify-center">
+              {/* Small Screen Logo */}
+              <Image
+                src="/images/logo/small.svg"
+                alt="Ensi Home"
+                layout="responsive"
+                width={100}
+                height={100}
+                className="block transition-all duration-500 ease-in-out lg:hidden"
+                objectFit="contain"
+                style={{ maxWidth: '40%', height: 'auto' }}
+              />
+
+              {/* Large Screen Logo */}
               <Image
                 src="/images/logo/full.svg"
                 alt="Ensi Home"
                 layout="responsive"
                 width={100}
                 height={100}
-                className="transition-all duration-500 ease-in-out"
+                className="hidden transition-all duration-500 ease-in-out lg:block"
+                objectFit="contain"
+                style={{ maxWidth: '40%', height: 'auto' }}
               />
             </div>
           </Link>
+
           <div className="flex w-full justify-end gap-4">
             <Link href="/contact" className="hidden md:inline">
               <Button variant="outline">{m.contact_with_us()}</Button>
