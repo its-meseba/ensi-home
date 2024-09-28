@@ -155,7 +155,6 @@ export const NewNavbar = () => {
                 style={{ maxWidth: '40%', height: 'auto' }}
               />
 
-              {/* Large Screen Logo */}
               <Image
                 src="/images/logo/full.svg"
                 alt="Ensi Home"

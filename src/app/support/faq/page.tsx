@@ -7,6 +7,7 @@ import {
   Zap,
 } from 'lucide-react';
 
+import FaqSectionOne from '@/components/pages/faq/faq';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const categories = [
@@ -69,6 +70,7 @@ export default function FAQPage() {
         <h2 className="mb-12 text-3xl font-bold text-gray-800">
           Sıkça Sorulan Sorular
         </h2>
+        <FaqSectionOne />
         <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {categories.map((category, index) => (
             <Card
