@@ -9,7 +9,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, PawPrint, Paperclip } from 'lucide-react'
+import { ArrowLeft, Paperclip } from 'lucide-react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
@@ -122,14 +122,14 @@ export default function SupportForm() {
                   name="attachment"
                   render={({ field: { onChange, ...field } }) => (
                     <FormItem>
-                      <FormLabel>Attachments (optional)</FormLabel>
+                      <FormLabel>Attachments</FormLabel>
                       <FormControl>
                         <div className="flex items-center space-x-2">
                           <Input
                             type="file"
                             {...field}
                             ref={fileInputRef}
-                            onChange={(e) => {
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                               const file = e.target.files?.[0];
                               if (file) {
                                 onChange(file);
