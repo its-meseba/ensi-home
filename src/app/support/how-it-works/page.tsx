@@ -48,10 +48,23 @@ export default function SmartHomeGuide() {
     <div className="flex flex-col items-center">
       <div className="w-full bg-gray-50">
         <div className="container mx-auto flex max-w-7xl flex-col items-center px-4 py-12">
-          <h1 className="mb-12 text-center text-3xl font-bold">
-            Nasıl kullanılır?
-          </h1>
-
+          <h1 className="mb-12 text-center text-3xl font-bold">How It Works</h1>
+          <IntroFeature
+            platform="How It Works"
+            title="Understanding Your Smart Home"
+            description="Learn how to make the most of your Ensi Home system."
+            checkPoints={[
+              {
+                title: 'Setup Guide',
+                description: 'Step-by-step installation.',
+              },
+              {
+                title: 'Device Management',
+                description: 'Easily manage your devices.',
+              },
+            ]}
+            imageUrl="/path/to/image.jpg" // Provide the correct image URL
+          />
           <Carousel className="w-full max-w-[95%]">
             <CarouselContent>
               {steps.map((step, index) => (

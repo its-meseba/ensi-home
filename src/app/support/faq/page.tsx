@@ -62,7 +62,7 @@ const categories = [
   },
 ];
 
-export default function DiscoverPage() {
+export default function FAQPage() {
   return (
     <div className="w-full bg-gradient-to-b from-gray-50 to-gray-200">
       <div className="container mx-auto flex max-w-7xl flex-col items-center px-4 py-16">
