@@ -3,6 +3,7 @@
 import React from 'react';
 import { MapPin, Smartphone, Tv, Wifi } from 'lucide-react';
 
+import { IntroFeature } from '@/components/common/intro-feature';
 import { Card, CardHeader } from '@/components/ui/card';
 import {
   Carousel,
