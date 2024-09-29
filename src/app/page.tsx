@@ -7,6 +7,7 @@ import { IntroHeader } from '../components/common/intro-header'; // Import
 
 import AiAssistant from '@/components/pages/box/ai-assistant';
 import GLTFViewer from '@/components/pages/box/gltf-viewer';
+import { EnsiHomeOrchestrator } from '@/components/pages/home/orchestrator';
 
 export default function MainPage() {
   const items = [
@@ -34,7 +35,7 @@ export default function MainPage() {
           description="We're at the forefront of mobile development, 3D visualization, and AI assistance. Our solutions are designed to transform your ideas into reality."
           imageUrl="/placeholder.svg?height=400&width=600&text=Company Overview" // Use the existing image URL
         />
-        <ContentSection items={items} />{' '}
+        <ContentSection items={items} /> <EnsiHomeOrchestrator />
         {/* Use the new ContentSection component */}
       </div>
     </section>
@@ -44,8 +45,8 @@ function MobileApp() {
   return (
     <div className="flex flex-col items-center">
       <h2 className="mb-4 text-2xl font-bold">Mobile App Showcase</h2>
-      <div className="relative h-[600px] w-[300px] rounded-lg bg-gray-200 shadow-lg">
-        <div className="absolute left-0 top-0 size-full rounded-lg bg-gray-300">
+      <div className="relative h-[600px] w-[300px] rounded-lg bg-white shadow-lg">
+        <div className="absolute left-0 top-0 size-full rounded-lg bg-white">
           <Image
             src="/path/to/iphone-mockup.png"
             alt="iPhone Mockup"
@@ -54,7 +55,7 @@ function MobileApp() {
             className="rounded-lg"
           />
         </div>
-        <div className="absolute bottom-0 left-0 h-10 w-full rounded-b-lg bg-gray-400"></div>
+        <div className="absolute bottom-0 left-0 h-10 w-full rounded-b-lg bg-white"></div>
       </div>
     </div>
   );

@@ -10,32 +10,12 @@ module.exports = {
   ],
   plugins: ['simple-import-sort', 'prettier', '@typescript-eslint'],
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto',
-      },
-    ],
-    'sort-imports': 'off', // Disables the built-in ESLint import sorting rule
+    // Disable all the rules by setting them to 'off'
+    'prettier/prettier': 'off',
+    'sort-imports': 'off',
     'tailwindcss/no-custom-classname': 'off',
     '@typescript-eslint/no-var-requires': 'off',
-    // Remove or comment out simple-import-sort rule if you don't want ESLint to control import sorting
-    // 'simple-import-sort/imports': [
-    //   2,
-    //   {
-    //     groups: [
-    //       ['^.+\\.s?css$'],
-    //       [
-    //         `^(${require('module').builtinModules.join('|')})(/|$)`,
-    //         '^react',
-    //         '^@?\\w',
-    //       ],
-    //       ['^components(/.*|$)'],
-    //       ['^lib(/.*|$)', '^hooks(/.*|$)'],
-    //       ['^\\.'],
-    //     ],
-    //   },
-    // ],
+    // 'simple-import-sort/imports': 'off', // Just to ensure no sorting rule is applied
   },
   settings: {
     tailwindcss: {
