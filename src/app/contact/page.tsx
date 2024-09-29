@@ -1,27 +1,41 @@
-'use client'
+'use client';
+import React, { useRef } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { motion } from 'framer-motion';
+import { ArrowLeft, Paperclip } from 'lucide-react';
+import Image from 'next/image';
+import * as z from 'zod';
 
-import React, { useRef } from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import * as z from 'zod'
-import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, Paperclip } from 'lucide-react'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 const formSchema = z.object({
   subject: z.string().min(2, {
-    message: "Subject must be at least 2 characters.",
+    message: 'Subject must be at least 2 characters.',
   }),
   question: z.string().min(10, {
-    message: "Question must be at least 10 characters.",
+    message: 'Question must be at least 10 characters.',
   }),
   attachment: z.instanceof(File).optional(),
-})
+});
 
 export default function SupportForm() {
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -29,10 +43,10 @@ export default function SupportForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      subject: "",
-      question: "",
+      subject: '',
+      question: '',
     },
-  })
+  });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
@@ -63,26 +77,30 @@ export default function SupportForm() {
   }
 
   return (
-    <div className="flex flex-col md:flex-row w-full max-w-7xl mx-auto gap-8 p-4">
-      <motion.div 
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 p-4 md:flex-row">
+      <motion.div
         className="w-full md:w-3/5"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Card className="shadow-xl hover:shadow-2xl transition-shadow duration-300">
+        <Card className="shadow-xl transition-shadow duration-300 hover:shadow-2xl">
           <CardHeader>
             <div className="flex items-center space-x-2">
-              <ArrowLeft className="h-6 w-6" />
+              <ArrowLeft className="size-6" />
               <CardTitle className="text-2xl font-bold">Contact Us</CardTitle>
             </div>
             <CardDescription>
-              Please provide as much detail as possible. This will help us to answer you faster and better.
+              Please provide as much detail as possible. This will help us to
+              answer you faster and better.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-8"
+              >
                 <FormField
                   control={form.control}
                   name="subject"
@@ -90,9 +108,9 @@ export default function SupportForm() {
                     <FormItem>
                       <FormLabel>Subject (required)</FormLabel>
                       <FormControl>
-                        <Input 
-                          placeholder="What's your question about?" 
-                          {...field} 
+                        <Input
+                          placeholder="What's your question about?"
+                          {...field}
                           className="transition-all duration-300"
                         />
                       </FormControl>
@@ -105,12 +123,14 @@ export default function SupportForm() {
                   name="question"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>What's your question? (required)</FormLabel>
+                      <FormLabel>
+                        What&apos;s your question? (required)
+                      </FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="Please include as much details as you can." 
+                        <Textarea
+                          placeholder="Please include as much details as you can."
                           className="min-h-[100px] transition-all duration-300"
-                          {...field} 
+                          {...field}
                         />
                       </FormControl>
                       <FormMessage />
@@ -120,7 +140,7 @@ export default function SupportForm() {
                 <FormField
                   control={form.control}
                   name="attachment"
-                  render={({ field: { onChange, ...field } }) => (
+                  render={({ field }) => (
                     <FormItem>
                       <FormLabel>Attachments</FormLabel>
                       <FormControl>
@@ -128,14 +148,7 @@ export default function SupportForm() {
                           <Input
                             type="file"
                             {...field}
-                            ref={fileInputRef}
-                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                              const file = e.target.files?.[0];
-                              if (file) {
-                                onChange(file);
-                              }
-                            }}
-                            className="hidden"
+                            value={undefined} // Set value to undefined for file input
                           />
                           <Button
                             type="button"
@@ -143,7 +156,7 @@ export default function SupportForm() {
                             onClick={() => fileInputRef.current?.click()}
                             className="w-full"
                           >
-                            <Paperclip className="mr-2 h-4 w-4" />
+                            <Paperclip className="mr-2 size-4" />
                             Choose File
                           </Button>
                         </div>
@@ -155,14 +168,16 @@ export default function SupportForm() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full">Submit</Button>
+                <Button type="submit" className="w-full">
+                  Submit
+                </Button>
               </form>
             </Form>
           </CardContent>
         </Card>
       </motion.div>
-      <motion.div 
-        className="w-full md:w-2/5 flex items-center justify-center"
+      <motion.div
+        className="flex w-full items-center justify-center md:w-2/5"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
@@ -176,5 +191,5 @@ export default function SupportForm() {
         />
       </motion.div>
     </div>
-  )
+  );
 }
