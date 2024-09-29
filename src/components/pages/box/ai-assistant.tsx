@@ -7,9 +7,10 @@ const AiAssistant = () => {
   const [currentAnimation, setCurrentAnimation] = useState('close_trig');
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setCurrentAnimation('bing_idle');
     }, 500);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -20,7 +21,6 @@ const AiAssistant = () => {
           src="/assets/models/ball_ai_chat.riv"
           stateMachines="State Machine 1"
           animations={currentAnimation}
-          // Add the currentAnimation to control the animation state
         />
       ))}
     </div>

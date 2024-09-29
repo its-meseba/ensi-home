@@ -9,8 +9,6 @@ interface IntroHeaderProps {
   badgeText: string;
   title: string;
   description: string;
-  callToAction1: string;
-  callToAction2: string;
   imageUrl: string; // Add imageUrl to the props
 }
 
@@ -27,8 +25,6 @@ export const IntroHeader = ({
   badgeText,
   title,
   description,
-  callToAction1,
-  callToAction2,
   imageUrl, // Destructure imageUrl from props
 }: IntroHeaderProps) => (
   <div className="w-full py-20 lg:py-40">
@@ -46,14 +42,14 @@ export const IntroHeader = ({
               {description}
             </p>
           </div>
-          <div className="flex flex-row gap-4">
-            <Button size="lg" className="gap-4" variant="outline">
+          {/* <div className="flex flex-row gap-4">
+            <Button size="lg" className="gap-4" variant="outline" onClick={() => console.log('Contact Us clicked')}>
               {callToAction1} <PhoneCall className="size-4" />
             </Button>
-            <Button size="lg" className="gap-4">
+            <Button size="lg" className="gap-4" onClick={() => console.log('Learn More clicked')}>
               {callToAction2} <MoveRight className="size-4" />
             </Button>
-          </div>
+          </div> */}
         </div>
         <div className="bg-muted aspect-square rounded-md">
           <Image
