@@ -13,9 +13,9 @@ const ContentSection: React.FC<ContentSectionProps> = ({ items }) => (
         key={item.id}
         className="relative h-[600px] w-full overflow-hidden rounded-lg bg-black shadow-lg"
       >
-        <div className="absolute inset-0 bg-gray-500 bg-opacity-30"></div>
+        <div className="absolute inset-0 bg-gray-500/30"></div>
         <item.component />
-        <div className="absolute inset-x-0 bottom-0 flex h-24 items-center justify-between bg-gray-500 bg-opacity-50 px-4">
+        <div className="absolute inset-x-0 bottom-0 flex h-24 items-center justify-between bg-gray-500/50 px-4">
           <p className="font-semibold text-white">{item.title}</p>
           <Link href={item.href}>
             <Button variant="outline" className="ml-4">

@@ -19,7 +19,7 @@ export const generateMetadata = (): Metadata => ({
   metadataBase: new URL(siteConfig.url()),
   title: {
     default: siteConfig.title(),
-    template: `%s | ${siteConfig.title()}`,
+    template: `%s | ${siteConfig.title}`,
   },
   description: siteConfig.description(),
   keywords: siteConfig.keywords(),

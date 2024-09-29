@@ -5,8 +5,8 @@ export const siteConfig = {
   title: m.meta_title,
   description: m.meta_description,
   keywords: () => [
-    m.meta_keyword_ensi,
-    m.meta_keyword_ensi_home,
+    m.meta_keyword_ensi(),
+    m.meta_keyword_ensi_home(),
     m.meta_keyword_ensi_starter(),
     m.meta_keyword_ensi_boilerplate(),
     m.meta_keyword_ensi_template(),
