@@ -1,270 +1,481 @@
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Checkbox } from "@/components/ui/checkbox"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Button } from "@/components/ui/button"
-import { Skeleton } from "@/components/ui/skeleton"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import Link from 'next/link'
-import { ChevronDown, ChevronUp, Search, X } from 'lucide-react'
-import { 
-  Lightbulb, Video, Music, Tv, Shield, Thermometer, Tool, Wifi, Globe, Zap,
-  Cloud, Bluetooth, Radio, Zigzag, Infrared, Waves, Network, Hexagon, GitBranch
-} from 'lucide-react'
+'use client';
 
-// Mock data structure
-const products = [
-  { id: 1, name: "Philips Hue", category: "Lighting", technology: "Zigbee", manufacturer: "Signify", image: "/placeholder.svg?height=200&width=300", description: "Smart lighting solution for your home" },
-  { id: 2, name: "Aqara", category: "Security", technology: "Zigbee", manufacturer: "Lumi United", image: "/placeholder.svg?height=200&width=300", description: "Comprehensive smart home and security devices" },
-  { id: 3, name: "IKEA Trådfri", category: "Lighting", technology: "Zigbee", manufacturer: "IKEA", image: "/placeholder.svg?height=200&width=300", description: "Affordable smart lighting options" },
-  { id: 4, name: "Smart Presence", category: "Security", technology: "Cloud", manufacturer: "Community", image: "/placeholder.svg?height=200&width=300", description: "Advanced presence detection for smart homes" },
-  { id: 5, name: "Tuya Zigbee", category: "Lighting", technology: "Zigbee", manufacturer: "Tuya", image: "/placeholder.svg?height=200&width=300", description: "Versatile smart home ecosystem" },
-]
+import React, { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ChevronDown, ChevronUp, Search, X } from 'lucide-react';
+import {
+  Antenna,
+  Bluetooth,
+  ChevronLeft as LucideChevronLeft,
+  ChevronRight as LucideChevronRight,
+  Cloud,
+  Fence,
+  GitBranch,
+  Globe,
+  Hammer,
+  Hexagon,
+  Lightbulb,
+  Music,
+  Network,
+  Radio,
+  Shield,
+  Thermometer,
+  Tv,
+  Video,
+  Waves,
+  Wifi,
+  Zap,
+} from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const categories = [
-  { name: "Lighting", icon: Lightbulb },
-  { name: "Video", icon: Video },
-  { name: "Music", icon: Music },
-  { name: "Appliances", icon: Tv },
-  { name: "Security", icon: Shield },
-  { name: "Climate", icon: Thermometer },
-  { name: "Tools", icon: Tool },
-  { name: "Internet", icon: Wifi },
-  { name: "Localization", icon: Globe },
-  { name: "Energy", icon: Zap }
-]
+import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Input } from '@/components/ui/input';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { Skeleton } from '@/components/ui/skeleton';
+import productsDataRaw from '@/data/compatible-brands-and-devices.json'; // Adjust the path as necessary
+import { CompatibleBrand, ProductsData } from '@/data/types'; // Adjust the path as necessary
 
-const technologies = [
-  { name: "Cloud", icon: Cloud },
-  { name: "BLE", icon: Bluetooth },
-  { name: "Z-Wave", icon: Radio },
-  { name: "Zigbee", icon: Zigzag },
-  { name: "Infrared", icon: Infrared },
-  { name: "433 Mhz", icon: Waves },
-  { name: "LAN", icon: Network },
-  { name: "Matter", icon: Hexagon },
-  { name: "Thread", icon: GitBranch }
-]
+// Type assertion for JSON data
+const productsData: ProductsData = productsDataRaw as ProductsData;
+
+// Extract all brands
+const allBrands: CompatibleBrand[] = productsData.categories.flatMap(
+  (category) => category.compatible_brands
+);
+
+// Extract unique categories
+function capitalizeFirstLetter(string: string) {
+  if (!string) return ''; // Handle empty or null string
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+const uniqueCategories = Array.from(
+  new Set(
+    productsData.categories.map((category) => {
+      // return capitalizeFirstLetter(category.category_name);
+      return category.category_name;
+    })
+  )
+);
+
+// Extract unique technologies (dummy filter)
+const uniqueTechnologies = Array.from(
+  new Set(
+    allBrands.flatMap((brand) =>
+      brand.supported_devices.flatMap((device) => device.technologies)
+    )
+  )
+);
+
+// Create icon mappings for categories
+const categoryIconMap: {
+  [key: string]: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+} = {};
+productsData.categories.forEach((cat) => {
+  switch (cat.category_name.toLowerCase()) {
+    case 'lighting':
+      categoryIconMap[cat.category_name] = Lightbulb;
+      break;
+    case 'video':
+      categoryIconMap[cat.category_name] = Video;
+      break;
+    case 'music':
+      categoryIconMap[cat.category_name] = Music;
+      break;
+    case 'appliances':
+      categoryIconMap[cat.category_name] = Tv;
+      break;
+    case 'security':
+      categoryIconMap[cat.category_name] = Shield;
+      break;
+    case 'climate':
+      categoryIconMap[cat.category_name] = Thermometer;
+      break;
+    case 'tools':
+      categoryIconMap[cat.category_name] = Hammer;
+      break;
+    case 'internet':
+      categoryIconMap[cat.category_name] = Wifi;
+      break;
+    case 'localization':
+      categoryIconMap[cat.category_name] = Globe;
+      break;
+    case 'energy':
+      categoryIconMap[cat.category_name] = Zap;
+      break;
+    default:
+      categoryIconMap[cat.category_name] = Lightbulb; // Default icon
+      break;
+  }
+});
+
+// Create icon mappings for technologies (dummy)
+const technologyIconMap: {
+  [key: string]: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+} = {};
+uniqueTechnologies.forEach((tech) => {
+  switch (tech.toLowerCase()) {
+    case 'cloud':
+      technologyIconMap[tech] = Cloud;
+      break;
+    case 'ble':
+      technologyIconMap[tech] = Bluetooth;
+      break;
+    case 'z-wave':
+      technologyIconMap[tech] = Radio;
+      break;
+    case 'zigbee':
+      technologyIconMap[tech] = Fence;
+      break;
+    case 'infrared':
+      technologyIconMap[tech] = Antenna;
+      break;
+    case '433 mhz':
+      technologyIconMap[tech] = Waves;
+      break;
+    case 'lan':
+      technologyIconMap[tech] = Network;
+      break;
+    case 'matter':
+      technologyIconMap[tech] = Hexagon;
+      break;
+    case 'thread':
+      technologyIconMap[tech] = GitBranch;
+      break;
+    default:
+      technologyIconMap[tech] = Cloud; // Default icon
+      break;
+  }
+});
 
 export default function EnhancedFilteredProducts() {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
-  const [selectedTechnologies, setSelectedTechnologies] = useState<string[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [searchQuery, setSearchQuery] = useState("")
-  const [sortOption, setSortOption] = useState("name")
-  const [isCategoryFilterOpen, setIsCategoryFilterOpen] = useState(true)
-  const [isTechnologyFilterOpen, setIsTechnologyFilterOpen] = useState(true)
-  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(true)
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedTechnologies, setSelectedTechnologies] = useState<string[]>(
+    []
+  );
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortOption, setSortOption] = useState<'name' | 'category'>('name');
+  const [isCategoryFilterOpen, setIsCategoryFilterOpen] = useState(true);
+  const [isTechnologyFilterOpen, setIsTechnologyFilterOpen] = useState(true);
+  const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(true);
 
-  const filteredProducts = products
-    .filter(product => 
-      (selectedCategories.length === 0 || selectedCategories.includes(product.category)) &&
-      (selectedTechnologies.length === 0 || selectedTechnologies.includes(product.technology)) &&
-      (product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-       product.description.toLowerCase().includes(searchQuery.toLowerCase()))
-    )
-    .sort((a, b) => {
-      if (sortOption === "name") return a.name.localeCompare(b.name)
-      if (sortOption === "category") return a.category.localeCompare(b.category)
-      return 0
+  // Filtered Brands based on selected categories
+  const filteredBrands = allBrands
+    .filter((brand) => {
+      if (selectedCategories.length === 0) return true;
+      const brandCategory = productsData.categories.find((cat) =>
+        cat.compatible_brands.includes(brand)
+      );
+      return brandCategory
+        ? selectedCategories.includes(brandCategory.category_name)
+        : false;
     })
+    .filter((brand) => {
+      if (searchQuery.trim() === '') return true;
+      const brandDescription = brand.description || '';
+      return (
+        brand.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        brandDescription.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    })
+    .sort((a, b) => {
+      if (sortOption === 'name') return a.name.localeCompare(b.name);
+      if (sortOption === 'category') {
+        const categoryA =
+          productsData.categories.find((cat) =>
+            cat.compatible_brands.includes(a)
+          )?.category_name || '';
+        const categoryB =
+          productsData.categories.find((cat) =>
+            cat.compatible_brands.includes(b)
+          )?.category_name || '';
+        return categoryA.localeCompare(categoryB);
+      }
+      return 0;
+    });
 
   const handleCategoryChange = (category: string) => {
-    setSelectedCategories(prev => 
-      prev.includes(category) ? prev.filter(c => c !== category) : [...prev, category]
-    )
-  }
+    setSelectedCategories((prev) =>
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category]
+    );
+  };
 
   const handleTechnologyChange = (technology: string) => {
-    setSelectedTechnologies(prev => 
-      prev.includes(technology) ? prev.filter(t => t !== technology) : [...prev, technology]
-    )
-  }
+    setSelectedTechnologies((prev) =>
+      prev.includes(technology)
+        ? prev.filter((t) => t !== technology)
+        : [...prev, technology]
+    );
+  };
 
-  const clearCategories = () => setSelectedCategories([])
-  const clearTechnologies = () => setSelectedTechnologies([])
+  const clearCategories = () => setSelectedCategories([]);
+  const clearTechnologies = () => setSelectedTechnologies([]);
 
   const getCategoryCount = (category: string) => {
-    return products.filter(product => product.category === category).length
-  }
+    return allBrands.filter((brand) => {
+      const brandCategory = productsData.categories.find((cat) =>
+        cat.compatible_brands.includes(brand)
+      );
+      return brandCategory ? brandCategory.category_name === category : false;
+    }).length;
+  };
 
-  const getTechnologyCount = (technology: string) => {
-    return products.filter(product => product.technology === technology).length
-  }
+  // Technologies filter is dummy and does not affect brands
 
   useEffect(() => {
-    // Simulate API call
+    // Simulate API call delay
     const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
+      setIsLoading(false);
+    }, 1000); // Adjust the delay as needed
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
+  const ChevronLeftIcon = () => <LucideChevronLeft className="size-4" />;
+
+  const ChevronRightIcon = () => <LucideChevronRight className="size-4" />;
   return (
     <div className="flex min-h-screen bg-gray-100">
+      {/* Filter Sidebar */}
       <motion.aside
-        initial={{ x: -300 }}
-        animate={{ x: isFilterSidebarOpen ? 0 : -300 }}
-        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="w-64 bg-white p-6 shadow-md relative"
+        animate={{
+          width: isFilterSidebarOpen ? 256 : 64, // Tailwind's w-64 is 16rem (256px), w-16 is 4rem (64px)
+        }}
+        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+        className="relative flex flex-col bg-white p-4 shadow-md"
       >
+        {/* Toggle Button */}
         <Button
           variant="outline"
           size="icon"
-          className="absolute -right-4 top-4"
+          className={`absolute -right-4 top-4 ${isFilterSidebarOpen ? '' : 'rotate-180'}`}
           onClick={() => setIsFilterSidebarOpen(!isFilterSidebarOpen)}
         >
-          {isFilterSidebarOpen ? <ChevronUp /> : <ChevronDown />}
+          {isFilterSidebarOpen ? <ChevronLeftIcon /> : <ChevronRightIcon />}
         </Button>
-        <h2 className="text-xl font-semibold mb-4">Filters</h2>
-        <ScrollArea className="h-[calc(100vh-100px)]">
-          <div className="space-y-4">
-            {/* Categories Filter */}
-            <div>
-              <div className="flex justify-between items-center mb-2">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="font-medium"
-                  onClick={() => setIsCategoryFilterOpen(!isCategoryFilterOpen)}
-                >
-                  Categories {isCategoryFilterOpen ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={clearCategories}
-                  className="text-sm text-gray-500 hover:text-gray-700"
-                >
-                  Clear
-                </Button>
-              </div>
-              <AnimatePresence>
-                {isCategoryFilterOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {categories.map(category => (
-                      <motion.div
-                        key={category.name}
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="flex items-center justify-between space-x-2 mb-2"
-                      >
-                        <div className="flex items-center space-x-2">
-                          <Checkbox 
-                            id={`category-${category.name}`} 
-                            checked={selectedCategories.includes(category.name)}
-                            onCheckedChange={() => handleCategoryChange(category.name)}
-                          />
-                          <label htmlFor={`category-${category.name}`} className="text-sm flex items-center">
-                            <category.icon className="w-4 h-4 mr-2" />
-                            {category.name}
-                          </label>
-                        </div>
-                        <span className="text-xs text-gray-500">({getCategoryCount(category.name)})</span>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
 
-            {/* Technologies Filter */}
-            <div>
-              <div className="flex justify-between items-center mb-2">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="font-medium"
-                  onClick={() => setIsTechnologyFilterOpen(!isTechnologyFilterOpen)}
-                >
-                  Technologies {isTechnologyFilterOpen ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={clearTechnologies}
-                  className="text-sm text-gray-500 hover:text-gray-700"
-                >
-                  Clear
-                </Button>
-              </div>
-              <AnimatePresence>
-                {isTechnologyFilterOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {technologies.map(technology => (
+        {/* Header */}
+        <div
+          className={`mb-4 transition-opacity duration-300 ${isFilterSidebarOpen ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <h2 className="text-xl font-semibold">Filters</h2>
+        </div>
+
+        {/* Scrollable Content */}
+        <AnimatePresence>
+          {isFilterSidebarOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="flex-1 overflow-auto"
+            >
+              <div className="space-y-4">
+                {/* Categories Filter */}
+                <div>
+                  <div className="mb-2 flex items-center justify-between">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="flex items-center font-medium"
+                      onClick={() =>
+                        setIsCategoryFilterOpen(!isCategoryFilterOpen)
+                      }
+                    >
+                      Categories
+                      {isCategoryFilterOpen ? (
+                        <ChevronUp className="ml-2 size-4" />
+                      ) : (
+                        <ChevronDown className="ml-2 size-4" />
+                      )}
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={clearCategories}
+                      className="text-sm text-gray-500 hover:text-gray-700"
+                    >
+                      Clear
+                    </Button>
+                  </div>
+                  <AnimatePresence>
+                    {isCategoryFilterOpen && (
                       <motion.div
-                        key={technology.name}
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="flex items-center justify-between space-x-2 mb-2"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="space-y-2"
                       >
-                        <div className="flex items-center space-x-2">
-                          <Checkbox 
-                            id={`technology-${technology.name}`} 
-                            checked={selectedTechnologies.includes(technology.name)}
-                            onCheckedChange={() => handleTechnologyChange(technology.name)}
-                          />
-                          <label htmlFor={`technology-${technology.name}`} className="text-sm flex items-center">
-                            <technology.icon className="w-4 h-4 mr-2" />
-                            {technology.name}
-                          </label>
-                        </div>
-                        <span className="text-xs text-gray-500">({getTechnologyCount(technology.name)})</span>
+                        {uniqueCategories.map((category) => (
+                          <motion.div
+                            key={category}
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.2 }}
+                            className="flex items-center justify-between space-x-2"
+                          >
+                            <div className="flex items-center space-x-2">
+                              <Checkbox
+                                id={`category-${category}`}
+                                checked={selectedCategories.includes(category)}
+                                onCheckedChange={() =>
+                                  handleCategoryChange(category)
+                                }
+                              />
+                              <label
+                                htmlFor={`category-${category}`}
+                                className="flex items-center text-sm"
+                              >
+                                {categoryIconMap[category] &&
+                                  React.createElement(
+                                    categoryIconMap[category],
+                                    { className: 'w-4 h-4 mr-2' }
+                                  )}
+                                {capitalizeFirstLetter(category)}
+                              </label>
+                            </div>
+                            <span className="text-xs text-gray-500">
+                              ({getCategoryCount(category)})
+                            </span>
+                          </motion.div>
+                        ))}
                       </motion.div>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </div>
-        </ScrollArea>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Technologies Filter (Dummy) */}
+                <div>
+                  <div className="mb-2 flex items-center justify-between">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="flex items-center font-medium"
+                      onClick={() =>
+                        setIsTechnologyFilterOpen(!isTechnologyFilterOpen)
+                      }
+                    >
+                      Technologies
+                      {isTechnologyFilterOpen ? (
+                        <ChevronUp className="ml-2 size-4" />
+                      ) : (
+                        <ChevronDown className="ml-2 size-4" />
+                      )}
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={clearTechnologies}
+                      className="text-sm text-gray-500 hover:text-gray-700"
+                    >
+                      Clear
+                    </Button>
+                  </div>
+                  <AnimatePresence>
+                    {isTechnologyFilterOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="space-y-2"
+                      >
+                        {uniqueTechnologies.map((technology) => (
+                          <motion.div
+                            key={technology}
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.2 }}
+                            className="flex items-center justify-between space-x-2"
+                          >
+                            <div className="flex items-center space-x-2">
+                              <Checkbox
+                                id={`technology-${technology}`}
+                                checked={selectedTechnologies.includes(
+                                  technology
+                                )}
+                                onCheckedChange={() =>
+                                  handleTechnologyChange(technology)
+                                }
+                              />
+                              <label
+                                htmlFor={`technology-${technology}`}
+                                className="flex items-center text-sm"
+                              >
+                                {technologyIconMap[technology] &&
+                                  React.createElement(
+                                    technologyIconMap[technology],
+                                    { className: 'w-4 h-4 mr-2' }
+                                  )}
+                                {technology}
+                              </label>
+                            </div>
+                            <span className="text-xs text-gray-500">(0)</span>{' '}
+                            {/* Dummy count */}
+                          </motion.div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.aside>
 
+      {/* Main Content */}
       <main className="flex-1 p-6">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl font-bold mb-4"
+          className="mb-4 text-2xl font-bold"
         >
-          Results
+          Compatible Brands
         </motion.h1>
         <div className="mb-4 flex flex-wrap gap-4">
-          <div className="relative flex-grow max-w-md">
+          <div className="relative max-w-md grow">
             <Input
               type="text"
-              placeholder="Search products..."
+              placeholder="Search brands..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-10"
             />
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
             {searchQuery && (
               <Button
                 variant="ghost"
                 size="sm"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2"
+                className="absolute right-2 top-1/2 -translate-y-1/2"
                 onClick={() => setSearchQuery('')}
               >
-                <X className="h-4 w-4" />
+                <X className="size-4" />
               </Button>
             )}
           </div>
-          <Select value={sortOption} onValueChange={setSortOption}>
+          <Select
+            value={sortOption}
+            onValueChange={(value) =>
+              setSortOption(value as 'name' | 'category')
+            }
+          >
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
@@ -276,7 +487,7 @@ export default function EnhancedFilteredProducts() {
         </div>
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
           <AnimatePresence>
             {isLoading ? (
@@ -288,12 +499,12 @@ export default function EnhancedFilteredProducts() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-lg shadow-md overflow-hidden"
+                  className="overflow-hidden rounded-lg bg-white shadow-md"
                 >
-                  <Skeleton className="w-full h-48" />
+                  <Skeleton className="h-48 w-full" />
                   <div className="p-4">
-                    <Skeleton className="h-6 w-3/4 mb-2" />
-                    <Skeleton className="h-4 w-1/2 mb-2" />
+                    <Skeleton className="mb-2 h-6 w-3/4" />
+                    <Skeleton className="mb-2 h-4 w-1/2" />
                     <div className="mt-2 flex items-center space-x-2">
                       <Skeleton className="h-6 w-16 rounded-full" />
                       <Skeleton className="h-6 w-16 rounded-full" />
@@ -301,41 +512,90 @@ export default function EnhancedFilteredProducts() {
                   </div>
                 </motion.div>
               ))
-            ) : (
-              filteredProducts.map(product => (
-                <motion.div
-                  key={product.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.3 }}
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                >
-                  <Link href={`/ensi-home/compatible-smart/devices/${product.id}`} className="block">
-                    <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
-                    <div className="p-4">
-                      <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
-                      <p className="text-sm text-gray-600 mb-2">{product.manufacturer}</p>
-                      <p className="text-sm text-gray-500 mb-4">{product.description}</p>
-                      <div className="flex items-center space-x-2">
-                        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full flex items-center">
-                          {categories.find(c => c.name === product.category)?.icon && React.createElement(categories.find(c => c.name === product.category)!.icon, { className: "w-3 h-3 mr-1" })}
-                          {product.category}
-                        </span>
-                        <span className="px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full flex items-center">
-                          {technologies.find(t => t.name === product.technology)?.icon && React.createElement(technologies.find(t => t.name === product.technology)!.icon, { className: "w-3 h-3 mr-1" })}
-                          {product.technology}
-                        </span>
+            ) : filteredBrands.length > 0 ? (
+              filteredBrands.map((brand) => {
+                console.log(brand.name.toLowerCase().replace(/\s+/g, '-'));
+                // const brandName = brand.name.toLowerCase().replace(/\s+/g, '-');
+
+                return (
+                  <motion.div
+                    key={brand.name}
+                    layout
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-lg"
+                  >
+                    <Link
+                      href={`/ensi-home/compatible-smart-devices/1`}
+                      className="block"
+                    >
+                      <div className="relative h-48 w-full">
+                        <Image
+                          src={brand.summary_image_url || '/placeholder.svg'}
+                          alt={brand.name}
+                          fill
+                          style={{ objectFit: 'cover' }}
+                          className="object-cover"
+                          placeholder="blur"
+                          blurDataURL="/placeholder.svg" // Ensure this image exists in your public directory
+                        />
                       </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))
+                      <div className="p-4">
+                        <h3 className="mb-2 text-lg font-semibold">
+                          {brand.name}
+                        </h3>
+                        <p className="mb-2 text-sm text-gray-600">
+                          {brand.company || 'Unknown Company'}
+                        </p>
+                        <p className="mb-4 text-sm text-gray-500">
+                          {brand.description || 'No description available.'}
+                        </p>
+                        <div className="flex items-center space-x-2">
+                          {/* Category Tag */}
+                          <span className="flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-800">
+                            {categoryIconMap[
+                              productsData.categories.find((cat) =>
+                                cat.compatible_brands.includes(brand)
+                              )?.category_name || 'Unknown'
+                            ] &&
+                              React.createElement(
+                                categoryIconMap[
+                                  productsData.categories.find((cat) =>
+                                    cat.compatible_brands.includes(brand)
+                                  )?.category_name || 'Unknown'
+                                ],
+                                { className: 'w-3 h-3 mr-1' }
+                              )}
+                            {capitalizeFirstLetter(
+                              productsData.categories.find((cat) =>
+                                cat.compatible_brands.includes(brand)
+                              )?.category_name || 'Unknown'
+                            )}
+                          </span>
+                          {/* Technology Tag (Dummy) */}
+                          <span className="flex items-center rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-800">
+                            Technologies
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                );
+              })
+            ) : (
+              <p className="text-gray-500">No brands match your filters.</p>
             )}
           </AnimatePresence>
         </motion.div>
       </main>
     </div>
-  )
+  );
 }
+
+/**
+ * Custom Chevron Icons for Sidebar Toggle
+ * Using ChevronLeft and ChevronRight instead of ChevronUp and ChevronDown
+ * to better represent the collapse/expand direction.
+ */
