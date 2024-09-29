@@ -16,25 +16,26 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
-    'sort-imports': 'off',
+    'sort-imports': 'off', // Disables the built-in ESLint import sorting rule
     'tailwindcss/no-custom-classname': 'off',
     '@typescript-eslint/no-var-requires': 'off',
-    'simple-import-sort/imports': [
-      2,
-      {
-        groups: [
-          ['^.+\\.s?css$'],
-          [
-            `^(${require('module').builtinModules.join('|')})(/|$)`,
-            '^react',
-            '^@?\\w',
-          ],
-          ['^components(/.*|$)'],
-          ['^lib(/.*|$)', '^hooks(/.*|$)'],
-          ['^\\.'],
-        ],
-      },
-    ],
+    // Remove or comment out simple-import-sort rule if you don't want ESLint to control import sorting
+    // 'simple-import-sort/imports': [
+    //   2,
+    //   {
+    //     groups: [
+    //       ['^.+\\.s?css$'],
+    //       [
+    //         `^(${require('module').builtinModules.join('|')})(/|$)`,
+    //         '^react',
+    //         '^@?\\w',
+    //       ],
+    //       ['^components(/.*|$)'],
+    //       ['^lib(/.*|$)', '^hooks(/.*|$)'],
+    //       ['^\\.'],
+    //     ],
+    //   },
+    // ],
   },
   settings: {
     tailwindcss: {

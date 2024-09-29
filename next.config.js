@@ -1,4 +1,5 @@
 import { paraglide } from '@inlang/paraglide-next/plugin';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
