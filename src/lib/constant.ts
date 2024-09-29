@@ -4,6 +4,7 @@ import * as m from '@/paraglide/messages';
 export const siteConfig = {
   title: m.meta_title,
   description: m.meta_description,
+  cardImage: '/ensihome.png',
   keywords: () => [
     m.meta_keyword_ensi(),
     m.meta_keyword_ensi_home(),
