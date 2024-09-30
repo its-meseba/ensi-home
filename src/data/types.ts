@@ -8,6 +8,14 @@ export interface SupportedDevice {
   image_url: string;
   local_image_url: string;
 }
+export interface Device {
+  data_driver_id: string;
+  data_platforms: string;
+  device_name: string;
+  technologies: string[];
+  image_url: string;
+  local_image_url: string;
+}
 
 export interface CompatibleBrand {
   name: string;

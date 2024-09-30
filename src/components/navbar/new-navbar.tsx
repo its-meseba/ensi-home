@@ -83,6 +83,10 @@ export const NewNavbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
+  const handleLinkClick = () => {
+    setOpen(false); // Close the drawer after a link is clicked
+  };
+
   return (
     <header
       className={`fixed w-full transition-transform duration-300 ${
@@ -99,7 +103,9 @@ export const NewNavbar = () => {
                     {item.href ? (
                       <>
                         <Link href={item.href}>
-                          <Button variant="ghost">{item.title}</Button>
+                          <Button variant="ghost" onClick={handleLinkClick}>
+                            {item.title}
+                          </Button>
                         </Link>
                       </>
                     ) : (
@@ -170,11 +176,13 @@ export const NewNavbar = () => {
 
           <div className="flex w-full justify-end gap-4">
             <Link href="/contact" className="hidden md:inline">
-              <Button variant="outline">{m.contact_with_us()}</Button>
+              <Button variant="outline" onClick={handleLinkClick}>
+                {m.contact_with_us()}
+              </Button>
             </Link>
             <div className="hidden border-r md:inline"></div>
-            {/* <Button variant="outline">{m.sign_in()}</Button> */}
-            {/* <Button>{m.get_started()}</Button> */}
+            {/* <Button variant="outline" onClick={handleLinkClick}>{m.sign_in()}</Button> */}
+            {/* <Button onClick={handleLinkClick}>{m.get_started()}</Button> */}
             <LanguageSwitcher />
           </div>
           <div className="flex w-12 shrink items-end justify-end lg:hidden">
@@ -190,6 +198,7 @@ export const NewNavbar = () => {
                         <Link
                           href={item.href}
                           className="flex items-center justify-between"
+                          onClick={handleLinkClick}
                         >
                           <span className="text-lg">{item.title}</span>
                           <MoveRight className="text-muted-foreground size-4 stroke-1" />
@@ -203,6 +212,7 @@ export const NewNavbar = () => {
                             key={subItem.title}
                             href={subItem.href}
                             className="flex items-center justify-between"
+                            onClick={handleLinkClick}
                           >
                             <span className="text-muted-foreground">
                               {subItem.title}
