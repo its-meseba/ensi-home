@@ -2,14 +2,14 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["@testing-library/jest-dom"],
-    "allowJs": true,
+    "types": ["@testing-library/jest-dom", "node"],
+    "allowJs": false, // Disable if you're fully migrating to TypeScript
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", // Changed from 'bundler' to 'node' for better compatibility
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",

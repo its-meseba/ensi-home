@@ -185,7 +185,9 @@ export const NewNavbar = () => {
               </Button>
             </Link>
             <div className="hidden border-r md:inline"></div>
-            {/* <Button variant="outline" onClick={handleLinkClick}>{m.sign_in()}</Button> */}
+            <Link href="/blog">
+              <Button variant="link">Blog</Button>
+            </Link>
             {/* <Button onClick={handleLinkClick}>{m.get_started()}</Button> */}
             <LanguageSwitcher />
           </div>
