@@ -43,6 +43,10 @@ export const NewNavbar = () => {
           href: `/${locale}/ensi-home/ai-voice-assistant`,
         },
         {
+          title: m.smart_life_areas(),
+          href: `/${locale}/ensi-home/smart-life-areas`,
+        },
+        {
           title: m.compatible_smart_devices(),
           href: `/${locale}/ensi-home/compatible-smart-devices`,
         },
