@@ -69,7 +69,7 @@ interface SmartHomeAppProps {
 
 export default function SmartHomeApp({ onDeviceAction }: SmartHomeAppProps) {
   return (
-    <div className="flex h-screen items-center justify-center">
+    <div className="flex size-fit items-center justify-center">
       <div className="relative h-[700px] w-[400px] overflow-hidden rounded-[40px] border-4 border-gray-300 bg-gray-50 shadow-xl">
         <div className="absolute left-1/2 top-0 h-7 w-1/3 -translate-x-1/2 rounded-b-2xl bg-gray-300"></div>
         <div className="h-full overflow-y-auto">
