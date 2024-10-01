@@ -186,7 +186,7 @@ export const NewNavbar = () => {
             </Link>
             <div className="hidden border-r md:inline"></div>
             <Link href="/blog">
-              <Button variant="link">Blog</Button>
+              <Button variant="primary">Blog</Button>
             </Link>
             {/* <Button onClick={handleLinkClick}>{m.get_started()}</Button> */}
             <LanguageSwitcher />

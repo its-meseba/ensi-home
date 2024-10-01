@@ -2,7 +2,7 @@
 
 import type { Config } from 'tailwindcss';
 import tailwindcssAnimate from 'tailwindcss-animate';
-// import typography from '@tailwindcss/typography'; // Added Typography plugin
+import typography from '@tailwindcss/typography'; // Added Typography plugin
 
 const config: Config = {
   darkMode: ['class'],
@@ -85,7 +85,7 @@ const config: Config = {
   },
   plugins: [
     tailwindcssAnimate,
-    // typography, // Added Typography plugin
+    typography, // Added Typography plugin
   ],
 } satisfies Config;
 

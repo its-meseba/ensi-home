@@ -74,7 +74,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 <p className="text-sm text-gray-500 dark:text-gray-400">{postData.author.role}</p>
               </div>
             </div> */}
-            <Separator className="my-6" />
+            {/* <Separator className="my-6" /> */}
             <div className="prose prose-lg dark:prose-invert prose-img:rounded-md prose-a:text-blue-600 hover:prose-a:text-blue-500">
               <MdxRenderer source={source} />
             </div>
