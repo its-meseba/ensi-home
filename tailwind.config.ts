@@ -1,19 +1,23 @@
+// tailwind.config.ts
+
 import type { Config } from 'tailwindcss';
 import tailwindcssAnimate from 'tailwindcss-animate';
+import typography from '@tailwindcss/typography'; // Added Typography plugin
 
-const config = {
+const config: Config = {
   darkMode: ['class'],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx,mdx}', // Included MDX files in App Router
+    './components/**/*.{ts,tsx,mdx}',
+    './src/**/*.{ts,tsx,mdx}',
+    './content/**/*.{md,mdx}', // If you have a separate content directory
+    './pages/**/*.{ts,tsx,mdx}', // If Pages Router is also used
   ],
   prefix: '',
   theme: {
     fontFamily: {
-      sans: ['var(--font-sans)'],
-      mono: ['var(--font-mono)'],
+      sans: ['var(--font-sans)', 'sans-serif'], // Added fallback fonts
+      mono: ['var(--font-mono)', 'monospace'],
     },
     container: {
       center: true,
@@ -65,20 +69,12 @@ const config = {
       },
       keyframes: {
         'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
       },
       animation: {
@@ -87,7 +83,10 @@ const config = {
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [
+    tailwindcssAnimate,
+    typography, // Added Typography plugin
+  ],
 } satisfies Config;
 
 export default config;

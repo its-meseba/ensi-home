@@ -3,7 +3,7 @@
 import React from 'react';
 import {
   ChevronDown,
-  Moon,
+  // Moon,
   MoreVertical,
   Plus,
   Power,
@@ -69,7 +69,7 @@ interface SmartHomeAppProps {
 
 export default function SmartHomeApp({ onDeviceAction }: SmartHomeAppProps) {
   return (
-    <div className="flex h-screen items-center justify-center">
+    <div className="flex size-fit items-center justify-center">
       <div className="relative h-[700px] w-[400px] overflow-hidden rounded-[40px] border-4 border-gray-300 bg-gray-50 shadow-xl">
         <div className="absolute left-1/2 top-0 h-7 w-1/3 -translate-x-1/2 rounded-b-2xl bg-gray-300"></div>
         <div className="h-full overflow-y-auto">
@@ -111,12 +111,12 @@ export default function SmartHomeApp({ onDeviceAction }: SmartHomeAppProps) {
           <div className="p-4">
             <h2 className="mb-4 text-lg font-bold">Favorites</h2>
             <div className="mb-6 flex space-x-4">
-              <Button className="flex-1 border border-yellow-300 bg-yellow-100 text-xs text-yellow-800 transition-colors duration-300 hover:bg-yellow-200">
+              {/* <Button className="flex-1 border border-yellow-300 bg-yellow-100 text-xs text-yellow-800 transition-colors duration-300 hover:bg-yellow-200">
                 <Sun className="mr-2 size-3" /> Good morning
               </Button>
               <Button className="flex-1 border border-indigo-300 bg-indigo-100 text-xs text-indigo-800 transition-colors duration-300 hover:bg-indigo-200">
                 <Moon className="mr-2 size-3" /> Good night
-              </Button>
+              </Button> */}
             </div>
 
             <div className="grid grid-cols-2 gap-4">

@@ -1,0 +1,151 @@
+.
+├── actions
+│   └── hello-action.ts
+├── animations
+│   ├── airConditioner.json
+│   ├── coffeeMaker.json
+│   ├── fan.json
+│   ├── lightBulb.json
+│   ├── speaker.json
+│   ├── television.json
+│   └── washingMachine.json
+├── app
+│   ├── api
+│   │   ├── auth
+│   │   │   └── [...nextauth]
+│   │   │       ├── auth-options.ts
+│   │   │       └── route.ts
+│   │   └── stripe
+│   │       ├── checkout-session
+│   │       │   └── route.ts
+│   │       └── webhook
+│   │           └── route.ts
+│   ├── blog
+│   │   ├── page.tsx
+│   │   └── [slug]
+│   │       └── page.tsx
+│   ├── contact
+│   │   └── page.tsx
+│   ├── ensi-home
+│   │   ├── ai-voice-assistant
+│   │   │   └── page.tsx
+│   │   ├── box
+│   │   │   └── page.tsx
+│   │   ├── cloud
+│   │   │   └── page.tsx
+│   │   ├── compatible-smart-devices
+│   │   │   ├── [brandn]
+│   │   │   │   └── page.tsx
+│   │   │   └── page.tsx
+│   │   ├── mobile-application
+│   │   │   ├── device-animation.tsx
+│   │   │   ├── mobile-app.tsx
+│   │   │   └── page.tsx
+│   │   ├── page.tsx
+│   │   └── smart-life-areas
+│   │       └── page.tsx
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── posts
+│   │   ├── first-post.mdx
+│   │   └── second-post.mdx
+│   ├── robots.ts
+│   ├── sitemap.ts
+│   └── support
+│       ├── device-connections
+│       │   └── page.tsx
+│       ├── faq
+│       │   └── page.tsx
+│       ├── how-it-works
+│       │   └── page.tsx
+│       ├── page.tsx
+│       └── technical-support
+│           └── page.tsx
+├── components
+│   ├── common
+│   │   ├── content-section.tsx
+│   │   ├── intro-feature.tsx
+│   │   ├── intro-header.tsx
+│   │   └── sliding-cases.tsx
+│   ├── footer.tsx
+│   ├── form.tsx
+│   ├── icons.tsx
+│   ├── navbar
+│   │   ├── language-switcher.tsx
+│   │   ├── navbar.tsx
+│   │   ├── new-navbar.tsx
+│   │   ├── sign-in-button.tsx
+│   │   └── user-dropdown.tsx
+│   ├── pages
+│   │   ├── box
+│   │   │   ├── ai-assistant.tsx
+│   │   │   └── gltf-viewer.tsx
+│   │   ├── compatible-devices-second
+│   │   ├── compatible-devices.tsx
+│   │   ├── faq
+│   │   │   └── faq.tsx
+│   │   ├── home
+│   │   │   ├── google-gemini-effect.tsx
+│   │   │   └── orchestrator.tsx
+│   │   └── product-detail.tsx
+│   ├── theme-provider.tsx
+│   ├── theme-switcher.tsx
+│   └── ui
+│       ├── accordion.tsx
+│       ├── badge.tsx
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── carousel.tsx
+│       ├── checkbox.tsx
+│       ├── dropdown-menu.tsx
+│       ├── form.tsx
+│       ├── input.tsx
+│       ├── label.tsx
+│       ├── navigation-menu.tsx
+│       ├── scroll-area.tsx
+│       ├── select.tsx
+│       ├── separator.tsx
+│       ├── sheet.tsx
+│       ├── skeleton.tsx
+│       ├── textarea.tsx
+│       ├── toaster.tsx
+│       ├── toast.tsx
+│       └── use-toast.ts
+├── data
+│   ├── compatible-brands-and-devices.json
+│   └── types.ts
+├── env.mjs
+├── hooks
+│   └── use-mounted.ts
+├── lib
+│   ├── constant.ts
+│   ├── fonts.ts
+│   ├── i18n.ts
+│   ├── posts.ts
+│   ├── prisma.ts
+│   ├── stripe.ts
+│   └── utils.ts
+├── messages
+│   ├── en.json
+│   └── tr.json
+├── middleware.ts
+├── output
+├── paraglide
+│   ├── messages
+│   │   ├── en.js
+│   │   ├── pl.js
+│   │   └── tr.js
+│   ├── messages.js
+│   └── runtime.js
+├── styles
+│   └── globals.css
+├── __tests__
+│   ├── e2e
+│   │   └── home.spec.ts
+│   └── unit
+│       └── home.spec.tsx
+└── types
+    ├── faq.ts
+    └── user.ts
+
+45 directories, 103 files
