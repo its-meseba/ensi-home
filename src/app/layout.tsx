@@ -8,7 +8,7 @@ import { Footer } from '@/components/footer';
 import { NewNavbar } from '@/components/navbar/new-navbar';
 // import { Navbar } from '@/components/navbar/navbar';
 import { ThemeProvider } from '@/components/theme-provider';
-import { ThemeSwitcher } from '@/components/theme-switcher';
+// import { ThemeSwitcher } from '@/components/theme-switcher';
 import { Toaster } from '@/components/ui/toaster';
 import { siteConfig } from '@/lib/constant';
 import { fonts } from '@/lib/fonts';
@@ -57,7 +57,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           <ThemeProvider attribute="class">
             <NewNavbar />
             <main className="pt-20">{children}</main>
-            <ThemeSwitcher className="absolute bottom-5 right-5 z-10" />
+            {/* <ThemeSwitcher className="absolute bottom-5 right-5 z-10" /> */}
             <Footer />
             <Toaster />
           </ThemeProvider>

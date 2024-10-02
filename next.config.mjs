@@ -4,7 +4,7 @@ import withMDX from '@next/mdx'; // {{ edit_1 }}
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['avatars.githubusercontent.com', 'apps-cdn.athom.com'],
+    domains: ['avatars.githubusercontent.com', 'apps-cdn.athom.com', 'images.unsplash.com', 'assets.aceternity.com'],
   },
 
   transpilePackages: ['next-mdx-remote'],

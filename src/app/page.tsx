@@ -8,6 +8,7 @@ import { IntroHeader } from '../components/common/intro-header'; // Import
 import AiAssistant from '@/components/pages/box/ai-assistant';
 import GLTFViewer from '@/components/pages/box/gltf-viewer';
 import { EnsiHomeOrchestrator } from '@/components/pages/home/orchestrator';
+import { AppleCardsCarouselDemo } from '@/components/common/apple-cards';
 
 export default function MainPage() {
   const items = [
@@ -25,20 +26,31 @@ export default function MainPage() {
       component: AiAssistantPart,
     },
   ];
-
+  const backgroundMode =
+    'dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col';
+  const backgroundAssistance =
+    'absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]';
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 px-4 py-12 sm:px-6 lg:px-8">
+    // <TracingBeam className="px-6">
+    <section
+      className={`min-h-screen from-gray-100 to-gray-200 px-4 py-12 ${backgroundMode}`}
+    >
+      <div className={backgroundAssistance} />
       <div className="mx-auto w-full max-w-7xl">
+        {/* <GridBackgroundDemo /> */}
         <IntroHeader
           badgeText="New"
           title="Innovating the Future"
           description="We're at the forefront of mobile development, 3D visualization, and AI assistance. Our solutions are designed to transform your ideas into reality."
           imageUrl="/placeholder.svg?height=400&width=600&text=Company Overview" // Use the existing image URL
         />
-        <ContentSection items={items} /> <EnsiHomeOrchestrator />
+        <AppleCardsCarouselDemo />
         {/* Use the new ContentSection component */}
+        <ContentSection items={items} />
       </div>
+      <EnsiHomeOrchestrator />
     </section>
+    // </TracingBeam>
   );
 }
 function MobileApp() {
