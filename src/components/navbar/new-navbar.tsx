@@ -27,6 +27,12 @@ export const NewNavbar = () => {
       description: '',
     },
     {
+      title: 'Nasil Oluyor',
+      href: `/${locale}/support/how-it-is-done`,
+      description: '',
+      includedSmall: true,
+    },
+    {
       title: m.about_ensi_home(),
       description: m.about_ensi_home_description(),
       items: [
@@ -105,13 +111,15 @@ export const NewNavbar = () => {
                 {navigationItems.map((item) => (
                   <NavigationMenuItem key={item.title}>
                     {item.href ? (
-                      <>
-                        <Link href={item.href}>
-                          <Button variant="ghost" onClick={handleLinkClick}>
-                            {item.title}
-                          </Button>
-                        </Link>
-                      </>
+                      !item.includedSmall ? (
+                        <>
+                          <Link href={item.href}>
+                            <Button variant="ghost" onClick={handleLinkClick}>
+                              {item.title}
+                            </Button>
+                          </Link>
+                        </>
+                      ) : null
                     ) : (
                       <>
                         <NavigationMenuTrigger className="text-sm font-medium">
@@ -126,9 +134,11 @@ export const NewNavbar = () => {
                                   {item.description}
                                 </p>
                               </div>
-                              <Button size="sm" className="mt-10">
-                                {m.contact_with_us()}
-                              </Button>
+                              <Link href="/support/how-it-is-done" className="">
+                                <Button size="sm" className="mt-10">
+                                  {m.contact_with_us()}
+                                </Button>
+                              </Link>
                             </div>
                             <div className="flex h-full flex-col justify-end text-sm">
                               {item.items?.map((subItem) => (
@@ -179,7 +189,7 @@ export const NewNavbar = () => {
           </Link>
 
           <div className="flex w-full justify-end gap-4">
-            <Link href="/contact" className="hidden md:inline">
+            <Link href="/support/how-it-is-done" className="hidden md:inline">
               <Button variant="outline" onClick={handleLinkClick}>
                 {m.contact_with_us()}
               </Button>
@@ -201,31 +211,46 @@ export const NewNavbar = () => {
                   <div key={item.title}>
                     <div className="flex flex-col gap-2">
                       {item.href ? (
-                        <Link
-                          href={item.href}
-                          className="flex items-center justify-between"
-                          onClick={handleLinkClick}
-                        >
-                          <span className="text-lg">{item.title}</span>
-                          <MoveRight className="text-muted-foreground size-4 stroke-1" />
-                        </Link>
+                        item.includedSmall ? (
+                          <Link
+                            href={item.href}
+                            className="flex items-center justify-between"
+                            onClick={handleLinkClick}
+                          >
+                            <span className="text-primary text-lg">
+                              {item.title}
+                            </span>
+                            <MoveRight className="text-muted-foreground size-4 stroke-1" />
+                          </Link>
+                        ) : (
+                          <Link
+                            href={item.href}
+                            className="flex items-center justify-between"
+                            onClick={handleLinkClick}
+                          >
+                            <span className="text-lg">{item.title}</span>
+                            <MoveRight className="text-muted-foreground size-4 stroke-1" />
+                          </Link>
+                        )
                       ) : (
                         <p className="text-lg">{item.title}</p>
                       )}
                       {item.items &&
-                        item.items.map((subItem) => (
-                          <Link
-                            key={subItem.title}
-                            href={subItem.href}
-                            className="flex items-center justify-between"
-                            onClick={handleLinkClick}
-                          >
-                            <span className="text-muted-foreground">
-                              {subItem.title}
-                            </span>
-                            <MoveRight className="size-4 stroke-1" />
-                          </Link>
-                        ))}
+                        item.items.map((subItem, index) => {
+                          return (
+                            <Link
+                              key={subItem.title}
+                              href={subItem.href}
+                              className="flex items-center justify-between"
+                              onClick={handleLinkClick}
+                            >
+                              <span className="text-muted-foreground">
+                                {subItem.title}
+                              </span>
+                              <MoveRight className="size-4 stroke-1" />
+                            </Link>
+                          );
+                        })}
                     </div>
                   </div>
                 ))}

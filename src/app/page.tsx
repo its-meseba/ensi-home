@@ -84,7 +84,7 @@ function EnsiHomeBox() {
 function AiAssistantPart() {
   return (
     <div className="flex flex-col items-center">
-      <div className="relative h-[600px] w-[300px] rounded-lg bg-black shadow-lg">
+      <div className="relative mb-12 h-[400px] w-[300px] rounded-lg bg-black shadow-lg">
         <div className="absolute left-0 top-0 size-full rounded-lg bg-black">
           <AiAssistant />
         </div>
