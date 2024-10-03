@@ -1,4 +1,38 @@
-// import { IntroHeaderWithModel } from '@/components/common/intro-header';
+// Purpose: To detail the features and benefits of the Ensi Home Box (the brain device/hub).
+
+// Components:
+
+// Hero Section:
+
+// Headline: "Ensi Home Box - The Brain of Smart Living"
+// Background Image: 3D rendering of the Ensi Home Box.
+// Product Overview:
+
+// Describe what the Ensi Home Box is and its role.
+// Emphasize its importance in the smart home ecosystem.
+// Key Features:
+
+// List features such as:
+// Centralized control.
+// High compatibility.
+// Secure connectivity.
+// Scalability.
+// Technical Specifications:
+
+// Provide detailed specs for technical teams.
+// Downloadable PDF with full specifications.
+// Integration Process:
+
+// Explain how the box is installed during construction.
+// Highlight ease of integration.
+// Visuals:
+
+// Interactive 3D model using GLTFViewer component.
+// Images of the box in various settings.
+// Call to Action:
+
+// CTA Button: "Contact Us for Technical Details" - links to /contact/
+
 import { IntroFeatureWithModel } from '@/components/common/intro-feature'; // Import IntroFeatureWithModel component
 import { Case1 } from '@/components/common/sliding-cases';
 

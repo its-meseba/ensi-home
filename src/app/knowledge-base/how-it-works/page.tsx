@@ -96,3 +96,30 @@ export default function SmartHomeGuide() {
     </div>
   );
 }
+
+// Purpose: To delve into the technical aspects and functionality of your solutions.
+
+// Components:
+
+// Introduction:
+
+// Overview of the technology stack.
+// Sections:
+
+// Ensi Home Box:
+// Technical architecture.
+// Mobile Application:
+// User interface design.
+// Platform compatibility.
+// AI Voice Assistant:
+// AI algorithms.
+// Language processing.
+// Cloud Services:
+// Data flow diagrams.
+// Security protocols.
+// Visuals:
+
+// Diagrams, charts, and flowcharts.
+// Call to Action:
+
+// CTA Button: "Request Technical Documentation" - leads to a form or contact.

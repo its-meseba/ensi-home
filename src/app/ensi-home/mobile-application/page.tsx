@@ -252,3 +252,35 @@ export default function MobileApplicationPage() {
     </div>
   );
 }
+
+// Mobile Application Page (/ensi-home/mobile-application/)
+// Purpose: To showcase the mobile app's capabilities and how it enhances user experience.
+
+// Components:
+
+// Hero Section:
+
+// Headline: "Control at Your Fingertips with Our Mobile App"
+// Background Image: Smartphone displaying the app interface.
+// App Overview:
+
+// Describe the app's role in controlling the smart home.
+// Features:
+
+// Remote device control.
+// Real-time monitoring.
+// Scheduling and automation.
+// User-friendly interface.
+// User Experience:
+
+// Interactive demo using device-animation.tsx and mobile-app.tsx.
+// Screenshots of different app screens.
+// Customization:
+
+// Highlight ability to customize settings per user preference.
+// Benefits for Homeowners:
+
+// Emphasize convenience, security, and efficiency.
+// Call to Action:
+
+// CTA Button: "See the App in Action" - opens a demo or video.

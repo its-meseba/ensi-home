@@ -497,3 +497,26 @@ export default function EnhancedFilteredProducts() {
     </div>
   );
 }
+
+// Purpose: To inform about the range of devices compatible with Ensi Home systems.
+
+// Components:
+
+// Introduction:
+
+// Emphasize flexibility and wide compatibility.
+// Brands Section:
+
+// Logos and brief descriptions of compatible brands.
+// Each brand links to a dedicated page (/[brandn]/page.tsx) with more details.
+// Device Categories:
+
+// Lighting, Security, Climate Control, Appliances, etc.
+// Images and brief descriptions.
+// Integration Benefits:
+
+// Ease of adding preferred devices.
+// Future-proofing projects.
+// Call to Action:
+
+// CTA Button: "Discuss Device Integration" - links to /contact/

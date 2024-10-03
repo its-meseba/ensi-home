@@ -22,3 +22,34 @@ export default function DiscoverPage() {
     </div>
   );
 }
+
+// Purpose: To present the AI Voice Assistant and its capabilities.
+
+// Components:
+
+// Hero Section:
+
+// Headline: "Interact Naturally with Our AI Voice Assistant"
+// Background Image: Illustration of a user speaking to a device.
+// Assistant Overview:
+
+// Explain the assistant's role in the ecosystem.
+// Key Features:
+
+// Natural language understanding.
+// Multilingual support.
+// Integration with all smart devices.
+// Demonstration:
+
+// Interactive component using AiAssistant to showcase voice commands.
+// Benefits:
+
+// Hands-free control.
+// Accessibility.
+// Personalization.
+// Visuals:
+
+// Videos or animations demonstrating use cases.
+// Call to Action:
+
+// CTA Button: "Learn More About Our AI Solutions" - links to contact or demo.

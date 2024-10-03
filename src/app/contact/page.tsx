@@ -211,3 +211,31 @@ export default function ContactPage() {
 //     </div>
 //   );
 // }
+
+// Purpose: To provide an easy way for businesses to reach out.
+
+// Components:
+
+// Introduction:
+
+// Friendly message encouraging contact.
+// Contact Form:
+
+// Fields:
+// Company Name
+// Contact Person
+// Email Address
+// Phone Number
+// Project Details/Message
+// CTA Button: "Send Message"
+// Contact Information:
+
+// Physical address with an interactive map.
+// Phone number.
+// Email address.
+// Business Hours:
+
+// Availability for calls or meetings.
+// Social Media Links:
+
+// Icons linking to professional profiles (e.g., LinkedIn).

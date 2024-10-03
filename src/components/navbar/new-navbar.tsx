@@ -27,13 +27,14 @@ export const NewNavbar = () => {
       description: '',
     },
     {
-      title: 'Nasil Oluyor',
-      href: `/${locale}/support/how-it-is-done`,
+      title: 'Nasıl Oluyor',
+      href: `/${locale}/knowledge-base/how-it-is-done`,
       description: '',
       includedSmall: true,
     },
     {
       title: m.about_ensi_home(),
+      spanFirst: true,
       description: m.about_ensi_home_description(),
       items: [
         {
@@ -64,15 +65,15 @@ export const NewNavbar = () => {
       items: [
         {
           title: m.how_it_works(),
-          href: `/${locale}/support/how-it-works`,
-        },
-        {
-          title: m.faq(),
-          href: `/${locale}/support/faq`,
+          href: `/${locale}/knowledge-base/how-it-works`,
         },
         {
           title: m.technical_support(),
-          href: `/${locale}/support/technical-support`,
+          href: `/${locale}/knowledge-base/technical-knowledge-base`,
+        },
+        {
+          title: m.faq(),
+          href: `/${locale}/knowledge-base/faq`,
         },
       ],
     },
@@ -122,7 +123,10 @@ export const NewNavbar = () => {
                       ) : null
                     ) : (
                       <>
-                        <NavigationMenuTrigger className="text-sm font-medium">
+                        <NavigationMenuTrigger
+                          className="text-sm font-medium"
+                          spanFirstWord={item.spanFirst ? true : false}
+                        >
                           {item.title}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent className="!w-[450px] p-4">
@@ -134,7 +138,10 @@ export const NewNavbar = () => {
                                   {item.description}
                                 </p>
                               </div>
-                              <Link href="/support/how-it-is-done" className="">
+                              <Link
+                                href="/knowledge-base/how-it-is-done"
+                                className=""
+                              >
                                 <Button size="sm" className="mt-10">
                                   {m.contact_with_us()}
                                 </Button>
@@ -189,7 +196,10 @@ export const NewNavbar = () => {
           </Link>
 
           <div className="flex w-full justify-end gap-4">
-            <Link href="/support/how-it-is-done" className="hidden md:inline">
+            <Link
+              href="/knowledge-base/how-it-is-done"
+              className="hidden md:inline"
+            >
               <Button variant="outline" onClick={handleLinkClick}>
                 {m.contact_with_us()}
               </Button>

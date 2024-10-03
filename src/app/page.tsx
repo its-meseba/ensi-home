@@ -36,19 +36,31 @@ export default function MainPage() {
       className={`min-h-screen from-gray-100 to-gray-200 px-4 py-12 ${backgroundMode}`}
     >
       <div className={backgroundAssistance} />
+      {/* First Section, quick tour of all the things */}
       <div className="mx-auto w-full max-w-7xl">
-        {/* <GridBackgroundDemo /> */}
+        {/* 1. intro - greeting with Ensi Home */}
         <IntroHeader
-          badgeText="New"
+          badgeText="Smart Home"
           title="Innovating the Future"
           description="We're at the forefront of mobile development, 3D visualization, and AI assistance. Our solutions are designed to transform your ideas into reality."
           imageUrl="/placeholder.svg?height=400&width=600&text=Company Overview" // Use the existing image URL
         />
+        {/* 2. talking about the pillar features of Ensi Home */}
         <AppleCardsCarouselDemo />
-        {/* Use the new ContentSection component */}
+        {/* 3. what are the main pillar technologies of Ensi Home */}
         <ContentSection items={items} />
       </div>
+      {/* 4. further delve into Ensi Home with an indicator that the journey moves on */}
+      {/* Second Section */}
       <EnsiHomeOrchestrator />
+      <div className="mx-auto w-full max-w-7xl">
+        {/* 1.1. BENEFITS FOR USER -         The perks of having an Ensi Home - VALUE PROPOSITION*/}
+        {/* 1.2. BENEFITS FOR CONSTRUCTION - COMPANIES The perks of having an Ensi Home - VALUE PROPOSITION*/}
+        {/* 1.3. BENEFITS FOR WORK SITES -   The perks of having an Ensi Home - VALUE PROPOSITION*/}
+        {/* 2. References -                  featured projects and testimonials*/}
+        {/* 3. Have an Ensi Home now, apply now and we will reach to you*/}
+        {/* 4. Featuring Blog */}
+      </div>
     </section>
     // </TracingBeam>
   );
@@ -56,7 +68,6 @@ export default function MainPage() {
 function MobileApp() {
   return (
     <div className="flex flex-col items-center">
-      <h2 className="mb-4 text-2xl font-bold">Mobile App Showcase</h2>
       <div className="relative h-[600px] w-[300px] rounded-lg bg-white shadow-lg">
         <div className="absolute left-0 top-0 size-full rounded-lg bg-white">
           <Image

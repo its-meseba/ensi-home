@@ -108,3 +108,21 @@ export default function FAQPage() {
     </div>
   );
 }
+
+// Purpose: To answer common questions from construction companies.
+
+// Components:
+
+// Categorized Questions:
+
+// General
+// Technical
+// Process
+// Expandable question and answer sections.
+// Search Functionality:
+
+// Quickly find relevant FAQs.
+// Contact Prompt:
+
+// Message: "Can't find what you're looking for?"
+// CTA Button: "Contact Us" - links to /contact/

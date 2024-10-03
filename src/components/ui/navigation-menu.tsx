@@ -44,22 +44,47 @@ const navigationMenuTriggerStyle = cva(
   'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50'
 );
 
+interface NavigationMenuTriggerProps
+  extends React.ComponentPropsWithoutRef<
+    typeof NavigationMenuPrimitive.Trigger
+  > {
+  spanFirstWord?: boolean;
+}
+
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
-  <NavigationMenuPrimitive.Trigger
-    ref={ref}
-    className={cn(navigationMenuTriggerStyle(), 'group', className)}
-    {...props}
-  >
-    {children}{' '}
-    <ChevronDown
-      className="relative top-px ml-1 size-3 transition duration-200 group-data-[state=open]:rotate-180"
-      aria-hidden="true"
-    />
-  </NavigationMenuPrimitive.Trigger>
-));
+  NavigationMenuTriggerProps
+>(({ className, children, spanFirstWord = false, ...props }, ref) => {
+  const content = React.useMemo(() => {
+    if (typeof children === 'string' && spanFirstWord) {
+      const words = children.split(' ');
+      const firstWord = words.shift();
+      return (
+        <>
+          <span className="bg-primary text-primary-foreground mx-2 rounded px-1 py-0.5">
+            {firstWord}
+          </span>
+          {words.length > 0 && <> {words.join(' ')}</>}
+        </>
+      );
+    }
+    return children;
+  }, [children, spanFirstWord]);
+
+  return (
+    <NavigationMenuPrimitive.Trigger
+      ref={ref}
+      className={cn(navigationMenuTriggerStyle(), 'group', className)}
+      {...props}
+    >
+      {content}{' '}
+      <ChevronDown
+        className="relative top-px ml-1 size-3 transition duration-200 group-data-[state=open]:rotate-180"
+        aria-hidden="true"
+      />
+    </NavigationMenuPrimitive.Trigger>
+  );
+});
 NavigationMenuTrigger.displayName = NavigationMenuPrimitive.Trigger.displayName;
 
 const NavigationMenuContent = React.forwardRef<

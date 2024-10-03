@@ -29,3 +29,22 @@ export default function TechnicalSupportPage() {
     </div>
   );
 }
+// Purpose: To provide technical teams with detailed resources.
+
+// Components:
+
+// Resource Library:
+
+// Installation Guides
+// API Documentation
+// Integration Manuals
+// Downloadable PDFs and online readable content.
+// Search and Filters:
+
+// Allow users to find resources by category or keyword.
+// Support Contact:
+
+// Direct line or email for technical inquiries.
+// Call to Action:
+
+// CTA Button: "Need Further Assistance?" - links to /contact/
