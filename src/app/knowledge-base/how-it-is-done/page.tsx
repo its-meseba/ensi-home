@@ -13,6 +13,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { BackgroundGradientAnimationDemo } from '@/components/common/bg-gradient-animation-demo';
+import { TimelineDemo } from '@/components/common/timeline-card';
 
 const steps = [
   {
@@ -48,6 +49,7 @@ const steps = [
 export default function SmartHomeGuide() {
   return (
     <div className="flex flex-col items-center">
+      <TimelineDemo />
       {/* 
 Step 1: Understanding Your Needs
 

@@ -1,3 +1,4 @@
+// app/layout.tsx
 import '@/styles/globals.css';
 
 import { PropsWithChildren } from 'react';
@@ -6,14 +7,14 @@ import type { Metadata } from 'next';
 
 import { Footer } from '@/components/footer';
 import { NewNavbar } from '@/components/navbar/new-navbar';
-// import { Navbar } from '@/components/navbar/navbar';
-import { ThemeProvider } from '@/components/theme-provider';
-// import { ThemeSwitcher } from '@/components/theme-switcher';
-import { Toaster } from '@/components/ui/toaster';
 import { siteConfig } from '@/lib/constant';
 import { fonts } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import { languageTag } from '@/paraglide/runtime.js';
+
+import { Providers } from './providers'; // Import the Providers component
+import { VisitorTypeSelector } from '@/components/common/VisitorTypeSelector';
+import { AIHelperButton } from '@/components/common/AiHelperButton';
 
 export const generateMetadata = (): Metadata => ({
   metadataBase: new URL(siteConfig.url()),
@@ -54,13 +55,17 @@ const RootLayout = ({ children }: PropsWithChildren) => {
     <LanguageProvider>
       <html lang={languageTag()} suppressHydrationWarning>
         <body className={cn('min-h-screen font-sans', fonts)}>
-          <ThemeProvider attribute="class">
+          <Providers>
             <NewNavbar />
             <main className="pt-20">{children}</main>
-            {/* <ThemeSwitcher className="absolute bottom-5 right-5 z-10" /> */}
             <Footer />
-            <Toaster />
-          </ThemeProvider>
+            {/* Place the VisitorTypeSelector at the bottom left */}
+            <div className="fixed bottom-4 left-4 z-50">
+              <VisitorTypeSelector />
+            </div>
+            {/* Place the AIHelperButton at the bottom right */}
+            <AIHelperButton />
+          </Providers>
         </body>
       </html>
     </LanguageProvider>

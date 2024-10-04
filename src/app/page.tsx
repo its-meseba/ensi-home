@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import {
   ContentSection,
   ContentItemProps,
@@ -14,42 +13,9 @@ import {
   ThreeComponentiPhoneMockup,
   TwoComponentiPhoneMockup,
 } from '@/components/common/apple-mockup';
-
-function MobileApp() {
-  return (
-    <div className="flex flex-col items-center">
-      <div className="relative h-[600px] w-[300px] rounded-lg bg-white shadow-lg">
-        <div className="absolute left-0 top-0 size-full rounded-lg bg-white">
-          <ThreeComponentiPhoneMockup>
-            <div className="bg-white"></div>
-          </ThreeComponentiPhoneMockup>
-        </div>
-        <div className="absolute bottom-0 left-0 h-10 w-full rounded-b-lg bg-white"></div>
-      </div>
-    </div>
-  );
-}
-
-function EnsiHomeBox() {
-  return (
-    <div className="flex flex-col items-center">
-      <GLTFViewer modelUrl="/assets/models/ensi-home-box.glb" />
-    </div>
-  );
-}
-
-function AiAssistantPart() {
-  return (
-    <div className="flex flex-col items-center">
-      <div className="relative h-[400px] w-[300px] rounded-3xl shadow-lg">
-        <div className="absolute left-0 top-0 size-full rounded-3xl bg-black">
-          <AiAssistant />
-        </div>
-        <div className="absolute bottom-0 left-0 h-10 w-full rounded-3xl bg-black"></div>
-      </div>
-    </div>
-  );
-}
+import { VisitorTypeModal } from '@/components/common/VisitorTypeModal';
+import { VisitorTypeSelector } from '@/components/common/VisitorTypeSelector';
+import { useVisitorType } from '@/context/VisitorTypeContext';
 
 export default function MainPage() {
   const items: ContentItemProps[] = [
@@ -85,7 +51,10 @@ export default function MainPage() {
     <section
       className={`min-h-screen from-gray-100 to-gray-200 px-4 py-12 ${backgroundMode}`}
     >
+      <VisitorTypeModal />
+
       <div className={backgroundAssistance} />
+      {/* 0. sen kimsin? diye site acildiginda soru sorulacak */}
       {/* First Section, quick tour of all the things */}
       <div className="mx-auto w-full max-w-7xl">
         {/* 1. intro - greeting with Ensi Home */}
@@ -106,11 +75,47 @@ export default function MainPage() {
       <div className="mx-auto w-full max-w-7xl">
         {/* 1.1. BENEFITS FOR USER -         The perks of having an Ensi Home - VALUE PROPOSITION*/}
         {/* 1.2. BENEFITS FOR CONSTRUCTION - COMPANIES The perks of having an Ensi Home - VALUE PROPOSITION*/}
-        {/* 1.3. BENEFITS FOR WORK SITES -   The perks of having an Ensi Home - VALUE PROPOSITION*/}
+        {/* 1.3. BENEFITS FOR WORK/BUSINESS SITES -   The perks of having an Ensi Home - VALUE PROPOSITION*/}
         {/* 2. References -                  featured projects and testimonials*/}
         {/* 3. Have an Ensi Home now, apply now and we will reach to you*/}
         {/* 4. Featuring Blog */}
       </div>
     </section>
+  );
+}
+
+function MobileApp() {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="relative h-[600px] w-[300px] rounded-lg bg-white shadow-lg">
+        <div className="absolute left-0 top-0 size-full rounded-lg bg-white">
+          <ThreeComponentiPhoneMockup>
+            <div className="bg-white"></div>
+          </ThreeComponentiPhoneMockup>
+        </div>
+        <div className="absolute bottom-0 left-0 h-10 w-full rounded-b-lg bg-white"></div>
+      </div>
+    </div>
+  );
+}
+
+function EnsiHomeBox() {
+  return (
+    <div className="flex flex-col items-center">
+      <GLTFViewer modelUrl="/assets/models/ensi-home-box.glb" />
+    </div>
+  );
+}
+
+function AiAssistantPart() {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="relative h-[400px] w-[300px] rounded-3xl shadow-lg">
+        <div className="absolute left-0 top-0 size-full rounded-3xl bg-black">
+          <AiAssistant />
+        </div>
+        <div className="absolute bottom-0 left-0 h-10 w-full rounded-3xl bg-black"></div>
+      </div>
+    </div>
   );
 }

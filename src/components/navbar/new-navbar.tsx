@@ -1,12 +1,12 @@
 'use client';
 
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { Menu, MoveRight, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { LanguageSwitcher } from './language-switcher';
-
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,

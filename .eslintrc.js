@@ -20,6 +20,8 @@ module.exports = {
 
     // Disable the no-unused-vars rule
     '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-empty-object-type': 'off',
     'no-unused-vars': 'off',
 
     // 'simple-import-sort/imports': 'off', // Just to ensure no sorting rule is applied
