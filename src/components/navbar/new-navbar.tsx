@@ -200,13 +200,13 @@ export const NewNavbar = () => {
               href="/knowledge-base/how-it-is-done"
               className="hidden md:inline"
             >
-              <Button variant="outline" onClick={handleLinkClick}>
+              <Button variant="primary" onClick={handleLinkClick}>
                 {m.contact_with_us()}
               </Button>
             </Link>
             <div className="hidden border-r md:inline"></div>
             <Link href="/blog">
-              <Button variant="primary">Blog</Button>
+              <Button variant="outline">Blog</Button>
             </Link>
             {/* <Button onClick={handleLinkClick}>{m.get_started()}</Button> */}
             <LanguageSwitcher />
