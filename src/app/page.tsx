@@ -54,7 +54,7 @@ export default function MainPage() {
 
   return (
     <section className={`min-h-screen from-gray-100 to-gray-200 px-4 py-12 `}>
-      <VisitorTypeModal />
+      {/* <VisitorTypeModal /> */}
 
       {/* <div className={backgroundAssistance} /> */}
       {/* 0. sen kimsin? diye site acildiginda soru sorulacak */}

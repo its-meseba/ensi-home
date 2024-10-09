@@ -7,6 +7,8 @@ type VisitorType = 'homeOwner' | 'constructionCompany' | 'businessOwner' | null;
 interface VisitorTypeContextType {
   visitorType: VisitorType;
   setVisitorType: (type: VisitorType) => void;
+  showModal: boolean;
+  setShowModal: (show: boolean) => void;
 }
 
 const VisitorTypeContext = createContext<VisitorTypeContextType | undefined>(
@@ -19,22 +21,35 @@ export function VisitorTypeProvider({
   children: React.ReactNode;
 }) {
   const [visitorType, setVisitorType] = useState<VisitorType>(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const storedType = localStorage.getItem('visitorType') as VisitorType;
     if (storedType) {
       setVisitorType(storedType);
+    } else {
+      setShowModal(true);
     }
   }, []);
 
   const updateVisitorType = (type: VisitorType) => {
     setVisitorType(type);
-    localStorage.setItem('visitorType', type as string);
+    if (type) {
+      localStorage.setItem('visitorType', type);
+    } else {
+      localStorage.removeItem('visitorType');
+    }
+    setShowModal(false);
   };
 
   return (
     <VisitorTypeContext.Provider
-      value={{ visitorType, setVisitorType: updateVisitorType }}
+      value={{
+        visitorType,
+        setVisitorType: updateVisitorType,
+        showModal,
+        setShowModal,
+      }}
     >
       {children}
     </VisitorTypeContext.Provider>

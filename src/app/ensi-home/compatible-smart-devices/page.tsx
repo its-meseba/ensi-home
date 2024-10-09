@@ -479,7 +479,7 @@ export default function EnhancedFilteredProducts() {
               className="flex items-center gap-2 rounded-full px-6 py-3 shadow-lg"
             >
               <Filter className="size-5" />
-              Filters
+
               {(selectedCategories.length > 0 ||
                 selectedTechnologies.length > 0) && (
                 <Badge variant="secondary" className="ml-2">

@@ -1,37 +1,6 @@
-// Purpose: To detail the features and benefits of the Ensi Home Box (the brain device/hub).
+'use client';
 
-// Components:
-
-// Hero Section:
-
-// Headline: "Ensi Home Box - The Brain of Smart Living"
-// Background Image: 3D rendering of the Ensi Home Box.
-// Product Overview:
-
-// Describe what the Ensi Home Box is and its role.
-// Emphasize its importance in the smart home ecosystem.
-// Key Features:
-
-// List features such as:
-// Centralized control.
-// High compatibility.
-// Secure connectivity.
-// Scalability.
-// Technical Specifications:
-
-// Provide detailed specs for technical teams.
-// Downloadable PDF with full specifications.
-// Integration Process:
-
-// Explain how the box is installed during construction.
-// Highlight ease of integration.
-// Visuals:
-
-// Interactive 3D model using GLTFViewer component.
-// Images of the box in various settings.
-// Call to Action:
-
-// CTA Button: "Contact Us for Technical Details" - links to /contact/
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -57,10 +26,33 @@ const logos = [
   '/images/logo/small.svg',
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 export default function BoxPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <section className="mb-16">
+    <motion.div
+      className="container mx-auto px-4 py-0"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <motion.section className="mb-0" variants={itemVariants}>
         <IntroFeatureWithModel
           platform="Smart Home"
           title="Ensi Home Box - The Brain of Smart Living"
@@ -84,70 +76,64 @@ export default function BoxPage() {
           ]}
           modelUrl="/assets/models/ensi-home-box.glb"
         />
-      </section>
+      </motion.section>
 
-      <section className="mb-16">
-        <h2 className="mb-8 text-3xl font-bold">Key Features</h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Zap className="mr-2" />
-                Centralized Control
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>
-                Manage all your smart devices from a single, intuitive
-                interface.
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Shield className="mr-2" />
-                Secure Connectivity
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>
-                Advanced encryption and security protocols to protect your home
-                network.
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Maximize className="mr-2" />
-                High Compatibility
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>
-                Seamlessly integrates with a wide range of smart home devices
-                and protocols.
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Download className="mr-2" />
-                Scalability
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>Easily expand your smart home system as your needs grow.</p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+      <motion.section className="mb-16" variants={containerVariants}>
+        <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
+          Key Features
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
+          variants={containerVariants}
+        >
+          {[
+            {
+              icon: <Zap className="mr-2" />,
+              title: 'Centralized Control',
+              description:
+                'Manage all your smart devices from a single, intuitive interface.',
+            },
+            {
+              icon: <Shield className="mr-2" />,
+              title: 'Secure Connectivity',
+              description:
+                'Advanced encryption and security protocols to protect your home network.',
+            },
+            {
+              icon: <Maximize className="mr-2" />,
+              title: 'High Compatibility',
+              description:
+                'Seamlessly integrates with a wide range of smart home devices and protocols.',
+            },
+            {
+              icon: <Download className="mr-2" />,
+              title: 'Scalability',
+              description:
+                'Easily expand your smart home system as your needs grow.',
+            },
+          ].map((feature, index) => (
+            <motion.div key={index} variants={itemVariants}>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    {feature.icon}
+                    {feature.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>{feature.description}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.section>
 
-      <section className="mb-16">
-        <h2 className="mb-8 text-3xl font-bold">Technical Specifications</h2>
-        <div className="bg-muted rounded-lg p-6">
+      <motion.section className="mb-16" variants={containerVariants}>
+        <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
+          Technical Specifications
+        </motion.h2>
+        <motion.div className="bg-muted rounded-lg p-6" variants={itemVariants}>
           <ul className="list-inside list-disc space-y-2">
             <li>Processor: Quad-core ARM Cortex-A53</li>
             <li>Memory: 2GB RAM</li>
@@ -160,13 +146,18 @@ export default function BoxPage() {
             <Download className="mr-2 size-4" /> Download Full Specifications
             (PDF)
           </Button>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
 
-      <section className="mb-16">
-        <h2 className="mb-8 text-3xl font-bold">Integration Process</h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div>
+      <motion.section className="mb-16" variants={containerVariants}>
+        <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
+          Integration Process
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 gap-8 md:grid-cols-2"
+          variants={containerVariants}
+        >
+          <motion.div variants={itemVariants}>
             <h3 className="mb-4 text-xl font-semibold">Easy Installation</h3>
             <p className="mb-4">
               The Ensi Home Box is designed for seamless integration during the
@@ -181,8 +172,8 @@ export default function BoxPage() {
               <li>Device pairing and system testing</li>
               <li>User training and handover</li>
             </ol>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={itemVariants}>
             <Image
               src="/placeholder.svg?height=300&width=400"
               alt="Ensi Home Box Installation"
@@ -190,51 +181,66 @@ export default function BoxPage() {
               height={300}
               className="rounded-lg"
             />
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        </motion.div>
+      </motion.section>
 
-      <section className="mb-16">
-        <h2 className="mb-8 text-3xl font-bold">Ensi Home Box in Action</h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <Image
-            src="/placeholder.svg?height=200&width=300"
-            alt="Ensi Home Box in Living Room"
-            width={300}
-            height={200}
-            className="rounded-lg"
-          />
-          <Image
-            src="/placeholder.svg?height=200&width=300"
-            alt="Ensi Home Box in Kitchen"
-            width={300}
-            height={200}
-            className="rounded-lg"
-          />
-          <Image
-            src="/placeholder.svg?height=200&width=300"
-            alt="Ensi Home Box in Home Office"
-            width={300}
-            height={200}
-            className="rounded-lg"
-          />
-        </div>
-      </section>
+      <motion.section className="mb-16" variants={containerVariants}>
+        <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
+          Ensi Home Box in Action
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 gap-6 md:grid-cols-3"
+          variants={containerVariants}
+        >
+          {[
+            {
+              src: '/placeholder.svg?height=200&width=300',
+              alt: 'Ensi Home Box in Living Room',
+            },
+            {
+              src: '/placeholder.svg?height=200&width=300',
+              alt: 'Ensi Home Box in Kitchen',
+            },
+            {
+              src: '/placeholder.svg?height=200&width=300',
+              alt: 'Ensi Home Box in Home Office',
+            },
+          ].map((image, index) => (
+            <motion.div key={index} variants={itemVariants}>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={300}
+                height={200}
+                className="rounded-lg"
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.section>
 
-      <section className="mb-16 text-center">
-        <h2 className="mb-4 text-3xl font-bold">
+      <motion.section
+        className="mb-16 text-center"
+        variants={containerVariants}
+      >
+        <motion.h2 className="mb-4 text-3xl font-bold" variants={itemVariants}>
           Ready to Transform Your Home?
-        </h2>
-        <p className="mb-8">
+        </motion.h2>
+        <motion.p className="mb-8" variants={itemVariants}>
           Get in touch with our team for personalized assistance and technical
           details.
-        </p>
-        <Link href="/contact">
-          <Button size="lg">Contact Us for Technical Details</Button>
-        </Link>
-      </section>
+        </motion.p>
+        <motion.div variants={itemVariants}>
+          <Link href="/contact">
+            <Button size="lg">Contact Us for Technical Details</Button>
+          </Link>
+        </motion.div>
+      </motion.section>
 
-      <Case1 title="Our Partners" logos={logos} interval={3000} />
-    </div>
+      <motion.section variants={itemVariants}>
+        <Case1 title="Our Partners" logos={logos} interval={3000} />
+      </motion.section>
+    </motion.div>
   );
 }

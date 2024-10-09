@@ -88,7 +88,7 @@ export const IntroFeatureWithModel = ({
   checkPoints,
   modelUrl, // Destructure modelUrl from props
 }: IntroFeatureWithModelProps) => (
-  <div className="w-full py-20 lg:py-40">
+  <div className="w-full py-12 lg:py-12">
     <div className="container mx-auto">
       <div className="container grid grid-cols-1 items-center gap-8 rounded-lg border py-8 lg:grid-cols-2">
         <div className="flex flex-col gap-10">

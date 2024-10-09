@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   ChevronLeft,
   ChevronRight,
@@ -202,6 +203,24 @@ const categories = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 export default function SmartLifeAreas() {
   const [currentIndexes, setCurrentIndexes] = useState(categories.map(() => 0));
 
@@ -217,37 +236,51 @@ export default function SmartLifeAreas() {
     setCurrentIndexes((prev) =>
       prev.map((current, i) =>
         i === index
-          ? Math.min(current + 1, categories[i].apps.length - 3) // Show 3 apps at a time
+          ? Math.min(current + 1, categories[i].apps.length - 3)
           : current
       )
     );
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-50">
+    <motion.div
+      className="flex min-h-screen flex-col bg-gray-50"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       {/* Header */}
-      <header className="bg-white p-6 shadow-md">
+      <motion.header className="bg-white p-6 shadow-md" variants={itemVariants}>
         <h1 className="font-regular text-center text-5xl tracking-tighter md:text-7xl">
           {m.smart_life_areas()}
         </h1>
-      </header>
+      </motion.header>
 
       {/* Main Content */}
-      <main className="grow p-6">
+      <motion.main className="grow p-6" variants={containerVariants}>
         <div className="mx-auto max-w-7xl space-y-12">
           {categories.map((category, index) => (
-            <section key={index} className="space-y-6">
+            <motion.section
+              key={index}
+              className="space-y-6"
+              variants={itemVariants}
+            >
               {/* Category Header */}
-              <div className="flex items-center space-x-3">
+              <motion.div
+                className="flex items-center space-x-3"
+                variants={itemVariants}
+              >
                 {category.icon}
                 <h2 className="text-2xl font-semibold text-gray-800">
                   {category.title}
                 </h2>
-              </div>
-              <p className="text-gray-600">{category.description}</p>
+              </motion.div>
+              <motion.p className="text-gray-600" variants={itemVariants}>
+                {category.description}
+              </motion.p>
 
               {/* Carousel */}
-              <div className="relative">
+              <motion.div className="relative" variants={itemVariants}>
                 {/* Previous Button */}
                 {currentIndexes[index] > 0 && (
                   <Button
@@ -262,33 +295,42 @@ export default function SmartLifeAreas() {
 
                 {/* Cards Container */}
                 <div className="overflow-hidden">
-                  <div
+                  <motion.div
                     className="flex transition-transform duration-300 ease-in-out"
                     style={{
                       transform: `translateX(-${currentIndexes[index] * 270}px)`,
                     }}
                   >
-                    {category.apps.map((app, appIndex) => (
-                      <Card
-                        key={appIndex}
-                        className="mr-6 w-64 shrink-0 shadow-sm"
-                      >
-                        <CardContent className="p-0">
-                          <img
-                            src={app.image}
-                            alt={app.name}
-                            className="h-40 w-full rounded-t-lg object-cover"
-                          />
-                        </CardContent>
-                        <CardFooter className="flex flex-col items-start space-y-2 p-4">
-                          <h3 className="text-lg font-semibold text-gray-800">
-                            {app.name}
-                          </h3>
-                          <p className="text-sm text-gray-500">{app.company}</p>
-                        </CardFooter>
-                      </Card>
-                    ))}
-                  </div>
+                    <AnimatePresence>
+                      {category.apps.map((app, appIndex) => (
+                        <motion.div
+                          key={appIndex}
+                          initial={{ opacity: 0, x: 50 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: -50 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Card className="mr-6 w-64 shrink-0 shadow-sm">
+                            <CardContent className="p-0">
+                              <img
+                                src={app.image}
+                                alt={app.name}
+                                className="h-40 w-full rounded-t-lg object-cover"
+                              />
+                            </CardContent>
+                            <CardFooter className="flex flex-col items-start space-y-2 p-4">
+                              <h3 className="text-lg font-semibold text-gray-800">
+                                {app.name}
+                              </h3>
+                              <p className="text-sm text-gray-500">
+                                {app.company}
+                              </p>
+                            </CardFooter>
+                          </Card>
+                        </motion.div>
+                      ))}
+                    </AnimatePresence>
+                  </motion.div>
                 </div>
 
                 {/* Next Button */}
@@ -302,42 +344,20 @@ export default function SmartLifeAreas() {
                     <ChevronRight className="size-5 text-gray-700" />
                   </Button>
                 )}
-              </div>
-            </section>
+              </motion.div>
+            </motion.section>
           ))}
         </div>
-      </main>
+      </motion.main>
 
       {/* Footer */}
-      <footer className="bg-white p-6 text-center text-gray-500 shadow-inner">
+      <motion.footer
+        className="bg-white p-6 text-center text-gray-500 shadow-inner"
+        variants={itemVariants}
+      >
         © {new Date().getFullYear()} Smart Home App Gallery. All rights
         reserved.
-      </footer>
-    </div>
+      </motion.footer>
+    </motion.div>
   );
 }
-
-// Purpose: To illustrate how different areas of a home can be enhanced with smart technology.
-
-// Components:
-
-// Introduction:
-
-// Overview of transforming living spaces.
-// Life Areas Sections:
-
-// Living Room:
-// Smart lighting, entertainment systems.
-// Kitchen:
-// Smart appliances, energy monitoring.
-// Bedroom:
-// Climate control, automated blinds.
-// Bathroom:
-// Smart mirrors, water usage tracking.
-// Each section includes images, features, and benefits.
-// Interactive Home Tour:
-
-// Virtual walkthrough showcasing smart features in each area.
-// Call to Action:
-
-// CTA Button: "Start Enhancing Your Projects" - links to /contact/

@@ -9,38 +9,64 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { useVisitorType } from '@/context/VisitorTypeContext';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const visitorTypes = [
+  { type: 'homeOwner', label: 'Home Owner' },
+  { type: 'constructionCompany', label: 'Construction Company' },
+  { type: 'businessOwner', label: 'Business Owner' },
+];
 
 export function VisitorTypeModal() {
-  const { visitorType, setVisitorType } = useVisitorType();
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    if (!visitorType) {
-      setIsOpen(true);
-    }
-  }, [visitorType]);
+  const { visitorType, setVisitorType, showModal, setShowModal } =
+    useVisitorType();
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleSelect = (
     type: 'homeOwner' | 'constructionCompany' | 'businessOwner'
   ) => {
     setVisitorType(type);
-    setIsOpen(false);
+    setShowModal(false);
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent>
+    <Dialog open={showModal} onOpenChange={setShowModal}>
+      <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Welcome! What type of visitor are you?</DialogTitle>
+          <DialogTitle className="text-center">
+            Welcome! What type of visitor are you?
+          </DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <Button onClick={() => handleSelect('homeOwner')}>Home Owner</Button>
-          <Button onClick={() => handleSelect('constructionCompany')}>
-            Construction Company
-          </Button>
-          <Button onClick={() => handleSelect('businessOwner')}>
-            Business Owner
-          </Button>
+          <AnimatePresence>
+            {visitorTypes.map((item, index) => (
+              <motion.div
+                key={item.type}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale:
+                    hoveredIndex === index
+                      ? 1.05
+                      : hoveredIndex === null
+                        ? 1
+                        : 0.95,
+                }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ delay: index * 0.15, duration: 0.3 }}
+              >
+                <Button
+                  className="w-full py-6 text-lg transition-all duration-300"
+                  onClick={() => handleSelect(item.type as any)}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  {item.label}
+                </Button>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
       </DialogContent>
     </Dialog>

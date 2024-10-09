@@ -50,6 +50,10 @@ export const NewNavbar = () => {
           href: `/${locale}/ensi-home/ai-voice-assistant`,
         },
         {
+          title: 'Cloud',
+          href: `/${locale}/ensi-home/cloud`,
+        },
+        {
           title: m.smart_life_areas(),
           href: `/${locale}/ensi-home/smart-life-areas`,
         },
@@ -68,12 +72,16 @@ export const NewNavbar = () => {
           href: `/${locale}/knowledge-base/how-it-works`,
         },
         {
+          title: m.faq(),
+          href: `/${locale}/knowledge-base/faq`,
+        },
+        {
           title: m.technical_support(),
           href: `/${locale}/knowledge-base/technical-knowledge-base`,
         },
         {
-          title: m.faq(),
-          href: `/${locale}/knowledge-base/faq`,
+          title: 'Contact',
+          href: `/${locale}/knowledge-base/contact`,
         },
       ],
     },
