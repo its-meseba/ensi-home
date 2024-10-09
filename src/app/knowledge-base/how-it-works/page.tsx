@@ -1,10 +1,18 @@
 'use client';
 
 import React from 'react';
-import { MapPin, Smartphone, Tv, Wifi } from 'lucide-react';
-
+import {
+  MapPin,
+  Smartphone,
+  Tv,
+  Wifi,
+  Box,
+  Cpu,
+  Cloud,
+  Lock,
+} from 'lucide-react';
 import { IntroFeature } from '@/components/common/intro-feature';
-import { Card, CardHeader } from '@/components/ui/card';
+import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import {
   Carousel,
   CarouselContent,
@@ -12,6 +20,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const steps = [
   {
@@ -43,6 +53,55 @@ const steps = [
     color: 'bg-red-100',
   },
 ];
+const techStack = [
+  { name: 'React Native', icon: '/icons/react-native.svg' },
+  { name: 'Node.js', icon: '/icons/nodejs.svg' },
+  { name: 'TensorFlow', icon: '/icons/tensorflow.svg' },
+  { name: 'AWS', icon: '/icons/aws.svg' },
+];
+
+const sections = [
+  {
+    title: 'Ensi Home Box',
+    description: 'The central hub of your smart home system.',
+    icon: <Box className="size-8 text-blue-500" />,
+    details: [
+      'Multi-protocol support (Wi-Fi, Zigbee, Z-Wave)',
+      'Edge computing capabilities',
+      'Secure local data processing',
+    ],
+  },
+  {
+    title: 'Mobile Application',
+    description: 'Control your home from anywhere.',
+    icon: <Smartphone className="size-8 text-green-500" />,
+    details: [
+      'Cross-platform compatibility (iOS & Android)',
+      'Intuitive user interface',
+      'Real-time device status updates',
+    ],
+  },
+  {
+    title: 'AI Voice Assistant',
+    description: 'Your intelligent home companion.',
+    icon: <Cpu className="size-8 text-purple-500" />,
+    details: [
+      'Natural Language Processing',
+      'Context-aware responses',
+      'Multi-language support',
+    ],
+  },
+  {
+    title: 'Cloud Services',
+    description: 'Seamless integration and data management.',
+    icon: <Cloud className="size-8 text-orange-500" />,
+    details: [
+      'Scalable architecture',
+      'Data analytics and insights',
+      'Automated firmware updates',
+    ],
+  },
+];
 
 export default function SmartHomeGuide() {
   return (
@@ -53,19 +112,26 @@ export default function SmartHomeGuide() {
           <IntroFeature
             platform="How It Works"
             title="Understanding Your Smart Home"
-            description="Learn how to make the most of your Ensi Home system."
+            description="Learn how to make the most of your Ensi Home system and explore its advanced technical features."
             checkPoints={[
               {
                 title: 'Setup Guide',
-                description: 'Step-by-step installation.',
+                description: 'Step-by-step installation process.',
               },
               {
                 title: 'Device Management',
-                description: 'Easily manage your devices.',
+                description: 'Easily manage and control your smart devices.',
+              },
+              {
+                title: 'Technical Deep Dive',
+                description:
+                  'Explore the advanced technology powering your smart home.',
               },
             ]}
-            imageUrl="/path/to/image.jpg" // Provide the correct image URL
+            imageUrl="/images/smart-home-overview.jpg"
           />
+
+          <h2 className="mb-8 mt-16 text-2xl font-semibold">Getting Started</h2>
           <Carousel className="w-full max-w-[95%]">
             <CarouselContent>
               {steps.map((step, index) => (
@@ -91,6 +157,59 @@ export default function SmartHomeGuide() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+
+          <h2 className="mb-8 mt-16 text-2xl font-semibold">
+            Technology Stack
+          </h2>
+          <div className="mb-16 flex flex-wrap justify-center gap-8">
+            {techStack.map((tech, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <Image src={tech.icon} alt={tech.name} width={64} height={64} />
+                <span className="mt-2 text-sm font-medium">{tech.name}</span>
+              </div>
+            ))}
+          </div>
+
+          <h2 className="mb-8 mt-16 text-2xl font-semibold">
+            Technical Deep Dive
+          </h2>
+          <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2">
+            {sections.map((section, index) => (
+              <Card key={index} className="w-full">
+                <CardHeader>
+                  <div className="flex items-center gap-4">
+                    {section.icon}
+                    <h3 className="text-xl font-semibold">{section.title}</h3>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="mb-4 text-gray-600">{section.description}</p>
+                  <ul className="list-inside list-disc">
+                    {section.details.map((detail, idx) => (
+                      <li key={idx} className="text-sm text-gray-700">
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-16 flex flex-col items-center">
+            <h2 className="mb-4 text-2xl font-semibold">Security First</h2>
+            <p className="mb-8 max-w-2xl text-center">
+              At Ensi Home, we prioritize the security and privacy of your data.
+              Our systems employ end-to-end encryption, regular security audits,
+              and follow best practices to ensure your smart home remains
+              secure.
+            </p>
+            <Lock className="mb-4 size-16 text-green-500" />
+          </div>
+
+          <Button size="lg" className="mt-12">
+            Request Technical Documentation
+          </Button>
         </div>
       </div>
     </div>

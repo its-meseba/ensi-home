@@ -32,17 +32,17 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className="w-full bg-white font-sans md:px-10 dark:bg-neutral-950"
       ref={containerRef}
     >
-      <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 lg:px-10">
+      {/* <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 lg:px-10">
         <h2 className="mb-4 max-w-4xl text-lg text-black md:text-4xl dark:text-white">
-          Changelog from my journey
+          Our Collaborative Process
         </h2>
         <p className="max-w-sm text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
+          Seamless integration of smart home solutions for construction
+          projects.
         </p>
-      </div>
+      </div> */}
 
-      <div ref={ref} className="relative mx-auto max-w-7xl pb-20">
+      <div ref={ref} className="relative mx-auto max-w-full pb-20">
         {data.map((item, index) => (
           <div
             key={index}
@@ -52,7 +52,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="absolute left-3 flex size-10 items-center justify-center rounded-full bg-white md:left-3 dark:bg-black">
                 <div className="size-4 rounded-full border border-neutral-300 bg-neutral-200 p-2 dark:border-neutral-700 dark:bg-neutral-800" />
               </div>
-              <h3 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-5xl dark:text-neutral-500 ">
+              <h3 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-4xl dark:text-neutral-500 ">
                 {item.title}
               </h3>
             </div>
