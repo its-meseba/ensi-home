@@ -1,4 +1,3 @@
-// components/VisitorTypeSelector.tsx
 'use client';
 
 import { Button } from '@/components/ui/button';
@@ -17,14 +16,20 @@ export function VisitorTypeSelector() {
   const getIcon = () => {
     switch (visitorType) {
       case 'homeOwner':
-        return <User className="mr-2 size-4" />;
+        return <User className="size-4" />;
       case 'constructionCompany':
-        return <Building className="mr-2 size-4" />;
+        return <Building className="size-4" />;
       case 'businessOwner':
-        return <Briefcase className="mr-2 size-4" />;
+        return <Briefcase className="size-4" />;
       default:
         return null;
     }
+  };
+
+  const getLabel = () => {
+    if (!visitorType) return 'Select';
+    const label = visitorType.replace(/([A-Z])/g, ' $1').trim();
+    return label.split(' ')[0]; // Return only the first word for small screens
   };
 
   return (
@@ -32,24 +37,27 @@ export function VisitorTypeSelector() {
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="ml-auto">
           {getIcon()}
-          {visitorType
-            ? visitorType.replace(/([A-Z])/g, ' $1').trim()
-            : 'Select Type'}
+          <span className="ml-2 hidden sm:inline">{getLabel()}</span>
+          <span className="ml-2 sm:hidden">{visitorType ? '' : 'Select'}</span>
           <ChevronDown className="ml-2 size-4" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="start">
+      <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setVisitorType('homeOwner')}>
-          <User className="mr-2 size-4" /> Home Owner
+          <User className="mr-2 size-4" />{' '}
+          <span className="hidden sm:inline">Home Owner</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setVisitorType('constructionCompany')}>
-          <Building className="mr-2 size-4" /> Construction Company
+          <Building className="mr-2 size-4" />{' '}
+          <span className="hidden sm:inline">Construction Company</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setVisitorType('businessOwner')}>
-          <Briefcase className="mr-2 size-4" /> Business Owner
+          <Briefcase className="mr-2 size-4" />{' '}
+          <span className="hidden sm:inline">Business Owner</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setVisitorType(null)}>
-          <span className="mr-2 size-4">🚫</span> Clear Selection
+          <span className="mr-2 size-4">🚫</span>{' '}
+          <span className="hidden sm:inline">Clear Selection</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

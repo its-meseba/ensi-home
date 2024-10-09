@@ -45,6 +45,7 @@ const ContentItem: React.FC<ContentItemProps> = ({
       variants={itemVariants}
       initial="hidden"
       animate={controls}
+      whileHover={{ scale: 1.05 }}
       className="group relative h-[700px] w-full overflow-hidden rounded-3xl border-2 border-gray-300 bg-white shadow-lg transition-all duration-300 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
     >
       <div className="relative h-[600px] w-full overflow-hidden bg-gray-50/10 p-4 dark:bg-gray-800/50">
@@ -85,13 +86,11 @@ export const ContentSection: React.FC<ContentSectionProps> = ({ items }) => {
     }
   }, [controls, inView]);
 
-  // Define heading variants
   const headingVariants: Variants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.3 } },
   };
 
-  // Define container variants
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {

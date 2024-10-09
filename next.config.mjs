@@ -4,6 +4,25 @@ import withMDX from '@next/mdx'; // {{ edit_1 }}
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    dangerouslyAllowSVG: true,
+    // remotePatterns: [
+    //   {
+    //     protocol: "https",
+    //     hostname: "avatars.githubusercontent.com",
+    //   },
+    //   {
+    //     protocol: "https",
+    //     hostname: "apps-cdn.athom.com",
+    //   },
+    //   {
+    //     protocol: "https",
+    //     hostname: "images.unsplash.com",
+    //   },
+    //   {
+    //     protocol: "https",
+    //     hostname: "assets.aceternity.com",
+    //   },
+    // ],
     domains: ['avatars.githubusercontent.com', 'apps-cdn.athom.com', 'images.unsplash.com', 'assets.aceternity.com'],
   },
 

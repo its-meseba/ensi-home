@@ -15,6 +15,7 @@ import { languageTag } from '@/paraglide/runtime.js';
 import { Providers } from './providers'; // Import the Providers component
 import { VisitorTypeSelector } from '@/components/common/VisitorTypeSelector';
 import { AIHelperButton } from '@/components/common/AiHelperButton';
+import { HeroHighlight } from '@/components/ui/hero-highlight';
 
 export const generateMetadata = (): Metadata => ({
   metadataBase: new URL(siteConfig.url()),
@@ -57,7 +58,9 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <body className={cn('min-h-screen font-sans', fonts)}>
           <Providers>
             <NewNavbar />
-            <main className="pt-20">{children}</main>
+            <HeroHighlight>
+              <main className="pt-20">{children}</main>
+            </HeroHighlight>
             <Footer />
             {/* Place the VisitorTypeSelector at the bottom left */}
             <div className="fixed bottom-4 left-4 z-50">
