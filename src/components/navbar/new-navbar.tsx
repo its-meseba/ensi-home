@@ -68,12 +68,12 @@ export const NewNavbar = () => {
       description: m.support_description(),
       items: [
         {
-          title: m.how_it_works(),
-          href: `/${locale}/knowledge-base/how-it-works`,
-        },
-        {
           title: m.faq(),
           href: `/${locale}/knowledge-base/faq`,
+        },
+        {
+          title: m.how_it_works(),
+          href: `/${locale}/knowledge-base/how-it-works`,
         },
         {
           title: m.technical_support(),

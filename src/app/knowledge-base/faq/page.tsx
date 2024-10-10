@@ -178,7 +178,7 @@ export default function FAQPage() {
       variants={containerVariants}
     >
       <CurvedBackground
-        imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
+        imageSrc="/images/pages/knowledge-base/faq/cover.jpg"
         title="Frequently Asked Questions"
       />
       <div className="container mx-auto flex max-w-7xl flex-col items-center px-4 py-16">

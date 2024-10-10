@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { getSortedPostsData, getAllTags, getAllCategories } from '@/lib/posts';
 import { Button } from '@/components/ui/button';
 import { BackgroundLines } from '@/components/ui/background-lines';
-import { CurvedBackground } from '@/components/common/CurvyBackground';
+import { CurvedBackgroundParallax } from '@/components/common/CurvyBackground';
 
 const BlogPage = async () => {
   const allPostsData = await getSortedPostsData();
@@ -14,7 +14,7 @@ const BlogPage = async () => {
     <BackgroundLines className="flex w-full flex-col items-center justify-center px-4">
       <div className="w-full bg-gray-50 dark:bg-gray-900">
         {/* Header Section */}
-        <CurvedBackground
+        <CurvedBackgroundParallax
           imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
           title="Welcome to News & Posts"
         />

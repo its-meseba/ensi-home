@@ -108,7 +108,7 @@ export default function SmartHomeGuide() {
   return (
     <div className="flex flex-col items-center">
       <CurvedBackground
-        imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
+        imageSrc="/images/pages/knowledge-base/how-it-works/cover.jpg"
         title="How It Works?"
       />
       <div className="w-full bg-gray-50">

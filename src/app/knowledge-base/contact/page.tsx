@@ -5,18 +5,23 @@ import { MapPin, Phone, Mail, Clock, Linkedin, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { NewContactForm } from '@/components/pages/contact/NewContactForm';
 import { NewContactBulletin } from '@/components/pages/contact/NewBulletin';
+import { CurvedBackground } from '@/components/common/CurvyBackground';
 
 export default function ContactPage() {
   return (
     <div className="container mx-auto px-4 py-8 md:py-16">
-      <motion.h1
+      <CurvedBackground
+        imageSrc="/images/pages/knowledge-base/contact/cover.jpg"
+        title="Contact Us"
+      />
+      {/* <motion.h1
         className="mb-8 text-center text-3xl font-bold md:text-4xl"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         Contact Us
-      </motion.h1>
+      </motion.h1> */}
 
       <div className="grid gap-8 md:grid-cols-2 md:gap-12">
         <motion.div

@@ -21,6 +21,12 @@ import { HeroHighlight } from '@/components/ui/hero-highlight';
 import References from '@/components/pages/home/References';
 import ApplyComponent from '@/components/pages/home/ApplyNow';
 import BlogPostsSection from '@/components/pages/home/BlogAndNews';
+import PageHeader from '@/components/common/PageHeader';
+import {
+  CurvedBackgroundParallax,
+  CurvedBackgroundParallaxHeader,
+  CurvedBackgroundParallaxHeaderVertical,
+} from '@/components/common/CurvyBackground';
 
 export default function MainPage() {
   const items: ContentItemProps[] = [
@@ -53,12 +59,18 @@ export default function MainPage() {
     'absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_700%,black)]';
 
   return (
-    <section className={`min-h-screen from-gray-100 to-gray-200 px-4 py-12 `}>
+    <section className={`min-h-screen from-gray-100 to-gray-200 py-12 `}>
       {/* <VisitorTypeModal /> */}
 
       {/* <div className={backgroundAssistance} /> */}
       {/* 0. sen kimsin? diye site acildiginda soru sorulacak */}
       {/* First Section, quick tour of all the things */}
+      {/* <CurvedBackgroundParallaxHeaderVertical
+        imageSrc="/images/pages/knowledge-base/technical-knowledge-base/cover.jpg"
+        title="Ensi Home Knowledge Base"
+        maxHeight="1080px"
+      /> */}
+
       <div className="mx-auto w-full max-w-7xl">
         {/* 1. intro - greeting with Ensi Home */}
         <IntroHeader

@@ -8,8 +8,8 @@ export default function SmartHomeGuide() {
   return (
     <div className="flex flex-col items-center">
       <CurvedBackground
-        imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
-        title="How Is it Done?"
+        imageSrc="/images/pages/knowledge-base/how-it-is-done/cover.jpg"
+        title="How It Is Done?"
       />
       <Component />
       {/* 

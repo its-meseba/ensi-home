@@ -6,7 +6,10 @@ import { motion } from 'framer-motion';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CurvedBackground } from '@/components/common/CurvyBackground';
+import {
+  CurvedBackground,
+  CurvedBackgroundParallax,
+} from '@/components/common/CurvyBackground';
 
 const categories = [
   {
@@ -81,8 +84,8 @@ export default function KnowledgeBaseClient() {
 
   return (
     <div className="bg-background relative min-h-screen">
-      <CurvedBackground
-        imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
+      <CurvedBackgroundParallax
+        imageSrc="/images/pages/knowledge-base/technical-knowledge-base/cover.jpg"
         title="Ensi Home Knowledge Base"
       />
       <div className="relative z-10">
