@@ -284,7 +284,7 @@ export default function CloudPage() {
       <div className="mt-8 text-center">
         <Link href="/contact">
           <Button size="lg" className="px-8 py-4 text-lg">
-            Learn More About Our Cloud Solutions
+            More About Our Cloud Solutions
           </Button>
         </Link>
       </div>

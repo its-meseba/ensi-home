@@ -1,6 +1,10 @@
 'use client';
-import { useScroll, useTransform, motion } from 'framer-motion';
+
+import { useScroll, useTransform, motion, useInView } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 interface TimelineEntry {
   title: string;
@@ -27,43 +31,29 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  const gradients = [
+    'bg-gradient-to-r from-pink-500 to-purple-500',
+    'bg-gradient-to-r from-purple-500 to-indigo-500',
+    'bg-gradient-to-r from-indigo-500 to-blue-500',
+    'bg-gradient-to-r from-blue-500 to-green-500',
+    'bg-gradient-to-r from-green-500 to-yellow-500',
+    'bg-gradient-to-r from-yellow-500 to-orange-500',
+    'bg-gradient-to-r from-orange-500 to-red-500',
+  ];
+
   return (
     <div
       className="w-full bg-white font-sans md:px-10 dark:bg-neutral-950"
       ref={containerRef}
     >
-      {/* <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 lg:px-10">
-        <h2 className="mb-4 max-w-4xl text-lg text-black md:text-4xl dark:text-white">
-          Our Collaborative Process
-        </h2>
-        <p className="max-w-sm text-sm text-neutral-700 md:text-base dark:text-neutral-300">
-          Seamless integration of smart home solutions for construction
-          projects.
-        </p>
-      </div> */}
-
       <div ref={ref} className="relative mx-auto max-w-full pb-20">
         {data.map((item, index) => (
-          <div
+          <TimelineItem
             key={index}
-            className="flex justify-start pt-10 md:gap-10 md:pt-40"
-          >
-            <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
-              <div className="absolute left-3 flex size-10 items-center justify-center rounded-full bg-white md:left-3 dark:bg-black">
-                <div className="size-4 rounded-full border border-neutral-300 bg-neutral-200 p-2 dark:border-neutral-700 dark:bg-neutral-800" />
-              </div>
-              <h3 className="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-4xl dark:text-neutral-500 ">
-                {item.title}
-              </h3>
-            </div>
-
-            <div className="relative w-full pl-20 pr-4 md:pl-4">
-              <h3 className="mb-4 block text-left text-2xl font-bold text-neutral-500 md:hidden dark:text-neutral-500">
-                {item.title}
-              </h3>
-              {item.content}{' '}
-            </div>
-          </div>
+            item={item}
+            index={index}
+            gradients={gradients}
+          />
         ))}
         <div
           style={{
@@ -81,5 +71,78 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </div>
       </div>
     </div>
+  );
+};
+
+const TimelineItem = ({
+  item,
+  index,
+  gradients,
+}: {
+  item: TimelineEntry;
+  index: number;
+  gradients: string[];
+}) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  const renderTitle = (title: string) => {
+    const parts = title.split('. ');
+    if (parts.length === 2) {
+      return (
+        <>
+          <span className="text-2xl md:text-6xl">{parts[0]}.</span> <br></br>
+          <span className="text-xl md:text-3xl">{parts[1]}</span>
+        </>
+      );
+    }
+    return title;
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      className="flex justify-start pt-10 md:gap-10 md:pt-40"
+    >
+      <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={isInView ? { scale: 1 } : { scale: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
+          className="absolute left-3 flex size-10 items-center justify-center rounded-full bg-white md:left-3 dark:bg-black"
+        >
+          <div className="size-4 rounded-full border border-neutral-300 bg-neutral-200 p-2 dark:border-neutral-700 dark:bg-neutral-800" />
+        </motion.div>
+        <motion.h3
+          initial={{ opacity: 0, x: -20 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+          transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}
+          className={`hidden text-xl font-bold md:block md:pl-20 md:text-4xl ${gradients[index % gradients.length]} bg-clip-text text-transparent`}
+        >
+          {renderTitle(item.title)}
+        </motion.h3>
+      </div>
+
+      <div className="relative w-full pl-20 pr-4 md:pl-4">
+        <motion.h3
+          initial={{ opacity: 0, y: -20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}
+          className={`mb-4 block text-left text-2xl font-bold md:hidden ${gradients[index % gradients.length]} bg-clip-text text-transparent`}
+        >
+          {renderTitle(item.title)}
+        </motion.h3>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: index * 0.2 + 0.6 }}
+        >
+          {item.content}
+        </motion.div>
+      </div>
+    </motion.div>
   );
 };

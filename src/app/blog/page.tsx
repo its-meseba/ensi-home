@@ -11,13 +11,13 @@ const BlogPage = async () => {
   const allCategories = await getAllCategories();
 
   return (
-    <BackgroundLines className="flex w-full flex-col items-center justify-center px-4">
+    <BackgroundLines className="flex w-full flex-col items-center justify-center">
       <div className="w-full bg-gray-50 dark:bg-gray-900">
-        {/* Header Section */}
         <CurvedBackgroundParallax
           imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
           title="Welcome to News & Posts"
         />
+        {/* Header Section */}
 
         {/* Main Content: Blog Posts */}
         {/* PUT HERE THAT HERE IS THE ARTICLES as */}

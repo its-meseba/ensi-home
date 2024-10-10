@@ -87,7 +87,7 @@ export const CurvedBackgroundParallax: React.FC<CurvedBackgroundProps> = ({
           {title}
         </h1>
       </div>
-      {/* <svg
+      <svg
         className="absolute bottom-0 h-16 w-full"
         viewBox="0 0 1440 80"
         preserveAspectRatio="none"
@@ -97,8 +97,8 @@ export const CurvedBackgroundParallax: React.FC<CurvedBackgroundProps> = ({
           fillOpacity="1"
           d="M0,32L80,42.7C160,53,320,75,480,74.7C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,80L1360,80C1280,80,1120,80,960,80C800,80,640,80,480,80C320,80,160,80,80,80L0,80Z"
         ></path>
-      </svg> */}
-      <svg
+      </svg>
+      {/* <svg
         className="absolute bottom-0 h-16 w-full"
         viewBox="0 0 1440 80"
         preserveAspectRatio="none"
@@ -108,7 +108,7 @@ export const CurvedBackgroundParallax: React.FC<CurvedBackgroundProps> = ({
           fillOpacity="1"
           d="M0,80 L0,0 C360,60 1080,60 1440,0 L1440,80 Z"
         />
-      </svg>
+      </svg> */}
     </div>
   );
 };
