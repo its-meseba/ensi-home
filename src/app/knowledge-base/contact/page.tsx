@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Linkedin, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { NewContactForm } from '@/components/pages/contact/NewContactForm';
 import { NewContactBulletin } from '@/components/pages/contact/NewBulletin';
@@ -68,6 +68,16 @@ export default function ContactPage() {
           >
             <Linkedin className="mr-2" />
             Follow us on LinkedIn
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/ensihome"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center pt-4 text-blue-600 hover:underline"
+          >
+            <Instagram className="mr-2" />
+            Follow us on Instagram
           </a>
 
           <div className="mt-8 md:mt-12">

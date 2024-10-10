@@ -9,7 +9,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.fibaro/93/55765b3c-0a66-49fd-a41d-e9915321e11f/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Fibaro\\image.png",
-                    "summary_description": "Fibaro features an extensive range of sensors and switches, both plug-and-play and invisible-built-in. And all of them can be directly, wirelessly controlled by Homey. Start small with their simple, beautiful compact Wall Plug or go all-in and make all your existing light switches smart with the Fibaro Dimmer.\nOr start with the devices you already own, like your TV, Chromecast, Sonos or smart thermostat. Expand and enjoy an even better home.",
+                    "summary_description": "Fibaro features an extensive range of sensors and switches, both plug-and-play and invisible-built-in. And all of them can be directly, wirelessly controlled by Ensi Home. Start small with their simple, beautiful compact Wall Plug or go all-in and make all your existing light switches smart with the Fibaro Dimmer.\nOr start with the devices you already own, like your TV, Chromecast, Sonos or smart thermostat. Expand and enjoy an even better home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "FGPB-101",
@@ -439,7 +439,7 @@
                     "company": "Aeotec Group",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.aeotec/78/9aef77d7-8e54-45e7-a56b-14ab39af5361/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Aeotec\\image.png",
-                    "summary_description": "Aeotec has an extensive range of visible and hidden Z-Wave and Zigbee sensors and switches. A large number can be controlled directly and wirelessly from Homey. Identical SmartThings sensors are also supported. \n\nIf you have any problems with our equipment, please contact our support team before submitting a review.",
+                    "summary_description": "Aeotec has an extensive range of visible and hidden Z-Wave and Zigbee sensors and switches. A large number can be controlled directly and wirelessly from Ensi Home. Identical SmartThings sensors are also supported. \n\nIf you have any problems with our equipment, please contact our support team before submitting a review.",
                     "supported_devices": [
                         {
                             "data_driver_id": "ZWA009",
@@ -1209,7 +1209,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.klikaanklikuit/47/94143b84-d061-4a2a-9bd5-7bb21d04f11e/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Trust_Smart_Home\\image.png",
-                    "summary_description": "Converting your home into a smart home? With KlikAanKlikUit you make every home smart, without complicated installations or conversion or shifting of existing switches and light points.\n\nIf you add wireless wall switches or other transmitters to your lighting, the existing (wired) wall switches will remain functional. You do not have to replace or remove it.\n\nConnect all your Trust Smart Home devices to Homey and manage all your lighting and devices on your smartphone.\nOnly Trust Smart Home devices that use 433Mhz can be added with this app.",
+                    "summary_description": "Converting your home into a smart home? With KlikAanKlikUit you make every home smart, without complicated installations or conversion or shifting of existing switches and light points.\n\nIf you add wireless wall switches or other transmitters to your lighting, the existing (wired) wall switches will remain functional. You do not have to replace or remove it.\n\nConnect all your Trust Smart Home devices to Ensi Home and manage all your lighting and devices on your smartphone.\nOnly Trust Smart Home devices that use 433Mhz can be added with this app.",
                     "supported_devices": [
                         {
                             "data_driver_id": "ABST-604",
@@ -2129,7 +2129,7 @@
                     "company": "Allterco Robotics",
                     "summary_image_url": "https://apps-cdn.athom.com/app/cloud.shelly/285/ae610402-3b6f-45e3-ba98-7df2ef6db80d/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\Shelly\\image.jpg",
-                    "summary_description": "This Homey app allows you to control a wide variety of Shelly devices.\n\nPlease visit the support topic on the community forum for installation instructions and further details.\n\nThe following devices are supported.\n\n1st generation\n-------------\nShelly Plug\nShelly Plug S\nShelly 1\nShelly 1L\nShelly 1PM\nShelly 2\nShelly 2.5\nShelly EM\nShelly 3EM\nShelly 4 Pro\nShelly i3\nShelly Uni\nShelly TRV (only Homey Pro)\nShelly Door/Window\nShelly Door/Window 2\nShelly Humidity/Temperature\nShelly Motion\nShelly Motion 2\nShelly Button 1\nShelly Button 2\nShelly Air\nShelly Flood\nShelly Gas (only Homey Pro)\nShelly Smoke\nShelly Bulb\nShelly Bulb RGBW\nShelly Duo\nShelly Dimmer\nShelly Dimmer 2\nShelly RGBW2\nShelly Vintage\n\nPlus\n-------------\nShelly Plus 1\nShelly Plus 1PM\nShelly Plus 2PM\nShelly Plus Humidity/Temperature\nShelly Plus i4\nShelly Plus i4DC\nShelly Plus Wall Dimmer US\nShelly Plus Plug S\nShelly Plus Smoke\nShelly Wall Panel (as thermostat only on Homey Pro)\nShelly Plus Uni\nShelly Plus PM Mini\nShelly Plus 1 Mini\nShelly Plus 1PM Mini\nShelly Plus 0-10V Dimmer\nShelly Plus RGBW PM\n\nPro\n-------------\nShelly Pro 1\nShelly Pro 1PM\nShelly Pro 2\nShelly Pro 2PM\nShelly Pro 3\nShelly Pro 3EM\nShelly Pro 4PM\nShelly Pro Dual Cover\nShelly Pro EM-50\nShelly Pro Dimmer 1PM\nShelly Pro Dimmer 2PM\n\nGen 3\n-------------\nShelly Humidity/Temperature Gen3\nShelly PM Mini Gen3\nShelly 1 Gen3\nShelly 1 Mini Gen3\nShelly 1PM Gen3\nShelly 1PM Mini Gen3\nShelly Dimmer 0/1-10V PM Gen3\nShelly i4 Gen3\n\nBluetooth\n-------------\nShelly BLU Button 1\nShelly BLU DoorWindow\nShelly BLU Motion\nShelly BLU Gateway (BLE to WiFi)\nShelly BLU HT\nShelly BLU Wall Switch 4 EU/US\n\nZ-Wave\n-------------\nShelly Wave PM Mini\nShelly Wave 1 (Mini)\nShelly Wave 1PM (Mini)\nShelly Wave 2PM\nShelly Wave Shutter\nShelly Wave Plug UK/US\nShelly Wave Pro 1\nShelly Wave Pro 1PM\nShelly Wave Pro 2\nShelly Wave Pro 2PM\nShelly Wave i4\nShelly Wave Pro 3\nShelly Wave Pro Shutter",
+                    "summary_description": "This Ensi Home app allows you to control a wide variety of Shelly devices.\n\nPlease visit the support topic on the community forum for installation instructions and further details.\n\nThe following devices are supported.\n\n1st generation\n-------------\nShelly Plug\nShelly Plug S\nShelly 1\nShelly 1L\nShelly 1PM\nShelly 2\nShelly 2.5\nShelly EM\nShelly 3EM\nShelly 4 Pro\nShelly i3\nShelly Uni\nShelly TRV (only Ensi Home Pro)\nShelly Door/Window\nShelly Door/Window 2\nShelly Humidity/Temperature\nShelly Motion\nShelly Motion 2\nShelly Button 1\nShelly Button 2\nShelly Air\nShelly Flood\nShelly Gas (only Ensi Home Pro)\nShelly Smoke\nShelly Bulb\nShelly Bulb RGBW\nShelly Duo\nShelly Dimmer\nShelly Dimmer 2\nShelly RGBW2\nShelly Vintage\n\nPlus\n-------------\nShelly Plus 1\nShelly Plus 1PM\nShelly Plus 2PM\nShelly Plus Humidity/Temperature\nShelly Plus i4\nShelly Plus i4DC\nShelly Plus Wall Dimmer US\nShelly Plus Plug S\nShelly Plus Smoke\nShelly Wall Panel (as thermostat only on Ensi Home Pro)\nShelly Plus Uni\nShelly Plus PM Mini\nShelly Plus 1 Mini\nShelly Plus 1PM Mini\nShelly Plus 0-10V Dimmer\nShelly Plus RGBW PM\n\nPro\n-------------\nShelly Pro 1\nShelly Pro 1PM\nShelly Pro 2\nShelly Pro 2PM\nShelly Pro 3\nShelly Pro 3EM\nShelly Pro 4PM\nShelly Pro Dual Cover\nShelly Pro EM-50\nShelly Pro Dimmer 1PM\nShelly Pro Dimmer 2PM\n\nGen 3\n-------------\nShelly Humidity/Temperature Gen3\nShelly PM Mini Gen3\nShelly 1 Gen3\nShelly 1 Mini Gen3\nShelly 1PM Gen3\nShelly 1PM Mini Gen3\nShelly Dimmer 0/1-10V PM Gen3\nShelly i4 Gen3\n\nBluetooth\n-------------\nShelly BLU Button 1\nShelly BLU DoorWindow\nShelly BLU Motion\nShelly BLU Gateway (BLE to WiFi)\nShelly BLU HT\nShelly BLU Wall Switch 4 EU/US\n\nZ-Wave\n-------------\nShelly Wave PM Mini\nShelly Wave 1 (Mini)\nShelly Wave 1PM (Mini)\nShelly Wave 2PM\nShelly Wave Shutter\nShelly Wave Plug UK/US\nShelly Wave Pro 1\nShelly Wave Pro 1PM\nShelly Wave Pro 2\nShelly Wave Pro 2PM\nShelly Wave i4\nShelly Wave Pro 3\nShelly Wave Pro Shutter",
                     "supported_devices": [
                         {
                             "data_driver_id": "shelly_bluetooth",
@@ -2449,7 +2449,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.somfy/14/f1b41b59-4e97-401b-a10d-1279feec3ea8/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Somfy_RTS\\image.png",
-                    "summary_description": "The Somfy app provides simplified control of motorized blinds, shades, rolling shutters and more. Connect with Homey and create Flows that simplify your life at home. Is it raining? Let Homey adjust your blinds automatically. Or want to watch a movie? Dim the lights and close the curtains.",
+                    "summary_description": "The Somfy app provides simplified control of motorized blinds, shades, rolling shutters and more. Connect with Ensi Home and create Flows that simplify your life at home. Is it raining? Let Ensi Home adjust your blinds automatically. Or want to watch a movie? Dim the lights and close the curtains.",
                     "supported_devices": [
                         {
                             "data_driver_id": "E500",
@@ -2679,7 +2679,7 @@
                     "company": "RockSoft Solutions",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.somfy.tahoma/227/407709f6-33cb-43c3-af5d-3b676758d1f6/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Somfy_TaHoma___Connexoon\\image.png",
-                    "summary_description": "Connect your Somfy TaHoma, Switch or Connexoon account to Homey then control and read your devices, sensors and scenarios directly from Homey.\n\nUse the power of Homey Flows to automate your Somfy devices.\n\nWritten to fully comply with Somfy's latest guidelines, so you can use the app with peace of mind.\nThe app requires one of the Somfy gateways, TaHoma, Connexoon, Switch or Connectivity kit.\n\nSuggestions or problems?\nIf you have a device that's not supported or a suggestion or problem with this app please go to the forum or the github page linked on this page and let me know.",
+                    "summary_description": "Connect your Somfy TaHoma, Switch or Connexoon account to Ensi Home then control and read your devices, sensors and scenarios directly from Ensi Home.\n\nUse the power of Ensi Home Flows to automate your Somfy devices.\n\nWritten to fully comply with Somfy's latest guidelines, so you can use the app with peace of mind.\nThe app requires one of the Somfy gateways, TaHoma, Connexoon, Switch or Connectivity kit.\n\nSuggestions or problems?\nIf you have a device that's not supported or a suggestion or problem with this app please go to the forum or the github page linked on this page and let me know.",
                     "supported_devices": [
                         {
                             "data_driver_id": "io_atlantic_basic_electric_heater",
@@ -3309,7 +3309,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.smartthings/17/2d022297-f0a6-47d8-9eee-d6d8d306948a/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Samsung_SmartThings\\image.png",
-                    "summary_description": "Sync up your home to suit your lifestyle. Let SmartThings share insights on your connected devices, help with your house chores and enhance your experiences, both in and outside your home.\n\nMONITOR\nMonitor your Samsung Washer or Dryer right from the Homey Mobile App or the Homey Web App. View the current status, remaining time and more.\n\nCONTROL\nControl your Samsung TV right from the Homey Mobile App or the Homey Web App. Turn it on and change the volume using Alexa or Google Assistant.\n\nAUTOMATE\nStart a Flow when your Samsung Washer or Dryer is finished, or when the Samsung AddWash door is opened or closed. Automatically dim the lights when your Samsung TV is turned on or off.\n\nCOMING SOON\nWhich Samsung SmartThings devices would you like to monitor and control? Let us know!",
+                    "summary_description": "Sync up your home to suit your lifestyle. Let SmartThings share insights on your connected devices, help with your house chores and enhance your experiences, both in and outside your home.\n\nMONITOR\nMonitor your Samsung Washer or Dryer right from the Ensi Home Mobile App or the Ensi Home Web App. View the current status, remaining time and more.\n\nCONTROL\nControl your Samsung TV right from the Ensi Home Mobile App or the Ensi Home Web App. Turn it on and change the volume using Alexa or Google Assistant.\n\nAUTOMATE\nStart a Flow when your Samsung Washer or Dryer is finished, or when the Samsung AddWash door is opened or closed. Automatically dim the lights when your Samsung TV is turned on or off.\n\nCOMING SOON\nWhich Samsung SmartThings devices would you like to monitor and control? Let us know!",
                     "supported_devices": [
                         {
                             "data_driver_id": "dryer",
@@ -3365,11 +3365,11 @@
                 },
                 {
                     "name": "Tuya",
-                    "description": "Connect any Tuya device with Homey",
+                    "description": "Connect any Tuya device with Ensi Home",
                     "company": "Tuya Inc.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.tuya/26/195973b4-5a8c-4acd-8ea4-10093350a348/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Tuya\\image.png",
-                    "summary_description": "Connect any Tuya device with Homey & Homey Pro.\n\nINSTRUCTIONS\nThe Tuya App for Homey is compatible with both the 'Tuya Smart' and 'Smart Life' apps for iOS and Android. Before connecting your Tuya-enabled devices to Homey, ensure they are first linked to one of these apps.\n\nCONTRIBUTE\nTuya makes many devices, and we're working together with the Homey Community to add support for all of them. If you'd like to contribute, visit the source on GitHub.",
+                    "summary_description": "Connect any Tuya device with Ensi Home & Ensi Home Pro.\n\nINSTRUCTIONS\nThe Tuya App for Ensi Home is compatible with both the 'Tuya Smart' and 'Smart Life' apps for iOS and Android. Before connecting your Tuya-enabled devices to Ensi Home, ensure they are first linked to one of these apps.\n\nCONTRIBUTE\nTuya makes many devices, and we're working together with the Ensi Home Community to add support for all of them. If you'd like to contribute, visit the source on GitHub.",
                     "supported_devices": [
                         {
                             "data_driver_id": "camera",
@@ -3505,11 +3505,11 @@
                 },
                 {
                     "name": "Home Assistant",
-                    "description": "Connect your Home Assistant devices to Homey",
+                    "description": "Connect your Home Assistant devices to Ensi Home",
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/io.home-assistant/19/1a675ad8-1498-4025-96cd-4e9fc6a6e671/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Home_Assistant\\image.png",
-                    "summary_description": "The Home Assistant app for Homey makes it easy for you to add Home Assistant integrations to Homey by connecting their devices. \n\nSupport for Home Assistant devices with Light, Sensor, Binary sensor, Cover and Media player entities. The Home Assistant App for Homey lets you control these entities via the Homey Mobile App, Homey Web App as well as voice assistants (Google Assistant and Alexa).\n\nPlease note that it is only possible to add entities which are part of a Home Assistant device, it is not possible to add separate entities. \n\nFor this integration Homey needs to connect to your Home Assistant instance, either through a static local IP and port (Homey Pro), port forwarding or remote access through a proxy service. For more information see also the documentation about Remote access by Home Assistant: https://www.home-assistant.io/docs/configuration/remote/.",
+                    "summary_description": "The Home Assistant app for Ensi Home makes it easy for you to add Home Assistant integrations to Ensi Home by connecting their devices. \n\nSupport for Home Assistant devices with Light, Sensor, Binary sensor, Cover and Media player entities. The Home Assistant App for Ensi Home lets you control these entities via the Ensi Home Mobile App, Ensi Home Web App as well as voice assistants (Google Assistant and Alexa).\n\nPlease note that it is only possible to add entities which are part of a Home Assistant device, it is not possible to add separate entities. \n\nFor this integration Ensi Home needs to connect to your Home Assistant instance, either through a static local IP and port (Ensi Home Pro), port forwarding or remote access through a proxy service. For more information see also the documentation about Remote access by Home Assistant: https://www.home-assistant.io/docs/configuration/remote/.",
                     "supported_devices": [
                         {
                             "data_driver_id": "hass-device",
@@ -3529,7 +3529,7 @@
                     "company": "SwitchBot Global",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.switchbot/107/b796ca55-40e7-4190-9f27-888be2ae3aba/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\SwitchBot\\image.png",
-                    "summary_description": "Connect your SwitchBot devices directly to Homey using BLE or via the cloud and the SwitchBot Hub.\nCreate your own Flows tailored to your needs.\nWake up with daylight in the morning and close the curtains when it gets dark. Turn on your lights when motion is detected and many more options.",
+                    "summary_description": "Connect your SwitchBot devices directly to Ensi Home using BLE or via the cloud and the SwitchBot Hub.\nCreate your own Flows tailored to your needs.\nWake up with daylight in the morning and close the curtains when it gets dark. Turn on your lights when motion is detected and many more options.",
                     "supported_devices": [
                         {
                             "data_driver_id": "air_con_hub",
@@ -3879,7 +3879,7 @@
                     "company": "Qubino by GOAP",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.qubino/31/361ea4f7-40d5-4618-bb47-e0b24b56bee3/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Qubino\\image.png",
-                    "summary_description": "With the products of Qubino you can remotely control your shading, lightning, energy meters and other household appliances. Qubino adds support for Z-Wave smart home devices. Connect with Homey and create Flows to make your life easier. \n\nWe'd like to clarify that currently, there is no ongoing development from our side for the app. However, in our commitment to fostering collaboration and improvement, we have decided to release the code of the app to the public. This means that anyone with the necessary skills and enthusiasm is welcome to contribute to the development of the app by adding the features they deem necessary.\n\nWe believe in the power of community-driven initiatives and look forward to seeing the app evolve with your contributions.\n\nGitHub repository: https://github.com/QubinoHelp/Qubino-Homey-app",
+                    "summary_description": "With the products of Qubino you can remotely control your shading, lightning, energy meters and other household appliances. Qubino adds support for Z-Wave smart home devices. Connect with Ensi Home and create Flows to make your life easier. \n\nWe'd like to clarify that currently, there is no ongoing development from our side for the app. However, in our commitment to fostering collaboration and improvement, we have decided to release the code of the app to the public. This means that anyone with the necessary skills and enthusiasm is welcome to contribute to the development of the app by adding the features they deem necessary.\n\nWe believe in the power of community-driven initiatives and look forward to seeing the app evolve with your contributions.\n\nGitHub repository: https://github.com/QubinoHelp/Qubino-Ensi Home-app",
                     "supported_devices": [
                         {
                             "data_driver_id": "ZMNHXD1",
@@ -4259,7 +4259,7 @@
                     "company": "frient A/S",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.frient/27/fef27eb5-8bd7-4dde-b40e-8cbf41745e5d/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\frient\\image.png",
-                    "summary_description": "Gain wireless control of your home, keep your family safe, and become more energy aware with wide range of frient devices.\n\nConnect your frient devices with Homey and start living the smart life.\n\nUse the frient sensors and alarms to monitor and control your home. Keep track of your energy consumption and turn on/off your electrical appliances with the smart plug or the smart cable.",
+                    "summary_description": "Gain wireless control of your home, keep your family safe, and become more energy aware with wide range of frient devices.\n\nConnect your frient devices with Ensi Home and start living the smart life.\n\nUse the frient sensors and alarms to monitor and control your home. Keep track of your energy consumption and turn on/off your electrical appliances with the smart plug or the smart cable.",
                     "supported_devices": [
                         {
                             "data_driver_id": "AQSZB-110",
@@ -4559,7 +4559,7 @@
                     "company": "iRobot Corporation",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.irobot/41/1a9b68e6-b241-4be6-883e-75c565c76212/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\iRobot\\image.png",
-                    "summary_description": "iRobot\u00ae products are driven by thoughtful intelligence, they clean around your schedule and your life. Connect your Roomba\u00ae or Braava jet\u00ae robots with Homey and begin designing the perfect Flows to have your cleaning robots become a more autonomous and effective little helper, while you're away, in bed, or just have your feet-up on the couch.\n\nCreate Flows that can start, pause, or stop cleaning missions, and link these to your other smart home device with Homey. Be alerted to empty your Roomba\u00ae robot\u2019s bin as soon as it\u2019s full, or fill your Braava jet\u00ae robot\u2019s tank when it\u2019s empty, just make a Flow to have your lights flash, or have your smart speakers play a sound or say a custom voice message. That way, your robots are always ready to go.\n\nA great way to use Homey with iRobot is to utilize Zone Activity, this is powered by your smart sensors. Design a Flow that tracks if a zone has been inactive for eg. 30 minutes, then your robot can start a cleaning mission in that area. If motion is detected during its mission, you can pause the mission, or choose to send your robot back to base.",
+                    "summary_description": "iRobot\u00ae products are driven by thoughtful intelligence, they clean around your schedule and your life. Connect your Roomba\u00ae or Braava jet\u00ae robots with Ensi Home and begin designing the perfect Flows to have your cleaning robots become a more autonomous and effective little helper, while you're away, in bed, or just have your feet-up on the couch.\n\nCreate Flows that can start, pause, or stop cleaning missions, and link these to your other smart home device with Ensi Home. Be alerted to empty your Roomba\u00ae robot\u2019s bin as soon as it\u2019s full, or fill your Braava jet\u00ae robot\u2019s tank when it\u2019s empty, just make a Flow to have your lights flash, or have your smart speakers play a sound or say a custom voice message. That way, your robots are always ready to go.\n\nA great way to use Ensi Home with iRobot is to utilize Zone Activity, this is powered by your smart sensors. Design a Flow that tracks if a zone has been inactive for eg. 30 minutes, then your robot can start a cleaning mission in that area. If motion is detected during its mission, you can pause the mission, or choose to send your robot back to base.",
                     "supported_devices": [
                         {
                             "data_driver_id": "braava_mop",
@@ -4599,7 +4599,7 @@
                     "company": "Withings",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.nokia.health/12/8e41e3f3-8672-4f68-9e41-0116ba092dac/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Withings\\image.png",
-                    "summary_description": "Withings (formerly Nokia Health) health ecosystem of connected devices is designed to improve daily wellbeing and long-term health. Discover our award-winning smart scales, hybrid smartwatches & health monitors.\n\nWith the Withings app for Homey, you can:\n\n\u2014 View & log the user's health data (e.g. weight) to Homey Insights\n\u2014 Start a Flow when a new weight or heartpulse measurement has been made\n\u2014 Start a Flow when you get in and out of bed (requires the Withings Sleep Tracking Mat)",
+                    "summary_description": "Withings (formerly Nokia Health) health ecosystem of connected devices is designed to improve daily wellbeing and long-term health. Discover our award-winning smart scales, hybrid smartwatches & health monitors.\n\nWith the Withings app for Ensi Home, you can:\n\n\u2014 View & log the user's health data (e.g. weight) to Ensi Home Insights\n\u2014 Start a Flow when a new weight or heartpulse measurement has been made\n\u2014 Start a Flow when you get in and out of bed (requires the Withings Sleep Tracking Mat)",
                     "supported_devices": [
                         {
                             "data_driver_id": "user",
@@ -4899,7 +4899,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.dyson/20/ebc4312c-9cdd-4cf9-8a43-52b16a8437af/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Dyson\\image.png",
-                    "summary_description": "Connect your Dyson Cool (Infrared) or Dyson Link (Wi-Fi) fans with Homey for the coolest smart home.\n\nCREATE\nCreate Flows to turn on your Dyson fan, or turn it off automatically after you went to bed.\n\nMEASURE\nMeasure your home's environment and view the temperature and humidity of your room.\n\nCONTROL\nControl your Dyson fan from the Homey app from anywhere in the world.\n\n* All Wi-Fi fans should work without problems.\n* When your fan behaves oddly, please notify Homey Support so they can help you.",
+                    "summary_description": "Connect your Dyson Cool (Infrared) or Dyson Link (Wi-Fi) fans with Ensi Home for the coolest smart home.\n\nCREATE\nCreate Flows to turn on your Dyson fan, or turn it off automatically after you went to bed.\n\nMEASURE\nMeasure your home's environment and view the temperature and humidity of your room.\n\nCONTROL\nControl your Dyson fan from the Ensi Home app from anywhere in the world.\n\n* All Wi-Fi fans should work without problems.\n* When your fan behaves oddly, please notify Ensi Home Support so they can help you.",
                     "supported_devices": [
                         {
                             "data_driver_id": "dyson_360_heuristic",
@@ -4939,7 +4939,7 @@
                     "company": "POPP & CO",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.popp/20/4ce5934f-9971-44e9-8f2d-ff2942f9b16d/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\POPP\\image.jpg",
-                    "summary_description": "POPP products are characterised by high quality interoperable solutions for your smart home to bring together areas such as lighting, heating, alarm system, ventilation or blind control. \n\nThis app has been revised and updated. There is a possibility that devices will need to be re-added to Homey.\n\nIn case of problems please send an email with a detailed description of the problem to our Support.",
+                    "summary_description": "POPP products are characterised by high quality interoperable solutions for your smart home to bring together areas such as lighting, heating, alarm system, ventilation or blind control. \n\nThis app has been revised and updated. There is a possibility that devices will need to be re-added to Ensi Home.\n\nIn case of problems please send an email with a detailed description of the problem to our Support.",
                     "supported_devices": [
                         {
                             "data_driver_id": "700342",
@@ -5209,7 +5209,7 @@
                     "company": "Miele & Cie. KG",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.miele/31/db35a52a-f544-43f0-9fb1-dd4915b1f822/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Miele\\image.png",
-                    "summary_description": "Cleverly networked: with our innovative Miele@home system, you can exploit the full potential of your Miele appliances and make your everyday life even smarter. All intelligent Miele domestic appliances can be networked conveniently and securely.\n\nConnect your intelligent Miele domestic appliances with Homey. A Smart Home makes daily routines easier and creates individual convenience for you in your home. Shutters, lights and domestic appliances communicate with each other and are easily operated using the Miele@home App for homey.\n\nThanks to the practical Miele Cloud interface, you can integrate them quickly and easily into your Smart Home partner application Homey. This allows you to enjoy the efficiency and convenience of a holistic home network.",
+                    "summary_description": "Cleverly networked: with our innovative Miele@home system, you can exploit the full potential of your Miele appliances and make your everyday life even smarter. All intelligent Miele domestic appliances can be networked conveniently and securely.\n\nConnect your intelligent Miele domestic appliances with Ensi Home. A Smart Home makes daily routines easier and creates individual convenience for you in your home. Shutters, lights and domestic appliances communicate with each other and are easily operated using the Miele@home App for Ensi Home.\n\nThanks to the practical Miele Cloud interface, you can integrate them quickly and easily into your Smart Home partner application Ensi Home. This allows you to enjoy the efficiency and convenience of a holistic home network.",
                     "supported_devices": [
                         {
                             "data_driver_id": "coffee_system",
@@ -5419,7 +5419,7 @@
                     "company": "Develco Products A/S",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.DevelcoProducts/14/17cbb04e-3695-4325-9186-fbcb20858f60/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Develco_Products\\image.png",
-                    "summary_description": "Gain wireless control of your home, keep your family safe, and become more energy aware with Develco Products\u2019 wide range of wireless devices.\n\nConnect your Develco Products devices with Homey and start living the smart life.\n\nUse the Develco Products sensors and alarms to monitor and control your home. Keep track of your energy consumption and turn on/off your electrical appliances with the smart plug or the smart cable.",
+                    "summary_description": "Gain wireless control of your home, keep your family safe, and become more energy aware with Develco Products\u2019 wide range of wireless devices.\n\nConnect your Develco Products devices with Ensi Home and start living the smart life.\n\nUse the Develco Products sensors and alarms to monitor and control your home. Keep track of your energy consumption and turn on/off your electrical appliances with the smart plug or the smart cable.",
                     "supported_devices": [
                         {
                             "data_driver_id": "AQSZB-110",
@@ -5559,7 +5559,7 @@
                     "company": "ELKO AS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/no.elko/54/c7b75ff5-7739-4066-91f9-1de5523c62d9/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\ELKO_Smart\\image.png",
-                    "summary_description": "A smart home with ELKO devices make your life more comfortable, gives you more safety and help to consume less electricity - while providing a great look. With ELKO Smart, the smartness doesn't come at the expense of design and quality - it enhances it!\n\nYou can control some of the most popular ELKO Smart devices directly in the Homey-app, without the need of additional gateway. This is what we call a smart home!",
+                    "summary_description": "A smart home with ELKO devices make your life more comfortable, gives you more safety and help to consume less electricity - while providing a great look. With ELKO Smart, the smartness doesn't come at the expense of design and quality - it enhances it!\n\nYou can control some of the most popular ELKO Smart devices directly in the Ensi Home-app, without the need of additional gateway. This is what we call a smart home!",
                     "supported_devices": [
                         {
                             "data_driver_id": "other_connected_socket_outlet",
@@ -5899,7 +5899,7 @@
                     "company": "Airthings AS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.airthings.cloud/25/2bf034af-281c-481d-8b18-19479860971c/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Airthings\\image.png",
-                    "summary_description": "Airthings indoor air quality monitors tell you what's in your air. They measure pollutants like radon gas, fine particulate matter (PM2.5), and airborne chemicals (VOCs) as well as environmental factors like carbon dioxide levels, temperature and humidity.\n\nUse your Airthings live air quality measurements to trigger your Homey-enabled devices to address air quality issues when they arise. Keep your home's air healthy and comfortable by minimizing airborne health risks, irritants and allergens. Your home's air is so much more than oxygen - ensure that it stays not only safe, but also promotes restful sleep and day-to-day wellbeing.",
+                    "summary_description": "Airthings indoor air quality monitors tell you what's in your air. They measure pollutants like radon gas, fine particulate matter (PM2.5), and airborne chemicals (VOCs) as well as environmental factors like carbon dioxide levels, temperature and humidity.\n\nUse your Airthings live air quality measurements to trigger your Ensi Home-enabled devices to address air quality issues when they arise. Keep your home's air healthy and comfortable by minimizing airborne health risks, irritants and allergens. Your home's air is so much more than oxygen - ensure that it stays not only safe, but also promotes restful sleep and day-to-day wellbeing.",
                     "supported_devices": [
                         {
                             "data_driver_id": "cloud_view_series",
@@ -5959,7 +5959,7 @@
                     "company": "Resideo Technologies, Inc.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.honeywell/31/7ad191d6-100b-4164-8387-f372326c390b/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Honeywell_Home_evohome\\image.png",
-                    "summary_description": "Resideo's Honeywell Home evohome Wi-Fi connected thermostat is a smart programmable thermostat. The wireless solution is simple to install and easily managed locally or remotely via the Resideo or Homey app. You can adjust your comfort levels from anywhere using a smartphone or tablet, ensuring maximum comfort when you're at home and energy savings whether you're not. Evohome can easily be extended to a smart zoning solution for your home as the evohome Wi-Fi Controller becomes the \u2018brains\u2019 of the system and can control up to 12 individual temperature zones.\n\nResideo is a leading global provider of critical comfort, residential thermal solutions and security solutions primarily in residential environments. Building on a 130-year heritage, Resideo has a presence in more than 150 million homes, with 15 million systems installed in homes each year.",
+                    "summary_description": "Resideo's Honeywell Home evohome Wi-Fi connected thermostat is a smart programmable thermostat. The wireless solution is simple to install and easily managed locally or remotely via the Resideo or Ensi Home app. You can adjust your comfort levels from anywhere using a smartphone or tablet, ensuring maximum comfort when you're at home and energy savings whether you're not. Evohome can easily be extended to a smart zoning solution for your home as the evohome Wi-Fi Controller becomes the \u2018brains\u2019 of the system and can control up to 12 individual temperature zones.\n\nResideo is a leading global provider of critical comfort, residential thermal solutions and security solutions primarily in residential environments. Building on a 130-year heritage, Resideo has a presence in more than 150 million homes, with 15 million systems installed in homes each year.",
                     "supported_devices": [
                         {
                             "data_driver_id": "thermostat",
@@ -5985,7 +5985,7 @@
                 },
                 {
                     "name": "Sunway Window Coverings",
-                    "description": "Let Homey control your Sunway window coverings",
+                    "description": "Let Ensi Home control your Sunway window coverings",
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.sunway/4/782bc914-ac0c-4bf7-99fc-e2badee0b892/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\Sunway_Window_Coverings\\image.jpg",
@@ -6025,7 +6025,7 @@
                 },
                 {
                     "name": "Flamingo",
-                    "description": "Give Homey the ability to control your Flamingo devices",
+                    "description": "Give Ensi Home the ability to control your Flamingo devices",
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/eu.elro.flamingo/4/ad9b2572-523c-4862-8f21-334acff6df43/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Flamingo\\image.png",
@@ -6115,7 +6115,7 @@
                 },
                 {
                     "name": "Action",
-                    "description": "Give Homey the ability to control your Action devices",
+                    "description": "Give Ensi Home the ability to control your Action devices",
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.action/8/ef9c6f92-4779-4efe-b1a1-cdc832dff233/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\Action\\image.jpg",
@@ -6209,7 +6209,7 @@
                     "company": "Datek Smart Home AS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.datek.eva/35/043eaa05-d555-4b64-8a5c-f45f08c9d945/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Eva_Smart_Home\\image.png",
-                    "summary_description": "Support for Eva Smart Home devices.\n\nEva Smart Plug\nWith Eva Smart Plug you have one of the smallest 16A smartplugs in the market. \nUse it to control lights, heating devices, chargers and more. \nYou can set it in timer mode so it will never be on more than a preset amount of minutes. \nThe plug measures resistive current load, with an accuracy of +/- 5 % on currents above 1 Amp.\n\nEva Meter Reader\nEva Meter Reader makes your Meter Reader smart! \nThe meter reader easily connects to the HAN-port of your modern AMS-meter reader that you can find in your fuse box. \nThis way you can collect real time data and get a full overview of your consumption - directly to your smart home system. \n\nEva Scene Selector\nEva Scene Selector makes it easy to create the perfect mood or scenario in your smart house. \nThe Scene Selector offers up to 12 programmable buttons that you can use to activate your favorite flows in the Homey App. \n\n\nEva Motion Sensor\nEva Motion Sensor allows you to automatically control devices such as lights and smart plugs. The sensor offers triggers on detected motion and also offers temperature measurements.\nThe sensor can also be used as part of an alarm system.\n\nEva Door/Window Sensor\nEva Door/Window sensor allows you to have full control of whether a door or window is open or shut. It can be used as part of an alarm system to trigger alarms or flows, or as a sensor for turning on lights or other devices.\nThe sensor also offers temperature measurements, and triggers based on whether the contact has been opened or closed.\n\nEva Water Sensor\nEva Water Sensor is made with focus on size, so that it can be placed in the smallest and most unavailable spots in the bathroom, kitchen, laundry room and attics.\nThe sensor offers alarm on water contact that can be used to trigger your selected flows. The sensor also offers temperature measurements.\n\n\nThe app will be continiously developed with support for more Eva Smart Home devices.",
+                    "summary_description": "Support for Eva Smart Home devices.\n\nEva Smart Plug\nWith Eva Smart Plug you have one of the smallest 16A smartplugs in the market. \nUse it to control lights, heating devices, chargers and more. \nYou can set it in timer mode so it will never be on more than a preset amount of minutes. \nThe plug measures resistive current load, with an accuracy of +/- 5 % on currents above 1 Amp.\n\nEva Meter Reader\nEva Meter Reader makes your Meter Reader smart! \nThe meter reader easily connects to the HAN-port of your modern AMS-meter reader that you can find in your fuse box. \nThis way you can collect real time data and get a full overview of your consumption - directly to your smart home system. \n\nEva Scene Selector\nEva Scene Selector makes it easy to create the perfect mood or scenario in your smart house. \nThe Scene Selector offers up to 12 programmable buttons that you can use to activate your favorite flows in the Ensi Home App. \n\n\nEva Motion Sensor\nEva Motion Sensor allows you to automatically control devices such as lights and smart plugs. The sensor offers triggers on detected motion and also offers temperature measurements.\nThe sensor can also be used as part of an alarm system.\n\nEva Door/Window Sensor\nEva Door/Window sensor allows you to have full control of whether a door or window is open or shut. It can be used as part of an alarm system to trigger alarms or flows, or as a sensor for turning on lights or other devices.\nThe sensor also offers temperature measurements, and triggers based on whether the contact has been opened or closed.\n\nEva Water Sensor\nEva Water Sensor is made with focus on size, so that it can be placed in the smallest and most unavailable spots in the bathroom, kitchen, laundry room and attics.\nThe sensor offers alarm on water contact that can be used to trigger your selected flows. The sensor also offers temperature measurements.\n\n\nThe app will be continiously developed with support for more Eva Smart Home devices.",
                     "supported_devices": [
                         {
                             "data_driver_id": "datek-contact-switch",
@@ -6289,7 +6289,7 @@
                     "company": "Koktail software development",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.tapo/8/a67c0c86-d9a8-4b5e-9fba-a7655cc1ab03/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Tapo\\image.png",
-                    "summary_description": "\u26a0\ufe0f Unfortunately, the API has a rate limit and this currently causes problems when adding devices. We are communicating with Tapo to get it resolved\n\nEffortlessly connect and manage your TP-Link Tapo devices with Homey and enhance your Smart Home experience.\nThe Tapo App allows you to control and monitor your Tapo devices directly from Homey, including smart plugs, switches and lights.\n\nEnjoy features like switching devices on/off, measuring power usage and adjusting lighting - unlocking the full potential of your smart home.\n\nDo note that currently not all Tapo devices are available through the Tapo API, e.g. camera's, vacuums and sensors. We are working together with TP-Link to add support for these devices in the future.",
+                    "summary_description": "\u26a0\ufe0f Unfortunately, the API has a rate limit and this currently causes problems when adding devices. We are communicating with Tapo to get it resolved\n\nEffortlessly connect and manage your TP-Link Tapo devices with Ensi Home and enhance your Smart Home experience.\nThe Tapo App allows you to control and monitor your Tapo devices directly from Ensi Home, including smart plugs, switches and lights.\n\nEnjoy features like switching devices on/off, measuring power usage and adjusting lighting - unlocking the full potential of your smart home.\n\nDo note that currently not all Tapo devices are available through the Tapo API, e.g. camera's, vacuums and sensors. We are working together with TP-Link to add support for these devices in the future.",
                     "supported_devices": [
                         {
                             "data_driver_id": "S505D",
@@ -6399,7 +6399,7 @@
                     "company": "Schneider Electric",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.se/54/711a2ac9-f614-48d1-a503-a1d15b47a919/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Wiser\\image.png",
-                    "summary_description": "Want to take control of your complete home, manage your lights, increase safety and security, or get increased insights about your energy consumption? With Wiser all of this and much more is easily achieved! No matter where you are in the world, with Wiser you can ensure that your home will be kept safe and under control.\n\nThis Homey app allows you to control a wide variety of devices from the Wiser system, directly in the Homey-app without the need of additional gateway.\n\nBy connecting Wiser devices with Homey you can build flows and automations based on your needs and wishes.",
+                    "summary_description": "Want to take control of your complete home, manage your lights, increase safety and security, or get increased insights about your energy consumption? With Wiser all of this and much more is easily achieved! No matter where you are in the world, with Wiser you can ensure that your home will be kept safe and under control.\n\nThis Ensi Home app allows you to control a wide variety of devices from the Wiser system, directly in the Ensi Home-app without the need of additional gateway.\n\nBy connecting Wiser devices with Ensi Home you can build flows and automations based on your needs and wishes.",
                     "supported_devices": [
                         {
                             "data_driver_id": "one_gang_1-10V_dimmer",
@@ -6769,7 +6769,7 @@
                     "company": "DoorBird GmbH",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.doorbird/32/3093e0fb-89e9-4142-b428-c90a1c6216c9/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\DoorBird\\image.png",
-                    "summary_description": "Use Homey together with the DoorBird IP Video Door Station. Let the DoorBird notify Homey when the doorbell is rang or when motion is detected. Use these triggers in Homey to for other actions like sending a snapshot through email.\n\nPlease visit the support topic for installation instructions and further details.",
+                    "summary_description": "Use Ensi Home together with the DoorBird IP Video Door Station. Let the DoorBird notify Ensi Home when the doorbell is rang or when motion is detected. Use these triggers in Ensi Home to for other actions like sending a snapshot through email.\n\nPlease visit the support topic for installation instructions and further details.",
                     "supported_devices": [
                         {
                             "data_driver_id": "doorbird",
@@ -6799,7 +6799,7 @@
                     "company": "Innovation in Motion",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.innovationinmotion.slide/19/8b33f6dc-7f7c-46be-a580-b49e5193f127/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Slide\\image.png",
-                    "summary_description": "Slide makes your curtains smart\n\nSlide is a universal smart curtain solution that fits on all straight tracks up to six meters for singe and double curtains. Make your curtains smart by setting routines to wake up naturally with sunlight, secure your home when you\u2019re away with the Holiday Mode or create automatic isolation to save on your heating or cooling! Last but not least, just give your curtains a small push by hand, and Slide will take over with Touch&Go.\n\nInstall and setup your Slide device(s) using the official app by Innovation in Motion, on your smartphone. Login using your e-mail address and password of your Slide account, in the Homey app, and select which Slide(s) you want to add to Homey.",
+                    "summary_description": "Slide makes your curtains smart\n\nSlide is a universal smart curtain solution that fits on all straight tracks up to six meters for singe and double curtains. Make your curtains smart by setting routines to wake up naturally with sunlight, secure your home when you\u2019re away with the Holiday Mode or create automatic isolation to save on your heating or cooling! Last but not least, just give your curtains a small push by hand, and Slide will take over with Touch&Go.\n\nInstall and setup your Slide device(s) using the official app by Innovation in Motion, on your smartphone. Login using your e-mail address and password of your Slide account, in the Ensi Home app, and select which Slide(s) you want to add to Ensi Home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "slide",
@@ -6935,7 +6935,7 @@
                 },
                 {
                     "name": "Forest",
-                    "description": "Let Homey control your Forest curtains and roller blinds",
+                    "description": "Let Ensi Home control your Forest curtains and roller blinds",
                     "company": "Forest Group B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.forest/10/ea9a4fe5-3101-4bfe-9888-7ee36a821458/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Forest\\image.png",
@@ -6979,7 +6979,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.devolo/12/fc8d9257-6bf2-4874-a5eb-d25239471f15/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Devolo\\image.png",
-                    "summary_description": "Control your Devolo Z-Wave devices with Homey.\nConnect with Homey and create the most beautiful scenes with just one press of a button.",
+                    "summary_description": "Control your Devolo Z-Wave devices with Ensi Home.\nConnect with Ensi Home and create the most beautiful scenes with just one press of a button.",
                     "supported_devices": [
                         {
                             "data_driver_id": "MT2648",
@@ -7099,7 +7099,7 @@
                     "company": "CTM Lyng",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.ctmlyng.op/47/b2227cfe-2e70-4626-a8c8-743e8dc56458/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\CTM_Lyng\\image.png",
-                    "summary_description": "Adds support for CTM Lyng OP products.\n\nLet Homey control your CTM Lyng OP products.\nWith thermostats, you can optimize consumption based on usage patterns and electricity prices. This way, you can maintain the same comfort while reducing your electricity bill.\nWith smart relays, you can shift hot water boiler load to when electricity is cheaper.\nWith smart lighting control, you can easily change the ambiance in your home.\nWith safety and security products like Power Cut-off, Stove Guard, and Water Stop, you can stay in control when you're not at home.\n\nOnly your imagination sets limits on what you can do",
+                    "summary_description": "Adds support for CTM Lyng OP products.\n\nLet Ensi Home control your CTM Lyng OP products.\nWith thermostats, you can optimize consumption based on usage patterns and electricity prices. This way, you can maintain the same comfort while reducing your electricity bill.\nWith smart relays, you can shift hot water boiler load to when electricity is cheaper.\nWith smart lighting control, you can easily change the ambiance in your home.\nWith safety and security products like Power Cut-off, Stove Guard, and Water Stop, you can stay in control when you're not at home.\n\nOnly your imagination sets limits on what you can do",
                     "supported_devices": [
                         {
                             "data_driver_id": "ventildriver",
@@ -7269,7 +7269,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.alecto/7/703ffef8-0134-4b67-98ce-cc0292558418/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Alecto\\image.png",
-                    "summary_description": "Add the Alecto app to your Homey to integrate their 433MHz doorbells.\nTrigger Flows when someone rings your doorbell, or activate the doorbell based on other actions.",
+                    "summary_description": "Add the Alecto app to your Ensi Home to integrate their 433MHz doorbells.\nTrigger Flows when someone rings your doorbell, or activate the doorbell based on other actions.",
                     "supported_devices": [
                         {
                             "data_driver_id": "adb-11",
@@ -7329,7 +7329,7 @@
                     "company": "Niko Europe",
                     "summary_image_url": "https://apps-cdn.athom.com/app/eu.niko/19/2a6041fc-44d1-426a-a5d7-a42af8567793/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Niko_Zigbee_\\image.png",
-                    "summary_description": "Niko offers a wide portfolio of high-quality, smart Zigbee\u00ae products. From Plug-and-Play products to beautiful built-in solutions such as sockets, dimmers and switches. The Niko built-in products can be combined with all Niko finishes to make them fit seamlessly into any interior.\n\nAll 230 Volt and battery-powered Niko Zigbee\u00ae products can be connected directly and wirelessly with the Homey.",
+                    "summary_description": "Niko offers a wide portfolio of high-quality, smart Zigbee\u00ae products. From Plug-and-Play products to beautiful built-in solutions such as sockets, dimmers and switches. The Niko built-in products can be combined with all Niko finishes to make them fit seamlessly into any interior.\n\nAll 230 Volt and battery-powered Niko Zigbee\u00ae products can be connected directly and wirelessly with the Ensi Home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "dimmer",
@@ -7439,7 +7439,7 @@
                     "company": "Jasco Products LLC",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.jasco/31/0ee6ff57-3495-46b5-8468-f71c4ea56778/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\GE_Enbrighten\\image.png",
-                    "summary_description": "Automate in-wall and plug-in electrical equipment with smart-home devices. Jasco Z-Wave smart controls provide versatile solutions to build a home-automation network. Remote operation, scheduling and monitoring capabilities increase security, reduce energy costs and more \u2013 all from the palm of your hand.\n\nConnect your Jasco devices with Homey to enable further automation scenarios, and seamlessly use your Jasco devices alongside the rest of your smart home.\n\nAlso works with Enbrighten and GE devices. Note that older devices might not be functional due to incompatibilities.",
+                    "summary_description": "Automate in-wall and plug-in electrical equipment with smart-home devices. Jasco Z-Wave smart controls provide versatile solutions to build a home-automation network. Remote operation, scheduling and monitoring capabilities increase security, reduce energy costs and more \u2013 all from the palm of your hand.\n\nConnect your Jasco devices with Ensi Home to enable further automation scenarios, and seamlessly use your Jasco devices alongside the rest of your smart home.\n\nAlso works with Enbrighten and GE devices. Note that older devices might not be functional due to incompatibilities.",
                     "supported_devices": [
                         {
                             "data_driver_id": "door_sensor",
@@ -7769,7 +7769,7 @@
                     "company": "Webed Solutions",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.ondilo.ico/14/819307d1-4aba-4f78-a618-360041e41118/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\ICO\\image.png",
-                    "summary_description": "ICO will monitor your pool/spa.\n\nIt analyzes your water quality, helps you with your maintenance and anticipates changes in the weather.\n\nHomey will automatically refresh the data every 15 minutes.",
+                    "summary_description": "ICO will monitor your pool/spa.\n\nIt analyzes your water quality, helps you with your maintenance and anticipates changes in the weather.\n\nEnsi Home will automatically refresh the data every 15 minutes.",
                     "supported_devices": [
                         {
                             "data_driver_id": "pool",
@@ -8339,7 +8339,7 @@
                     "company": "HELTUN Inc",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.heltun/39/ffda14d8-c450-4b78-8a7b-5d0342f019a1/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\HELTUN\\image.png",
-                    "summary_description": "With HELTUN you can remotely control and automate heating, cooling, lighting, shades, curtains, irrigation, and most of the things in your home.\nWe offer one of the biggest ranges of Z-Wave 700 series products reflecting the company\u2019s commitment toward outstanding functionality, elegant design, and uncompromised quality.\nAll the products are available for all Z-Wave frequencies, so you can use those wherever you are located.\nJust connect your HELTUN devices with Homey to enrich and simplify your home automation with uncompromising user experience.",
+                    "summary_description": "With HELTUN you can remotely control and automate heating, cooling, lighting, shades, curtains, irrigation, and most of the things in your home.\nWe offer one of the biggest ranges of Z-Wave 700 series products reflecting the company\u2019s commitment toward outstanding functionality, elegant design, and uncompromised quality.\nAll the products are available for all Z-Wave frequencies, so you can use those wherever you are located.\nJust connect your HELTUN devices with Ensi Home to enrich and simplify your home automation with uncompromising user experience.",
                     "supported_devices": [
                         {
                             "data_driver_id": "ft01-fan-coil-thermostat",
@@ -8489,7 +8489,7 @@
                     "company": "Hoppe Group",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.hoppe/21/1d24d82c-8c2c-4ce2-9285-76bba01eb580/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\HOPPE\\image.png",
-                    "summary_description": "eHandle ConnectSense - Keeping an eye on the window\n\nThe HOPPE eHandle ConnectSense reliably detects break-in attempts through a window and reports those to the Homey smart home control centre. Both, the position of the handle (closed, tilted, open) and the position of the window itself (closed, open), are detected and reported. These positions can be checked through a smartphone anytime; a detected break-in attempt can be transmitted via push notification.\n\nUsing a special algorithm, the handle distinguishes an actual break-in attempt (e.g. prising open the window) from an accidental shock (e.g. caused by children playing ball). Through the Homey smart home control centre users can define preventive measures via further integrated gadgets that are to be activated in the event of a detected break-in attempt, e.g. lowering the shutters or switching on the lights.\n\nIndependent of break-in attempt detection, users can define scenarios that ensure greater energy efficiency and convenience, e.g. automatic curbing of heating or air-conditioning while the window is opened for ventilation.",
+                    "summary_description": "eHandle ConnectSense - Keeping an eye on the window\n\nThe HOPPE eHandle ConnectSense reliably detects break-in attempts through a window and reports those to the Ensi Home smart home control centre. Both, the position of the handle (closed, tilted, open) and the position of the window itself (closed, open), are detected and reported. These positions can be checked through a smartphone anytime; a detected break-in attempt can be transmitted via push notification.\n\nUsing a special algorithm, the handle distinguishes an actual break-in attempt (e.g. prising open the window) from an accidental shock (e.g. caused by children playing ball). Through the Ensi Home smart home control centre users can define preventive measures via further integrated gadgets that are to be activated in the event of a detected break-in attempt, e.g. lowering the shutters or switching on the lights.\n\nIndependent of break-in attempt detection, users can define scenarios that ensure greater energy efficiency and convenience, e.g. automatic curbing of heating or air-conditioning while the window is opened for ventilation.",
                     "supported_devices": [
                         {
                             "data_driver_id": "ewindowhandle_connectsense",
@@ -8834,7 +8834,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.netatmo/22/35711107-dc06-42ff-86b8-b13951467da2/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Netatmo\\image.png",
-                    "summary_description": "Connect your Netatmo products with Homey to open up a whole new world of automation.\n\nHomey seamlessly connects with your Netatmo Security cameras, the Netatmo Thermostat and the Netatmo Radiator Valves.\n\nConnect the Netatmo Weather Station & accessories to Homey and log to Homey Insights for a complete smart home.",
+                    "summary_description": "Connect your Netatmo products with Ensi Home to open up a whole new world of automation.\n\nEnsi Home seamlessly connects with your Netatmo Security cameras, the Netatmo Thermostat and the Netatmo Radiator Valves.\n\nConnect the Netatmo Weather Station & accessories to Ensi Home and log to Ensi Home Insights for a complete smart home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "coalarm",
@@ -8944,7 +8944,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.google.nest/18/423501c8-3b18-4385-b3e0-998ca703f403/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Google_Nest\\image.png",
-                    "summary_description": "Welcome to Google Nest, where you build your helpful home. Our products work even better together. Especially with Homey.\n\nNest Thermostat\n\u2014 Control heating\n\u2014 Automate with Flow when the temperature or mode changes.\n\u2014 Monitor the ambient temperature.\n\nNest Cam\n\u2014 Start a Flow when motion, a person or sound is detected.\n\nNest Doorbell\n\u2014 Start a Flow when someone rings the doorbell.\n\nNest Hub Max\n\u2014 Start a Flow when motion, a person or sound is detected.\n\nDISCLAIMER\nThe Google Nest integration for Homey is limited to the functionality and devices offered by Google.\n\nLEGAL\nGoogle, Google Nest, Nest Thermostat, Nest Cam, Nest Doorbell, Nest Hub Max are trademarks of Google LLC.\n\nHomey's use of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.\nRead the Google API Services User Data Policy at https://developers.google.com/terms/api-services-user-data-policy.\n\nACCOUNT\nManage your account permissions Google Account at https://myaccount.google.com.",
+                    "summary_description": "Welcome to Google Nest, where you build your helpful home. Our products work even better together. Especially with Ensi Home.\n\nNest Thermostat\n\u2014 Control heating\n\u2014 Automate with Flow when the temperature or mode changes.\n\u2014 Monitor the ambient temperature.\n\nNest Cam\n\u2014 Start a Flow when motion, a person or sound is detected.\n\nNest Doorbell\n\u2014 Start a Flow when someone rings the doorbell.\n\nNest Hub Max\n\u2014 Start a Flow when motion, a person or sound is detected.\n\nDISCLAIMER\nThe Google Nest integration for Ensi Home is limited to the functionality and devices offered by Google.\n\nLEGAL\nGoogle, Google Nest, Nest Thermostat, Nest Cam, Nest Doorbell, Nest Hub Max are trademarks of Google LLC.\n\nEnsi Home's use of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.\nRead the Google API Services User Data Policy at https://developers.google.com/terms/api-services-user-data-policy.\n\nACCOUNT\nManage your account permissions Google Account at https://myaccount.google.com.",
                     "supported_devices": [
                         {
                             "data_driver_id": "camera",
@@ -9274,7 +9274,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.tado2/19/e5059068-809d-4a63-8c2a-caf24df8981c/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\tado_\\image.png",
-                    "summary_description": "Time for smarter heating. Replace your old thermostat with the tado\u00b0 Smart Thermostat and control your heating from anywhere.\nConnect the tado\u00b0 thermostat via Homey with your other devices at home and experience a new level of comfort while saving energy and costs.\n\ntado\u00b0 Radiator Thermostats cannot be connected to Homey without the tado\u00b0 bridge. \n\nSet your preferences of manual control with Homey via the advanced settings of your device.\n\nOpen window detection can unfortunately only be checked every 15 minutes.",
+                    "summary_description": "Time for smarter heating. Replace your old thermostat with the tado\u00b0 Smart Thermostat and control your heating from anywhere.\nConnect the tado\u00b0 thermostat via Ensi Home with your other devices at home and experience a new level of comfort while saving energy and costs.\n\ntado\u00b0 Radiator Thermostats cannot be connected to Ensi Home without the tado\u00b0 bridge. \n\nSet your preferences of manual control with Ensi Home via the advanced settings of your device.\n\nOpen window detection can unfortunately only be checked every 15 minutes.",
                     "supported_devices": [
                         {
                             "data_driver_id": "airconditioning",
@@ -9334,7 +9334,7 @@
                     "company": "ML Development",
                     "summary_image_url": "https://apps-cdn.athom.com/app/climate.onecta.daikin/66/9f6ea776-aa7f-4b7f-8454-21d580f6d5f8/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Daikin_ONECTA\\image.png",
-                    "summary_description": "Combine your Daikin devices with the rest of your smart home using Homey. \nEasily monitor and control your AC units and/or heatpumps\nCreate Flows to effortlessly trigger your climate control in exactly the way you want, together with your smart blinds or curtains, home lighting, and even your entertainment system.\n\nTo enable control thru Homey, each (indoor) unit first need to be added to the Daikin ONECTA app, which can be downloaded from the App Store or Google Play.\n\nSupport for AC models :\n- General (All system functionalities and values)\n- Perfera (FTXM)  \n- Synergi III (FTXTM))\n- Perfera Floor (FVXM)  \n- Origo II XRH Floor (FVXM)  \n- Emura (FTXJ)\n- Comfora (FTXP)\n- Ururu Sarara (FTXZ)\n- Sensira (FTXF)  \n- Sensira (FTXC)\n- Stylish II (FTXA) \n- Skyair (FDXM)\n- Ducted (FBA-A)\n- Altherma III\n- Altherma III Hybrid Heatpump\n- Altherma III GEO Heatpump",
+                    "summary_description": "Combine your Daikin devices with the rest of your smart home using Ensi Home. \nEasily monitor and control your AC units and/or heatpumps\nCreate Flows to effortlessly trigger your climate control in exactly the way you want, together with your smart blinds or curtains, home lighting, and even your entertainment system.\n\nTo enable control thru Ensi Home, each (indoor) unit first need to be added to the Daikin ONECTA app, which can be downloaded from the App Store or Google Play.\n\nSupport for AC models :\n- General (All system functionalities and values)\n- Perfera (FTXM)  \n- Synergi III (FTXTM))\n- Perfera Floor (FVXM)  \n- Origo II XRH Floor (FVXM)  \n- Emura (FTXJ)\n- Comfora (FTXP)\n- Ururu Sarara (FTXZ)\n- Sensira (FTXF)  \n- Sensira (FTXC)\n- Stylish II (FTXA) \n- Skyair (FDXM)\n- Ducted (FBA-A)\n- Altherma III\n- Altherma III Hybrid Heatpump\n- Altherma III GEO Heatpump",
                     "supported_devices": [
                         {
                             "data_driver_id": "altherma3",
@@ -9504,7 +9504,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.honeywell.lyric/13/3622bf1c-df2b-4042-8d48-9fe1d7f28d14/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Honeywell_Home\\image.png",
-                    "summary_description": "Adds support for Honeywell Home devices.\nHoneywell adapts to your life. Control your thermostat with Homey and create personalised Flows to manage the climate in your home.",
+                    "summary_description": "Adds support for Honeywell Home devices.\nHoneywell adapts to your life. Control your thermostat with Ensi Home and create personalised Flows to manage the climate in your home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "tthermostat",
@@ -9544,7 +9544,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.danfoss/14/9152b1cd-580f-4c56-9b2e-0a287931c1ad/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\Danfoss\\image.jpg",
-                    "summary_description": "Makes Homey work with the Z-Wave version of the Danfoss LC13 and Danfoss Ally Zigbee version.",
+                    "summary_description": "Makes Ensi Home work with the Z-Wave version of the Danfoss LC13 and Danfoss Ally Zigbee version.",
                     "supported_devices": [
                         {
                             "data_driver_id": "RS-ALLY",
@@ -9594,7 +9594,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.eneco.toon/78/76e50cc0-6598-46f2-b0f1-e14be66e6bda/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Toon\\image.png",
-                    "summary_description": "With Toon\u2019s thermostat you can set the target temperature, read the room temperature and have insight into your energy consumption. Connect Toon with Homey and you'll never arrive at a frigid house again.",
+                    "summary_description": "With Toon\u2019s thermostat you can set the target temperature, read the room temperature and have insight into your energy consumption. Connect Toon with Ensi Home and you'll never arrive at a frigid house again.",
                     "supported_devices": [
                         {
                             "data_driver_id": "toon",
@@ -9684,7 +9684,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.ecobee/9/e018a309-14b5-4a2b-a19b-c1ef794431b5/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Ecobee\\image.png",
-                    "summary_description": "Let Homey control your Ecobee devices! Set the target temperature, read the room temperature, control the HVAC mode and use the Ecobee Room Sensors in your Flows. Be aware: changes done from the app or directly on the thermostat and temperature/occupancy updates may take up to 3 minutes to update in Homey, due to API limitations.",
+                    "summary_description": "Let Ensi Home control your Ecobee devices! Set the target temperature, read the room temperature, control the HVAC mode and use the Ecobee Room Sensors in your Flows. Be aware: changes done from the app or directly on the thermostat and temperature/occupancy updates may take up to 3 minutes to update in Ensi Home, due to API limitations.",
                     "supported_devices": [
                         {
                             "data_driver_id": "ecobee_thermostat_enhanced",
@@ -9734,7 +9734,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.mitsubishielectric.ir/9/c2dd3a8c-4534-46ce-bd29-707d73d92338/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Mitsubishi_Electric_AC_Airconditioning\\image.png",
-                    "summary_description": "Connect your Mitsubishi Electric Air conditioning system to Homey.\n\nTurn your HVAC unit on or off, set the temperature, and adjust the mode\u2014all through infrared technology. No need for a separate remote; it's all integrated.\n\nThis app allows Homey Bridge and Homey Pro to control Mitsubishi Electric AC units via Infrared, so you can control and automate them in the Homey app. Homey Pro or Homey Bridge need to be in te same room as your AC system, as infrared signals to not travel through walls.",
+                    "summary_description": "Connect your Mitsubishi Electric Air conditioning system to Ensi Home.\n\nTurn your HVAC unit on or off, set the temperature, and adjust the mode\u2014all through infrared technology. No need for a separate remote; it's all integrated.\n\nThis app allows Ensi Home Box and Ensi Home Pro to control Mitsubishi Electric AC units via Infrared, so you can control and automate them in the Ensi Home app. Ensi Home Pro or Ensi Home Box need to be in te same room as your AC system, as infrared signals to not travel through walls.",
                     "supported_devices": [
                         {
                             "data_driver_id": "split_airco",
@@ -9794,7 +9794,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.mitsubishiheavyindustries.ir/7/a0221e4b-ddc4-4f41-885e-8e35cdc96506/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Mitsubishi_Heavy_AC_Airconditioning\\image.png",
-                    "summary_description": "Connect your Mitsubishi Heavy Industries Air conditioning system to Homey.\n\nTurn your HVAC unit on or off, set the temperature, and adjust the mode\u2014all through infrared technology. No need for a separate remote; it's all integrated.\n\nThis app allows Homey Bridge and Homey Pro to control Mitsubishi Heavy Industries AC units via Infrared, so you can control and automate them in the Homey app. Homey Pro or Homey Bridge need to be in te same room as your AC system, as infrared signals to not travel through walls.",
+                    "summary_description": "Connect your Mitsubishi Heavy Industries Air conditioning system to Ensi Home.\n\nTurn your HVAC unit on or off, set the temperature, and adjust the mode\u2014all through infrared technology. No need for a separate remote; it's all integrated.\n\nThis app allows Ensi Home Box and Ensi Home Pro to control Mitsubishi Heavy Industries AC units via Infrared, so you can control and automate them in the Ensi Home app. Ensi Home Pro or Ensi Home Box need to be in te same room as your AC system, as infrared signals to not travel through walls.",
                     "supported_devices": [
                         {
                             "data_driver_id": "split-airco",
@@ -9814,7 +9814,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.lg.airco-ir/8/5eb89920-f38d-40aa-9d37-af7f039a4f06/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\LG_AC_Airconditioning\\image.png",
-                    "summary_description": "Connect your LG Air conditioning to Homey.\n\nLG Heat pumps and HVAC systems are among the top in the market for efficiency and design. Enjoy fresh air at the right temperature in your home for your optimal indoor climate.\n\nThis app allows Homey Bridge and Homey Pro to control LG AC units via Infrared, so you can control and automate them in the Homey app. Homey Pro or Homey Bridge need to be in te same room as your AC system, as infrared signals to not travel through walls.\n\nNote: LG has several types of air conditioning systems, using different remote commands. The most popular types are available in this app, and we expect to add more variants in the future. Please try which type (1/2/3) works with your AC unit. If you want to provide feedback on supported units, you can do so via our support form.",
+                    "summary_description": "Connect your LG Air conditioning to Ensi Home.\n\nLG Heat pumps and HVAC systems are among the top in the market for efficiency and design. Enjoy fresh air at the right temperature in your home for your optimal indoor climate.\n\nThis app allows Ensi Home Box and Ensi Home Pro to control LG AC units via Infrared, so you can control and automate them in the Ensi Home app. Ensi Home Pro or Ensi Home Box need to be in te same room as your AC system, as infrared signals to not travel through walls.\n\nNote: LG has several types of air conditioning systems, using different remote commands. The most popular types are available in this app, and we expect to add more variants in the future. Please try which type (1/2/3) works with your AC unit. If you want to provide feedback on supported units, you can do so via our support form.",
                     "supported_devices": [
                         {
                             "data_driver_id": "split-airco-type-1",
@@ -9854,7 +9854,7 @@
                     "company": "RockSoft Solutions",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.linktap/38/d9ae3ad2-5018-4a66-b1f5-5de7b77646a7/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\LinkTap\\image.jpg",
-                    "summary_description": "Connect your LinkTap valves so you can control them directly from Homey.\n\nUse the power of Homey flows to automate your watering schedule with the Instant mode or simply select one of the LinkTap predefined modes.\n\nSet the required watering duration along with the Eco mode settings from the devices advanced settings and then simply turn the valves off and on as required.\nFor full automation use the flow action card to set all the desired parameters and start or stop the Instant mode.\n\nGet notifications when watering starts and stops as well as the alarms for low battery, a fallen or broken valve or when the water supply has been switched off.\nView and chart the water flow rate and volume of water used durning each watering session in Insights.\n\nSuggestions or problems?\nIf you have a device that's not supported or a suggestion or problem with this app please go to the forum or the github page linked on the app store page and let me know.",
+                    "summary_description": "Connect your LinkTap valves so you can control them directly from Ensi Home.\n\nUse the power of Ensi Home flows to automate your watering schedule with the Instant mode or simply select one of the LinkTap predefined modes.\n\nSet the required watering duration along with the Eco mode settings from the devices advanced settings and then simply turn the valves off and on as required.\nFor full automation use the flow action card to set all the desired parameters and start or stop the Instant mode.\n\nGet notifications when watering starts and stops as well as the alarms for low battery, a fallen or broken valve or when the water supply has been switched off.\nView and chart the water flow rate and volume of water used durning each watering session in Insights.\n\nSuggestions or problems?\nIf you have a device that's not supported or a suggestion or problem with this app please go to the forum or the github page linked on the app store page and let me know.",
                     "supported_devices": [
                         {
                             "data_driver_id": "link-tap",
@@ -9934,7 +9934,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.daikin.airco-ir/4/db47b33f-abdd-40d7-ad44-2acb4f71af3e/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Daikin_AC_Airconditioning\\image.png",
-                    "summary_description": "Connect your Daikin Air conditioning system to Homey.\n\nTurn your HVAC unit on or off, set the temperature, and adjust the mode\u2014all through infrared technology. No need for a separate remote; it's all integrated.\n\nThis app allows Homey Bridge and Homey Pro to control Daikin AC units via Infrared, so you can control and automate them in the Homey app. Homey Pro or Homey Bridge need to be in te same room as your AC system, as infrared signals to not travel through walls.",
+                    "summary_description": "Connect your Daikin Air conditioning system to Ensi Home.\n\nTurn your HVAC unit on or off, set the temperature, and adjust the mode\u2014all through infrared technology. No need for a separate remote; it's all integrated.\n\nThis app allows Ensi Home Box and Ensi Home Pro to control Daikin AC units via Infrared, so you can control and automate them in the Ensi Home app. Ensi Home Pro or Ensi Home Box need to be in te same room as your AC system, as infrared signals to not travel through walls.",
                     "supported_devices": [
                         {
                             "data_driver_id": "split-airco",
@@ -9954,7 +9954,7 @@
                     "company": "Taelek Oy",
                     "summary_image_url": "https://apps-cdn.athom.com/app/fi.taelek.ecocontrol/17/f5de64c1-061b-4e7f-8ac9-538787f97768/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\ecoControl\\image.png",
-                    "summary_description": "Make your home more comfortable and save energy costs at the same time by connecting your smart thermostats to Homey.\nSet your thermostat to ECO-mode when you leave your house and back to comfort mode when you get home.",
+                    "summary_description": "Make your home more comfortable and save energy costs at the same time by connecting your smart thermostats to Ensi Home.\nSet your thermostat to ECO-mode when you leave your house and back to comfort mode when you get home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "dial",
@@ -10004,7 +10004,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/eu.huum/5/16d3eb31-c6f1-4881-9588-82a3c044a559/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\HUUM\\image.png",
-                    "summary_description": "The simple and organic design of HUUM sauna heaters accentuates the natural beauty of stones and adds elegance to every sauna.\n\nWith HUUM app for Homey, you can start heating your sauna even if you are not home yet. All it takes is a couple of clicks in the Homey app, or a Flow to start your sauna automatically.",
+                    "summary_description": "The simple and organic design of HUUM sauna heaters accentuates the natural beauty of stones and adds elegance to every sauna.\n\nWith HUUM app for Ensi Home, you can start heating your sauna even if you are not home yet. All it takes is a couple of clicks in the Ensi Home app, or a Flow to start your sauna automatically.",
                     "supported_devices": [
                         {
                             "data_driver_id": "uku",
@@ -10024,7 +10024,7 @@
                     "company": "Taelek Oy",
                     "summary_image_url": "https://apps-cdn.athom.com/app/no.homeify/20/2fd66993-f5fc-4a83-ba57-cfe1684ecd39/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Homeify\\image.png",
-                    "summary_description": "Make your home more comfortable and save energy costs at the same time by connecting your smart thermostats to Homey.\nSet your thermostat to ECO-mode when you leave your house and back to comfort mode when you get home.",
+                    "summary_description": "Make your home more comfortable and save energy costs at the same time by connecting your smart thermostats to Ensi Home.\nSet your thermostat to ECO-mode when you leave your house and back to comfort mode when you get home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "dial",
@@ -10070,11 +10070,11 @@
                 },
                 {
                     "name": "RYSE SmartHome",
-                    "description": "Connect your RYSE SmartShade or SmartCurtain to Homey.",
+                    "description": "Connect your RYSE SmartShade or SmartCurtain to Ensi Home.",
                     "company": "RYSE Developer",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.ryse/3/e92b2817-56a4-4a19-ad8f-905fd0d86a05/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\RYSE_SmartHome\\image.png",
-                    "summary_description": "Connect your RYSE SmartShade or SmartCurtain to Homey.\nWith RYSE products you are effortlessly motorize your existing window coverings to complete your Smart Home experience.",
+                    "summary_description": "Connect your RYSE SmartShade or SmartCurtain to Ensi Home.\nWith RYSE products you are effortlessly motorize your existing window coverings to complete your Smart Home experience.",
                     "supported_devices": [
                         {
                             "data_driver_id": "smartshade",
@@ -10139,7 +10139,7 @@
                     "company": "Diederik Bakker",
                     "summary_image_url": "https://apps-cdn.athom.com/app/it.diederik.solar/105/a0c281db-4a51-4819-a59e-19bfa25a99d3/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Solar_Panels\\image.png",
-                    "summary_description": "Let Homey monitor your solar panels. This app allows you to view production statistics using Insights, and lets you create triggers based on the current power output. For example, enable your car charger when your panels are producing!\n\nNeed help pairing your inverter? Go to the documentation by clicking the homepage link below.",
+                    "summary_description": "Let Ensi Home monitor your solar panels. This app allows you to view production statistics using Insights, and lets you create triggers based on the current power output. For example, enable your car charger when your panels are producing!\n\nNeed help pairing your inverter? Go to the documentation by clicking the homepage link below.",
                     "supported_devices": [
                         {
                             "data_driver_id": "enphase-envoy-v7",
@@ -10199,7 +10199,7 @@
                     "company": "Futurehome AS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/no.connecte/26/4c3ff053-93ab-43b1-91e0-cf162995a8c7/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Connecte\\image.png",
-                    "summary_description": "With everything we do, we want your everyday life to be better. At Connecte we focus on open compatibility and quality in our smart home products, as well as easier installation and reliability in our electrical equipment.\n\nConnect your Connecte devices with Homey to enable further automation scenarios, and seamlessly use your Connecte devices alongside the rest of your smart home.",
+                    "summary_description": "With everything we do, we want your everyday life to be better. At Connecte we focus on open compatibility and quality in our smart home products, as well as easier installation and reliability in our electrical equipment.\n\nConnect your Connecte devices with Ensi Home to enable further automation scenarios, and seamlessly use your Connecte devices alongside the rest of your smart home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "puck_relay",
@@ -10249,7 +10249,7 @@
                     "company": "Futurehome AS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/no.futurehome/6/40162e40-f3bc-406d-9a7d-df9bcc3225e9/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Futurehome\\image.png",
-                    "summary_description": "With everything we do, we want your everyday life to be better. At Futurehome we focus on open compatibility and quality in our smart home products, as well as easier installation and reliability in our electrical equipment.\n\nConnect your Futurehome devices with Homey to enable further automation scenarios, and seamlessly use your Futurehome devices alongside the rest of your smart home.",
+                    "summary_description": "With everything we do, we want your everyday life to be better. At Futurehome we focus on open compatibility and quality in our smart home products, as well as easier installation and reliability in our electrical equipment.\n\nConnect your Futurehome devices with Ensi Home to enable further automation scenarios, and seamlessly use your Futurehome devices alongside the rest of your smart home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "puck_relay",
@@ -10308,7 +10308,7 @@
                     "company": "Amina Charging AS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.aminacharging/16/caff4181-5eb7-4270-8fe7-f2def00437c1/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\amina\\image.png",
-                    "summary_description": "Enhance your smart home with amina S for a stable charging experience. Seamlessly integrate amina S with Homey for simplified home control and cost-effective charging. amina S is the small, fast, and smart charger that gives you complete control over charging speed and energy consumption. With its 6 m lightweight, flexible and fixed cable, you can charge up to 22kW.\n\nKey features:\n- Start and stop charging\n- Set charging current\n- Realtime energy consumption\n- Charging history\n- Alarm notifications\n\nIn addition to key functionality, you can combine amina S with other devices to build flows for load balancing, price optimised charging and solar energy utilisation. Discover all possibilities with amina below.\n\nFor the best experience in Homey amina S should be on firmware version 1.8.7 or later.",
+                    "summary_description": "Enhance your smart home with amina S for a stable charging experience. Seamlessly integrate amina S with Ensi Home for simplified home control and cost-effective charging. amina S is the small, fast, and smart charger that gives you complete control over charging speed and energy consumption. With its 6 m lightweight, flexible and fixed cable, you can charge up to 22kW.\n\nKey features:\n- Start and stop charging\n- Set charging current\n- Realtime energy consumption\n- Charging history\n- Alarm notifications\n\nIn addition to key functionality, you can combine amina S with other devices to build flows for load balancing, price optimised charging and solar energy utilisation. Discover all possibilities with amina below.\n\nFor the best experience in Ensi Home amina S should be on firmware version 1.8.7 or later.",
                     "supported_devices": [
                         {
                             "data_driver_id": "amina-s",
@@ -10388,7 +10388,7 @@
                     "company": "Enua AS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/no.enua/17/1a132871-76d1-4122-9a61-d2db6d2a3831/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Enua\\image.png",
-                    "summary_description": "Simplify the use of your Enua Charger with the Enua Homey app.\n\nThis app offers extended control over your electric vehicle charging needs. Whether you just want to turn the charger on or off with a tap, or automate the process with Flow cards.\n\nEmbrace the blend of smart technology and practicality, while realizing the vision of electric freedom.",
+                    "summary_description": "Simplify the use of your Enua Charger with the Enua Ensi Home app.\n\nThis app offers extended control over your electric vehicle charging needs. Whether you just want to turn the charger on or off with a tap, or automate the process with Flow cards.\n\nEmbrace the blend of smart technology and practicality, while realizing the vision of electric freedom.",
                     "supported_devices": [
                         {
                             "data_driver_id": "enua-charger",
@@ -10413,7 +10413,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.google.sheets/6/ebedc6ed-c9a0-42ed-9f1e-df447445a3bf/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Google_Sheets\\image.png",
-                    "summary_description": "Connect Google Sheets with Homey, and log any type of data to your spreadsheets from a Flow.\n\nMeasure your smart plug's energy usage, log the weather station's temperature or events when someone came home. It's entirely up to you.\n\nAfter installing the Google Sheets app an additional step is needed before you can use it in your Flows. \n\nOpen the Homey Web App in your browser or the Homey Mobile App on your phone, go to the Devices screen and select \"+\" to add a new device. Select the Google sheets app and connect with a Google account.\n\nA device tile will be created for this Google account and you can start using it in Flows with the now created Flow cards.",
+                    "summary_description": "Connect Google Sheets with Ensi Home, and log any type of data to your spreadsheets from a Flow.\n\nMeasure your smart plug's energy usage, log the weather station's temperature or events when someone came home. It's entirely up to you.\n\nAfter installing the Google Sheets app an additional step is needed before you can use it in your Flows. \n\nOpen the Ensi Home Web App in your browser or the Ensi Home Mobile App on your phone, go to the Devices screen and select \"+\" to add a new device. Select the Google sheets app and connect with a Google account.\n\nA device tile will be created for this Google account and you can start using it in Flows with the now created Flow cards.",
                     "supported_devices": [
                         {
                             "data_driver_id": "user",
@@ -10433,7 +10433,7 @@
                     "company": "\u00e9lo consultancy",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.lrvdlinden.knmi-weerwaarschuwing/93/2d5ce983-317c-4a10-b206-999e54edc43d/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\KNMI\\image.png",
-                    "summary_description": "\ud83c\udf26\ufe0f KNMI for Homey\n\nWelcome to KNMI for Homey! This app allows you to integrate weather data from the Dutch KNMI into your Homey automation setup. Stay informed about real-time weather conditions and receive notifications directly from KNMI.\n\nInstallation\n\n1. \ud83d\udcf1 Open the Homey app on your mobile device.\n2. \ud83d\udd0d Navigate to the \"Apps\" tab.\n3. \ud83d\udd8a\ufe0f Search for \"KNMI\" in the search bar.\n4. \ud83d\udcf2 Select the KNMI app from the search results.\n5. \u2b07\ufe0f Tap on the \"Install\" button to install the app on your Homey.\n\nAdding a Device\n\n1. \ud83d\udd27 After configuring the app settings, go to the \"Devices\" tab in the Homey app.\n2. \u2795 Tap on the \"+\" icon to add a new device.\n3. \ud83d\udd0d Search for \"KNMI\" in the search bar and select the KNMI device.\n4. \ud83d\udd04 Follow the on-screen instructions to complete the pairing process.\n\nPairing Screen\n\nDuring the pairing process, you may be prompted to select specific weather data or preferences. Follow the instructions on the pairing screen to customize your KNMI integration according to your preferences.\n\nFeatures\n\n- \ud83d\udea8 Receive real-time notifications about weather conditions.\n- \ud83d\udd11 Access tokens for weather-related actions.\n- \ud83d\uddbc\ufe0f View weather warning images directly from KNMI.\n- \ud83d\udcf7 Utilize camera image capability with weather warning images for enhanced visualization.\n\nExample Flows\n\nExplore the community forum for examples of how to create effective flows using KNMI data.\n\nSupported Languages\n\nSupported languages \ud83c\uddf3\ud83c\uddf1\n- \ud83c\uddf3\ud83c\uddf1 Dutch\n- \ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f English\n\nEnjoy using KNMI for Homey to stay informed and enhance your home automation experience with weather data from KNMI powered by Weerlive.nl!",
+                    "summary_description": "\ud83c\udf26\ufe0f KNMI for Ensi Home\n\nWelcome to KNMI for Ensi Home! This app allows you to integrate weather data from the Dutch KNMI into your Ensi Home automation setup. Stay informed about real-time weather conditions and receive notifications directly from KNMI.\n\nInstallation\n\n1. \ud83d\udcf1 Open the Ensi Home app on your mobile device.\n2. \ud83d\udd0d Navigate to the \"Apps\" tab.\n3. \ud83d\udd8a\ufe0f Search for \"KNMI\" in the search bar.\n4. \ud83d\udcf2 Select the KNMI app from the search results.\n5. \u2b07\ufe0f Tap on the \"Install\" button to install the app on your Ensi Home.\n\nAdding a Device\n\n1. \ud83d\udd27 After configuring the app settings, go to the \"Devices\" tab in the Ensi Home app.\n2. \u2795 Tap on the \"+\" icon to add a new device.\n3. \ud83d\udd0d Search for \"KNMI\" in the search bar and select the KNMI device.\n4. \ud83d\udd04 Follow the on-screen instructions to complete the pairing process.\n\nPairing Screen\n\nDuring the pairing process, you may be prompted to select specific weather data or preferences. Follow the instructions on the pairing screen to customize your KNMI integration according to your preferences.\n\nFeatures\n\n- \ud83d\udea8 Receive real-time notifications about weather conditions.\n- \ud83d\udd11 Access tokens for weather-related actions.\n- \ud83d\uddbc\ufe0f View weather warning images directly from KNMI.\n- \ud83d\udcf7 Utilize camera image capability with weather warning images for enhanced visualization.\n\nExample Flows\n\nExplore the community forum for examples of how to create effective flows using KNMI data.\n\nSupported Languages\n\nSupported languages \ud83c\uddf3\ud83c\uddf1\n- \ud83c\uddf3\ud83c\uddf1 Dutch\n- \ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f English\n\nEnjoy using KNMI for Ensi Home to stay informed and enhance your home automation experience with weather data from KNMI powered by Weerlive.nl!",
                     "supported_devices": [
                         {
                             "data_driver_id": "knmi",
@@ -10453,7 +10453,7 @@
                     "company": "\u00e9lo consultancy",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.lrvdlinden.p2000/121/7fc0dca9-f1f3-46dd-92b1-a52e97301625/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\P2000\\image.png",
-                    "summary_description": "P2000 for Homey\n\nThis app gives Homey the ability to respond to messages of the Dutch P2000 network. Keep in mind that all messages sent on this network are in Dutch.\n\nCurrently has support for:\n\ud83d\udcac Realtime notifications with a short and/or long messages\n\ud83d\udcac Tokens: Message (long notification), P2000 (short message), Category, Service, Town, Street, Province, Prio, Region\n\ud83d\udd0e Search abilities with condition cards (capcode, province, town, region, street, service, Prio type, category More filtering by adding more devices or using the conditions cards\n\ud83d\uddfa\ufe0f Image tag of incident location\n\n\n\u2699\ufe0f To use this app, you need to create a new device and create a flow. For using Image tag of incident location, please create a Google Maps Static Apikey) and place it in the device settings.\n\n\ud83d\udcac Supported languages:\n\ud83c\uddfa\ud83c\uddf8 English\n\ud83c\uddf3\ud83c\uddf1 Dutch\n\ud83c\uddf5\ud83c\uddf1 Polish",
+                    "summary_description": "P2000 for Ensi Home\n\nThis app gives Ensi Home the ability to respond to messages of the Dutch P2000 network. Keep in mind that all messages sent on this network are in Dutch.\n\nCurrently has support for:\n\ud83d\udcac Realtime notifications with a short and/or long messages\n\ud83d\udcac Tokens: Message (long notification), P2000 (short message), Category, Service, Town, Street, Province, Prio, Region\n\ud83d\udd0e Search abilities with condition cards (capcode, province, town, region, street, service, Prio type, category More filtering by adding more devices or using the conditions cards\n\ud83d\uddfa\ufe0f Image tag of incident location\n\n\n\u2699\ufe0f To use this app, you need to create a new device and create a flow. For using Image tag of incident location, please create a Google Maps Static Apikey) and place it in the device settings.\n\n\ud83d\udcac Supported languages:\n\ud83c\uddfa\ud83c\uddf8 English\n\ud83c\uddf3\ud83c\uddf1 Dutch\n\ud83c\uddf5\ud83c\uddf1 Polish",
                     "supported_devices": [
                         {
                             "data_driver_id": "p2000",
@@ -10473,7 +10473,7 @@
                     "company": "Emile Nijssen",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.github/5/44576d5d-1db4-436f-a49d-6e338ae7b101/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\GitHub\\image.png",
-                    "summary_description": "Millions of developers and companies build, ship, and maintain their software on GitHub\u2014the largest and most advanced development platform in the world.\n\nConnect Homey with GitHub and start a Flow when an Issue is created or closed, or when a Pull Request is opened, merged or closed.",
+                    "summary_description": "Millions of developers and companies build, ship, and maintain their software on GitHub\u2014the largest and most advanced development platform in the world.\n\nConnect Ensi Home with GitHub and start a Flow when an Issue is created or closed, or when a Pull Request is opened, merged or closed.",
                     "supported_devices": [
                         {
                             "data_driver_id": "organization",
@@ -10493,7 +10493,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.discord/4/00fc01dc-c813-4400-9f76-f169f68bab08/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Discord\\image.png",
-                    "summary_description": "Connect Discord with Homey, and create Flows to send messages to your channels.",
+                    "summary_description": "Connect Discord with Ensi Home, and create Flows to send messages to your channels.",
                     "supported_devices": [
                         {
                             "data_driver_id": "webhook",
@@ -10513,7 +10513,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.slack2/7/36b4d458-4bca-4b46-b6d8-4d947e614adc/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Slack\\image.png",
-                    "summary_description": "Connect Slack with Homey to automate your work \u2014 or just have more fun at it.\n\nSEND MESSAGES TO SLACK\nCreate a Flow to send any message to any Slack channel or user. For example, use Homey Logic Webhooks to send a message from anywhere to Slack. Or let your team know who's at the office!\n\nSTART A FLOW FROM SLACK\nStart any Flow from Slack by typing `/flow all-lights-on`. Feeling adventurous? Provide a Tag for even more advanced behavior by typing `/flow say Hello World!`.",
+                    "summary_description": "Connect Slack with Ensi Home to automate your work \u2014 or just have more fun at it.\n\nSEND MESSAGES TO SLACK\nCreate a Flow to send any message to any Slack channel or user. For example, use Ensi Home Logic Webhooks to send a message from anywhere to Slack. Or let your team know who's at the office!\n\nSTART A FLOW FROM SLACK\nStart any Flow from Slack by typing `/flow all-lights-on`. Feeling adventurous? Provide a Tag for even more advanced behavior by typing `/flow say Hello World!`.",
                     "supported_devices": [
                         {
                             "data_driver_id": "workspace",
@@ -10533,7 +10533,7 @@
                     "company": "\u00e9lo consultancy",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.lrvdlinden.KMI/37/53430afe-f85d-4bec-b0aa-bc3fb033b8e5/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\KMI\\image.png",
-                    "summary_description": "\ud83c\udf26\ufe0f KMI for Homey\n\nWelcome to KMI for Homey! This app allows you to integrate weather data from the Dutch KMI into your Homey automation setup. Stay informed about real-time weather conditions and receive notifications directly from KMI.\n\nInstallation\n\n1. \ud83d\udcf1 Open the Homey app on your mobile device.\n2. \ud83d\udd0d Navigate to the \"Apps\" tab.\n3. \ud83d\udd8a\ufe0f Search for \"KMI\" in the search bar.\n4. \ud83d\udcf2 Select the KMI app from the search results.\n5. \u2b07\ufe0f Tap on the \"Install\" button to install the app on your Homey.\n\nAdding a Device\n\n1. \ud83d\udd27 After configuring the app settings, go to the \"Devices\" tab in the Homey app.\n2. \u2795 Tap on the \"+\" icon to add a new device.\n3. \ud83d\udd0d Search for \"KMI\" in the search bar and select the KMI device.\n4. \ud83d\udd04 Follow the on-screen instructions to complete the pairing process.\n\nPairing Screen\n\nDuring the pairing process, you may be prompted to select specific weather data or preferences. Follow the instructions on the pairing screen to customize your KMI integration according to your preferences.\n\nFeatures\n\n- \ud83d\udea8 Receive real-time notifications about weather conditions.\n- \ud83d\udd11 Access tokens for weather-related actions.\n- \ud83d\uddbc\ufe0f View weather warning images directly from KMI.\n- \ud83d\udcf7 Utilize camera image capability with weather warning images for enhanced visualization.\n\nExample Flows\n\nExplore the community forum for examples of how to create effective flows using KMI data.\n\nSupported Languages\n\nSupported languages \ud83c\uddf3\ud83c\uddf1\n- \ud83c\uddf3\ud83c\uddf1 Dutch\n- \ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f English\n\nEnjoy using KMI for Homey to stay informed and enhance your home automation experience with weather data from KMI powered by Weerlive.nl!",
+                    "summary_description": "\ud83c\udf26\ufe0f KMI for Ensi Home\n\nWelcome to KMI for Ensi Home! This app allows you to integrate weather data from the Dutch KMI into your Ensi Home automation setup. Stay informed about real-time weather conditions and receive notifications directly from KMI.\n\nInstallation\n\n1. \ud83d\udcf1 Open the Ensi Home app on your mobile device.\n2. \ud83d\udd0d Navigate to the \"Apps\" tab.\n3. \ud83d\udd8a\ufe0f Search for \"KMI\" in the search bar.\n4. \ud83d\udcf2 Select the KMI app from the search results.\n5. \u2b07\ufe0f Tap on the \"Install\" button to install the app on your Ensi Home.\n\nAdding a Device\n\n1. \ud83d\udd27 After configuring the app settings, go to the \"Devices\" tab in the Ensi Home app.\n2. \u2795 Tap on the \"+\" icon to add a new device.\n3. \ud83d\udd0d Search for \"KMI\" in the search bar and select the KMI device.\n4. \ud83d\udd04 Follow the on-screen instructions to complete the pairing process.\n\nPairing Screen\n\nDuring the pairing process, you may be prompted to select specific weather data or preferences. Follow the instructions on the pairing screen to customize your KMI integration according to your preferences.\n\nFeatures\n\n- \ud83d\udea8 Receive real-time notifications about weather conditions.\n- \ud83d\udd11 Access tokens for weather-related actions.\n- \ud83d\uddbc\ufe0f View weather warning images directly from KMI.\n- \ud83d\udcf7 Utilize camera image capability with weather warning images for enhanced visualization.\n\nExample Flows\n\nExplore the community forum for examples of how to create effective flows using KMI data.\n\nSupported Languages\n\nSupported languages \ud83c\uddf3\ud83c\uddf1\n- \ud83c\uddf3\ud83c\uddf1 Dutch\n- \ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f English\n\nEnjoy using KMI for Ensi Home to stay informed and enhance your home automation experience with weather data from KMI powered by Weerlive.nl!",
                     "supported_devices": [
                         {
                             "data_driver_id": "KMI",
@@ -10553,7 +10553,7 @@
                     "company": "\u00e9lo consultancy",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.lrvdlinden.lifeliner/60/9beb89a3-8b5d-435e-989a-9347c7e1ffe9/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\Lifeliner\\image.jpg",
-                    "summary_description": "Lifeliner for Homey\n\nThis app gives Homey the ability to respond to Lifeliner messages of the Dutch P2000 network.\nKeep in mind that all messages send on this network are in Dutch.\n\nCurrently has support for:\n\ud83d\udcac Realtime notifications with a short and/or long messages\n\ud83d\udcac Tokens: Message (long notification), P2000 (short message), Category, Service, Town, Street, Province, Prio, Region\n\ud83d\udd0e Search abilities with condition cards (capcode, province, town, region, street, service, Prio type, category More filtering by adding more devices or using the conditions cards\n\ud83d\uddfa\ufe0f Image tag of incident location\n\n\u2699\ufe0f To use this app, you need to create a new device and create a flow. For using Image tag of incident location, please create a Google Maps Static Apikey) and place it in the device settings.\n\n\ud83d\udcac Supported languages:\n\ud83c\uddfa\ud83c\uddf8 English\n\ud83c\uddf3\ud83c\uddf1 Dutch\n\ud83c\uddf5\ud83c\uddf1 Polish",
+                    "summary_description": "Lifeliner for Ensi Home\n\nThis app gives Ensi Home the ability to respond to Lifeliner messages of the Dutch P2000 network.\nKeep in mind that all messages send on this network are in Dutch.\n\nCurrently has support for:\n\ud83d\udcac Realtime notifications with a short and/or long messages\n\ud83d\udcac Tokens: Message (long notification), P2000 (short message), Category, Service, Town, Street, Province, Prio, Region\n\ud83d\udd0e Search abilities with condition cards (capcode, province, town, region, street, service, Prio type, category More filtering by adding more devices or using the conditions cards\n\ud83d\uddfa\ufe0f Image tag of incident location\n\n\u2699\ufe0f To use this app, you need to create a new device and create a flow. For using Image tag of incident location, please create a Google Maps Static Apikey) and place it in the device settings.\n\n\ud83d\udcac Supported languages:\n\ud83c\uddfa\ud83c\uddf8 English\n\ud83c\uddf3\ud83c\uddf1 Dutch\n\ud83c\uddf5\ud83c\uddf1 Polish",
                     "supported_devices": [
                         {
                             "data_driver_id": "lifeliner",
@@ -10578,7 +10578,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.philips.hue/76/f47a71b9-2028-40a4-8912-5ad09e8bea6e/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\Philips_Hue\\image.jpg",
-                    "summary_description": "The Philips Hue App for Homey makes it easy for you to get the most out of your Hue lights and accessories.\n\nConnect your Philips Hue lights & accessories with Homey. This app requires the Philips Hue Bridge. Connect one or multiple Hue bridges to your Homey Pro, or connect your Hue account to Homey to control your devices.\n\nPlease note that 3rd party brands such as IKEA, Osram and other Friends of Hue accessories that are connected to the Hue bridge might work, but are not officially supported.",
+                    "summary_description": "The Philips Hue App for Ensi Home makes it easy for you to get the most out of your Hue lights and accessories.\n\nConnect your Philips Hue lights & accessories with Ensi Home. This app requires the Philips Hue Bridge. Connect one or multiple Hue bridges to your Ensi Home Pro, or connect your Hue account to Ensi Home to control your devices.\n\nPlease note that 3rd party brands such as IKEA, Osram and other Friends of Hue accessories that are connected to the Hue bridge might work, but are not officially supported.",
                     "supported_devices": [
                         {
                             "data_driver_id": "contactsensor",
@@ -11368,7 +11368,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.ikea.tradfri/93/b73fc7ea-4285-4c34-acc3-3da88c35cdad/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\IKEA_Tr\u00e5dfri\\image.png",
-                    "summary_description": "Automatically turn the lights off and on, select your optimal brightness and create presets for different times of the day. With IKEA Tr\u00e5dfri, you can create the right atmosphere in any room, for any mood, at any time. Tr\u00e5dfri is designed to be plug-and-play and the bulbs can be used in any lamp with standard socket sizes. Connect them with Homey and change your lights (or blinds) at the touch of a button.",
+                    "summary_description": "Automatically turn the lights off and on, select your optimal brightness and create presets for different times of the day. With IKEA Tr\u00e5dfri, you can create the right atmosphere in any room, for any mood, at any time. Tr\u00e5dfri is designed to be plug-and-play and the bulbs can be used in any lamp with standard socket sizes. Connect them with Ensi Home and change your lights (or blinds) at the touch of a button.",
                     "supported_devices": [
                         {
                             "data_driver_id": "powerstrip_switch_askvader",
@@ -12654,7 +12654,7 @@
                     "company": "Drenso V.O.F.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.wizconnected/48/eac285c6-f289-45b0-87ec-000b029d867a/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\WiZ_Connected\\image.jpg",
-                    "summary_description": "Smart lighting made simple. WiZ lights connect to your home Wi-Fi \u2013 no bridge required \u2013 to bring you the perfect blend of rich features and uncompromised ease of use.\n\nOrganize your lights by groups and rooms. Stay in control from anywhere in the world. Improve the way you work, feel, and simply enjoy the environment you're in with our wide variety of different light modes that cover the range from fun to functional. All your settings are securely stored on the cloud and can be shared with your family, friends and even your guests if you like.\n\nConnect your WiZ lights with Homey to enable further automation scenarios, and seamlessly use your WiZ devices alongside the rest of your smart home.\n\nAlso works with Philips Smart LED, AEG, ATOM, Lednify, Brilliant, Esto, Fischer / Honsel, Lutec, SLV, Trio and Wofi.",
+                    "summary_description": "Smart lighting made simple. WiZ lights connect to your home Wi-Fi \u2013 no bridge required \u2013 to bring you the perfect blend of rich features and uncompromised ease of use.\n\nOrganize your lights by groups and rooms. Stay in control from anywhere in the world. Improve the way you work, feel, and simply enjoy the environment you're in with our wide variety of different light modes that cover the range from fun to functional. All your settings are securely stored on the cloud and can be shared with your family, friends and even your guests if you like.\n\nConnect your WiZ lights with Ensi Home to enable further automation scenarios, and seamlessly use your WiZ devices alongside the rest of your smart home.\n\nAlso works with Philips Smart LED, AEG, ATOM, Lednify, Brilliant, Esto, Fischer / Honsel, Lutec, SLV, Trio and Wofi.",
                     "supported_devices": [
                         {
                             "data_driver_id": "wiz_light",
@@ -12684,7 +12684,7 @@
                     "company": "INNR BV",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.innr/67/4cf4c77d-1e26-4c38-935f-abdc32ee271f/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\INNR\\image.png",
-                    "summary_description": "About Innr\nFounded in 2012, Innr founders Jeroen and Rob (both ex-managers at Philips) put all their\nenergy into creating beautiful, practical and smart lighting with the motto \u201eSimple and\nAffordable\". By closely following the lighting and smart home trends, Innr can respond early\nto customer needs and create the perfect Smart Lighting products. This knowledge is\nreflected in both the quality of their products and their personal service.\nInnr makes high-quality LED lighting systems for the living, working and outdoor areas. Innr's\nLED technology replaces classic incandescent and halogen bulbs with \u201esmart\" dimmable\nLED bulbs that can be controlled via smartphone, tablet, remote control or voice control.\nConnect the energy-efficient lights to your Homey, create atmospheric scenes per room and\nlet the light support your activity or mood.",
+                    "summary_description": "About Innr\nFounded in 2012, Innr founders Jeroen and Rob (both ex-managers at Philips) put all their\nenergy into creating beautiful, practical and smart lighting with the motto \u201eSimple and\nAffordable\". By closely following the lighting and smart home trends, Innr can respond early\nto customer needs and create the perfect Smart Lighting products. This knowledge is\nreflected in both the quality of their products and their personal service.\nInnr makes high-quality LED lighting systems for the living, working and outdoor areas. Innr's\nLED technology replaces classic incandescent and halogen bulbs with \u201esmart\" dimmable\nLED bulbs that can be controlled via smartphone, tablet, remote control or voice control.\nConnect the energy-efficient lights to your Ensi Home, create atmospheric scenes per room and\nlet the light support your activity or mood.",
                     "supported_devices": [
                         {
                             "data_driver_id": "dimmable_bulb",
@@ -13304,7 +13304,7 @@
                     "company": "Kjell & Co Elektronik AB",
                     "summary_image_url": "https://apps-cdn.athom.com/app/se.luxorparts/6/bd11ab02-4875-4862-8444-036ca183e5b9/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Cleverio\\image.png",
-                    "summary_description": "Connect your Cleverio Z-Wave and 433 MHz devices with Homey to make your life easier.",
+                    "summary_description": "Connect your Cleverio Z-Wave and 433 MHz devices with Ensi Home to make your life easier.",
                     "supported_devices": [
                         {
                             "data_driver_id": "50988S",
@@ -13894,7 +13894,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.klikaanklikuit.zigbee/27/a254e3dd-f26b-40be-b34e-3682ddc2612d/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Trust_Smart_Home__Zigbee_\\image.png",
-                    "summary_description": "Improve comfort, convenience and reduce power consumption with the affordable Trust Smart Home products. Dim, switch or turn your lighting on/off and create your own wireless lighting system. Simply integrate it with Homey and create Flows for endless possibilities.",
+                    "summary_description": "Improve comfort, convenience and reduce power consumption with the affordable Trust Smart Home products. Dim, switch or turn your lighting on/off and create your own wireless lighting system. Simply integrate it with Ensi Home and create Flows for endless possibilities.",
                     "supported_devices": [
                         {
                             "data_driver_id": "smart_dimmable_led_bulb_E14",
@@ -14094,7 +14094,7 @@
                     "company": "Plejd AB",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.plejd/34/a636f24a-0161-4df2-be9c-86903bb8877a/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Plejd\\image.png",
-                    "summary_description": "The Plejd app for Homey allows you to integrate your Plejd system with Homey.\n\nSmart lighting from Plejd equips your home or business with more ways to control your lighting.\n\nConnect your Plejd account to Homey to control your lights and devices from Plejd through Homey. This app requires Plejd Gateway.",
+                    "summary_description": "The Plejd app for Ensi Home allows you to integrate your Plejd system with Ensi Home.\n\nSmart lighting from Plejd equips your home or business with more ways to control your lighting.\n\nConnect your Plejd account to Ensi Home to control your lights and devices from Plejd through Ensi Home. This app requires Plejd Gateway.",
                     "supported_devices": [
                         {
                             "data_driver_id": "plejd_device",
@@ -14114,7 +14114,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.osram.lightify.zigbee/11/00840e40-30eb-4bf1-b3d0-592dcbb15e54/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Osram_Lightify\\image.png",
-                    "summary_description": "Let your creativity run free and play around with Osram lighting in Flows. Create a brighter lighting in the kitchen when you\u2019re preparing dinner in the evening, and a warmer, dimmed lighting mood when it\u2019s time to settle in for movie night. Connect Osram with Homey and let your home shine in a whole new way.",
+                    "summary_description": "Let your creativity run free and play around with Osram lighting in Flows. Create a brighter lighting in the kitchen when you\u2019re preparing dinner in the evening, and a warmer, dimmed lighting mood when it\u2019s time to settle in for movie night. Connect Osram with Ensi Home and let your home shine in a whole new way.",
                     "supported_devices": [
                         {
                             "data_driver_id": "lightify_dimmable_white",
@@ -14515,7 +14515,7 @@
                     "company": "StyraHem Sweden",
                     "summary_image_url": "https://apps-cdn.athom.com/app/se.styrahem.sonoff.zigbee/27/2d718534-f554-4127-a2c1-ece87d6e285e/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Sonoff\\image.png",
-                    "summary_description": "Sonoff Zigbee\n\nThe Homey App will add support for Sonoff Devices.\n\nSupport devices:\n-Sonoff SNZB-01  (Square button)\n-Sonoff SNZB-01P (Round button)\n-Sonoff SNZB-02  (Square thermometer)\n-Sonoff SNZB-02D (Thermometer with display)\n-Sonoff SNZB-02P (Round thermometer)\n-Sonoff SNZB-03  (Motion detector)\n-Sonoff SNZB-03P (Motion detector)\n-Sonoff SNZB-04  (Door/window contact)\n-Sonoff SNZB-04P (Door/window contact)\n-Sonoff SNZB-06P (Presence detector)\n-Sonoff ZBTRV    (Radiator valve)\n-Sonoff ZBMINI-L (Switch)\n-Sonoff ZBMINI-L2 (Switch)\n-Sonoff RF/TX devices (send and receive)",
+                    "summary_description": "Sonoff Zigbee\n\nThe Ensi Home App will add support for Sonoff Devices.\n\nSupport devices:\n-Sonoff SNZB-01  (Square button)\n-Sonoff SNZB-01P (Round button)\n-Sonoff SNZB-02  (Square thermometer)\n-Sonoff SNZB-02D (Thermometer with display)\n-Sonoff SNZB-02P (Round thermometer)\n-Sonoff SNZB-03  (Motion detector)\n-Sonoff SNZB-03P (Motion detector)\n-Sonoff SNZB-04  (Door/window contact)\n-Sonoff SNZB-04P (Door/window contact)\n-Sonoff SNZB-06P (Presence detector)\n-Sonoff ZBTRV    (Radiator valve)\n-Sonoff ZBMINI-L (Switch)\n-Sonoff ZBMINI-L2 (Switch)\n-Sonoff RF/TX devices (send and receive)",
                     "supported_devices": [
                         {
                             "data_driver_id": "SNZB-01",
@@ -14665,7 +14665,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.yeelight.cloud/10/02274f79-2689-4584-b6a0-791aa17052fb/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Yeelight\\image.png",
-                    "summary_description": "Play with lights, compose with colors. With Yeelight for Homey, controlling lights becomes such a fun and easy thing. Add, configure, monitor and control your Yeelight products on your mobile devices with a touch of your fingertip.\n\nCompatible Yeelight devices include bulbs, desk lamps, ceiling lights, ambiance lights and all future products.",
+                    "summary_description": "Play with lights, compose with colors. With Yeelight for Ensi Home, controlling lights becomes such a fun and easy thing. Add, configure, monitor and control your Yeelight products on your mobile devices with a touch of your fingertip.\n\nCompatible Yeelight devices include bulbs, desk lamps, ceiling lights, ambiance lights and all future products.",
                     "supported_devices": [
                         {
                             "data_driver_id": "light_cn",
@@ -14705,7 +14705,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.lifx/8/d76a4f6e-e0bb-4fa6-8c84-46260d5af321/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\LIFX\\image.jpg",
-                    "summary_description": "Connect your LIFX Wi-Fi enabled LED smart lights to Homey.\n\nSUPPORTED DEVICES\n- LIFX GU10\n- LIFX A60\n- LIFX Mini Colour\n- LIFX+ A60\n- LIFX+ BR30\n- LIFX Z 2m LED Kit\n- LIFX 100mm Downlight\n- LIFX Mini Colour Day & Dusk \n- LIFX Mini White\n- LIFX Tile\n- LIFX Beam\n\nMultizone devices (e.g. LED Strip) and Scenes are supported as well.",
+                    "summary_description": "Connect your LIFX Wi-Fi enabled LED smart lights to Ensi Home.\n\nSUPPORTED DEVICES\n- LIFX GU10\n- LIFX A60\n- LIFX Mini Colour\n- LIFX+ A60\n- LIFX+ BR30\n- LIFX Z 2m LED Kit\n- LIFX 100mm Downlight\n- LIFX Mini Colour Day & Dusk \n- LIFX Mini White\n- LIFX Tile\n- LIFX Beam\n\nMultizone devices (e.g. LED Strip) and Scenes are supported as well.",
                     "supported_devices": [
                         {
                             "data_driver_id": "lifx",
@@ -14725,7 +14725,7 @@
                     "company": "GLEDOPTO CO.,LTD",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.gledopto.lights/10/cb9ae7ee-ecc7-4340-bc42-3ecb9bee9346/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\GLEDOPTO\\image.png",
-                    "summary_description": "The GLEDOPTO App for Homey, now allows you to integrate your GLEDOPTO Smarthome Lights\n\nGLEDOPTO is a smart lighting system that is both intelligent and simple at the same time.\nChoose the perfect light setup and create the right mood for every area of your home.\nFor space whether it is indoor or outdoor there is an LED light that is just right.",
+                    "summary_description": "The GLEDOPTO App for Ensi Home, now allows you to integrate your GLEDOPTO Smarthome Lights\n\nGLEDOPTO is a smart lighting system that is both intelligent and simple at the same time.\nChoose the perfect light setup and create the right mood for every area of your home.\nFor space whether it is indoor or outdoor there is an LED light that is just right.",
                     "supported_devices": [
                         {
                             "data_driver_id": "5in1-controller-cct",
@@ -15065,7 +15065,7 @@
                     "company": "EGLO Leuchten GmbH",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.eglo/22/0a0a8a13-291d-48bc-815f-5531b76dca35/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Eglo\\image.png",
-                    "summary_description": "Discover the smart world with EGLO and Homey!\n\nConnect the wide range of EGLO Zigbee lighting devices and accessories (connect.z, crosslink.z and Smart Choice) with Homey to unlock the full potential of your products.\n\nAdjust the RGB color, brightness, set your preferred white temperature and start creating your best automations. Control your environment with your app, your remote or your favorite voice assistant at the same time!",
+                    "summary_description": "Discover the smart world with EGLO and Ensi Home!\n\nConnect the wide range of EGLO Zigbee lighting devices and accessories (connect.z, crosslink.z and Smart Choice) with Ensi Home to unlock the full potential of your products.\n\nAdjust the RGB color, brightness, set your preferred white temperature and start creating your best automations. Control your environment with your app, your remote or your favorite voice assistant at the same time!",
                     "supported_devices": [
                         {
                             "data_driver_id": "legacy",
@@ -15175,7 +15175,7 @@
                     "company": "Q-Light AS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/no.qlight/10/e14c0b80-27d8-4b68-8183-aa57c790e713/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Q-Light\\image.png",
-                    "summary_description": "Q-Light's range of premium lighting products is designed in Norway. The products are modern and timeless, while maintaining their functionality.\n\nConnect them with Homey to make your life easier.",
+                    "summary_description": "Q-Light's range of premium lighting products is designed in Norway. The products are modern and timeless, while maintaining their functionality.\n\nConnect them with Ensi Home to make your life easier.",
                     "supported_devices": [
                         {
                             "data_driver_id": "Z-WAVE_PUCK",
@@ -15215,7 +15215,7 @@
                     "company": "Sengled USA",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.sengled/17/f709279a-808b-4edd-b5fa-004d5eb6c55f/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Sengled\\image.png",
-                    "summary_description": "At Sengled, we understand that lighting is an essential element of every home. That's why we go beyond traditional light bulbs to deliver products that protect, entertain and connect people\u2019s lives. By integrating technology inside energy-efficient LED bulbs, Sengled provides consumers with app controlled, intuitive, eco-friendly smart lighting products that bring smart home capabilities and conveniences to every room.\n\nYou can now connect your Sengled light bulbs directly with Homey and extend your smart home convenience even further.",
+                    "summary_description": "At Sengled, we understand that lighting is an essential element of every home. That's why we go beyond traditional light bulbs to deliver products that protect, entertain and connect people\u2019s lives. By integrating technology inside energy-efficient LED bulbs, Sengled provides consumers with app controlled, intuitive, eco-friendly smart lighting products that bring smart home capabilities and conveniences to every room.\n\nYou can now connect your Sengled light bulbs directly with Ensi Home and extend your smart home convenience even further.",
                     "supported_devices": [
                         {
                             "data_driver_id": "big_dimmable_bulb",
@@ -15493,7 +15493,7 @@
                     "name": "Lightwave RF",
                     "description": "Your Home. Smarter.",
                     "company": "Athom B.V.",
-                    "summary_image_url": "https://apps-cdn.athom.com/app/com.lightwaverf.homey/6/bd0bc6f5-596f-4435-9fbc-62d960412f57/assets/images/large.png",
+                    "summary_image_url": "https://apps-cdn.athom.com/app/com.lightwaverf.Ensi Home/6/bd0bc6f5-596f-4435-9fbc-62d960412f57/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Lightwave_RF\\image.png",
                     "summary_description": "Adds support for LightwaveRF devices.",
                     "supported_devices": [
@@ -15504,7 +15504,7 @@
                             "technologies": [
                                 "433 MHz"
                             ],
-                            "image_url": "https://apps-cdn.athom.com/app/com.lightwaverf.homey/6/bd0bc6f5-596f-4435-9fbc-62d960412f57/drivers/JSJSLW100WH/assets/images/large.png",
+                            "image_url": "https://apps-cdn.athom.com/app/com.lightwaverf.Ensi Home/6/bd0bc6f5-596f-4435-9fbc-62d960412f57/drivers/JSJSLW100WH/assets/images/large.png",
                             "local_image_url": "images\\devices\\JSJSLW100WH_Remote\\image.png"
                         },
                         {
@@ -15514,7 +15514,7 @@
                             "technologies": [
                                 "433 MHz"
                             ],
-                            "image_url": "https://apps-cdn.athom.com/app/com.lightwaverf.homey/6/bd0bc6f5-596f-4435-9fbc-62d960412f57/drivers/JSJSLW104WH/assets/images/large.png",
+                            "image_url": "https://apps-cdn.athom.com/app/com.lightwaverf.Ensi Home/6/bd0bc6f5-596f-4435-9fbc-62d960412f57/drivers/JSJSLW104WH/assets/images/large.png",
                             "local_image_url": "images\\devices\\JSJSLW104WH_Mood_Remote\\image.png"
                         },
                         {
@@ -15524,7 +15524,7 @@
                             "technologies": [
                                 "433 MHz"
                             ],
-                            "image_url": "https://apps-cdn.athom.com/app/com.lightwaverf.homey/6/bd0bc6f5-596f-4435-9fbc-62d960412f57/drivers/JSJSLW300WH/assets/images/large.png",
+                            "image_url": "https://apps-cdn.athom.com/app/com.lightwaverf.Ensi Home/6/bd0bc6f5-596f-4435-9fbc-62d960412f57/drivers/JSJSLW300WH/assets/images/large.png",
                             "local_image_url": "images\\devices\\JSJSLW300WH_Dimmer_Socket\\image.png"
                         },
                         {
@@ -15534,7 +15534,7 @@
                             "technologies": [
                                 "433 MHz"
                             ],
-                            "image_url": "https://apps-cdn.athom.com/app/com.lightwaverf.homey/6/bd0bc6f5-596f-4435-9fbc-62d960412f57/drivers/JSJSLW320WH/assets/images/large.png",
+                            "image_url": "https://apps-cdn.athom.com/app/com.lightwaverf.Ensi Home/6/bd0bc6f5-596f-4435-9fbc-62d960412f57/drivers/JSJSLW320WH/assets/images/large.png",
                             "local_image_url": "images\\devices\\JSJSLW320WH_Socket\\image.png"
                         }
                     ]
@@ -15545,7 +15545,7 @@
                     "company": "Electric HZC",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.hzc-electric/349/9824b099-91ca-4780-867f-dd2da36f4a01/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\HZC_electric\\image.jpg",
-                    "summary_description": "Connect your HZC z-wave devices such as Door sensor, water leak sensor, motion \nsensor, Dimmer switch, and thermostat to homey. make your home more intelligent.",
+                    "summary_description": "Connect your HZC z-wave devices such as Door sensor, water leak sensor, motion \nsensor, Dimmer switch, and thermostat to Ensi Home. make your home more intelligent.",
                     "supported_devices": [
                         {
                             "data_driver_id": "dimmer_2gang",
@@ -15860,7 +15860,7 @@
                     "company": "The Light Group",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.slc.smartone/33/7b11d3fc-ba86-485f-8e17-50ac39a03032/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\SLC_SmartOne\\image.png",
-                    "summary_description": "App for supporting SLC SmartOne Zigbee products in Homey.\n\nSLC has an extensive range of products for controlling lights.\n\nFor installation, please read the user manual thoroughly.",
+                    "summary_description": "App for supporting SLC SmartOne Zigbee products in Ensi Home.\n\nSLC has an extensive range of products for controlling lights.\n\nFor installation, please read the user manual thoroughly.",
                     "supported_devices": [
                         {
                             "data_driver_id": "S24013",
@@ -16161,7 +16161,7 @@
                     "company": "Vesternet",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.vesternet/13/81088a5f-6145-40fa-9535-bec19e987020/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Vesternet\\image.png",
-                    "summary_description": "This App adds support for Vesternet Zigbee and Z-Wave Hardware Devices.\n\nVesternet Hardware Devices offer many advantages over products from other manufacturers, including hassle free returns, 3 year warranty, lifetime controller compatibility, technical support and dedicated user guides.\n\nThese devices have been carefully curated and we support them in the Aeotec SmartThings, Athom Homey and Hubitat Elevation Smart Home Controllers.\n\nWe've also ensured that all our Hardware Devices are available in both Zigbee and Z-Wave versions, meaning that you can mix-and-match across both technologies while maintaining a consistent hardware style.",
+                    "summary_description": "This App adds support for Vesternet Zigbee and Z-Wave Hardware Devices.\n\nVesternet Hardware Devices offer many advantages over products from other manufacturers, including hassle free returns, 3 year warranty, lifetime controller compatibility, technical support and dedicated user guides.\n\nThese devices have been carefully curated and we support them in the Aeotec SmartThings, Athom Ensi Home and Hubitat Elevation Smart Home Controllers.\n\nWe've also ensured that all our Hardware Devices are available in both Zigbee and Z-Wave versions, meaning that you can mix-and-match across both technologies while maintaining a consistent hardware style.",
                     "supported_devices": [
                         {
                             "data_driver_id": "VES-ZB-DIM-004",
@@ -16291,7 +16291,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.mipow/11/f250eff0-95d7-4150-ba89-440d258f6b52/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\MIPOW\\image.jpg",
-                    "summary_description": "Affordable LED lights that work anywhere. That's what MIPOW stands for.\n\nConnect your Bluetooth-enabled PLAYBULB with Homey to push your light to the next level.",
+                    "summary_description": "Affordable LED lights that work anywhere. That's what MIPOW stands for.\n\nConnect your Bluetooth-enabled PLAYBULB with Ensi Home to push your light to the next level.",
                     "supported_devices": [
                         {
                             "data_driver_id": "candle",
@@ -16480,7 +16480,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.spotify/9/c178840f-116c-4232-b7db-0ad82c6db38d/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Spotify\\image.png",
-                    "summary_description": "Automate Spotify with Homey. Start a playlist, listen to your favorite artist, and pause when you leave home.\n\nPlease note that:\n\n\u2014 Due to Spotify's Web API limitations, control is only available with Flow.\n\u2014 Sonos users should install the Sonos app to control their Sonos devices.\n\u2014 Chromecast devices are not supported due to a limitation on Google's end.",
+                    "summary_description": "Automate Spotify with Ensi Home. Start a playlist, listen to your favorite artist, and pause when you leave home.\n\nPlease note that:\n\n\u2014 Due to Spotify's Web API limitations, control is only available with Flow.\n\u2014 Sonos users should install the Sonos app to control their Sonos devices.\n\u2014 Chromecast devices are not supported due to a limitation on Google's end.",
                     "supported_devices": [
                         {
                             "data_driver_id": "connect",
@@ -16500,7 +16500,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.sonos/28/e34f0298-cff4-410a-86e4-2f679ad06e19/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Sonos\\image.png",
-                    "summary_description": "Experience brilliant sound in your home.\n\nFeatures include, among others:\n\n\u2014 Control your Sonos speakers (play/pause/etc.)\n\u2014 Add players to groups\n\u2014 Play music from your Local Library\n\u2014 Play your Sonos Favorites\n\u2014 Switch to Line-In\n\u2014 Play sounds from the Homey Soundboard app\n\u2014 Say something using text-to-speech\n\nTo play content from 3rd party services such as TuneIn, Spotify, Apple Music etc., add the track or playlist to your Sonos Favorites. You can then start a Sonos Favorite from a Flow.\n\nNote: Both Sonos S1 & S2 speakers are supported, but S1 has some limitations. For example, listeners can\u2019t group players in an S1 system with players in an S2 system.",
+                    "summary_description": "Experience brilliant sound in your home.\n\nFeatures include, among others:\n\n\u2014 Control your Sonos speakers (play/pause/etc.)\n\u2014 Add players to groups\n\u2014 Play music from your Local Library\n\u2014 Play your Sonos Favorites\n\u2014 Switch to Line-In\n\u2014 Play sounds from the Ensi Home Soundboard app\n\u2014 Say something using text-to-speech\n\nTo play content from 3rd party services such as TuneIn, Spotify, Apple Music etc., add the track or playlist to your Sonos Favorites. You can then start a Sonos Favorite from a Flow.\n\nNote: Both Sonos S1 & S2 speakers are supported, but S1 has some limitations. For example, listeners can\u2019t group players in an S1 system with players in an S2 system.",
                     "supported_devices": [
                         {
                             "data_driver_id": "cloud",
@@ -16525,7 +16525,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.ring/9/c712bf32-29d1-482a-ad6b-0d362cee0ace/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Ring\\image.png",
-                    "summary_description": "Introducing the Ring App for Homey, specifically designed to integrate your Ring Doorbell into the Homey smart home ecosystem. With this app, you can activate Homey Flow cards based on doorbell rings, allowing for instant notifications and automated actions such as turning on porch lights or sending alerts to your smartphone.\n\nHarness the simplicity and power of Homey's automation features to customize your doorbell experience. Whether it's unlocking a smart lock or sending a quick notification to your phone, a single doorbell ring can set off a tailored sequence of smart home events.\n\nEasy to install and user-friendly, this Ring App for Homey enhances your smart home setup by offering seamless interconnectivity between your Ring Doorbell and Homey. Elevate your home automation with this focused, efficient solution.",
+                    "summary_description": "Introducing the Ring App for Ensi Home, specifically designed to integrate your Ring Doorbell into the Ensi Home smart home ecosystem. With this app, you can activate Ensi Home Flow cards based on doorbell rings, allowing for instant notifications and automated actions such as turning on porch lights or sending alerts to your smartphone.\n\nHarness the simplicity and power of Ensi Home's automation features to customize your doorbell experience. Whether it's unlocking a smart lock or sending a quick notification to your phone, a single doorbell ring can set off a tailored sequence of smart home events.\n\nEasy to install and user-friendly, this Ring App for Ensi Home enhances your smart home setup by offering seamless interconnectivity between your Ring Doorbell and Ensi Home. Elevate your home automation with this focused, efficient solution.",
                     "supported_devices": [
                         {
                             "data_driver_id": "camera",
@@ -16565,7 +16565,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/io.nuki/11/904d9fd5-43e0-4ca8-a0aa-6e796015b664/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Nuki\\image.png",
-                    "summary_description": "Connect your Nuki Smart Lock 3.0 Pro & Nuki Opener with the Nuki Bridge and enjoy the following features: \n\n\u2014 Unlock or lock your door with a Flow or the Homey app\n\u2014 Create a Flow that starts when the door is locked or unlocked\n\u2014 Create a Flow that starts when the battery is low\n\u2014 Create a Flow that starts when the door is open\n\nPlease note that your Nuki Smart Lock must be first connected to Nuki Web before it can be found by Homey.",
+                    "summary_description": "Connect your Nuki Smart Lock 3.0 Pro & Nuki Opener with the Nuki Bridge and enjoy the following features: \n\n\u2014 Unlock or lock your door with a Flow or the Ensi Home app\n\u2014 Create a Flow that starts when the door is locked or unlocked\n\u2014 Create a Flow that starts when the battery is low\n\u2014 Create a Flow that starts when the door is open\n\nPlease note that your Nuki Smart Lock must be first connected to Nuki Web before it can be found by Ensi Home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "opener",
@@ -16595,7 +16595,7 @@
                     "company": "ASSA ABLOY",
                     "summary_image_url": "https://apps-cdn.athom.com/app/emeia.yalehome/16/410bb51c-fca5-4a7c-b7ef-c17174f56abb/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Yale_Home\\image.png",
-                    "summary_description": "This app is only available for users that do not reside in the USA & Canada. Check out the Yale Access app in case you are!\n\nWith Yale Smart Locks and the Yale Home app, you can check who comes and when with your phone \u2013 whether you're there or not. You're just a tap away from locking up, sending virtual keys to trusted friends and family or checking if the kids got home on time.\n\nHomey will let your Yale Smart Lock work seamlessly with all your smart devices at home. Create flows that will be activated by locking and unlocking the door with your Yale Home enabled smart locks such as the latest Linus\u00ae  Smart Lock. For example, as soon as you come home, Homey will play your favourite tunes, turn on the lights, turn up the heating, and even open up the curtains.\n\nWe can't say you won't lift a finger. But that's all you have to do.",
+                    "summary_description": "This app is only available for users that do not reside in the USA & Canada. Check out the Yale Access app in case you are!\n\nWith Yale Smart Locks and the Yale Home app, you can check who comes and when with your phone \u2013 whether you're there or not. You're just a tap away from locking up, sending virtual keys to trusted friends and family or checking if the kids got home on time.\n\nEnsi Home will let your Yale Smart Lock work seamlessly with all your smart devices at home. Create flows that will be activated by locking and unlocking the door with your Yale Home enabled smart locks such as the latest Linus\u00ae  Smart Lock. For example, as soon as you come home, Ensi Home will play your favourite tunes, turn on the lights, turn up the heating, and even open up the curtains.\n\nWe can't say you won't lift a finger. But that's all you have to do.",
                     "supported_devices": [
                         {
                             "data_driver_id": "connected_cabinet_lock",
@@ -16645,7 +16645,7 @@
                     "company": "Danalock ApS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.danalock/40/fa9c962d-0bca-4a6b-b4ac-c2e33b325049/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Danalock\\image.png",
-                    "summary_description": "Danalock provides a full family of elegantly designed and secure smart lock products compatible with any standard door throughout the world.\n\nLet your Homey talk with the Zigbee Danalock V3 and the Z-Wave versions of the Danalock V2/V3, without any hassle. And if you have paired a Danapad with your lock, you can configure and monitor that as well!\n\nBefore installation please refer to the device's manual for installation and calibration instructions.",
+                    "summary_description": "Danalock provides a full family of elegantly designed and secure smart lock products compatible with any standard door throughout the world.\n\nLet your Ensi Home talk with the Zigbee Danalock V3 and the Z-Wave versions of the Danalock V2/V3, without any hassle. And if you have paired a Danapad with your lock, you can configure and monitor that as well!\n\nBefore installation please refer to the device's manual for installation and calibration instructions.",
                     "supported_devices": [
                         {
                             "data_driver_id": "danalock_v2",
@@ -16685,7 +16685,7 @@
                     "company": "Yale Access",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.yalehome/54/9176fcd7-ddae-4afb-8166-3ff3a9a67780/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Yale_Access\\image.png",
-                    "summary_description": "This app is only available for users that reside in the USA & Canada. Check out the Yale Home app in case you aren't!\n\nWith Yale Smart Locks and the Yale Access app, you can check who comes and when with your phone \u2013 whether you're there or not. You're just a tap away from locking up, sending virtual keys to trusted friends and family or checking if the kids got home on time.\n\nHomey will let your Yale Smart Lock work seamlessly with all your smart devices at home. Create flows that will be activated by locking and unlocking the door with your Yale Access enabled smart locks such as the latest Linus\u00ae  Smart Lock. For example, as soon as you come home, Homey will play your favourite tunes, turn on the lights, turn up the heating, and even open up the curtains.\n\nWe can't say you won't lift a finger. But that's all you have to do.",
+                    "summary_description": "This app is only available for users that reside in the USA & Canada. Check out the Yale Home app in case you aren't!\n\nWith Yale Smart Locks and the Yale Access app, you can check who comes and when with your phone \u2013 whether you're there or not. You're just a tap away from locking up, sending virtual keys to trusted friends and family or checking if the kids got home on time.\n\nEnsi Home will let your Yale Smart Lock work seamlessly with all your smart devices at home. Create flows that will be activated by locking and unlocking the door with your Yale Access enabled smart locks such as the latest Linus\u00ae  Smart Lock. For example, as soon as you come home, Ensi Home will play your favourite tunes, turn on the lights, turn up the heating, and even open up the curtains.\n\nWe can't say you won't lift a finger. But that's all you have to do.",
                     "supported_devices": [
                         {
                             "data_driver_id": "connected_lock",
@@ -16705,7 +16705,7 @@
                     "company": "Nimly AS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.305.easyaccess/39/7a459f83-9ce0-4da5-87de-c38d2e2d5196/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Nimly\\image.png",
-                    "summary_description": "Nimly lock + Connect Module = works directly with Athom Homey!\n\nWe are convinced that smart homes start at the front door. Unlock the potential of your home with Homey and let nimly work seamlessly with all your smart home devices. Activate flows by locking or unlocking your nimly lock, creating endless possibilities for smart scenery.\n\nFor example, upon your arrival home, imagine your favorite tune filling the house on the stereo, accompanied by the automatic illumination of lights as you walk in. Simultaneously, the living room curtains gracefully part, revealing a splendid view, while the air conditioning adjusts itself to your desired comfort. Enjoy!\n\nWhat do we offer? Better homecomings for you and your family. Our products are developed for the Nordic climate and Scandinavian door standards. Easy DIY installation. Elevate your entrance by adding both style and tech to your door, featuring an elegant and modern design.\n\nFind the model best suited for your needs and unlock your home with your fingerprint, personal code, key tag, or emergency key, adding both security and comfort to your home.",
+                    "summary_description": "Nimly lock + Connect Module = works directly with Athom Ensi Home!\n\nWe are convinced that smart homes start at the front door. Unlock the potential of your home with Ensi Home and let nimly work seamlessly with all your smart home devices. Activate flows by locking or unlocking your nimly lock, creating endless possibilities for smart scenery.\n\nFor example, upon your arrival home, imagine your favorite tune filling the house on the stereo, accompanied by the automatic illumination of lights as you walk in. Simultaneously, the living room curtains gracefully part, revealing a splendid view, while the air conditioning adjusts itself to your desired comfort. Enjoy!\n\nWhat do we offer? Better homecomings for you and your family. Our products are developed for the Nordic climate and Scandinavian door standards. Easy DIY installation. Elevate your entrance by adding both style and tech to your door, featuring an elegant and modern design.\n\nFind the model best suited for your needs and unlock your home with your fingerprint, personal code, key tag, or emergency key, adding both security and comfort to your home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "easycodetouch",
@@ -16785,7 +16785,7 @@
                     "company": "Bold Security Technology",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.boldsmartlock/31/17d4ce32-6414-4b9e-ba29-ea8f4851aa08/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Bold\\image.png",
-                    "summary_description": "With Bold, your smartphone is your key. Enter and leave your house with your phone in your pocket; Bold will (auto) unlock and lock your door as you come and go. Use the Bold app for Homey to connect your Bold Smart Cylinder with any flow.",
+                    "summary_description": "With Bold, your smartphone is your key. Enter and leave your house with your phone in your pocket; Bold will (auto) unlock and lock your door as you come and go. Use the Bold app for Ensi Home to connect your Bold Smart Cylinder with any flow.",
                     "supported_devices": [
                         {
                             "data_driver_id": "gateway",
@@ -16945,7 +16945,7 @@
                     "company": "Homely AS",
                     "summary_image_url": "https://apps-cdn.athom.com/app/no.homely/17/96997cf5-aa2b-46c6-9680-2e9fd4d4f733/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Homely\\image.png",
-                    "summary_description": "This app allows you to pair your Homely alarm system and most sensors to your Homey.\n\nUse your Homely credentials when logging in. Then you can add sensors and the gateway.",
+                    "summary_description": "This app allows you to pair your Homely alarm system and most sensors to your Ensi Home.\n\nUse your Homely credentials when logging in. Then you can add sensors and the gateway.",
                     "supported_devices": [
                         {
                             "data_driver_id": "AirQualitySensor",
@@ -17065,7 +17065,7 @@
                     "company": "tedee smart lock",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.tedee/18/bb50ab3a-07cf-4437-8409-5460606cbf9a/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Tedee\\image.png",
-                    "summary_description": "Say goodbye to traditional keys and welcome new ways to access, protect, and share your home. Open your door with just a smartphone, smartwatch, or PIN.\n\nIt's time to redefine your front door's purpose. Install a Tedee GO or Tedee PRO smart lock on the interior side of your door lock, making it invisible from the outside.\n\nConnect it to a Wi-Fi-enabled Tedee Bridge for seamless integration with Homey. Welcome to a new era of convenience, security, and smart automation, synchronized with your comings and goings as though your home had an on/off switch.",
+                    "summary_description": "Say goodbye to traditional keys and welcome new ways to access, protect, and share your home. Open your door with just a smartphone, smartwatch, or PIN.\n\nIt's time to redefine your front door's purpose. Install a Tedee GO or Tedee PRO smart lock on the interior side of your door lock, making it invisible from the outside.\n\nConnect it to a Wi-Fi-enabled Tedee Bridge for seamless integration with Ensi Home. Welcome to a new era of convenience, security, and smart automation, synchronized with your comings and goings as though your home had an on/off switch.",
                     "supported_devices": [
                         {
                             "data_driver_id": "bridge",
@@ -17115,7 +17115,7 @@
                     "company": "Schlage Lock Company",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.schlage/12/c837d9b9-ed33-4a70-a475-e968425f1452/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Schlage\\image.png",
-                    "summary_description": "Smart access doesn\u2019t stop at the front door. Bring easy and secure access to even more doors throughout your home, now also supported by your Homey.\n\nNo more worrying whether you locked the front door before you left. With your Schlage smart lock combined with Homey you can enjoy peace of mind and freedom from keys and automate all kinds of scenarios based on what happens with your lock.\n\nThis app supports both the WiFi enabled smart locks using your Schlage cloud account and a selection of Z-Wave locks directly connected with your Homey.",
+                    "summary_description": "Smart access doesn\u2019t stop at the front door. Bring easy and secure access to even more doors throughout your home, now also supported by your Ensi Home.\n\nNo more worrying whether you locked the front door before you left. With your Schlage smart lock combined with Ensi Home you can enjoy peace of mind and freedom from keys and automate all kinds of scenarios based on what happens with your lock.\n\nThis app supports both the WiFi enabled smart locks using your Schlage cloud account and a selection of Z-Wave locks directly connected with your Ensi Home.",
                     "supported_devices": [
                         {
                             "data_driver_id": "zwave_lock",
@@ -17145,7 +17145,7 @@
                     "company": "Kwikset USA",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.kwikset/10/447ae6c4-12fd-466b-ab86-2e3a10b24b93/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Kwikset\\image.png",
-                    "summary_description": "Seamlessly integrate your Z-Wave and Zigbee based Kwikset smart locks with Homey, enabling effortless control and management of your smart door lock. With the Kwikset App for Homey, enjoy features like remote lock/unlock, monitoring lock status, creating personalized access codes for family, friends, or trusted visitors, and adjusting lock settings. Experience peace of mind knowing your home is secure, accessible, and intelligently connected!\n\nBefore connecting your Kwikset Smart Lock with Homey please refer to the device's manual for installation instructions.",
+                    "summary_description": "Seamlessly integrate your Z-Wave and Zigbee based Kwikset smart locks with Ensi Home, enabling effortless control and management of your smart door lock. With the Kwikset App for Ensi Home, enjoy features like remote lock/unlock, monitoring lock status, creating personalized access codes for family, friends, or trusted visitors, and adjusting lock settings. Experience peace of mind knowing your home is secure, accessible, and intelligently connected!\n\nBefore connecting your Kwikset Smart Lock with Ensi Home please refer to the device's manual for installation instructions.",
                     "supported_devices": [
                         {
                             "data_driver_id": "ZW620",
@@ -17245,7 +17245,7 @@
                     "company": "Yale Access",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.august/48/63d317b1-b87f-4a39-94aa-2f57f8b01f5b/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\August_Home\\image.png",
-                    "summary_description": "At August Home, we believe that the door to the home isn't just about keeping your home safe from unwanted visitors. It's also about letting the right people in - at the right times, on your terms. With August, you are always in control of your front door, no matter where you are.\n\nHomey will let your August Smart Lock work seamlessly with all your smart devices at home. Create flows that will be activated by locking and unlocking the door with your August Home enabled smart locks such as the latest August Smart Lock Pro. For example, as soon as you come home, Homey will play your favorite tunes, turn on the lights, turn up the heating, and even open up the curtains.\n\nWe can't say you won't lift a finger. But that's all you have to do.",
+                    "summary_description": "At August Home, we believe that the door to the home isn't just about keeping your home safe from unwanted visitors. It's also about letting the right people in - at the right times, on your terms. With August, you are always in control of your front door, no matter where you are.\n\nEnsi Home will let your August Smart Lock work seamlessly with all your smart devices at home. Create flows that will be activated by locking and unlocking the door with your August Home enabled smart locks such as the latest August Smart Lock Pro. For example, as soon as you come home, Ensi Home will play your favorite tunes, turn on the lights, turn up the heating, and even open up the curtains.\n\nWe can't say you won't lift a finger. But that's all you have to do.",
                     "supported_devices": [
                         {
                             "data_driver_id": "connected_lock",
@@ -17265,16 +17265,16 @@
                     "company": "Klink B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.smartklink.klink/8/b4792b47-8790-45b1-820c-6d73ca0eb746/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Klink\\image.png",
-                    "summary_description": "Klink Smart One Homey App\n\nWelkom bij de Klink Smart One Homey App! Met deze app kun je jouw Klink Smart One-apparaat integreren met jouw Homey-systeem, waardoor je eenvoudig jouw slimme apparaten kunt bedienen en automatiseren vanuit \u00e9\u00e9n centrale hub.\n\nKoppelen van Klink Smart One met Homey\n\n1. Zorg ervoor dat jouw Klink Smart One-apparaat is ge\u00efnstalleerd en verbonden is met de Klink Smart Hub.\n2. Open de Homey-app op jouw mobiele apparaat.\n3. Ga naar het tabblad 'Apparaten'.\n4. Tik op het pluspictogram om een nieuw apparaat toe te voegen.\n5. Zoek naar \"Klink Smart One\" en selecteer het.\n6. Volg de instructies in de app om jouw Klink Smart One-apparaat te koppelen met Homey.\n\nFuncties\n\nMet de Klink Smart One Homey App kun je:\n\n- Jouw Klink Smart One-apparaat bedienen vanuit de Homey-app.\n- Automatiseringen maken met jouw Klink Smart One-apparaat en andere slimme apparaten die zijn gekoppeld aan Homey.\n\nOndersteuning en Feedback\n\nHeb je vragen, feedback of loop je tegen problemen aan? Dan kan je hieronder onze contactgegevens vinden. We staan altijd klaar om te helpen!\n\n---\n\n\u00a9 2024 Klink. Alle rechten voorbehouden.",
+                    "summary_description": "Klink Smart One Ensi Home App\n\nWelkom bij de Klink Smart One Ensi Home App! Met deze app kun je jouw Klink Smart One-apparaat integreren met jouw Ensi Home-systeem, waardoor je eenvoudig jouw slimme apparaten kunt bedienen en automatiseren vanuit \u00e9\u00e9n centrale hub.\n\nKoppelen van Klink Smart One met Ensi Home\n\n1. Zorg ervoor dat jouw Klink Smart One-apparaat is ge\u00efnstalleerd en verbonden is met de Klink Smart Hub.\n2. Open de Ensi Home-app op jouw mobiele apparaat.\n3. Ga naar het tabblad 'Apparaten'.\n4. Tik op het pluspictogram om een nieuw apparaat toe te voegen.\n5. Zoek naar \"Klink Smart One\" en selecteer het.\n6. Volg de instructies in de app om jouw Klink Smart One-apparaat te koppelen met Ensi Home.\n\nFuncties\n\nMet de Klink Smart One Ensi Home App kun je:\n\n- Jouw Klink Smart One-apparaat bedienen vanuit de Ensi Home-app.\n- Automatiseringen maken met jouw Klink Smart One-apparaat en andere slimme apparaten die zijn gekoppeld aan Ensi Home.\n\nOndersteuning en Feedback\n\nHeb je vragen, feedback of loop je tegen problemen aan? Dan kan je hieronder onze contactgegevens vinden. We staan altijd klaar om te helpen!\n\n---\n\n\u00a9 2024 Klink. Alle rechten voorbehouden.",
                     "supported_devices": [
                         {
-                            "data_driver_id": "klinkhomeylock",
+                            "data_driver_id": "klinkEnsi Homelock",
                             "data_platforms": "cloud,local",
                             "device_name": "Klink Smart One",
                             "technologies": [
                                 "Cloud"
                             ],
-                            "image_url": "https://apps-cdn.athom.com/app/nl.smartklink.klink/8/b4792b47-8790-45b1-820c-6d73ca0eb746/drivers/klinkhomeylock/assets/images/large.png",
+                            "image_url": "https://apps-cdn.athom.com/app/nl.smartklink.klink/8/b4792b47-8790-45b1-820c-6d73ca0eb746/drivers/klinkEnsi Homelock/assets/images/large.png",
                             "local_image_url": "images\\devices\\Klink_Smart_One\\image.png"
                         }
                     ]
@@ -17285,7 +17285,7 @@
                     "company": "Latticework B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/net.amberpro/44/7e2e4f80-69e1-4aa4-88ad-819dcb3de788/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\Amber\\image.jpg",
-                    "summary_description": "Adds support for Amber Pro and Amber X\n\nRetrieve information from your Amber. \nGet notification when a value has changed.\n\nHow to use:\n- Install this app on your Homey.\n- Go to new devices\n- Insert password\n- Device will be added\n- Data will be fetched.\n- Check statuses or create flows.\n\nCurrent features:\n- Reboot / switch off.\n- Display CPU %\n- Display Disk %\n- Display Temperature\n- Temperature alarm\n- Display online time\n- Upload files to Amber\n- Amber One & Amber Plus: router functionality\n    -- IP connected\n    -- IP disconnected\n- Get notification when a value has changed.\n\nMore info on the community:\n- Link in app info below",
+                    "summary_description": "Adds support for Amber Pro and Amber X\n\nRetrieve information from your Amber. \nGet notification when a value has changed.\n\nHow to use:\n- Install this app on your Ensi Home.\n- Go to new devices\n- Insert password\n- Device will be added\n- Data will be fetched.\n- Check statuses or create flows.\n\nCurrent features:\n- Reboot / switch off.\n- Display CPU %\n- Display Disk %\n- Display Temperature\n- Temperature alarm\n- Display online time\n- Upload files to Amber\n- Amber One & Amber Plus: router functionality\n    -- IP connected\n    -- IP disconnected\n- Get notification when a value has changed.\n\nMore info on the community:\n- Link in app info below",
                     "supported_devices": [
                         {
                             "data_driver_id": "AmberOne",
@@ -17730,7 +17730,7 @@
                     "company": "NodOn Official",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.nodon.app/4/b02a99e5-377d-4d66-87fc-20c69f581133/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\NodOn\\image.png",
-                    "summary_description": "NodOn\u00ae is a French company specialized in radio products for connected housing and connected buildings. We design and manufacture products (own brand, OEM/ODM) to make homes and buildings smarter, simply and quickly, using state-of-the-art technologies.\n\nOfficial NodOn application for the compatibility of products in the Zigbee range with Homey.\n\nCompatible products:\n\n- Lighting module (Ref SIN-4-2-20)\n\n- Multifunction Module (Ref SIN-4-1-20)",
+                    "summary_description": "NodOn\u00ae is a French company specialized in radio products for connected housing and connected buildings. We design and manufacture products (own brand, OEM/ODM) to make homes and buildings smarter, simply and quickly, using state-of-the-art technologies.\n\nOfficial NodOn application for the compatibility of products in the Zigbee range with Ensi Home.\n\nCompatible products:\n\n- Lighting module (Ref SIN-4-2-20)\n\n- Multifunction Module (Ref SIN-4-1-20)",
                     "supported_devices": [
                         {
                             "data_driver_id": "SIN-4-1-20",
@@ -17805,7 +17805,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.samsung.ir/6/6675e0d5-747c-489a-945a-5a01c9109fc7/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\Samsung_TV\\image.jpg",
-                    "summary_description": "Whether it's an old model or the newest Samsung TV, Homey can control your TV with infrared.\n\nTurn it on & off, change the channel, adjust the volume, or send any command using Flow.",
+                    "summary_description": "Whether it's an old model or the newest Samsung TV, Ensi Home can control your TV with infrared.\n\nTurn it on & off, change the channel, adjust the volume, or send any command using Flow.",
                     "supported_devices": [
                         {
                             "data_driver_id": "remote",
@@ -17825,7 +17825,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.lg.ir/9/c18bb581-49df-4d0b-9434-0f5707dcd465/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\LG_TV__IR_\\image.jpg",
-                    "summary_description": "Life's Good. And Life's Better when you connect your LG TV with Homey.\n\nHomey can control your TV with infrared and turn it on & off, change the channel and adjust the volume.",
+                    "summary_description": "Life's Good. And Life's Better when you connect your LG TV with Ensi Home.\n\nEnsi Home can control your TV with infrared and turn it on & off, change the channel and adjust the volume.",
                     "supported_devices": [
                         {
                             "data_driver_id": "lg_tv",
@@ -17845,7 +17845,7 @@
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.philips.ir/11/b5d7e19b-74e3-4507-aef1-9d17953aed5b/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Philips_TV\\image.png",
-                    "summary_description": "Homey can control your Philips TV with infrared and turn it on & off, change the channel and adjust the volume.\n\nAutomate with Flow to send any command, such as HDMI 1, Play/Pause or any TV Channel.",
+                    "summary_description": "Ensi Home can control your Philips TV with infrared and turn it on & off, change the channel and adjust the volume.\n\nAutomate with Flow to send any command, such as HDMI 1, Play/Pause or any TV Channel.",
                     "supported_devices": [
                         {
                             "data_driver_id": "new_tv",
@@ -17871,11 +17871,11 @@
                 },
                 {
                     "name": "Ziggo",
-                    "description": "Connect your Mediabox Next with Homey",
+                    "description": "Connect your Mediabox Next with Ensi Home",
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/nl.ziggo/10/922d4c32-4500-4bde-b390-63ad81ee7cf1/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Ziggo\\image.png",
-                    "summary_description": "Connect Homey with your Ziggo Mediabox Next and unleash a whole new world of TV.\n\nAutomatically start your favourite programs with a Flow, or turn the Mediabox off when you leave home \u2014 it's up to you.\n\nNote: this app is not officially maintained by Ziggo.",
+                    "summary_description": "Connect Ensi Home with your Ziggo Mediabox Next and unleash a whole new world of TV.\n\nAutomatically start your favourite programs with a Flow, or turn the Mediabox off when you leave home \u2014 it's up to you.\n\nNote: this app is not officially maintained by Ziggo.",
                     "supported_devices": [
                         {
                             "data_driver_id": "mediabox-next",
@@ -17895,7 +17895,7 @@
                     "company": "Emile Nijssen",
                     "summary_image_url": "https://apps-cdn.athom.com/app/tv.plex/16/c5e16dbe-aad1-4d3e-9dd5-d5d993073e96/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Plex\\image.png",
-                    "summary_description": "Plex brings together all the media that matters to you. Your personal collection will look beautiful alongside stellar streaming content. Enjoy Live TV & DVR, a growing catalog of great web shows, news, and podcasts. It's finally possible to enjoy all the media you love in a single app, on any device, no matter where you are.\n\nPlex for Homey integrates your favorite home entertainment with your smart home. View what's currently playing, start a Flow when new media has been added to your Plex library, or automatically re-scan your library from a Flow.",
+                    "summary_description": "Plex brings together all the media that matters to you. Your personal collection will look beautiful alongside stellar streaming content. Enjoy Live TV & DVR, a growing catalog of great web shows, news, and podcasts. It's finally possible to enjoy all the media you love in a single app, on any device, no matter where you are.\n\nPlex for Ensi Home integrates your favorite home entertainment with your smart home. View what's currently playing, start a Flow when new media has been added to your Plex library, or automatically re-scan your library from a Flow.",
                     "supported_devices": [
                         {
                             "data_driver_id": "pms",
@@ -17911,11 +17911,11 @@
                 },
                 {
                     "name": "Sony TV IR",
-                    "description": "This app enables Homey to send IR remote signals to your Sony TV",
+                    "description": "This app enables Ensi Home to send IR remote signals to your Sony TV",
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.sony.ir/5/f426efae-52ee-49ab-8b3b-bb88b68b8cfc/assets/images/large.jpg",
                     "local_summary_image_url": "images\\brands\\Sony_TV_IR\\image.jpg",
-                    "summary_description": "Homey can control your Sony TV with infrared and turn it on & off, change the channel or adjust the volume.\n\nAutomate with Flow to send any command, such as HDMI 1, Play/Pause or any TV Channel.",
+                    "summary_description": "Ensi Home can control your Sony TV with infrared and turn it on & off, change the channel or adjust the volume.\n\nAutomate with Flow to send any command, such as HDMI 1, Play/Pause or any TV Channel.",
                     "supported_devices": [
                         {
                             "data_driver_id": "sony_tv",
@@ -17931,11 +17931,11 @@
                 },
                 {
                     "name": "Panasonic TV IR",
-                    "description": "This app enables Homey to send IR remote signals to your Panasonic TV",
+                    "description": "This app enables Ensi Home to send IR remote signals to your Panasonic TV",
                     "company": "Athom B.V.",
                     "summary_image_url": "https://apps-cdn.athom.com/app/com.panasonic.ir/6/4128eed8-e9bc-43af-a316-973f93748a20/assets/images/large.png",
                     "local_summary_image_url": "images\\brands\\Panasonic_TV_IR\\image.png",
-                    "summary_description": "Homey can control your Panasonic TV with infrared and turn it on & off, change the channel and adjust the volume.\n\nAutomate with Flow to send any command, such as HDMI 1, Play/Pause or any TV Channel.",
+                    "summary_description": "Ensi Home can control your Panasonic TV with infrared and turn it on & off, change the channel and adjust the volume.\n\nAutomate with Flow to send any command, such as HDMI 1, Play/Pause or any TV Channel.",
                     "supported_devices": [
                         {
                             "data_driver_id": "panasonic_tv",

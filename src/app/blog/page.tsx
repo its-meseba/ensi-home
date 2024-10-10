@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getSortedPostsData, getAllTags, getAllCategories } from '@/lib/posts';
 import { Button } from '@/components/ui/button';
 import { BackgroundLines } from '@/components/ui/background-lines';
+import { CurvedBackground } from '@/components/common/CurvyBackground';
 
 const BlogPage = async () => {
   const allPostsData = await getSortedPostsData();
@@ -13,29 +14,20 @@ const BlogPage = async () => {
     <BackgroundLines className="flex w-full flex-col items-center justify-center px-4">
       <div className="w-full bg-gray-50 dark:bg-gray-900">
         {/* Header Section */}
-        <header className="py-12 md:py-16 lg:py-20">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="relative z-20 bg-gradient-to-b from-neutral-900 to-neutral-700 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent sm:text-5xl lg:text-6xl dark:from-neutral-100 dark:to-neutral-400">
-                Welcome to Our Blog
-              </h1>
-              <p className="relative z-20 mt-4 text-lg text-gray-600 dark:text-gray-400">
-                Discover the latest insights, trends, and stories from our team
-                of experts.
-              </p>
-              <div className="relative z-20 mt-8">
-                <Link href="#posts">
-                  <Button variant="default">Read More</Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </header>
+        <CurvedBackground
+          imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
+          title="Welcome to News & Posts"
+        />
 
         {/* Main Content: Blog Posts */}
+        {/* PUT HERE THAT HERE IS THE ARTICLES as */}
+
         <main className="relative z-20">
           <section id="posts" className="py-12 md:py-16 lg:py-20">
             <div className="container mx-auto px-4 md:px-6">
+              <h2 className="mb-8 text-3xl font-bold text-gray-900 dark:text-gray-50">
+                Latest Articles
+              </h2>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {allPostsData.map(
                   ({ slug, date, title, description, coverImage }) => (

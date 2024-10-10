@@ -1,4 +1,3 @@
-// components/AIHelperButton.tsx
 'use client';
 
 import { useState } from 'react';

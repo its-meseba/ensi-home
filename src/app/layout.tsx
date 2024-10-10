@@ -1,5 +1,4 @@
 import '@/styles/globals.css';
-
 import { PropsWithChildren } from 'react';
 import { LanguageProvider } from '@inlang/paraglide-next';
 import type { Metadata } from 'next';
@@ -11,10 +10,8 @@ import { fonts } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import { languageTag } from '@/paraglide/runtime.js';
 
-import { Providers } from './providers';
 import { VisitorTypeSelector } from '@/components/common/VisitorTypeSelector';
 import { AIHelperButton } from '@/components/common/AiHelperButton';
-import { HeroHighlight } from '@/components/ui/hero-highlight';
 import { AppWrapper } from '@/wrapper/VisitorWrapper';
 
 export const generateMetadata = (): Metadata => ({
@@ -55,22 +52,24 @@ const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <LanguageProvider>
       <html lang={languageTag()} suppressHydrationWarning>
-        <body className={cn('min-h-screen font-sans', fonts)}>
-          <Providers>
-            <AppWrapper>
-              <NewNavbar />
-              <HeroHighlight>
-                <main className="pt-20">{children}</main>
-              </HeroHighlight>
-              <Footer />
-              {/* Place the VisitorTypeSelector at the bottom left */}
-              <div className="fixed bottom-4 left-4 z-50">
-                <VisitorTypeSelector />
-              </div>
-              {/* Place the AIHelperButton at the bottom right */}
-              <AIHelperButton />
-            </AppWrapper>
-          </Providers>
+        <body
+          className={cn(
+            'bg-background text-foreground min-h-screen font-sans',
+            fonts
+          )}
+        >
+          {/* <Providers> */}
+          <AppWrapper>
+            <NewNavbar />
+            <main className="pt-20">{children}</main>
+            <Footer />
+            {/* Place the VisitorTypeSelector at the bottom left */}
+            <div className="fixed bottom-4 left-4 z-50">
+              <VisitorTypeSelector />
+            </div>
+            <AIHelperButton />
+          </AppWrapper>
+          {/* </Providers> */}
         </body>
       </html>
     </LanguageProvider>

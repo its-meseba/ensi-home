@@ -2,10 +2,15 @@
 
 import React from 'react';
 import Component from '@/components/common/timeline-card';
+import { CurvedBackground } from '@/components/common/CurvyBackground';
 
 export default function SmartHomeGuide() {
   return (
     <div className="flex flex-col items-center">
+      <CurvedBackground
+        imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
+        title="How Is it Done?"
+      />
       <Component />
       {/* 
 Step 1: Understanding Your Needs

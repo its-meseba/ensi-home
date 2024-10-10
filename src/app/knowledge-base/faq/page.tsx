@@ -18,6 +18,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { FaqVanishingInput } from '@/components/pages/knowledge-base/faq/faq-vanishing-input';
 import Link from 'next/link';
+import { CurvedBackground } from '@/components/common/CurvyBackground';
 
 const categories = [
   {
@@ -176,12 +177,16 @@ export default function FAQPage() {
       animate="visible"
       variants={containerVariants}
     >
+      <CurvedBackground
+        imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
+        title="Frequently Asked Questions"
+      />
       <div className="container mx-auto flex max-w-7xl flex-col items-center px-4 py-16">
         <motion.h1
           className="mb-12 text-4xl font-bold text-gray-800"
           variants={itemVariants}
         >
-          Ensi Home Knowledge Base
+          We want to have your question!
         </motion.h1>
 
         <motion.div className="w-full max-w-2xl" variants={itemVariants}>
@@ -196,7 +201,7 @@ export default function FAQPage() {
             className="mb-6 text-2xl font-bold text-gray-800"
             variants={itemVariants}
           >
-            Frequently Asked Questions
+            Some of the Questions You Asked
           </motion.h2>
           <motion.div
             className="mb-6 flex items-center"

@@ -22,6 +22,7 @@ import {
 } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import { CurvedBackground } from '@/components/common/CurvyBackground';
 
 const steps = [
   {
@@ -106,9 +107,13 @@ const sections = [
 export default function SmartHomeGuide() {
   return (
     <div className="flex flex-col items-center">
+      <CurvedBackground
+        imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
+        title="How It Works?"
+      />
       <div className="w-full bg-gray-50">
         <div className="container mx-auto flex max-w-7xl flex-col items-center px-4 py-12">
-          <h1 className="mb-12 text-center text-3xl font-bold">How It Works</h1>
+          {/* <h1 className="mb-12 text-center text-3xl font-bold">How It Works</h1> */}
           <IntroFeature
             platform="How It Works"
             title="Understanding Your Smart Home"

@@ -9,56 +9,56 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 
 const devices = [
-  { id: 'sonos', name: 'Connecting Sonos with Homey' },
-  { id: 'tuya', name: 'Connecting Tuya with Homey' },
-  { id: 'netatmo', name: 'Connecting Netatmo with Homey' },
-  { id: 'philips', name: 'Connecting Philips Hue with Homey' },
-  { id: 'ikea', name: 'Connecting IKEA Trådfri with Homey' },
-  { id: 'aqara', name: 'Connecting Aqara Xiaomi with Homey' },
-  { id: 'innr', name: 'Connecting Innr with Homey' },
+  { id: 'sonos', name: 'Connecting Sonos with Ensi Home' },
+  { id: 'tuya', name: 'Connecting Tuya with Ensi Home' },
+  { id: 'netatmo', name: 'Connecting Netatmo with Ensi Home' },
+  { id: 'philips', name: 'Connecting Philips Hue with Ensi Home' },
+  { id: 'ikea', name: 'Connecting IKEA Trådfri with Ensi Home' },
+  { id: 'aqara', name: 'Connecting Aqara Xiaomi with Ensi Home' },
+  { id: 'innr', name: 'Connecting Innr with Ensi Home' },
 ];
 
 const deviceContent = {
   sonos: {
-    title: 'Connecting Sonos with Homey',
+    title: 'Connecting Sonos with Ensi Home',
     content:
-      "Homey works with numerous Sonos smart speakers. We've documented the pairing process below.",
+      "Ensi Home works with numerous Sonos smart speakers. We've documented the pairing process below.",
     videoId: 'dQw4w9WgXcQ', // Replace with actual Sonos video ID
   },
   tuya: {
-    title: 'Connecting Tuya with Homey',
+    title: 'Connecting Tuya with Ensi Home',
     content:
-      'Learn how to connect your Tuya-compatible devices with Homey for seamless smart home integration.',
+      'Learn how to connect your Tuya-compatible devices with Ensi Home for seamless smart home integration.',
     videoId: 'abcdefghijk', // Replace with actual Tuya video ID
   },
   netatmo: {
-    title: 'Connecting Netatmo with Homey',
+    title: 'Connecting Netatmo with Ensi Home',
     content:
-      'Discover the steps to connect your Netatmo weather station and other devices to Homey.',
+      'Discover the steps to connect your Netatmo weather station and other devices to Ensi Home.',
     videoId: 'lmnopqrstuv', // Replace with actual Netatmo video ID
   },
   philips: {
-    title: 'Connecting Philips Hue with Homey',
+    title: 'Connecting Philips Hue with Ensi Home',
     content:
-      'Follow our guide to connect your Philips Hue lighting system with Homey for enhanced control.',
+      'Follow our guide to connect your Philips Hue lighting system with Ensi Home for enhanced control.',
     videoId: 'wxyzabcdefg', // Replace with actual Philips Hue video ID
   },
   ikea: {
-    title: 'Connecting IKEA Trådfri with Homey',
+    title: 'Connecting IKEA Trådfri with Ensi Home',
     content:
-      'Learn how to integrate your IKEA Trådfri smart lighting products with Homey.',
+      'Learn how to integrate your IKEA Trådfri smart lighting products with Ensi Home.',
     videoId: 'hijklmnopqr', // Replace with actual IKEA Trådfri video ID
   },
   aqara: {
-    title: 'Connecting Aqara Xiaomi with Homey',
+    title: 'Connecting Aqara Xiaomi with Ensi Home',
     content:
-      'Follow our step-by-step guide to connect your Aqara Xiaomi devices with Homey.',
+      'Follow our step-by-step guide to connect your Aqara Xiaomi devices with Ensi Home.',
     videoId: 'stuvwxyzabc', // Replace with actual Aqara Xiaomi video ID
   },
   innr: {
-    title: 'Connecting Innr with Homey',
+    title: 'Connecting Innr with Ensi Home',
     content:
-      'Discover how to pair your Innr smart lighting products with Homey for seamless control.',
+      'Discover how to pair your Innr smart lighting products with Ensi Home for seamless control.',
     videoId: 'defghijklmn', // Replace with actual Innr video ID
   },
 };
