@@ -22,7 +22,7 @@ const products = [
     category: 'Lighting',
     technology: 'Zigbee',
     manufacturer: 'Signify',
-    image: '/placeholder.svg?height=200&width=300',
+    image: '/placeholder.jpg?height=200&width=300',
     description: 'Smart lighting solution for your home',
   },
   {
@@ -31,7 +31,7 @@ const products = [
     category: 'Security',
     technology: 'Zigbee',
     manufacturer: 'Lumi United',
-    image: '/placeholder.svg?height=200&width=300',
+    image: '/placeholder.jpg?height=200&width=300',
     description: 'Comprehensive smart home and security devices',
   },
   {
@@ -40,7 +40,7 @@ const products = [
     category: 'Lighting',
     technology: 'Zigbee',
     manufacturer: 'IKEA',
-    image: '/placeholder.svg?height=200&width=300',
+    image: '/placeholder.jpg?height=200&width=300',
     description: 'Affordable smart lighting options',
   },
   {
@@ -49,7 +49,7 @@ const products = [
     category: 'Security',
     technology: 'Cloud',
     manufacturer: 'Community',
-    image: '/placeholder.svg?height=200&width=300',
+    image: '/placeholder.jpg?height=200&width=300',
     description: 'Advanced presence detection for smart homes',
   },
   {
@@ -58,7 +58,7 @@ const products = [
     category: 'Lighting',
     technology: 'Zigbee',
     manufacturer: 'Tuya',
-    image: '/placeholder.svg?height=200&width=300',
+    image: '/placeholder.jpg?height=200&width=300',
     description: 'Versatile smart home ecosystem',
   },
 ];

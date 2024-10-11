@@ -37,7 +37,7 @@ export const IntroHeader = ({
           <Badge variant="outline" className="w-fit">
             {badgeText}
           </Badge>
-          <h1 className="font-regular text-4xl tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="text-5xl font-normal tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
             {title}
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed tracking-tight sm:text-xl">

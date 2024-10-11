@@ -27,6 +27,7 @@ import {
   CurvedBackgroundParallaxHeader,
   CurvedBackgroundParallaxHeaderVertical,
 } from '@/components/common/CurvyBackground';
+import InfiniteScrollingMobileApplicationScreens from '@/components/pages/ensi-home/mobile-application/InfiniteScrollingMobileApplicationScreens';
 
 export default function MainPage() {
   const items: ContentItemProps[] = [
@@ -40,7 +41,7 @@ export default function MainPage() {
     {
       id: 'box',
       title: 'Box',
-      buttonText: 'Uygulamayi Gor',
+      buttonText: 'Kutuyu Gor',
       href: '/ensi-home/box',
       component: <EnsiHomeBox />,
     },
@@ -77,7 +78,7 @@ export default function MainPage() {
           badgeText="Smart Home"
           title="Innovating the Future"
           description="We're at the forefront of mobile development, 3D visualization, and AI assistance. Our solutions are designed to transform your ideas into reality."
-          imageUrl="/placeholder.svg?height=400&width=600&text=Company Overview"
+          imageUrl="/placeholder.jpg?height=400&width=600&text=Company Overview"
           callToAction1="First"
           callToAction2="Second"
         />
@@ -85,13 +86,16 @@ export default function MainPage() {
         {/* 2. talking about the pillar features of Ensi Home */}
         <AppleCardsCarouselDemo />
         {/* 3. what are the main pillar technologies of Ensi Home */}
+      </div>
+      <InfiniteScrollingMobileApplicationScreens />
+      <div className="mx-auto w-full max-w-7xl">
         <ContentSection items={items} />
       </div>
 
       {/* 4. further delve into Ensi Home with an indicator that the journey moves on */}
       {/* Second Section */}
       <EnsiHomeOrchestrator />
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto w-full max-w-full">
         {/* 1.1. BENEFITS FOR USER -         The perks of having an Ensi Home - VALUE PROPOSITION*/}
         {/* 1.2. BENEFITS FOR CONSTRUCTION - COMPANIES The perks of having an Ensi Home - VALUE PROPOSITION*/}
         {/* 1.3. BENEFITS FOR WORK/BUSINESS SITES -   The perks of having an Ensi Home - VALUE PROPOSITION*/}

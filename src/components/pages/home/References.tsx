@@ -8,25 +8,25 @@ import { motion } from 'framer-motion';
 const references = [
   {
     name: 'Company A',
-    logo: '/placeholder.svg?height=100&width=200',
+    logo: '/placeholder.jpg?height=100&width=200',
     quote:
       'Ensi Home has revolutionized our approach to sustainable living. Their innovative solutions have not only improved our energy efficiency but also enhanced the overall quality of life for our residents.',
   },
   {
     name: 'Company B',
-    logo: '/placeholder.svg?height=100&width=200',
+    logo: '/placeholder.jpg?height=100&width=200',
     quote:
       'Working with Ensi Home has been a game-changer for our construction projects. Their cutting-edge technologies and commitment to sustainability have set a new standard in the industry.',
   },
   {
     name: 'Company C',
-    logo: '/placeholder.svg?height=100&width=200',
+    logo: '/placeholder.jpg?height=100&width=200',
     quote:
       "As a business owner, I've seen a significant improvement in workplace productivity and employee satisfaction since implementing Ensi Home solutions. It's been a worthwhile investment for our company.",
   },
   {
     name: 'Company D',
-    logo: '/placeholder.svg?height=100&width=200',
+    logo: '/placeholder.jpg?height=100&width=200',
     quote:
       "Ensi Home's sustainable solutions have not only reduced our carbon footprint but also significantly lowered our operational costs. It's a win-win for our business and the environment.",
   },

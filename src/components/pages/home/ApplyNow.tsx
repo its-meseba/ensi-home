@@ -49,11 +49,11 @@ export default function ApplyComponent() {
       initial={{ opacity: 0, y: 50 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
-      className="container mx-auto rounded-3xl bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-16"
+      className="from-primary container mx-auto rounded-3xl bg-gradient-to-r to-purple-600 px-4 py-16"
     >
       <Card className="mx-auto max-w-2xl overflow-hidden rounded-3xl border-0 bg-white bg-opacity-90 shadow-2xl backdrop-blur-md">
         <CardHeader className="text-center">
-          <CardTitle className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-4xl font-bold text-transparent">
+          <CardTitle className="from-primary bg-gradient-to-r to-purple-600 bg-clip-text text-4xl font-bold text-transparent">
             Have an Ensi Home Now
           </CardTitle>
           <CardDescription className="mt-2 text-lg">
@@ -78,7 +78,7 @@ export default function ApplyComponent() {
             </div>
             <Button
               type="submit"
-              className="w-full rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 py-6 text-lg transition-all duration-300 hover:from-blue-600 hover:to-purple-700"
+              className="from-primary hover:from-primary w-full rounded-xl bg-gradient-to-r to-purple-600 py-6 text-lg transition-all duration-300 hover:to-purple-700"
             >
               Apply Now
             </Button>

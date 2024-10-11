@@ -175,7 +175,7 @@ export default function BoxPage() {
           </motion.div>
           <motion.div variants={itemVariants}>
             <Image
-              src="/placeholder.svg?height=300&width=400"
+              src="/placeholder.jpg?height=300&width=400"
               alt="Ensi Home Box Installation"
               width={400}
               height={300}
@@ -195,15 +195,15 @@ export default function BoxPage() {
         >
           {[
             {
-              src: '/placeholder.svg?height=200&width=300',
+              src: '/placeholder.jpg?height=200&width=300',
               alt: 'Ensi Home Box in Living Room',
             },
             {
-              src: '/placeholder.svg?height=200&width=300',
+              src: '/placeholder.jpg?height=200&width=300',
               alt: 'Ensi Home Box in Kitchen',
             },
             {
-              src: '/placeholder.svg?height=200&width=300',
+              src: '/placeholder.jpg?height=200&width=300',
               alt: 'Ensi Home Box in Home Office',
             },
           ].map((image, index) => (

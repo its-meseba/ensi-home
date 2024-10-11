@@ -39,14 +39,14 @@ export default function Component() {
             </ul>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               <Image
-                src="/placeholder.svg?height=240&width=320"
+                src="/placeholder.jpg?height=240&width=320"
                 alt="Customer consultation"
                 width={320}
                 height={240}
                 className="w-full rounded-lg object-cover shadow-lg"
               />
               <Image
-                src="/placeholder.svg?height=240&width=320"
+                src="/placeholder.jpg?height=240&width=320"
                 alt="Home assessment"
                 width={320}
                 height={240}
@@ -89,14 +89,14 @@ export default function Component() {
             </ul>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               <Image
-                src="/placeholder.svg?height=240&width=320"
+                src="/placeholder.jpg?height=240&width=320"
                 alt="Smart device selection"
                 width={320}
                 height={240}
                 className="w-full rounded-lg object-cover shadow-lg"
               />
               <Image
-                src="/placeholder.svg?height=240&width=320"
+                src="/placeholder.jpg?height=240&width=320"
                 alt="Quality assurance process"
                 width={320}
                 height={240}
@@ -144,14 +144,14 @@ export default function Component() {
             </ul>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               <Image
-                src="/placeholder.svg?height=240&width=320"
+                src="/placeholder.jpg?height=240&width=320"
                 alt="On-site installation"
                 width={320}
                 height={240}
                 className="w-full rounded-lg object-cover shadow-lg"
               />
               <Image
-                src="/placeholder.svg?height=240&width=320"
+                src="/placeholder.jpg?height=240&width=320"
                 alt="Team collaboration"
                 width={320}
                 height={240}

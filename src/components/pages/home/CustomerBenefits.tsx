@@ -38,7 +38,7 @@ export default function EnhancedCustomerBenefits() {
     homeOwner: {
       title: 'Benefits for Home Owners',
       description: 'Experience the future of sustainable living with Ensi Home',
-      image: '/placeholder.svg?height=400&width=600',
+      image: '/placeholder.jpg?height=400&width=600',
       content: [
         {
           title: 'Energy Efficiency',
@@ -50,7 +50,7 @@ export default function EnhancedCustomerBenefits() {
             'Energy-efficient appliances and LED lighting',
             'Solar panel integration for renewable energy generation',
           ],
-          imageUrl: '/placeholder.svg?height=200&width=300',
+          imageUrl: '/placeholder.jpg?height=200&width=300',
         },
         {
           title: 'Comfort and Well-being',
@@ -62,7 +62,7 @@ export default function EnhancedCustomerBenefits() {
             'Noise reduction technologies',
             'Circadian lighting systems for better sleep patterns',
           ],
-          imageUrl: '/placeholder.svg?height=200&width=300',
+          imageUrl: '/placeholder.jpg?height=200&width=300',
         },
         {
           title: 'Smart Home Integration',
@@ -85,7 +85,7 @@ export default function EnhancedCustomerBenefits() {
             'Sustainable flooring options',
             'Water-efficient plumbing fixtures',
           ],
-          imageUrl: '/placeholder.svg?height=200&width=300',
+          imageUrl: '/placeholder.jpg?height=200&width=300',
         },
       ],
       cta: 'Schedule a Home Consultation',
@@ -94,7 +94,7 @@ export default function EnhancedCustomerBenefits() {
       title: 'Benefits for Construction Companies',
       description:
         "Revolutionize your projects with Ensi Home's innovative construction solutions",
-      image: '/placeholder.svg?height=400&width=600',
+      image: '/placeholder.jpg?height=400&width=600',
       content: [
         {
           title: 'Efficient Building Processes',
@@ -147,7 +147,7 @@ export default function EnhancedCustomerBenefits() {
       title: 'Benefits for Business Owners',
       description:
         'Transform your workspace into a sustainable, productive environment with Ensi Home',
-      image: '/placeholder.svg?height=400&width=600',
+      image: '/placeholder.jpg?height=400&width=600',
       content: [
         {
           title: 'Enhanced Productivity',
@@ -253,77 +253,87 @@ export default function EnhancedCustomerBenefits() {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5 }}
-      className="container mx-auto rounded-3xl border-gray-300 bg-white px-4 py-12"
+      className="mx-auto rounded-3xl border-gray-300 bg-white px-4 py-12"
     >
-      <Tabs
-        value={activeTab}
-        onValueChange={handleTabChange}
-        className="w-full"
+      <motion.div
+        ref={containerRef}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5 }}
+        className="container"
       >
-        <TabsList className="mb-8 grid w-full grid-cols-3">
-          <TabsTrigger
-            value="homeOwner"
-            className="flex items-center justify-center"
-          >
-            <Home className="mr-2 size-5" />
-            <span className="hidden text-base sm:inline">Home Owner</span>
-          </TabsTrigger>
-          <TabsTrigger
-            value="constructionCompany"
-            className="flex items-center justify-center"
-          >
-            <Building2 className="mr-2 size-5" />
-            <span className="hidden text-base sm:inline">
-              Construction Company
-            </span>
-          </TabsTrigger>
-          <TabsTrigger
-            value="businessOwner"
-            className="flex items-center justify-center"
-          >
-            <Briefcase className="mr-2 size-5" />
-            <span className="hidden text-base sm:inline">Business Owner</span>
-          </TabsTrigger>
-        </TabsList>
-        {Object.entries(benefitsData).map(([key, data]) => (
-          <TabsContent key={key} value={key}>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="space-y-8"
+        <Tabs
+          value={activeTab}
+          onValueChange={handleTabChange}
+          className="w-full"
+        >
+          <TabsList className="mb-8 grid w-full grid-cols-3">
+            <TabsTrigger
+              value="homeOwner"
+              className="flex items-center justify-center"
             >
-              <div className="text-center">
-                <h2 className="mb-4 text-4xl font-bold">{data.title}</h2>
-                <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-xl">
-                  {data.description}
-                </p>
-                {data.image && (
-                  <div className="mb-12">
-                    <Image
-                      src={data.image}
-                      alt={data.title}
-                      width={600}
-                      height={400}
-                      className="mx-auto rounded-3xl shadow-lg"
-                    />
-                  </div>
-                )}
-              </div>
-              {renderContent(data.content)}
-              <div className="mt-12 flex justify-center">
-                <Button
-                  size="lg"
-                  className="flex items-center px-8 py-6 text-lg"
-                >
-                  {data.cta}
-                  <ArrowRight className="ml-2 size-5" />
-                </Button>
-              </div>
-            </motion.div>
-          </TabsContent>
-        ))}
-      </Tabs>
+              <Home className="mr-2 size-5" />
+              <span className="hidden text-base sm:inline">Home Owner</span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="constructionCompany"
+              className="flex items-center justify-center"
+            >
+              <Building2 className="mr-2 size-5" />
+              <span className="hidden text-base sm:inline">
+                Construction Company
+              </span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="businessOwner"
+              className="flex items-center justify-center"
+            >
+              <Briefcase className="mr-2 size-5" />
+              <span className="hidden text-base sm:inline">Business Owner</span>
+            </TabsTrigger>
+          </TabsList>
+          {Object.entries(benefitsData).map(([key, data]) => (
+            <TabsContent key={key} value={key}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-8"
+              >
+                <div className="text-center">
+                  <h2 className="text-3xl font-normal tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                    {data.title}
+                  </h2>
+                  <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-xl">
+                    {data.description}
+                  </p>
+                  {data.image && (
+                    <div className="mb-12">
+                      <Image
+                        src={data.image}
+                        alt={data.title}
+                        width={600}
+                        height={400}
+                        className="mx-auto rounded-3xl shadow-lg"
+                      />
+                    </div>
+                  )}
+                </div>
+                {renderContent(data.content)}
+                <div className="mt-12 flex justify-center">
+                  <Button
+                    size="lg"
+                    className="flex items-center px-8 py-6 text-lg"
+                  >
+                    {data.cta}
+                    <ArrowRight className="ml-2 size-5" />
+                  </Button>
+                </div>
+              </motion.div>
+            </TabsContent>
+          ))}
+        </Tabs>
+      </motion.div>
     </motion.div>
   );
 }

@@ -23,13 +23,6 @@ interface CarouselProps {
   initialScroll?: number;
 }
 
-// type Card = {
-//   src: string;
-//   title: string;
-//   category: string;
-//   content: React.ReactNode;
-// };
-
 export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
   currentIndex: number;
@@ -107,7 +100,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           <div
             className={cn(
               'flex flex-row justify-start gap-4 pl-4',
-              'mx-auto max-w-7xl' // remove max-w-4xl if you want the carousel to span the full width of its container
+              'mx-auto max-w-7xl'
             )}
           >
             {items.map((item, index) => (
@@ -171,7 +164,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({ card, index, layout = false }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { onCardClose, currentIndex } = useContext(CarouselContext);
+  const { onCardClose } = useContext(CarouselContext);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -254,7 +247,15 @@ export const Card: React.FC<CardProps> = ({ card, index, layout = false }) => {
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-[40rem] md:w-96 dark:bg-neutral-900"
+        className={cn(
+          'relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-[40rem] md:w-96 dark:bg-neutral-900',
+          'transition-all duration-300 ease-in-out',
+          'hover:scale-105 hover:shadow-lg focus:scale-105 focus:shadow-lg',
+          'active:scale-95',
+          'outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50'
+        )}
+        whileHover={{ y: -25 }}
+        whileTap={{ scale: 0.9 }}
       >
         <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-b from-black/50 via-transparent to-transparent" />
         <div className="relative z-30 p-8">

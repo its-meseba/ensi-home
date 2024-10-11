@@ -38,7 +38,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <article className="overflow-hidden rounded-lg bg-white shadow-sm dark:bg-gray-800">
           <div className="relative aspect-[21/9] w-full overflow-hidden">
             <Image
-              src={postData.coverImage || '/placeholder.svg'}
+              src={postData.coverImage || '/placeholder.jpg'}
               alt={postData.title}
               fill
               className="object-cover"

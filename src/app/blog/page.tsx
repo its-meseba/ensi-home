@@ -14,7 +14,7 @@ const BlogPage = async () => {
     <BackgroundLines className="flex w-full flex-col items-center justify-center">
       <div className="w-full bg-gray-50 dark:bg-gray-900">
         <CurvedBackgroundParallax
-          imageSrc="/images/pages/knowledge-base/technical-knowledge-base/support.jpg"
+          imageSrc="/images/pages/blog/cover.jpg"
           title="Welcome to News & Posts"
         />
         {/* Header Section */}
@@ -37,7 +37,7 @@ const BlogPage = async () => {
                     >
                       <Link href={`/blog/${slug}`}>
                         <Image
-                          src={coverImage || '/placeholder.svg'}
+                          src={coverImage || '/placeholder.jpg'}
                           alt={title}
                           width={400}
                           height={200}

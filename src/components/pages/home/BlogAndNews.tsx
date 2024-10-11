@@ -64,7 +64,7 @@ export default function BlogAndNews() {
           >
             <Card className="h-full overflow-hidden rounded-3xl border transition-shadow duration-300 hover:shadow-lg">
               <Image
-                src={post.coverImage || '/placeholder.svg'}
+                src={post.coverImage || '/placeholder.jpg'}
                 alt={post.title}
                 width={400}
                 height={200}

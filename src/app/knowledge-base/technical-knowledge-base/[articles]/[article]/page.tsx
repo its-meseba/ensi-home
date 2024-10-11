@@ -58,7 +58,7 @@ const articleContent: Record<string, ArticleContent> = {
     category: 'Devices & Zones',
     author: {
       name: 'Jane Doe',
-      avatar: '/placeholder.svg?height=40&width=40',
+      avatar: '/placeholder.jpg?height=40&width=40',
       bio: 'Jane is a smart home expert with over 5 years of experience in IoT technologies.',
     },
     publishDate: '2023-05-15',
@@ -103,17 +103,17 @@ const articleContent: Record<string, ArticleContent> = {
       {
         title: 'Using Zone Activity',
         slug: 'using-zone-activity',
-        thumbnail: '/placeholder.svg?height=80&width=120',
+        thumbnail: '/placeholder.jpg?height=80&width=120',
       },
       {
         title: 'Customizing Zones',
         slug: 'customizing-zones',
-        thumbnail: '/placeholder.svg?height=80&width=120',
+        thumbnail: '/placeholder.jpg?height=80&width=120',
       },
       {
         title: 'Troubleshooting device connections',
         slug: 'troubleshooting-device-connections',
-        thumbnail: '/placeholder.svg?height=80&width=120',
+        thumbnail: '/placeholder.jpg?height=80&width=120',
       },
     ],
   },

@@ -409,13 +409,13 @@ export default function EnhancedFilteredProducts() {
                       >
                         <div className="relative h-48 w-full">
                           <Image
-                            src={brand.summary_image_url || '/placeholder.svg'}
+                            src={brand.summary_image_url || '/placeholder.jpg'}
                             alt={brand.name}
                             fill
                             style={{ objectFit: 'cover' }}
                             className="object-cover"
                             placeholder="blur"
-                            blurDataURL="/placeholder.svg"
+                            blurDataURL="/placeholder.jpg"
                           />
                         </div>
                         <div className="p-4">

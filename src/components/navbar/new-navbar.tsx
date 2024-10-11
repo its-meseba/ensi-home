@@ -1,10 +1,10 @@
 'use client';
 
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Menu, MoveRight, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 
 import { LanguageSwitcher } from './language-switcher';
 import { Button } from '@/components/ui/button';
@@ -88,195 +88,166 @@ export const NewNavbar = () => {
   ];
 
   const [isOpen, setOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const lastScrollY = useRef(0);
+  const controls = useAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setIsCollapsed(true);
+        controls.start({
+          y: [0, -10, 0],
+          transition: { duration: 0.5, ease: 'easeInOut' },
+        });
+      } else if (currentScrollY < lastScrollY.current) {
+        setIsCollapsed(false);
+      }
+      lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
+  }, [controls]);
 
   const handleLinkClick = () => {
-    setOpen(false); // Close the drawer after a link is clicked
+    setOpen(false);
+  };
+
+  const navVariants = {
+    expanded: {
+      width: '95%',
+      height: '80px',
+      borderRadius: '1.5rem',
+      transition: {
+        type: 'spring',
+        stiffness: 300,
+        damping: 30,
+      },
+    },
+    collapsed: {
+      width: '60px',
+      height: '60px',
+      borderRadius: '1.5rem',
+      transition: {
+        type: 'spring',
+        stiffness: 300,
+        damping: 30,
+      },
+    },
+  };
+
+  const contentVariants = {
+    expanded: {
+      opacity: 1,
+      transition: { delay: 0.2, duration: 0.2 },
+    },
+    collapsed: {
+      opacity: 0,
+      transition: { duration: 0.2 },
+    },
   };
 
   return (
-    <header
-      className={`fixed w-full transition-transform duration-300 ${
-        visible ? 'translate-y-0' : '-translate-y-full'
-      } z-50`}
+    <motion.header
+      className="bg-background fixed left-1/2 top-4 z-50 -translate-x-1/2 rounded-3xl shadow-lg"
+      initial="expanded"
+      animate={[isCollapsed ? 'collapsed' : 'expanded']}
+      variants={navVariants}
     >
-      <div className="bg-background fixed left-0 top-0 z-40 w-full">
-        <div className="container relative mx-auto flex min-h-20 flex-row items-center gap-4 lg:grid lg:grid-cols-3">
-          <div className="hidden flex-row items-center justify-start gap-4 lg:flex">
-            <NavigationMenu className="flex items-start justify-start">
-              <NavigationMenuList className="flex flex-row justify-start gap-4">
-                {navigationItems.map((item) => (
-                  <NavigationMenuItem key={item.title}>
-                    {item.href ? (
-                      !item.includedSmall ? (
-                        <>
-                          <Link href={item.href}>
-                            <Button variant="ghost" onClick={handleLinkClick}>
-                              {item.title}
-                            </Button>
-                          </Link>
-                        </>
-                      ) : null
-                    ) : (
-                      <>
-                        <NavigationMenuTrigger
-                          className="text-sm font-medium"
-                          spanFirstWord={item.spanFirst ? true : false}
-                        >
-                          {item.title}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent className="!w-[450px] p-4">
-                          <div className="flex grid-cols-2 flex-col gap-4 lg:grid">
-                            <div className="flex h-full flex-col justify-between">
-                              <div className="flex flex-col">
-                                <p className="text-base">{item.title}</p>
-                                <p className="text-muted-foreground text-sm">
-                                  {item.description}
-                                </p>
-                              </div>
-                              <Link
-                                href="/knowledge-base/how-it-is-done"
-                                className=""
-                              >
-                                <Button size="sm" className="mt-10">
-                                  {m.contact_with_us()}
-                                </Button>
-                              </Link>
-                            </div>
-                            <div className="flex h-full flex-col justify-end text-sm">
-                              {item.items?.map((subItem) => (
-                                <NavigationMenuLink
-                                  href={subItem.href}
-                                  key={subItem.title}
-                                  className="hover:bg-muted flex flex-row items-center justify-between rounded px-4 py-2"
-                                >
-                                  <span>{subItem.title}</span>
-                                  <MoveRight className="text-muted-foreground size-4" />
-                                </NavigationMenuLink>
-                              ))}
-                            </div>
-                          </div>
-                        </NavigationMenuContent>
-                      </>
-                    )}
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-          <Link href="/">
-            <div className="flex lg:justify-center">
-              {/* Small Screen Logo */}
-              <Image
-                src="/images/logo/small.svg"
-                alt="Ensi Home"
-                layout="responsive"
-                width={100}
-                height={100}
-                className="block transition-all duration-500 ease-in-out lg:hidden"
-                objectFit="contain"
-                style={{ maxWidth: '40%', height: 'auto' }}
-              />
-
-              <Image
-                src="/images/logo/full.svg"
-                alt="Ensi Home"
-                layout="responsive"
-                width={100}
-                height={100}
-                className="hidden transition-all duration-500 ease-in-out lg:block"
-                objectFit="contain"
-                style={{ maxWidth: '40%', height: 'auto' }}
-              />
-            </div>
-          </Link>
-
-          <div className="flex w-full justify-end gap-4">
-            <Link
-              href="/knowledge-base/how-it-is-done"
-              className="hidden md:inline"
+      <div className="relative flex size-full items-center justify-between px-4">
+        <AnimatePresence>
+          {!isCollapsed && (
+            <motion.div
+              className="flex items-center space-x-4"
+              variants={contentVariants}
+              initial="collapsed"
+              animate="expanded"
+              exit="collapsed"
             >
-              <Button variant="primary" onClick={handleLinkClick}>
-                {m.contact_with_us()}
-              </Button>
-            </Link>
-            <div className="hidden border-r md:inline"></div>
-            <Link href="/blog">
-              <Button variant="outline">Blog</Button>
-            </Link>
-            {/* <Button onClick={handleLinkClick}>{m.get_started()}</Button> */}
-            <LanguageSwitcher />
-          </div>
-          <div className="flex w-12 shrink items-end justify-end lg:hidden">
-            <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-              {isOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-            </Button>
-            {isOpen && (
-              <div className="bg-background container absolute right-0 top-20 flex w-full flex-col gap-8 border-t py-4 shadow-lg">
-                {navigationItems.map((item) => (
-                  <div key={item.title}>
-                    <div className="flex flex-col gap-2">
+              <NavigationMenu>
+                <NavigationMenuList>
+                  {navigationItems.map((item) => (
+                    <NavigationMenuItem key={item.title}>
                       {item.href ? (
-                        item.includedSmall ? (
-                          <Link
-                            href={item.href}
-                            className="flex items-center justify-between"
-                            onClick={handleLinkClick}
-                          >
-                            <span className="text-primary text-lg">
-                              {item.title}
-                            </span>
-                            <MoveRight className="text-muted-foreground size-4 stroke-1" />
-                          </Link>
-                        ) : (
-                          <Link
-                            href={item.href}
-                            className="flex items-center justify-between"
-                            onClick={handleLinkClick}
-                          >
-                            <span className="text-lg">{item.title}</span>
-                            <MoveRight className="text-muted-foreground size-4 stroke-1" />
-                          </Link>
-                        )
+                        <Link href={item.href} legacyBehavior passHref>
+                          <NavigationMenuLink className="text-sm font-medium">
+                            {item.title}
+                          </NavigationMenuLink>
+                        </Link>
                       ) : (
-                        <p className="text-lg">{item.title}</p>
+                        <>
+                          <NavigationMenuTrigger className="text-sm font-medium">
+                            {item.title}
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent>
+                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                              {item.items?.map((subItem) => (
+                                <li key={subItem.title}>
+                                  <NavigationMenuLink asChild>
+                                    <Link
+                                      href={subItem.href}
+                                      className="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors"
+                                    >
+                                      <div className="text-sm font-medium leading-none">
+                                        {subItem.title}
+                                      </div>
+                                    </Link>
+                                  </NavigationMenuLink>
+                                </li>
+                              ))}
+                            </ul>
+                          </NavigationMenuContent>
+                        </>
                       )}
-                      {item.items &&
-                        item.items.map((subItem, index) => {
-                          return (
-                            <Link
-                              key={subItem.title}
-                              href={subItem.href}
-                              className="flex items-center justify-between"
-                              onClick={handleLinkClick}
-                            >
-                              <span className="text-muted-foreground">
-                                {subItem.title}
-                              </span>
-                              <MoveRight className="size-4 stroke-1" />
-                            </Link>
-                          );
-                        })}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
+                    </NavigationMenuItem>
+                  ))}
+                </NavigationMenuList>
+              </NavigationMenu>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <Link
+          href="/"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <div className="flex h-full items-center justify-center">
+            <Image
+              src={
+                isCollapsed ? '/images/logo/small.svg' : '/images/logo/full.svg'
+              }
+              alt="Ensi Home"
+              width={isCollapsed ? 40 : 100}
+              height={isCollapsed ? 40 : 40}
+              className="transition-all duration-300 ease-in-out"
+            />
           </div>
-        </div>
+        </Link>
+
+        <AnimatePresence>
+          {!isCollapsed && (
+            <motion.div
+              className="flex items-center space-x-4"
+              variants={contentVariants}
+              initial="collapsed"
+              animate="expanded"
+              exit="collapsed"
+            >
+              <Link href="/knowledge-base/how-it-is-done">
+                <Button variant="primary" onClick={handleLinkClick}>
+                  {m.contact_with_us()}
+                </Button>
+              </Link>
+              <Link href="/blog">
+                <Button variant="outline">Blog</Button>
+              </Link>
+              <LanguageSwitcher />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </header>
+    </motion.header>
   );
 };

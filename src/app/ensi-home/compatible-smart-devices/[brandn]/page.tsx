@@ -152,7 +152,7 @@ function DeviceCard({ device }: DeviceCardProps) {
     <div className="overflow-hidden rounded-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
       <div className="relative aspect-square">
         <Image
-          src={device.image_url || '/placeholder.svg'}
+          src={device.image_url || '/placeholder.jpg'}
           alt={`Image of ${device.device_name}`}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"

@@ -108,7 +108,7 @@ export const ContentSection: React.FC<ContentSectionProps> = ({ items }) => {
           variants={headingVariants}
           initial="hidden"
           animate={controls}
-          className="mb-12 text-center font-sans text-3xl font-bold text-gray-800 md:text-5xl dark:text-gray-200"
+          className="mb-12 text-center text-3xl font-normal tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
         >
           Ensi Home&apos;u var edenler
         </motion.h2>
