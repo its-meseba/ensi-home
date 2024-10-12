@@ -10,9 +10,10 @@ export function AppleCardsCarouselDemo() {
 
   return (
     <div className="size-full py-20">
-      <h2 className="mx-auto max-w-7xl pl-4 font-sans text-3xl tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+      <h3 className="mx-auto max-w-7xl pl-4 font-sans text-2xl tracking-tighter sm:text-4xl md:text-6xl lg:text-6xl">
         Yalnizca sizin icin Ensi Home.
-      </h2>
+      </h3>
+
       <Carousel items={cards} />
     </div>
   );
