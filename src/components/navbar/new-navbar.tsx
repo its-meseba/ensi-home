@@ -10,7 +10,6 @@ import {
   useAnimation,
   AnimatePresence,
   useScroll,
-  useTransform,
   useDragControls,
 } from 'framer-motion';
 
@@ -36,12 +35,12 @@ export const NewNavbar = () => {
         href: `/${locale}/`,
         description: '',
       },
-      {
-        title: 'Nasıl Oluyor',
-        href: `/${locale}/knowledge-base/how-it-is-done`,
-        description: '',
-        includedSmall: true,
-      },
+      // {
+      //   title: 'Nasıl Oluyor',
+      //   href: `/${locale}/knowledge-base/how-it-is-done`,
+      //   description: '',
+      //   includedSmall: true,
+      // },
       {
         title: m.about_ensi_home(),
         spanFirst: true,
@@ -107,11 +106,6 @@ export const NewNavbar = () => {
   const firstMenuItemRef = useRef<HTMLAnchorElement>(null);
 
   const { scrollY } = useScroll();
-  const navbarBackground = useTransform(
-    scrollY,
-    [0, 100],
-    ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 1)']
-  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -287,11 +281,10 @@ export const NewNavbar = () => {
 
   return (
     <motion.header
-      className="fixed left-1/2 top-4 z-50 flex -translate-x-1/2 items-center rounded-3xl shadow-lg"
+      className="bg-background fixed left-1/2 top-4 z-50 flex -translate-x-1/2 items-center rounded-3xl shadow-lg"
       initial="expanded"
       animate={[isCollapsed ? 'collapsed' : 'expanded']}
       variants={navVariants}
-      style={{ backgroundColor: navbarBackground }}
     >
       <div className="relative flex size-full items-center justify-between px-4 py-2">
         <div className="flex flex-1 items-center justify-start">
@@ -350,39 +343,39 @@ export const NewNavbar = () => {
                               </motion.span>
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>
-                              <motion.ul
-                                className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]"
+                              <motion.div
+                                className="w-[450px] p-4"
                                 variants={dropdownVariants}
                                 initial="closed"
                                 animate="open"
                                 exit="closed"
                               >
-                                {item.items?.map((subItem) => (
-                                  <li key={subItem.title}>
-                                    <NavigationMenuLink asChild>
-                                      <Link
+                                <div className="flex grid-cols-2 flex-col gap-4 lg:grid">
+                                  <div className="flex h-full flex-col justify-between">
+                                    <div className="flex flex-col">
+                                      <p className="text-base">{item.title}</p>
+                                      <p className="text-muted-foreground text-sm">
+                                        {item.description}
+                                      </p>
+                                    </div>
+                                    <Button size="sm" className="mt-10">
+                                      {m.contact_with_us()}
+                                    </Button>
+                                  </div>
+                                  <div className="flex h-full flex-col justify-end text-sm">
+                                    {item.items?.map((subItem) => (
+                                      <NavigationMenuLink
+                                        key={subItem.title}
                                         href={subItem.href}
-                                        className={`hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors ${
-                                          pathname === subItem.href
-                                            ? 'bg-accent text-accent-foreground'
-                                            : ''
-                                        }`}
+                                        className="hover:bg-muted flex flex-row items-center justify-between rounded px-4 py-2"
                                       >
-                                        <motion.div
-                                          className="text-sm font-medium leading-none"
-                                          variants={menuItemHoverVariants}
-                                          whileHover="hover"
-                                        >
-                                          {subItem.title}
-                                        </motion.div>
-                                        {/* <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                                          {subItem.description}
-                                        </p> */}
-                                      </Link>
-                                    </NavigationMenuLink>
-                                  </li>
-                                ))}
-                              </motion.ul>
+                                        <span>{subItem.title}</span>
+                                        <MoveRight className="text-muted-foreground size-4" />
+                                      </NavigationMenuLink>
+                                    ))}
+                                  </div>
+                                </div>
+                              </motion.div>
                             </NavigationMenuContent>
                           </>
                         )}
@@ -413,13 +406,9 @@ export const NewNavbar = () => {
           <Link href="/" className="absolute left-1/2 -translate-x-1/2">
             <motion.div variants={logoVariants} className="flex items-center">
               <Image
-                src={
-                  isCollapsed
-                    ? '/images/logo/small.svg'
-                    : '/images/logo/full.svg'
-                }
+                src="/images/logo/full.svg"
                 alt="Ensi Home"
-                width={isCollapsed ? 40 : 100}
+                width={100}
                 height={40}
                 className="transition-all duration-300 ease-in-out"
               />
@@ -453,11 +442,12 @@ export const NewNavbar = () => {
           <AnimatePresence>
             {!isCollapsed && (
               <motion.div
-                className="flex h-full items-center md:hidden"
+                className="flex h-full items-center space-x-2 md:hidden"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
+                <LanguageSwitcher />
                 <Button
                   variant="ghost"
                   onClick={() => setOpen(!isOpen)}
@@ -485,6 +475,7 @@ export const NewNavbar = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setOpen(false)}
+                onTouchStart={() => setOpen(false)}
               />
               <motion.div
                 className="bg-background absolute right-0 top-full h-screen w-4/5 max-w-sm overflow-hidden shadow-lg"
@@ -585,9 +576,6 @@ export const NewNavbar = () => {
                         Blog
                       </Button>
                     </Link>
-                    <div className="pt-2">
-                      <LanguageSwitcher />
-                    </div>
                   </motion.div>
                 </motion.div>
               </motion.div>
