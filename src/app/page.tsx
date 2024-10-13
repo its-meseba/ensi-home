@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import {
   ContentSection,
   ContentItemProps,
@@ -29,8 +30,10 @@ import {
 } from '@/components/common/CurvyBackground';
 import InfiniteScrollingMobileApplicationScreens from '@/components/pages/ensi-home/mobile-application/InfiniteScrollingMobileApplicationScreens';
 import GradientHeader from '@/components/common/headers';
+import VerticalScrollIndicator from '@/components/common/scroll-indicator-vertical';
 
 export default function MainPage() {
+  // Define the main content items for the ContentSection component
   const items: ContentItemProps[] = [
     {
       id: 'mobile-app',
@@ -55,69 +58,89 @@ export default function MainPage() {
     },
   ];
 
+  // Define background styles
   const backgroundMode =
     'dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col';
   const backgroundAssistance =
     'absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_700%,black)]';
 
+  // Define sections for the VerticalScrollIndicator
+  const sections = [
+    { id: 'intro', label: 'Intro' },
+    { id: 'features', label: 'Features' },
+    { id: 'mobile-app', label: 'Mobile App' },
+    { id: 'ensi-home', label: 'Ensi Home' },
+    { id: 'benefits', label: 'Benefits' },
+    { id: 'references', label: 'References' },
+    { id: 'blog', label: 'Blog' },
+    { id: 'apply', label: 'Apply' },
+  ];
+
   return (
     <section className={`min-h-screen from-gray-100 to-gray-200`}>
-      {/* <VisitorTypeModal /> */}
+      {/* Add the VerticalScrollIndicator component */}
+      <VerticalScrollIndicator sections={sections} />
 
-      {/* <div className={backgroundAssistance} /> */}
-      {/* 0. sen kimsin? diye site acildiginda soru sorulacak */}
-      {/* First Section, quick tour of all the things */}
-      {/* <CurvedBackgroundParallaxHeaderVertical
-        imageSrc="/images/pages/knowledge-base/technical-knowledge-base/cover.jpg"
-        title="Ensi Home Knowledge Base"
-        maxHeight="1080px"
-      /> */}
-      <CurvedBackgroundParallaxHeaderVertical
-        imageSrc="/images/pages/main/cover2.jpg"
-        title="We are presenting Ensi Home!"
-        description="The world's most advanced smart home platform."
-      >
-        <EnsiHomeBox />
-      </CurvedBackgroundParallaxHeaderVertical>
-      <div className="mx-auto w-full max-w-7xl">
-        {/* 1. intro - greeting with Ensi Home */}
-        {/* <IntroHeader
-          badgeText="Smart Home"
-          title="Innovating the Future"
-          description="We're at the forefront of mobile development, 3D visualization, and AI assistance. Our solutions are designed to transform your ideas into reality."
-          imageUrl="/placeholder.jpg?height=400&width=600&text=Company Overview"
-          callToAction1="First"
-          callToAction2="Second"
-        /> */}
-
-        {/* 2. talking about the pillar features of Ensi Home */}
-        <AppleCardsCarouselDemo />
-        {/* 3. what are the main pillar technologies of Ensi Home */}
+      {/* Introduction Section */}
+      <div id="intro">
+        <CurvedBackgroundParallaxHeaderVertical
+          imageSrc="/images/pages/main/cover2.jpg"
+          title="We are presenting Ensi Home!"
+          description="The world's most advanced smart home platform."
+        >
+          <EnsiHomeBox />
+        </CurvedBackgroundParallaxHeaderVertical>
       </div>
-      <InfiniteScrollingMobileApplicationScreens />
+
+      {/* Features Section */}
+      <div className="mx-auto w-full max-w-7xl">
+        <div id="features">
+          <AppleCardsCarouselDemo />
+        </div>
+      </div>
+
+      {/* Mobile App Section */}
+      <div id="mobile-app">
+        <InfiniteScrollingMobileApplicationScreens />
+      </div>
+
+      {/* Content Section for Mobile App, Box, and AI Voice Assistant */}
       <div className="mx-auto w-full max-w-7xl">
         <ContentSection items={items} />
       </div>
 
-      {/* 4. further delve into Ensi Home with an indicator that the journey moves on */}
-      {/* Second Section */}
-      <EnsiHomeOrchestrator />
+      {/* Ensi Home Orchestrator Section */}
+      <div id="ensi-home">
+        <EnsiHomeOrchestrator />
+      </div>
+
+      {/* Additional Sections */}
       <div className="mx-auto w-full max-w-full">
-        {/* 1.1. BENEFITS FOR USER -         The perks of having an Ensi Home - VALUE PROPOSITION*/}
-        {/* 1.2. BENEFITS FOR CONSTRUCTION - COMPANIES The perks of having an Ensi Home - VALUE PROPOSITION*/}
-        {/* 1.3. BENEFITS FOR WORK/BUSINESS SITES -   The perks of having an Ensi Home - VALUE PROPOSITION*/}
-        <CustomerBenefits />
-        {/* 2. References -                  featured projects and testimonials*/}
-        <References />
-        {/* 3. Featuring Blog */}
-        <BlogPostsSection />
-        {/* 4. Have an Ensi Home now, apply now and we will reach to you*/}
-        <ApplyComponent />
+        {/* Customer Benefits Section */}
+        <div id="benefits">
+          <CustomerBenefits />
+        </div>
+
+        {/* References Section */}
+        <div id="references">
+          <References />
+        </div>
+
+        {/* Blog Posts Section */}
+        <div id="blog">
+          <BlogPostsSection />
+        </div>
+
+        {/* Apply Now Section */}
+        <div id="apply">
+          <ApplyComponent />
+        </div>
       </div>
     </section>
   );
 }
 
+// MobileApp component for displaying a mobile app mockup
 function MobileApp() {
   return (
     <div className="flex flex-col items-center">
@@ -133,6 +156,7 @@ function MobileApp() {
   );
 }
 
+// EnsiHomeBox component for displaying the Ensi Home Box 3D model
 function EnsiHomeBox() {
   return (
     <div className="flex flex-col items-center">
@@ -141,6 +165,7 @@ function EnsiHomeBox() {
   );
 }
 
+// AiAssistantPart component for displaying the AI Voice Assistant interface
 function AiAssistantPart() {
   return (
     <div className="flex flex-col items-center">
