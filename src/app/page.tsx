@@ -28,6 +28,7 @@ import {
   CurvedBackgroundParallaxHeaderVertical,
 } from '@/components/common/CurvyBackground';
 import InfiniteScrollingMobileApplicationScreens from '@/components/pages/ensi-home/mobile-application/InfiniteScrollingMobileApplicationScreens';
+import GradientHeader from '@/components/common/headers';
 
 export default function MainPage() {
   const items: ContentItemProps[] = [
@@ -60,7 +61,7 @@ export default function MainPage() {
     'absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_700%,black)]';
 
   return (
-    <section className={`min-h-screen from-gray-100 to-gray-200 py-12 `}>
+    <section className={`min-h-screen from-gray-100 to-gray-200`}>
       {/* <VisitorTypeModal /> */}
 
       {/* <div className={backgroundAssistance} /> */}
@@ -71,17 +72,23 @@ export default function MainPage() {
         title="Ensi Home Knowledge Base"
         maxHeight="1080px"
       /> */}
-
+      <CurvedBackgroundParallaxHeaderVertical
+        imageSrc="/images/pages/main/cover2.jpg"
+        title="We are presenting Ensi Home!"
+        description="The world's most advanced smart home platform."
+      >
+        <EnsiHomeBox />
+      </CurvedBackgroundParallaxHeaderVertical>
       <div className="mx-auto w-full max-w-7xl">
         {/* 1. intro - greeting with Ensi Home */}
-        <IntroHeader
+        {/* <IntroHeader
           badgeText="Smart Home"
           title="Innovating the Future"
           description="We're at the forefront of mobile development, 3D visualization, and AI assistance. Our solutions are designed to transform your ideas into reality."
           imageUrl="/placeholder.jpg?height=400&width=600&text=Company Overview"
           callToAction1="First"
           callToAction2="Second"
-        />
+        /> */}
 
         {/* 2. talking about the pillar features of Ensi Home */}
         <AppleCardsCarouselDemo />

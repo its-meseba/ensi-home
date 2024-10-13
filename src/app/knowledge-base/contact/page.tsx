@@ -5,12 +5,12 @@ import { MapPin, Phone, Mail, Clock, Linkedin, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { NewContactForm } from '@/components/pages/contact/NewContactForm';
 import { NewContactBulletin } from '@/components/pages/contact/NewBulletin';
-import { CurvedBackground } from '@/components/common/CurvyBackground';
+import { CurvedBackgroundParallax } from '@/components/common/CurvyBackground';
 
 export default function ContactPage() {
   return (
     <div className="container mx-auto px-4 py-8 md:py-16">
-      <CurvedBackground
+      <CurvedBackgroundParallax
         imageSrc="/images/pages/knowledge-base/contact/cover.jpg"
         title="Contact Us"
       />

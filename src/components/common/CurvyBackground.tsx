@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { ReactNode, useEffect, useRef, useState } from 'react';
+import GradientHeader from './headers';
 
 interface CurvedBackgroundProps {
   imageSrc: string;
@@ -164,26 +165,16 @@ export const CurvedBackgroundParallaxHeader: React.FC<
     </div>
   );
 };
-
 interface CurvedBackgroundProps {
   imageSrc: string;
   title: string;
   description?: string;
-  height?: string;
-  maxHeight?: string;
-  children?: ReactNode;
+  children?: React.ReactNode;
 }
 
 export const CurvedBackgroundParallaxHeaderVertical: React.FC<
   CurvedBackgroundProps
-> = ({
-  imageSrc,
-  title,
-  description,
-  height = '45vw',
-  maxHeight = '480px',
-  children,
-}) => {
+> = ({ imageSrc, title, description, children }) => {
   const parallaxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -199,10 +190,7 @@ export const CurvedBackgroundParallaxHeaderVertical: React.FC<
   }, []);
 
   return (
-    <div
-      className="relative h-5/6 w-full overflow-hidden"
-      style={{ height, maxHeight }}
-    >
+    <div className="relative h-screen w-full overflow-hidden">
       <div ref={parallaxRef} className="absolute inset-0">
         <Image
           src={imageSrc}
@@ -213,15 +201,19 @@ export const CurvedBackgroundParallaxHeaderVertical: React.FC<
         />
       </div>
       <div className="absolute inset-0 bg-black/30" />
-      <div className="absolute inset-0 flex flex-col items-center justify-between py-8">
-        <div className="w-full max-w-4xl">{children}</div>
-        <div className="text-center">
-          <h1 className="mb-4 text-4xl font-bold text-white md:text-6xl">
+      <div className="absolute inset-0 flex flex-col items-center justify-start py-4 sm:py-6 md:py-8 lg:py-12">
+        <div className="mt-24 px-4 text-center sm:mt-24 sm:px-6 md:mt-24 md:px-8 lg:mt-24">
+          <GradientHeader level="h1" isBold={true} isDarkMode={false}>
             {title}
-          </h1>
+          </GradientHeader>
           {description && (
-            <p className="text-xl text-white md:text-2xl">{description}</p>
+            <p className="text-lg text-white sm:text-xl md:text-2xl">
+              {description}
+            </p>
           )}
+        </div>
+        <div className="mb-8 mt-4 w-full max-w-4xl px-4 sm:mb-12 sm:mt-6 sm:px-6 md:mb-16 md:mt-8 md:px-8 lg:mb-20 lg:mt-12">
+          {children}
         </div>
       </div>
       <svg
@@ -238,7 +230,6 @@ export const CurvedBackgroundParallaxHeaderVertical: React.FC<
     </div>
   );
 };
-
 interface CurvedBackgroundHorizontalProps extends CurvedBackgroundProps {
   reversed?: boolean;
 }

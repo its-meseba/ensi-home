@@ -61,7 +61,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           {/* <Providers> */}
           <AppWrapper>
             <NewNavbar />
-            <main className="pt-20">{children}</main>
+            <main className="pt-0">{children}</main>
             <Footer />
             {/* Place the VisitorTypeSelector at the bottom left */}
             <div className="fixed bottom-4 left-4 z-50">

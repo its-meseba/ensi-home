@@ -37,7 +37,7 @@ export default function GradientHeader({
 
   return (
     <HeaderTag
-      className={`${baseStyles} ${gradientStyles} ${sizeStyles[level]} ${className}`}
+      className={`py-4 ${baseStyles} ${gradientStyles} ${sizeStyles[level]} ${className}`}
     >
       {children}
     </HeaderTag>
