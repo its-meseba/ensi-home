@@ -57,52 +57,53 @@ export default function VerticalScrollIndicator({
   };
 
   return (
-    <div className="fixed right-4 top-1/2 z-50 -translate-y-1/2">
-      <div className="flex flex-col items-end space-y-4">
+    <div className="fixed right-2 top-1/2 z-50 -translate-y-1/2 sm:right-4 md:right-6">
+      <div className="flex flex-col items-end space-y-3 sm:space-y-4 md:space-y-6">
         {sections.map((section, index) => (
           <div
             key={section.id}
-            className="group flex items-center"
+            className="group relative flex items-center"
             onMouseEnter={() => setHoveredSection(index)}
             onMouseLeave={() => setHoveredSection(null)}
           >
-            <div
-              className="relative flex items-center"
+            <AnimatePresence>
+              {(hoveredSection === index || activeSection === index) && (
+                <motion.div
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 10 }}
+                  transition={{ duration: 0.2 }}
+                  className="bg-primary/10 text-primary absolute right-full mr-2 whitespace-nowrap rounded-md px-1.5 py-0.5 text-[10px] font-medium sm:mr-3 sm:px-2 sm:py-1 sm:text-xs"
+                >
+                  {section.label}
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <motion.div
+              className="relative size-4 cursor-pointer sm:size-6 md:size-8"
               onClick={() => scrollToSection(index)}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <AnimatePresence>
-                {(hoveredSection === index || activeSection === index) && (
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 20 }}
-                    transition={{ duration: 0.2 }}
-                    className="bg-primary mr-2 whitespace-nowrap rounded-full px-2 py-1 text-xs text-white"
-                  >
-                    {section.label}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-              <motion.button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  scrollToSection(index);
-                }}
+              {/* Outer ring */}
+              <motion.div
+                className="border-primary absolute inset-0 rounded-full border sm:border-2"
+                initial={{ scale: 0.8, opacity: 0 }}
                 animate={{
                   scale: index === activeSection ? 1 : 0.8,
-                  backgroundColor:
-                    index === activeSection ? '#408B91' : '#D1D5DB',
+                  opacity: index === activeSection ? 1 : 0,
                 }}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                className="size-3 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                aria-label={`Scroll to ${section.label} section`}
+                transition={{ duration: 0.3 }}
               />
-              <div
-                className="absolute right-full h-full w-6 cursor-pointer"
-                aria-hidden="true"
+              {/* Inner dot */}
+              <motion.div
+                className="bg-primary absolute inset-1 rounded-full sm:inset-1.5 md:inset-2"
+                animate={{
+                  scale: index === activeSection ? 1 : 0.8,
+                }}
+                transition={{ duration: 0.3 }}
               />
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>
