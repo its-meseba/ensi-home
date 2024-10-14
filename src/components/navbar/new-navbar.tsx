@@ -339,7 +339,16 @@ export const NewNavbar = () => {
                           <>
                             <NavigationMenuTrigger className="text-sm font-medium">
                               <motion.span variants={menuItemVariants}>
-                                {item.title}
+                                {item.title === m.about_ensi_home() ? (
+                                  <>
+                                    <span className="bg-primary text-primary-foreground rounded-3xl px-3 py-1 shadow-sm">
+                                      {item.title.split(' ')[0]}
+                                    </span>{' '}
+                                    {item.title.split(' ').slice(1).join(' ')}
+                                  </>
+                                ) : (
+                                  item.title
+                                )}
                               </motion.span>
                             </NavigationMenuTrigger>
                             <NavigationMenuContent>

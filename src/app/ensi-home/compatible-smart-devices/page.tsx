@@ -317,7 +317,7 @@ export default function EnhancedFilteredProducts() {
   );
 
   return (
-    <div className="relative min-h-screen bg-gray-100">
+    <div className="relative min-h-screen bg-gray-100 py-24">
       <div className="flex flex-col md:flex-row">
         {/* Desktop Sidebar */}
         <aside className="hidden w-64 bg-white p-6 shadow-md lg:block">

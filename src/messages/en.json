@@ -69,5 +69,66 @@
     "faqSectionOne_question13": "What devices can I control with Ensi Home?",
     "faqSectionOne_answer13": "Ensi Home allows you to control a variety of devices, including lighting, thermostats, security cameras, door locks, and more, all from one app.",
     "faqSectionOne_question14": "Where can I purchase Ensi Home?",
-    "faqSectionOne_answer14": "Ensi Home is available for purchase on our official website and at select authorized retailers nationwide."
+    "faqSectionOne_answer14": "Ensi Home is available for purchase on our official website and at select authorized retailers nationwide.",
+
+    "navbar_main": "Main Page",
+    "navbar_howItIsDone": "How is it Done?",
+    "navbar_solutions": "Solutions",
+    "navbar_solutions_ensiBox": "Ensi Home Box",
+    "navbar_solutions_ensiMobileApp": "Ensi Home App",
+    "navbar_solutions_ensiVoiceAssistant": "Ensi Home Voice Assistant",
+    "navbar_solutions_cloud": "Cloud",
+    "navbar_solutions_smartLiving": "Smart Living",
+    "navbar_solutions_supportedDevices": "Supported Devices",
+    "navbar_solutions_getDetailedInfo": "Get Detailed Information about Ensi Home",
+    "navbar_knowledgeBase": "Knowledge Base",
+    "navbar_knowledgeBase_faq": "FAQ",
+    "navbar_knowledgeBase_howItWorks": "How it Works",
+    "navbar_knowledgeBase_technicalSupport": "Technical Support",
+    "navbar_knowledgeBase_contact": "Contact",
+
+    "main_intro_title": "We present Ensi Home",
+    "main_intro_description": "a Complete Smart Home Solution",
+
+    "main_appleCards_title": "Ensi Home Personalized for You",
+    "main_appleCards_card_1_category": "Personalized Experience",
+    "main_appleCards_card_1_title": "Your smart home tailored for you.",
+    
+    "main_appleCards_card_2_category": "Constant Access",
+    "main_appleCards_card_2_title": "Have access to your home wherever you are.",
+
+    "main_appleCards_card_3_category": "Efficiency",
+    "main_appleCards_card_3_title": "Eliminate energy waste, reduce your bill.",
+
+
+    "main_appleCards_card_4_category": "Advanced Voice Assistant",
+    "main_appleCards_card_4_title": "A voice assistant that provides seamless usability with contextual understanding.",
+
+
+    "main_appleCards_card_5_category": "Automation AI",
+    "main_appleCards_card_5_title": "Autonomously automate your ruitines.",
+
+    "main_appleCards_card_6_category": "Security",
+    "main_appleCards_card_6_title": "Stay informed about what's happening at home, so it's never on your mind.",
+
+    "main_app_title": "An app you'll love.",
+    "main_app_description": "Designed to make controlling, automating and monitoring your smart home intuitive and fun.",
+
+    "main_threesome_title": "What makes Ensi Home?",
+    "main_threesome_mobileApp": "Mobile Application",
+    "main_threesome_mobileApp_button": "Take a look",
+    "main_threesome_box": "Box",
+    "main_threesome_box_button": "View the Box",
+    "main_threesome_voiceAssistant": "AI Voice Assistant ",
+    "main_threesome_voiceAssistant_button": "Get more Details",
+
+    "main_orchestrator_title": "The orchestrator",
+    "main_orchestrator_description": "Ensi Home is the orchestra conductor of your Smart House. It will always make your house reachable, not just available.",
+    "main_orchestrator_button": "Your Smart Companion in your House!",
+
+    "main_get_ensi": "Get an Ensi Home now!",
+    "main_get_description": "Apply now and we will reach out to you",
+    "main_get_email": "E-mail",
+    "main_get_email_placeholder": "Enter your e-mail",
+    "main_get_button": "Apply Now"
 }
