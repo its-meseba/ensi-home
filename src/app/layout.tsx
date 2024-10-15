@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react';
 import { LanguageProvider } from '@inlang/paraglide-next';
 import type { Metadata } from 'next';
 
-import { Footer } from '@/components/footer';
+import Footer from '@/components/footer';
 import NewNavbar from '@/components/navbar/new-navbar';
 import { siteConfig } from '@/lib/constant';
 import { fonts } from '@/lib/fonts';
@@ -61,7 +61,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           {/* <Providers> */}
           <AppWrapper>
             <NewNavbar />
-            <main className="pt-0">{children}</main>
+            <main className="pb-8 pt-0">{children}</main>
             <Footer />
             {/* Place the VisitorTypeSelector at the bottom left */}
             <div className="fixed bottom-4 left-4 z-50">
