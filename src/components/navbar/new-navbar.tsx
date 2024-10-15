@@ -99,7 +99,7 @@ export default function NewNavbar() {
             href: `/${locale}/knowledge-base/technical-knowledge-base`,
           },
           {
-            title: 'Contact',
+            title: m.navbar_knowledgeBase_contact(),
             href: `/${locale}/knowledge-base/contact`,
           },
         ],
@@ -317,7 +317,7 @@ export default function NewNavbar() {
                 <div className="mt-auto space-y-4">
                   <Link href={`/${locale}/knowledge-base/how-it-is-done`}>
                     <Button variant="primary" className="w-full">
-                      {m.navbar_knowledgeBase_contact()}
+                      {m.navbar_howItIsDone()}
                     </Button>
                   </Link>
                   <Link href={`/${locale}/blog`}>
@@ -379,9 +379,7 @@ export default function NewNavbar() {
                 className="flex items-center space-x-4"
               >
                 <Link href={`/${locale}/knowledge-base/how-it-is-done`}>
-                  <Button variant="primary">
-                    {m.navbar_knowledgeBase_contact()}
-                  </Button>
+                  <Button variant="primary">{m.navbar_howItIsDone()}</Button>
                 </Link>
                 <Link href={`/${locale}/blog`}>
                   <Button variant="outline">📰 Blog</Button>
