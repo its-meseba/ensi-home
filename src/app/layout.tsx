@@ -4,7 +4,7 @@ import { LanguageProvider } from '@inlang/paraglide-next';
 import type { Metadata } from 'next';
 
 import { Footer } from '@/components/footer';
-import { NewNavbar } from '@/components/navbar/new-navbar';
+import NewNavbar from '@/components/navbar/new-navbar';
 import { siteConfig } from '@/lib/constant';
 import { fonts } from '@/lib/fonts';
 import { cn } from '@/lib/utils';

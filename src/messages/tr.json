@@ -69,5 +69,129 @@
   "faqSectionOne_question13": "Ensi Home ile hangi cihazları kontrol edebilirim?",
   "faqSectionOne_answer13": "Ensi Home, aydınlatma, termostatlar, güvenlik kameraları, kapı kilitleri ve daha fazlası gibi çeşitli cihazları, tek bir uygulamadan kontrol etmenizi sağlar.",
   "faqSectionOne_question14": "Ensi Home'u nerede satın alabilirim?",
-  "faqSectionOne_answer14": "Ensi Home, resmi web sitemizde ve yetkili bayilerimizde satın alınabilir."
+  "faqSectionOne_answer14": "Ensi Home, resmi web sitemizde ve yetkili bayilerimizde satın alınabilir.",
+
+
+    "navbar_main": "🏠 Ana Sayfa",
+    "navbar_howItIsDone": "Nasıl Oluyor?",
+    "navbar_solutions": "Çözümlerimiz Ensi Home",
+    "navbar_solutions_ensiBox": "• Ensi Home Kutusu",
+    "navbar_solutions_ensiMobileApp": "Ensi Home Mobil Uygulaması",
+    "navbar_solutions_ensiVoiceAssistant": "Ensi Home Sesli Asistanı",
+    "navbar_solutions_cloud": "Bulut",
+    "navbar_solutions_smartLiving": "Akıllı Yaşam",
+    "navbar_solutions_supportedDevices": "Desteklenen Cihazlar",
+    "navbar_solutions_getDetailedInfo": "Ensi Home Hakkında Detaylı Bilgi Alın",
+    "navbar_solutions_descriptions": "Ensi Home Çözümlerimiz hakında detaylı bilgi alın.",
+    "navbar_knowledgeBase": "Bilgi Bankası",
+    "navbar_knowledgeBase_faq": "SSS",
+    "navbar_knowledgeBase_howItWorks": "Nasıl Çalışır",
+    "navbar_knowledgeBase_technicalSupport": "Teknik Destek",
+    "navbar_knowledgeBase_contact": "İletişim",
+    "navbar_knowledgeBase_descriptions": "Sorularınız ve merak ettikleriniz Bilgi Bankasında!",
+
+    "userType_homeOwner": "Ev Sahibi",
+    "userType_constructionCompany": "İnşaat Şirketi",
+    "userType_clear_selection": "Seçimi Temizle",
+    "userType_select": "Seç",
+    "userType_choose_modal": "Hoş geldiniz! Ne tür ziyaretçisiniz?",
+
+    "main_scroll_indicator_intro": "Giriş",
+    "main_scroll_indicator_features": "Özellikler",
+    "main_scroll_indicator_mobile_app": "Mobil Uygulama",
+    "main_scroll_indicator_ensi_home": "Ensi Home",
+    "main_scroll_indicator_benefits": "Faydalar",
+    "main_scroll_indicator_references": "Referanslar",
+    "main_scroll_indicator_blog": "Blog",
+    "main_scroll_indicator_apply": "Başvur",
+
+    "main_intro_title": "Ensi Home'u Sunuyoruz",
+    "main_intro_description": "Tam bir Akıllı Ev Çözümü",
+
+    "main_appleCards_title": "Sizin için Kişiselleştirilmiş Ensi Home",
+    "main_appleCards_card_1_category": "Kişiselleştirilmiş Deneyim",
+    "main_appleCards_card_1_title": "Sizin için özelleştirilmiş akıllı eviniz.",
+    
+    "main_appleCards_card_2_category": "Sürekli Erişim",
+    "main_appleCards_card_2_title": "Her yerde evinize erişim sağlayın.",
+
+    "main_appleCards_card_3_category": "Verimlilik",
+    "main_appleCards_card_3_title": "Enerji israfını ortadan kaldırın, faturanızı azaltın.",
+
+
+    "main_appleCards_card_4_category": "Gelişmiş Sesli Asistan",
+    "main_appleCards_card_4_title": "Kontekstli anlama ile sorunsuz kullanılabilirlik sağlayan bir sesli asistan.",
+
+
+    "main_appleCards_card_5_category": "Otomasyon AI",
+    "main_appleCards_card_5_title": "Rutinlerinizi otomatik olarak özelleştirin.",
+
+    "main_appleCards_card_6_category": "Güvenlik",
+    "main_appleCards_card_6_title": "Evde ne olup bittiği hakkında bilgilendirin, böylece aklınızdan çıkmaz.",
+
+    "main_app_title": "Seveceğiniz bir uygulama.",
+    "main_app_description": "Akıllı evinizi kontrol etmenin, otomatikleştirmenin ve izlemenin eğlenceli ve sezgisel olmasını sağlamak için tasarlandı.",
+
+    "main_threesome_title": "Ensi Home'u neler oluşturur?",
+    "main_threesome_mobileApp": "Mobil Uygulama",
+    "main_threesome_mobileApp_button": "Bir bakın",
+    "main_threesome_box": "Kutu",
+    "main_threesome_box_button": "Kutuyu Gör",
+    "main_threesome_voiceAssistant": "AI Sesli Asistan ",
+    "main_threesome_voiceAssistant_button": "Daha Fazla Detay Alın",
+
+    "main_orchestrator_title": "Orkestra Şefi",
+    "main_orchestrator_description": "Ensi Home, Akıllı Ev'inizin orkestra şefidir. Ev'inizi her zaman ulaşılabilir, sadece mevcut değil, yapar.",
+    "main_orchestrator_button": "Ev'inizdeki Akıllı Arkadaşınız!",
+
+    "main_blog_and_news": "En Son Haberler ve Paylaşımlar",
+    "main_blog_and_news_read_more": "Daha Fazla Oku",
+
+    "main_get_ensi": "Şimdi Ensi Home Alın!",
+    "main_get_description": "Şimdi başvurun ve biz sizinle iletişime geçeceğiz",
+    "main_get_email": "E-posta",
+    "main_get_email_placeholder": "E-postanızı girin",
+    "main_get_button": "Şimdi Başvur",
+
+    
+    "main_customerBenefits_constructionCompany_title": "İnşaat Şirketleri için Faydalar",
+    "main_customerBenefits_constructionCompany_description": "Ensi Home'un yenilikçi inşaat çözümleriyle projelerinizi devrimleştirin.",
+    "main_customerBenefits_constructionCompany_cta": "Ensi Home ile ortaklık kurun",
+    "main_customerBenefits_constructionCompany_content_1_title": "Verimli İnşaat Süreçleri",
+    "main_customerBenefits_constructionCompany_content_1_description": "İnşaat projelerinizi akıllıca yönetin ve genel verimliliği artırın.",
+    "main_customerBenefits_constructionCompany_content_1_features": "Hızlı montaj için modüler inşaat teknikleri, sahada çalışmayı azaltan prefabrik bileşenler, gelişmiş proje yönetim araçları ve yazılımları, otomatik kalite kontrol süreçleri",
+    "main_customerBenefits_constructionCompany_content_2_title": "Sürdürülebilir Uygulamalar",
+    "main_customerBenefits_constructionCompany_content_2_description": "Sürdürülebilir inşaatta sektörde liderlik edin ve çevre bilincine sahip müşterileri çekin.",
+    "main_customerBenefits_constructionCompany_content_2_features": "Sürdürülebilir malzeme tedarikçilerinin ağına erişim, atık azaltma stratejileri ve geri dönüşüm programları, yeşil bina sertifikası yardımı (LEED, BREEAM, vb.), sürdürülebilir inşaat teknikleri için eğitim programları",
+    "main_customerBenefits_constructionCompany_content_3_title": "Teknoloji Entegrasyonu",
+    "main_customerBenefits_constructionCompany_content_3_description": "İnşaat teknolojilerinde öncü olmayı sürdürün.",
+    "main_customerBenefits_constructionCompany_content_3_features": "BIM (Bina Bilgi Modelleme) entegrasyonu, inşaat sırasında gerçek zamanlı izleme için IoT sensörleri, drone surveying ve 3D haritalama yetenekleri, proje görselleştirme için AR ve VR araçları",
+    "main_customerBenefits_constructionCompany_content_4_title": "Pazar Farklılaştırması",
+    "main_customerBenefits_constructionCompany_content_4_description": "Ensi Home'un benzersiz teklifleriyle rekabetçi bir pazarda şirketinizi ayırın.",
+    "main_customerBenefits_constructionCompany_content_4_features": "Ensi Home'un telifli tasarımlarına özel erişim, pazarlama amaçları için co-branding fırsatları, Ensi Home sistemleri için ekibiniz için özel eğitim, öncelikli destek ve danışmanlık hizmetleri",
+    "main_customerBenefits_homeOwner_title": "Ev Sahipleri için Faydalar",
+    "main_customerBenefits_homeOwner_description": "Ensi Home ile sürdürülebilir yaşamın geleceğini deneyimleyin.",
+    "main_customerBenefits_homeOwner_cta": "Ev Danışmanlığı Randevusu Alın",
+    "main_customerBenefits_homeOwner_content_1_title": "Enerji Verimliliği",
+    "main_customerBenefits_homeOwner_content_1_description": "Ensi Evleri, enerji verimliliğini maksimize etmek için tasarlanmıştır, böylece karbon ayak izinizi azaltır ve fatura masraflarınızı düşürür.",
+    "main_customerBenefits_homeOwner_content_1_features": "Akıllı termostatlar ve enerji yönetim sistemleri, yüksek performanslı yalıtım ve pencereler, enerji-verimli cihazlar ve LED aydınlatma, yenilenebilir enerji üretimi için güneş paneli entegrasyonu",
+    "main_customerBenefits_homeOwner_content_2_title": "Konfor ve İyi Olma",
+    "main_customerBenefits_homeOwner_content_2_description": "İhtiyaçlarınıza göre uyarlanmış, daha sağlıklı ve daha rahat bir yaşam ortamı keyfini çıkarın.",
+    "main_customerBenefits_homeOwner_content_2_features": "Gelişmiş hava filtrasyonu ve arıtma sistemleri, optimal nem kontrolü, gürültü azaltma teknolojileri, uyku kalitesini artırmak için sirkadiyen aydınlatma sistemleri",
+    "main_customerBenefits_homeOwner_content_3_title": "Akıllı Ev Entegrasyonu",
+    "main_customerBenefits_homeOwner_content_3_description": "Evini kolayca kontrol edin ve gündelik yaşamınızı yenilikçi teknolojiyle zenginleştirin.",
+    "main_customerBenefits_homeOwner_content_3_features": "Sesli ev asistanları, otomatik güvenlik ve erişim kontrolü, akıllı cihazlar ve cihaz bağlantısı, özelleştirilebilir otomasyon rutinleri",
+    "main_customerBenefits_homeOwner_content_4_title": "Sürdürülebilir Malzemeler",
+    "main_customerBenefits_homeOwner_content_4_description": "Dayanıklı ve güzel olan çevre dostu malzemelerle inşa edilmiş bir evde yaşayın.",
+    "main_customerBenefits_homeOwner_content_4_features": "Geridönüşümlü ve yenilenebilir inşaat malzemeleri, düşük VOC'li boyalar ve bitirme, sürdürülebilir zemin seçenekleri, su-verimli tesisat armatürleri",
+
+    "contact_contact_us": "Bize Ulaşın",
+    "contact_get_in_touch": "İletişim Kurun",
+    "contact_contact_information": "İletişim Bilgilerimiz",
+    "contact_connect_with_us": "Bizimle Bağlanın",
+    "contact_stay_updated": "Güncel Kalmaya Devam Edin",
+    "contact_our_location": "Lokasyonumuz",
+    "contact_follow_us_on_linkedin": "LinkedIn'de Bizi Takip Edin",
+    "contact_follow_us_on_instagram": "Instagram'de Bizi Takip Edin"
+
 }

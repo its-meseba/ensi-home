@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { motion, useAnimation, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import * as m from '@/paraglide/messages';
 
 export interface ContentItemProps {
   id: string;
@@ -110,7 +111,7 @@ export const ContentSection: React.FC<ContentSectionProps> = ({ items }) => {
           animate={controls}
           className="mb-12 text-center text-3xl font-normal tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
         >
-          Ensi Home&apos;u var edenler
+          {m.main_threesome_title()}
         </motion.h2>
         <motion.div
           variants={containerVariants}

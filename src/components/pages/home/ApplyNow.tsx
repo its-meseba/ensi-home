@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { motion } from 'framer-motion';
+import * as m from '@/paraglide/messages';
 
 export default function ApplyComponent() {
   const [email, setEmail] = useState('');
@@ -42,7 +43,6 @@ export default function ApplyComponent() {
     // Reset form
     setEmail('');
   };
-
   return (
     <motion.div
       ref={componentRef}
@@ -54,22 +54,22 @@ export default function ApplyComponent() {
       <Card className="mx-auto max-w-2xl overflow-hidden rounded-3xl border-0 bg-white bg-opacity-90 shadow-2xl backdrop-blur-md">
         <CardHeader className="text-center">
           <CardTitle className="from-primary bg-gradient-to-r to-purple-600 bg-clip-text text-4xl font-bold text-transparent">
-            Have an Ensi Home Now
+            {m.main_get_ensi()}
           </CardTitle>
           <CardDescription className="mt-2 text-lg">
-            Apply now and we will reach out to you
+            {m.main_get_description()}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <Label htmlFor="email" className="text-lg font-medium">
-                Email
+                {m.main_get_email()}
               </Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="Enter your email"
+                placeholder={m.main_get_email_placeholder()}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -80,7 +80,7 @@ export default function ApplyComponent() {
               type="submit"
               className="from-primary hover:from-primary w-full rounded-xl bg-gradient-to-r to-purple-600 py-6 text-lg transition-all duration-300 hover:to-purple-700"
             >
-              Apply Now
+              {m.main_get_button()}
             </Button>
           </form>
         </CardContent>

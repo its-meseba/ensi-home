@@ -2,6 +2,7 @@
 import { useScroll, useTransform } from 'framer-motion';
 import React from 'react';
 import { GoogleGeminiEffect } from './google-gemini-effect';
+import * as m from '@/paraglide/messages';
 
 export function EnsiHomeOrchestrator() {
   const ref = React.useRef(null);
@@ -22,8 +23,8 @@ export function EnsiHomeOrchestrator() {
       ref={ref}
     >
       <GoogleGeminiEffect
-        title="The Orchestrator"
-        description="Ensi Home is the orchestra conductor of your Smart House. It will always make your house reachable, not just available."
+        title={m.main_orchestrator_title()}
+        description={m.main_orchestrator_description()}
         pathLengths={[
           pathLengthFirst,
           pathLengthSecond,

@@ -2,6 +2,7 @@
 import { cn } from '@/lib/utils';
 import { motion, MotionValue } from 'framer-motion';
 import React from 'react';
+import * as m from '@/paraglide/messages';
 
 const transition = {
   duration: 0,
@@ -31,7 +32,7 @@ export const GoogleGeminiEffect = ({
       </p>
       <div className="bg-red-transparent absolute -top-60 flex  h-[890px] w-full items-center justify-center md:-top-40 ">
         <button className="z-30 mx-auto mt-8 w-fit rounded-full bg-white px-2 py-1 text-xs font-bold text-black md:mt-24 md:px-4  md:py-2 md:text-base ">
-          Your Smart Companion in your House!
+          {m.main_orchestrator_button()}
         </button>
       </div>
       <svg

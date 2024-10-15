@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-type VisitorType = 'homeOwner' | 'constructionCompany' | 'businessOwner' | null;
+type VisitorType = 'homeOwner' | 'constructionCompany' | null;
 
 interface VisitorTypeContextType {
   visitorType: VisitorType;

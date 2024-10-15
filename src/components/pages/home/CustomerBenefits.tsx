@@ -14,6 +14,7 @@ import { useVisitorType } from '@/context/VisitorTypeContext';
 import { Home, Building2, Briefcase, Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
+import * as message from '@/paraglide/messages';
 
 export default function EnhancedCustomerBenefits() {
   const { visitorType, setVisitorType } = useVisitorType();
@@ -29,172 +30,97 @@ export default function EnhancedCustomerBenefits() {
 
   const handleTabChange = (value: string) => {
     setActiveTab(value);
-    setVisitorType(
-      value as 'homeOwner' | 'constructionCompany' | 'businessOwner'
-    );
+    setVisitorType(value as 'homeOwner' | 'constructionCompany');
   };
 
   const benefitsData = {
     homeOwner: {
-      title: 'Benefits for Home Owners',
-      description: 'Experience the future of sustainable living with Ensi Home',
+      title: message.main_customerBenefits_homeOwner_title(),
+      description: message.main_customerBenefits_homeOwner_description(),
       image: '/placeholder.jpg?height=400&width=600',
       content: [
         {
-          title: 'Energy Efficiency',
+          title: message.main_customerBenefits_homeOwner_content_1_title(),
           description:
-            'Ensi Homes are designed to maximize energy efficiency, reducing your carbon footprint and saving you money on utility bills.',
-          features: [
-            'Smart thermostats and energy management systems',
-            'High-performance insulation and windows',
-            'Energy-efficient appliances and LED lighting',
-            'Solar panel integration for renewable energy generation',
-          ],
+            message.main_customerBenefits_homeOwner_content_1_description(),
+          features: message
+            .main_customerBenefits_homeOwner_content_1_features()
+            .split(', '),
           imageUrl: '/placeholder.jpg?height=200&width=300',
         },
         {
-          title: 'Comfort and Well-being',
+          title: message.main_customerBenefits_homeOwner_content_2_title(),
           description:
-            'Enjoy a healthier and more comfortable living environment tailored to your needs.',
-          features: [
-            'Advanced air filtration and purification systems',
-            'Optimal humidity control',
-            'Noise reduction technologies',
-            'Circadian lighting systems for better sleep patterns',
-          ],
+            message.main_customerBenefits_homeOwner_content_2_description(),
+          features: message
+            .main_customerBenefits_homeOwner_content_2_features()
+            .split(', '),
           imageUrl: '/placeholder.jpg?height=200&width=300',
         },
         {
-          title: 'Smart Home Integration',
+          title: message.main_customerBenefits_homeOwner_content_3_title(),
           description:
-            'Control your home with ease and enhance your daily life with cutting-edge technology.',
-          features: [
-            'Voice-activated home assistants',
-            'Automated security and access control',
-            'Smart appliances and device connectivity',
-            'Customizable automation routines',
-          ],
+            message.main_customerBenefits_homeOwner_content_3_description(),
+          features: message
+            .main_customerBenefits_homeOwner_content_3_features()
+            .split(', '),
         },
         {
-          title: 'Sustainable Materials',
+          title: message.main_customerBenefits_homeOwner_content_4_title(),
           description:
-            'Live in a home built with eco-friendly materials that are both durable and beautiful.',
-          features: [
-            'Recycled and renewable building materials',
-            'Low-VOC paints and finishes',
-            'Sustainable flooring options',
-            'Water-efficient plumbing fixtures',
-          ],
+            message.main_customerBenefits_homeOwner_content_4_description(),
+          features: message
+            .main_customerBenefits_homeOwner_content_4_features()
+            .split(', '),
           imageUrl: '/placeholder.jpg?height=200&width=300',
         },
       ],
-      cta: 'Schedule a Home Consultation',
+      cta: message.main_customerBenefits_homeOwner_cta(),
     },
     constructionCompany: {
-      title: 'Benefits for Construction Companies',
+      title: message.main_customerBenefits_constructionCompany_title(),
       description:
-        "Revolutionize your projects with Ensi Home's innovative construction solutions",
+        message.main_customerBenefits_constructionCompany_description(),
       image: '/placeholder.jpg?height=400&width=600',
       content: [
         {
-          title: 'Efficient Building Processes',
+          title:
+            message.main_customerBenefits_constructionCompany_content_1_title(),
           description:
-            'Streamline your construction projects and improve overall efficiency.',
-          features: [
-            'Modular construction techniques for faster assembly',
-            'Prefabricated components to reduce on-site labor',
-            'Advanced project management tools and software',
-            'Automated quality control processes',
-          ],
+            message.main_customerBenefits_constructionCompany_content_1_description(),
+          features: message
+            .main_customerBenefits_constructionCompany_content_1_features()
+            .split(', '),
         },
         {
-          title: 'Sustainable Practices',
+          title:
+            message.main_customerBenefits_constructionCompany_content_2_title(),
           description:
-            'Lead the industry in sustainable construction and attract eco-conscious clients.',
-          features: [
-            'Access to a network of sustainable material suppliers',
-            'Waste reduction strategies and recycling programs',
-            'Green building certification assistance (LEED, BREEAM, etc.)',
-            'Training programs for sustainable construction techniques',
-          ],
+            message.main_customerBenefits_constructionCompany_content_2_description(),
+          features: message
+            .main_customerBenefits_constructionCompany_content_2_features()
+            .split(', '),
         },
         {
-          title: 'Technology Integration',
+          title:
+            message.main_customerBenefits_constructionCompany_content_3_title(),
           description:
-            'Stay ahead of the curve with cutting-edge construction technologies.',
-          features: [
-            'BIM (Building Information Modeling) integration',
-            'IoT sensors for real-time monitoring during construction',
-            'Drone surveying and 3D mapping capabilities',
-            'AR and VR tools for project visualization',
-          ],
+            message.main_customerBenefits_constructionCompany_content_3_description(),
+          features: message
+            .main_customerBenefits_constructionCompany_content_3_features()
+            .split(', '),
         },
         {
-          title: 'Market Differentiation',
+          title:
+            message.main_customerBenefits_constructionCompany_content_4_title(),
           description:
-            "Set your company apart in a competitive market with Ensi Home's unique offerings.",
-          features: [
-            "Exclusive access to Ensi Home's proprietary designs",
-            'Co-branding opportunities for marketing purposes',
-            'Specialized training for your team on Ensi Home systems',
-            'Priority support and consultation services',
-          ],
+            message.main_customerBenefits_constructionCompany_content_4_description(),
+          features: message
+            .main_customerBenefits_constructionCompany_content_4_features()
+            .split(', '),
         },
       ],
-      cta: 'Partner with Ensi Home',
-    },
-    businessOwner: {
-      title: 'Benefits for Business Owners',
-      description:
-        'Transform your workspace into a sustainable, productive environment with Ensi Home',
-      image: '/placeholder.jpg?height=400&width=600',
-      content: [
-        {
-          title: 'Enhanced Productivity',
-          description:
-            'Create an optimal work environment that boosts employee performance and satisfaction.',
-          features: [
-            'Ergonomic design principles for comfortable workspaces',
-            'Biophilic elements to reduce stress and improve focus',
-            'Flexible space configurations for various work styles',
-            'Acoustic management for noise reduction',
-          ],
-        },
-        {
-          title: 'Energy Cost Savings',
-          description:
-            'Significantly reduce your operational costs with energy-efficient solutions.',
-          features: [
-            'Smart building management systems',
-            'Energy usage analytics and optimization',
-            'Automated lighting and HVAC controls',
-            'On-site renewable energy integration options',
-          ],
-        },
-        {
-          title: 'Sustainability Credentials',
-          description:
-            'Enhance your brand image and attract eco-conscious clients and employees.',
-          features: [
-            'Green building certifications (LEED, WELL, etc.)',
-            'Transparent sustainability reporting tools',
-            'Employee engagement programs for sustainability',
-            'Waste reduction and recycling initiatives',
-          ],
-        },
-        {
-          title: 'Future-Proof Workspace',
-          description:
-            'Invest in a workspace that adapts to evolving business needs and technologies.',
-          features: [
-            'Modular and adaptable office layouts',
-            'Integrated smart technology infrastructure',
-            'Scalable energy and water management systems',
-            'Regular updates and upgrades to Ensi Home systems',
-          ],
-        },
-      ],
-      cta: 'Book a Business Consultation',
+      cta: message.main_customerBenefits_constructionCompany_cta(),
     },
   };
 
@@ -267,7 +193,7 @@ export default function EnhancedCustomerBenefits() {
           onValueChange={handleTabChange}
           className="w-full"
         >
-          <TabsList className="mb-8 grid w-full grid-cols-3">
+          <TabsList className="mb-8 grid w-full grid-cols-2">
             <TabsTrigger
               value="homeOwner"
               className="flex items-center justify-center"
@@ -283,13 +209,6 @@ export default function EnhancedCustomerBenefits() {
               <span className="hidden text-base sm:inline">
                 Construction Company
               </span>
-            </TabsTrigger>
-            <TabsTrigger
-              value="businessOwner"
-              className="flex items-center justify-center"
-            >
-              <Briefcase className="mr-2 size-5" />
-              <span className="hidden text-base sm:inline">Business Owner</span>
             </TabsTrigger>
           </TabsList>
           {Object.entries(benefitsData).map(([key, data]) => (

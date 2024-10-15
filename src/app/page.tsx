@@ -5,54 +5,41 @@ import {
   ContentSection,
   ContentItemProps,
 } from '../components/common/content-section';
-import { IntroHeader } from '../components/common/intro-header';
 import AiAssistant from '@/components/pages/box/ai-assistant';
 import GLTFViewer from '@/components/pages/box/gltf-viewer';
 import { EnsiHomeOrchestrator } from '@/components/pages/home/orchestrator';
 import { AppleCardsCarouselDemo } from '@/components/common/apple-cards';
-import {
-  ThreeComponentiPhoneMockup,
-  TwoComponentiPhoneMockup,
-} from '@/components/common/apple-mockup';
-import { VisitorTypeModal } from '@/components/common/VisitorTypeModal';
-import { VisitorTypeSelector } from '@/components/common/VisitorTypeSelector';
-import { useVisitorType } from '@/context/VisitorTypeContext';
+import { ThreeComponentiPhoneMockup } from '@/components/common/apple-mockup';
 import CustomerBenefits from '@/components/pages/home/CustomerBenefits';
-import { HeroHighlight } from '@/components/ui/hero-highlight';
 import References from '@/components/pages/home/References';
 import ApplyComponent from '@/components/pages/home/ApplyNow';
 import BlogPostsSection from '@/components/pages/home/BlogAndNews';
-import PageHeader from '@/components/common/PageHeader';
-import {
-  CurvedBackgroundParallax,
-  CurvedBackgroundParallaxHeader,
-  CurvedBackgroundParallaxHeaderVertical,
-} from '@/components/common/CurvyBackground';
+import { CurvedBackgroundParallaxHeaderVertical } from '@/components/common/CurvyBackground';
 import InfiniteScrollingMobileApplicationScreens from '@/components/pages/ensi-home/mobile-application/InfiniteScrollingMobileApplicationScreens';
-import GradientHeader from '@/components/common/headers';
 import VerticalScrollIndicator from '@/components/common/scroll-indicator-vertical';
+import * as m from '@/paraglide/messages';
 
 export default function MainPage() {
   // Define the main content items for the ContentSection component
   const items: ContentItemProps[] = [
     {
       id: 'mobile-app',
-      title: 'Mobile Application',
-      buttonText: 'Uygulamayi Gor',
+      title: m.mobile_app(),
+      buttonText: m.main_threesome_mobileApp_button(),
       href: '/ensi-home/mobile-application',
       component: <MobileApp />,
     },
     {
       id: 'box',
-      title: 'Box',
-      buttonText: 'Kutuyu Gor',
+      title: m.box(),
+      buttonText: m.main_threesome_box_button(),
       href: '/ensi-home/box',
       component: <EnsiHomeBox />,
     },
     {
       id: 'ai-voice-assistant',
-      title: 'AI Voice Assistant',
-      buttonText: 'Asistani Gor',
+      title: m.ai_voice_assistant(),
+      buttonText: m.main_threesome_voiceAssistant_button(),
       href: '/ensi-home/ai-voice-assistant',
       component: <AiAssistantPart />,
     },
@@ -66,14 +53,14 @@ export default function MainPage() {
 
   // Define sections for the VerticalScrollIndicator
   const sections = [
-    { id: 'intro', label: 'Intro' },
-    { id: 'features', label: 'Features' },
-    { id: 'mobile-app', label: 'Mobile App' },
-    { id: 'ensi-home', label: 'Ensi Home' },
-    { id: 'benefits', label: 'Benefits' },
-    { id: 'references', label: 'References' },
-    { id: 'blog', label: 'Blog' },
-    { id: 'apply', label: 'Apply' },
+    { id: 'intro', label: m.main_scroll_indicator_intro() },
+    { id: 'features', label: m.main_scroll_indicator_features() },
+    { id: 'mobile-app', label: m.main_scroll_indicator_mobile_app() },
+    { id: 'ensi-home', label: m.main_scroll_indicator_ensi_home() },
+    { id: 'benefits', label: m.main_scroll_indicator_benefits() },
+    { id: 'references', label: m.main_scroll_indicator_references() },
+    { id: 'blog', label: m.main_scroll_indicator_blog() },
+    { id: 'apply', label: m.main_scroll_indicator_apply() },
   ];
 
   return (
@@ -85,8 +72,8 @@ export default function MainPage() {
       <div id="intro">
         <CurvedBackgroundParallaxHeaderVertical
           imageSrc="/images/pages/main/cover2.jpg"
-          title="We are presenting Ensi Home!"
-          description="The world's most advanced smart home platform."
+          title={m.main_intro_title()}
+          description={m.main_intro_description()}
         >
           <EnsiHomeBox />
         </CurvedBackgroundParallaxHeaderVertical>

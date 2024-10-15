@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
-
+import * as m from '@/paraglide/messages';
 interface PostData {
   slug: string;
   title: string;
@@ -52,7 +52,7 @@ export default function BlogAndNews() {
       className="container mx-auto rounded-3xl bg-white px-4 py-16"
     >
       <h2 className="mb-8 text-center text-3xl font-bold">
-        Latest News and Insights
+        {m.main_blog_and_news()}
       </h2>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {blogPosts.map((post, index) => (
@@ -82,7 +82,7 @@ export default function BlogAndNews() {
               <CardFooter>
                 <Link href={`/blog/${post.slug}`} passHref>
                   <Button variant="outline" className="w-full">
-                    Read More
+                    {m.main_blog_and_news_read_more()}
                   </Button>
                 </Link>
               </CardFooter>

@@ -15,8 +15,9 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useVisitorType } from '@/context/VisitorTypeContext';
+import * as m from '@/paraglide/messages';
 
-type VisitorType = 'homeOwner' | 'constructionCompany' | 'businessOwner' | null;
+type VisitorType = 'homeOwner' | 'constructionCompany' | null;
 
 interface VisitorTypeOption {
   type: Exclude<VisitorType, null>;
@@ -26,18 +27,17 @@ interface VisitorTypeOption {
 }
 
 const visitorTypes: VisitorTypeOption[] = [
-  { type: 'homeOwner', label: 'Home Owner', shortLabel: 'Home', icon: User },
   {
-    type: 'constructionCompany',
-    label: 'Construction Company',
-    shortLabel: 'Construct',
-    icon: Building,
+    type: 'homeOwner',
+    label: m.userType_homeOwner(),
+    shortLabel: 'Home',
+    icon: User,
   },
   {
-    type: 'businessOwner',
-    label: 'Business Owner',
-    shortLabel: 'Business',
-    icon: Briefcase,
+    type: 'constructionCompany',
+    label: m.userType_constructionCompany(),
+    shortLabel: 'Construct',
+    icon: Building,
   },
 ];
 
@@ -66,7 +66,7 @@ export function VisitorTypeSelector() {
           ) : (
             <>
               <User className="mr-2 size-4" />
-              <span>Select</span>
+              <span>{m.userType_select()}</span>
             </>
           )}
           <ChevronDown className="ml-auto size-4" />
@@ -81,7 +81,7 @@ export function VisitorTypeSelector() {
         ))}
         <DropdownMenuItem onClick={() => setVisitorType(null)}>
           <span className="mr-2 size-4">🚫</span>
-          <span>Clear Selection</span>
+          <span>{m.userType_clear_selection()}</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -10,11 +10,11 @@ import {
 import { Button } from '@/components/ui/button';
 import { useVisitorType } from '@/context/VisitorTypeContext';
 import { motion, AnimatePresence } from 'framer-motion';
+import * as m from '@/paraglide/messages';
 
 const visitorTypes = [
   { type: 'homeOwner', label: 'Home Owner' },
   { type: 'constructionCompany', label: 'Construction Company' },
-  { type: 'businessOwner', label: 'Business Owner' },
 ];
 
 export function VisitorTypeModal() {
@@ -22,9 +22,7 @@ export function VisitorTypeModal() {
     useVisitorType();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const handleSelect = (
-    type: 'homeOwner' | 'constructionCompany' | 'businessOwner'
-  ) => {
+  const handleSelect = (type: 'homeOwner' | 'constructionCompany') => {
     setVisitorType(type);
     setShowModal(false);
   };
@@ -34,7 +32,7 @@ export function VisitorTypeModal() {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="text-center">
-            Welcome! What type of visitor are you?
+            {m.userType_choose_modal()}
           </DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
@@ -46,12 +44,7 @@ export function VisitorTypeModal() {
                 animate={{
                   opacity: 1,
                   y: 0,
-                  scale:
-                    hoveredIndex === index
-                      ? 1.05
-                      : hoveredIndex === null
-                        ? 1
-                        : 0.95,
+                  scale: hoveredIndex === index ? 1.05 : 1,
                 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ delay: index * 0.15, duration: 0.3 }}

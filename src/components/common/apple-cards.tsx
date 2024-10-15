@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { Carousel, Card } from '@/components/ui/apple-cards-carousel';
+import * as m from '@/paraglide/messages';
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
@@ -11,7 +12,7 @@ export function AppleCardsCarouselDemo() {
   return (
     <div className="size-full py-20">
       <h3 className="mx-auto max-w-7xl pl-4 font-sans text-2xl tracking-tighter sm:text-4xl md:text-6xl lg:text-6xl">
-        Yalnizca sizin icin Ensi Home.
+        {m.main_appleCards_title()}
       </h3>
 
       <Carousel items={cards} />
@@ -30,12 +31,9 @@ const DummyContent = () => {
           >
             <p className="mx-auto max-w-3xl font-sans text-base text-neutral-600 md:text-2xl">
               <span className="font-bold text-neutral-700">
-                The first rule of Apple club is that you boast about Apple club.
+                {m.faqSectionOne_question0()}
               </span>{' '}
-              Keep a journal, quickly jot down a grocery list, and take amazing
-              class notes. Want to convert those notes to text? No problem.
-              Langotiya jeetu ka mara hua yaar is ready to capture every
-              thought.
+              {m.faqSectionOne_answer0()}
             </p>
             <Image
               src="https://assets.aceternity.com/macbook.png"
@@ -53,39 +51,39 @@ const DummyContent = () => {
 
 const data = [
   {
-    category: 'Kisisellestirilmis Deneyim',
-    title: 'Evinizin gercek sahibi siz olun!',
+    category: m.main_appleCards_card_1_category(),
+    title: m.main_appleCards_card_1_title(),
     src: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     content: <DummyContent />,
   },
   {
-    category: 'Her An Erisim',
-    title: 'Nerede olursaniz olun evinize ulasin.',
+    category: m.main_appleCards_card_2_category(),
+    title: m.main_appleCards_card_2_title(),
     src: 'https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     content: <DummyContent />,
   },
   {
-    category: 'Verimlilik',
-    title: 'Evinizde israfi bitirin, paraniz cebinizde kalsin.',
+    category: m.main_appleCards_card_3_category(),
+    title: m.main_appleCards_card_3_title(),
     src: 'https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     content: <DummyContent />,
   },
 
   {
-    category: 'Ileri Teknoloji',
-    title: 'Yuksek teknolojiyi avcunuza alin, hersey sizin emrinizde!',
+    category: m.main_appleCards_card_4_category(),
+    title: m.main_appleCards_card_4_title(),
     src: 'https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     content: <DummyContent />,
   },
   {
-    category: 'Yapay Zeka',
-    title: 'Ensi Yapay Zekalari ile gunluk yasantiniza destek olun.',
+    category: m.main_appleCards_card_5_category(),
+    title: m.main_appleCards_card_5_title(),
     src: 'https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     content: <DummyContent />,
   },
   {
-    category: 'Guvenlik',
-    title: 'Evinizde her an ne oldugundan haberdar olun, akliniz kalmasin!',
+    category: m.main_appleCards_card_6_category(),
+    title: m.main_appleCards_card_6_title(),
     src: 'https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     content: <DummyContent />,
   },
