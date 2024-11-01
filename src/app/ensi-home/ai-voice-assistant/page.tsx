@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Mic, Globe, Zap, Brain, Shield, Sparkles } from 'lucide-react';
+import * as m from '@/paraglide/messages';
 
 const fadeIn: Variants = {
   initial: { opacity: 0, y: 20 },
@@ -30,24 +31,24 @@ export default function AIVoiceAssistantPage() {
     <div className="container mx-auto space-y-24 px-4 py-16">
       <motion.div initial="initial" animate="animate" variants={fadeIn}>
         <IntroFeatureWithRiveModel
-          platform="AI Voice Assistant"
-          title="Experience the Future of Home Control"
-          description="Ensi Home's AI Voice Assistant brings unparalleled convenience and intelligence to your smart home. Speak naturally, control effortlessly, and live smarter."
+          platform={m.ensi_ai_voice_assistant_ai_voice_assistant()}
+          title={m.ensi_ai_voice_assistant_experience_the_future_of_home_control()}
+          description={m.ensi_ai_voice_assistant_description()}
           checkPoints={[
             {
-              title: 'Natural Interaction',
+              title: m.ensi_ai_voice_assistant_natural_interaction(),
               description:
-                'Communicate with your home as you would with a person.',
+                m.ensi_ai_voice_assistant_communicate_with_your_home_as_you_would_with_a_person(),
             },
             {
-              title: 'Multilingual Mastery',
+              title: m.ensi_ai_voice_assistant_multilingual_mastery(),
               description:
-                'Speak in your preferred language, no matter where you&apos;re from.',
+                m.ensi_ai_voice_assistant_speak_in_your_preferred_language_no_matter_where_youre_from(),
             },
             {
-              title: 'Seamless Integration',
+              title: m.ensi_ai_voice_assistant_seamless_integration(),
               description:
-                'Control all your smart devices with simple voice commands.',
+                m.ensi_ai_voice_assistant_control_all_your_smart_devices_with_simple_voice_commands(),
             },
           ]}
         />
@@ -60,7 +61,7 @@ export default function AIVoiceAssistantPage() {
         animate="animate"
       >
         <motion.h2 className="text-center text-4xl font-bold" variants={fadeIn}>
-          Unleash the Power of Voice
+          {m.ensi_ai_voice_assistant_unleash_the_power_of_voice()}
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 gap-8 md:grid-cols-3"
@@ -69,33 +70,39 @@ export default function AIVoiceAssistantPage() {
           {[
             {
               icon: Mic,
-              title: 'Natural Language Processing',
-              description: 'Understand context and intent, not just words.',
+              title: m.ensi_ai_voice_assistant_natural_language_processing(),
+              description:
+                m.ensi_ai_voice_assistant_understand_context_and_intent_not_just_words(),
             },
             {
               icon: Globe,
-              title: 'Multilingual Support',
-              description: 'Communicate in multiple languages effortlessly.',
+              title: m.ensi_ai_voice_assistant_multilingual_support(),
+              description:
+                m.ensi_ai_voice_assistant_communicate_in_multiple_languages_effortlessly(),
             },
             {
               icon: Zap,
-              title: 'Smart Device Integration',
-              description: 'Control your entire smart home ecosystem.',
+              title: m.ensi_ai_voice_assistant_smart_device_integration(),
+              description:
+                m.ensi_ai_voice_assistant_control_your_entire_smart_home_ecosystem(),
             },
             {
               icon: Brain,
-              title: 'Adaptive Learning',
-              description: 'Improves and personalizes over time.',
+              title: m.ensi_ai_voice_assistant_adaptive_learning(),
+              description:
+                m.ensi_ai_voice_assistant_improves_and_personalizes_over_time(),
             },
             {
               icon: Shield,
-              title: 'Privacy-First Design',
-              description: 'Your conversations stay private and secure.',
+              title: m.ensi_ai_voice_assistant_privacy_first_design(),
+              description:
+                m.ensi_ai_voice_assistant_your_conversations_stay_private_and_secure(),
             },
             {
               icon: Sparkles,
-              title: 'Contextual Awareness',
-              description: 'Understands and responds to your environment.',
+              title: m.ensi_ai_voice_assistant_contextual_awareness(),
+              description:
+                m.ensi_ai_voice_assistant_understands_and_responds_to_your_environment(),
             },
           ].map((feature, index) => (
             <motion.div key={index} variants={fadeIn}>
@@ -118,31 +125,30 @@ export default function AIVoiceAssistantPage() {
         animate="animate"
       >
         <motion.h2 className="text-center text-4xl font-bold" variants={fadeIn}>
-          Transform Your Living Experience
+          {m.ensi_ai_voice_assistant_transform_your_living_experience()}
         </motion.h2>
         <motion.div variants={fadeIn}>
           <Tabs defaultValue="convenience" className="w-full">
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="convenience">
-                Unparalleled Convenience
+                {m.ensi_ai_voice_assistant_unparalleled_convenience()}
               </TabsTrigger>
               <TabsTrigger value="accessibility">
-                Enhanced Accessibility
+                {m.ensi_ai_voice_assistant_enhanced_accessibility()}
               </TabsTrigger>
-              <TabsTrigger value="efficiency">Boosted Efficiency</TabsTrigger>
+              <TabsTrigger value="efficiency">
+                {m.ensi_ai_voice_assistant_boosted_efficiency()}
+              </TabsTrigger>
             </TabsList>
             <TabsContent
               value="convenience"
               className="bg-secondary mt-6 rounded-lg p-6"
             >
               <h3 className="mb-4 text-2xl font-semibold">
-                Effortless Control at Your Command
+                {m.ensi_ai_voice_assistant_effortless_control_at_your_command()}
               </h3>
               <p>
-                Imagine adjusting your home&apos;s ambiance, managing your
-                schedule, or controlling your devices - all without lifting a
-                finger. Our AI Voice Assistant turns this vision into reality,
-                offering unmatched convenience in your daily life.
+                {m.ensi_ai_voice_assistant_effortless_control_description()}
               </p>
             </TabsContent>
             <TabsContent
@@ -150,13 +156,10 @@ export default function AIVoiceAssistantPage() {
               className="bg-secondary mt-6 rounded-lg p-6"
             >
               <h3 className="mb-4 text-2xl font-semibold">
-                A Home That Responds to Everyone
+                {m.ensi_ai_voice_assistant_a_home_that_responds_to_everyone()}
               </h3>
               <p>
-                We believe in creating inclusive smart homes. Our AI Voice
-                Assistant empowers users of all abilities to interact with their
-                living spaces effortlessly, ensuring that the future of home
-                automation is accessible to everyone.
+                {m.ensi_ai_voice_assistant_a_home_that_responds_to_everyone_description()}
               </p>
             </TabsContent>
             <TabsContent
@@ -164,14 +167,10 @@ export default function AIVoiceAssistantPage() {
               className="bg-secondary mt-6 rounded-lg p-6"
             >
               <h3 className="mb-4 text-2xl font-semibold">
-                Streamline Your Daily Routines
+                {m.ensi_ai_voice_assistant_streamline_your_daily_routines()}
               </h3>
               <p>
-                From managing your smart devices to providing timely
-                information, our AI Voice Assistant acts as your personal home
-                manager. It learns your preferences over time, anticipating your
-                needs and helping you navigate your day with unprecedented
-                efficiency.
+                {m.ensi_ai_voice_assistant_streamline_your_daily_routines_description()}
               </p>
             </TabsContent>
           </Tabs>
@@ -185,22 +184,23 @@ export default function AIVoiceAssistantPage() {
         animate="animate"
       >
         <motion.h2 className="text-center text-4xl font-bold" variants={fadeIn}>
-          Experience the Magic
+          {m.ensi_ai_voice_assistant_experience_the_magic()}
         </motion.h2>
         <motion.div
           className="flex flex-col items-center space-y-8"
           variants={fadeIn}
         >
           <p className="max-w-2xl text-center">
-            See our AI Voice Assistant in action. Interact with the demo below
-            to experience the future of home control firsthand.
+            {m.ensi_ai_voice_assistant_see_our_ai_voice_assistant_in_action()}
           </p>
           <Button
             size="lg"
             onClick={() => setShowDemo(!showDemo)}
             className="px-8 py-6 text-lg"
           >
-            {showDemo ? 'Hide Interactive Demo' : 'Launch Interactive Demo'}
+            {showDemo
+              ? m.ensi_ai_voice_assistant_hide_interactive_demo()
+              : m.ensi_ai_voice_assistant_launch_interactive_demo()}
           </Button>
         </motion.div>
         {showDemo && (
@@ -222,16 +222,14 @@ export default function AIVoiceAssistantPage() {
         animate="animate"
       >
         <motion.h2 className="text-4xl font-bold" variants={fadeIn}>
-          Ready to Revolutionize Your Home?
+          {m.ensi_ai_voice_assistant_ready_to_revolutionize_your_home()}
         </motion.h2>
         <motion.p className="mx-auto max-w-2xl text-lg" variants={fadeIn}>
-          Join the future of smart living with Ensi Home&apos;s AI Voice
-          Assistant. Experience unparalleled convenience, accessibility, and
-          efficiency in your daily life.
+          {m.ensi_ai_voice_assistant_join_the_future_of_smart_living()}
         </motion.p>
         <motion.div variants={fadeIn}>
           <Button size="lg" variant="secondary" className="px-8 py-6 text-lg">
-            Explore AI Solutions
+            {m.ensi_ai_voice_assistant_explore_ai_solutions()}
           </Button>
         </motion.div>
       </motion.section>

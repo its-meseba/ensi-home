@@ -4,6 +4,7 @@ import { getSortedPostsData, getAllTags, getAllCategories } from '@/lib/posts';
 import { Button } from '@/components/ui/button';
 import { BackgroundLines } from '@/components/ui/background-lines';
 import { CurvedBackgroundParallax } from '@/components/common/CurvyBackground';
+import * as m from '@/paraglide/messages';
 
 const BlogPage = async () => {
   const allPostsData = await getSortedPostsData();
@@ -15,7 +16,7 @@ const BlogPage = async () => {
       <div className="w-full bg-gray-50 dark:bg-gray-900">
         <CurvedBackgroundParallax
           imageSrc="/images/pages/blog/cover.jpg"
-          title="Welcome to News & Posts"
+          title={m.blog_welcome_title()}
         />
         {/* Header Section */}
 
@@ -26,7 +27,7 @@ const BlogPage = async () => {
           <section id="posts" className="py-12 md:py-16 lg:py-20">
             <div className="container mx-auto px-4 md:px-6">
               <h2 className="mb-8 text-3xl font-bold text-gray-900 dark:text-gray-50">
-                Latest Articles
+                {m.blog_latest_articles()}
               </h2>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {allPostsData.map(
@@ -79,7 +80,7 @@ const BlogPage = async () => {
               {/* Popular Tags */}
               <div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-gray-50">
-                  Popular Tags
+                  {m.blog_popular_tags()}
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {allTags.map((tag) => (
@@ -97,7 +98,7 @@ const BlogPage = async () => {
               {/* Popular Categories */}
               <div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-gray-50">
-                  Popular Categories
+                  {m.blog_popular_categories()}
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {allCategories.map((category) => (
@@ -115,7 +116,7 @@ const BlogPage = async () => {
               {/* Newsletter Subscription */}
               <div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-gray-50">
-                  Subscribe to our Newsletter
+                  {m.blog_newsletter_title()}
                 </h3>
                 {/* Newsletter form implementation */}
               </div>

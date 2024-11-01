@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { IntroFeatureWithModel } from '@/components/common/intro-feature';
 import { Case1 } from '@/components/common/sliding-cases';
 import { Download, Zap, Shield, Maximize } from 'lucide-react';
+import * as m from '@/paraglide/messages';
 
 const logos = [
   '/images/logo/small.svg',
@@ -54,24 +55,21 @@ export default function BoxPage() {
     >
       <motion.section className="mb-0" variants={itemVariants}>
         <IntroFeatureWithModel
-          platform="Smart Home"
-          title="Ensi Home Box - The Brain of Smart Living"
-          description="Experience the future of home automation with the Ensi Home Box, the central hub that brings intelligence to your living space."
+          platform={m.ensi_box_platform()}
+          title={m.ensi_box_title()}
+          description={m.ensi_box_description()}
           checkPoints={[
             {
-              title: 'Centralized Control',
-              description:
-                'Manage all your smart devices from a single interface.',
+              title: m.ensi_box_centralized_control_title(),
+              description: m.ensi_box_centralized_control_description(),
             },
             {
-              title: 'High Compatibility',
-              description:
-                'Works seamlessly with a wide range of smart home devices.',
+              title: m.ensi_box_high_compatibility_title(),
+              description: m.ensi_box_high_compatibility_description(),
             },
             {
-              title: 'Secure Connectivity',
-              description:
-                'Advanced encryption to keep your home network safe.',
+              title: m.ensi_box_secure_connectivity_title(),
+              description: m.ensi_box_secure_connectivity_description(),
             },
           ]}
           modelUrl="/assets/models/ensi-home-box.glb"
@@ -80,7 +78,7 @@ export default function BoxPage() {
 
       <motion.section className="mb-16" variants={containerVariants}>
         <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
-          Key Features
+          {m.ensi_box_key_features()}
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
@@ -89,27 +87,23 @@ export default function BoxPage() {
           {[
             {
               icon: <Zap className="mr-2" />,
-              title: 'Centralized Control',
-              description:
-                'Manage all your smart devices from a single, intuitive interface.',
+              title: m.ensi_box_centralized_control_feature_title(),
+              description: m.ensi_box_centralized_control_feature_description(),
             },
             {
               icon: <Shield className="mr-2" />,
-              title: 'Secure Connectivity',
-              description:
-                'Advanced encryption and security protocols to protect your home network.',
+              title: m.ensi_box_secure_connectivity_feature_title(),
+              description: m.ensi_box_secure_connectivity_feature_description(),
             },
             {
               icon: <Maximize className="mr-2" />,
-              title: 'High Compatibility',
-              description:
-                'Seamlessly integrates with a wide range of smart home devices and protocols.',
+              title: m.ensi_box_high_compatibility_feature_title(),
+              description: m.ensi_box_high_compatibility_feature_description(),
             },
             {
               icon: <Download className="mr-2" />,
-              title: 'Scalability',
-              description:
-                'Easily expand your smart home system as your needs grow.',
+              title: m.ensi_box_scalability_feature_title(),
+              description: m.ensi_box_scalability_feature_description(),
             },
           ].map((feature, index) => (
             <motion.div key={index} variants={itemVariants}>
@@ -131,52 +125,49 @@ export default function BoxPage() {
 
       <motion.section className="mb-16" variants={containerVariants}>
         <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
-          Technical Specifications
+          {m.ensi_box_technical_specifications()}
         </motion.h2>
         <motion.div className="bg-muted rounded-lg p-6" variants={itemVariants}>
           <ul className="list-inside list-disc space-y-2">
-            <li>Processor: Quad-core ARM Cortex-A53</li>
-            <li>Memory: 2GB RAM</li>
-            <li>Storage: 16GB eMMC</li>
-            <li>Connectivity: Wi-Fi 6, Bluetooth 5.0, Zigbee, Z-Wave</li>
-            <li>Ports: 2x USB 3.0, 1x Ethernet</li>
-            <li>Power: 12V DC input</li>
+            <li>{m.ensi_box_processor()}</li>
+            <li>{m.ensi_box_memory()}</li>
+            <li>{m.ensi_box_storage()}</li>
+            <li>{m.ensi_box_connectivity()}</li>
+            <li>{m.ensi_box_ports()}</li>
+            <li>{m.ensi_box_power()}</li>
           </ul>
           <Button className="mt-4">
-            <Download className="mr-2 size-4" /> Download Full Specifications
-            (PDF)
+            <Download className="mr-2 size-4" />{' '}
+            {m.ensi_box_download_full_specifications()}
           </Button>
         </motion.div>
       </motion.section>
 
       <motion.section className="mb-16" variants={containerVariants}>
         <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
-          Integration Process
+          {m.ensi_box_integration_process()}
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 gap-8 md:grid-cols-2"
           variants={containerVariants}
         >
           <motion.div variants={itemVariants}>
-            <h3 className="mb-4 text-xl font-semibold">Easy Installation</h3>
-            <p className="mb-4">
-              The Ensi Home Box is designed for seamless integration during the
-              construction phase or as an upgrade to existing homes. Our team of
-              experts ensures a smooth installation process, minimizing
-              disruption to your daily life.
-            </p>
+            <h3 className="mb-4 text-xl font-semibold">
+              {m.ensi_box_easy_installation()}
+            </h3>
+            <p className="mb-4">{m.ensi_box_easy_installation_description()}</p>
             <ol className="list-inside list-decimal space-y-2">
-              <li>Site assessment and planning</li>
-              <li>Wiring and infrastructure setup</li>
-              <li>Box installation and configuration</li>
-              <li>Device pairing and system testing</li>
-              <li>User training and handover</li>
+              <li>{m.ensi_box_site_assessment_and_planning()}</li>
+              <li>{m.ensi_box_wiring_and_infrastructure_setup()}</li>
+              <li>{m.ensi_box_box_installation_and_configuration()}</li>
+              <li>{m.ensi_box_device_pairing_and_system_testing()}</li>
+              <li>{m.ensi_box_user_training_and_handover()}</li>
             </ol>
           </motion.div>
           <motion.div variants={itemVariants}>
             <Image
               src="/placeholder.jpg?height=300&width=400"
-              alt="Ensi Home Box Installation"
+              alt={m.ensi_box_in_action_alt_living_room()}
               width={400}
               height={300}
               className="rounded-lg"
@@ -187,7 +178,7 @@ export default function BoxPage() {
 
       <motion.section className="mb-16" variants={containerVariants}>
         <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
-          Ensi Home Box in Action
+          {m.ensi_box_in_action()}
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 gap-6 md:grid-cols-3"
@@ -196,15 +187,15 @@ export default function BoxPage() {
           {[
             {
               src: '/placeholder.jpg?height=200&width=300',
-              alt: 'Ensi Home Box in Living Room',
+              alt: m.ensi_box_in_living_room_alt(),
             },
             {
               src: '/placeholder.jpg?height=200&width=300',
-              alt: 'Ensi Home Box in Kitchen',
+              alt: m.ensi_box_in_kitchen_alt(),
             },
             {
               src: '/placeholder.jpg?height=200&width=300',
-              alt: 'Ensi Home Box in Home Office',
+              alt: m.ensi_box_in_home_office_alt(),
             },
           ].map((image, index) => (
             <motion.div key={index} variants={itemVariants}>
@@ -225,21 +216,26 @@ export default function BoxPage() {
         variants={containerVariants}
       >
         <motion.h2 className="mb-4 text-3xl font-bold" variants={itemVariants}>
-          Ready to Transform Your Home?
+          {m.ensi_box_ready_to_transform_your_home()}
         </motion.h2>
         <motion.p className="mb-8" variants={itemVariants}>
-          Get in touch with our team for personalized assistance and technical
-          details.
+          {m.ensi_box_get_in_touch()}
         </motion.p>
         <motion.div variants={itemVariants}>
           <Link href="/contact">
-            <Button size="lg">Contact Us for Technical Details</Button>
+            <Button size="lg">
+              {m.ensi_box_contact_us_for_technical_details()}
+            </Button>
           </Link>
         </motion.div>
       </motion.section>
 
       <motion.section variants={itemVariants}>
-        <Case1 title="Our Partners" logos={logos} interval={3000} />
+        <Case1
+          title={m.ensi_box_our_partners()}
+          logos={logos}
+          interval={3000}
+        />
       </motion.section>
     </motion.div>
   );

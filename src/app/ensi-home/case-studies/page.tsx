@@ -35,9 +35,9 @@
 
 import { IntroFeatureWithModel } from '@/components/common/intro-feature'; // Import IntroFeatureWithModel component
 import { Case1 } from '@/components/common/sliding-cases';
+import * as m from '@/paraglide/messages'; // Import messages
 
 const logos = [
-  '/images/logo/small.svg',
   '/images/logo/small.svg',
   '/images/logo/small.svg',
   '/images/logo/small.svg',
@@ -78,7 +78,7 @@ export default function BoxPage() {
         modelUrl="/assets/models/ensi-home-box.glb" // Add the model URL
       />
       <Case1
-        title="Our Partners"
+        title={m.ensi_case_studies_our_partners()}
         logos={logos}
         interval={3000} // Adjust the interval as needed
       />
