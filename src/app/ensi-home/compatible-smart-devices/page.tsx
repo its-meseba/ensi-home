@@ -43,6 +43,8 @@ import { Badge } from '@/components/ui/badge';
 import productsDataRaw from '@/data/compatible-brands-and-devices.json';
 import { CompatibleBrand, ProductsData } from '@/data/types';
 
+import * as m from '@/paraglide/messages';
+
 const productsData: ProductsData = productsDataRaw as ProductsData;
 const allBrands: CompatibleBrand[] = productsData.categories.flatMap(
   (category) => category.compatible_brands
@@ -186,7 +188,7 @@ export default function EnhancedFilteredProducts() {
             className="flex items-center font-medium"
             onClick={() => setIsCategoryFilterOpen(!isCategoryFilterOpen)}
           >
-            Categories
+            {m.ensi_compatible_smart_devices_filters_categories()}
             {isCategoryFilterOpen ? (
               <ChevronUp className="ml-2 size-4" />
             ) : (
@@ -199,7 +201,7 @@ export default function EnhancedFilteredProducts() {
             onClick={clearCategories}
             className="text-sm text-gray-500 hover:text-gray-700"
           >
-            Clear
+            {m.ensi_compatible_smart_devices_filters_clear()}
           </Button>
         </div>
         <AnimatePresence>
@@ -234,7 +236,9 @@ export default function EnhancedFilteredProducts() {
                         React.createElement(categoryIconMap[category], {
                           className: 'mr-2 h-4 w-4',
                         })}
-                      {capitalizeFirstLetter(category)}
+                      {m.ensi_compatible_smart_devices_capitalize_first_letter(
+                        category
+                      )}
                     </label>
                   </div>
                   <span className="text-xs text-gray-500">
@@ -255,7 +259,7 @@ export default function EnhancedFilteredProducts() {
             className="flex items-center font-medium"
             onClick={() => setIsTechnologyFilterOpen(!isTechnologyFilterOpen)}
           >
-            Technologies
+            {m.ensi_compatible_smart_devices_filters_technologies()}
             {isTechnologyFilterOpen ? (
               <ChevronUp className="ml-2 size-4" />
             ) : (
@@ -268,7 +272,7 @@ export default function EnhancedFilteredProducts() {
             onClick={clearTechnologies}
             className="text-sm text-gray-500 hover:text-gray-700"
           >
-            Clear
+            {m.ensi_compatible_smart_devices_filters_clear()}
           </Button>
         </div>
         <AnimatePresence>
@@ -321,18 +325,22 @@ export default function EnhancedFilteredProducts() {
       <div className="flex flex-col md:flex-row">
         {/* Desktop Sidebar */}
         <aside className="hidden w-64 bg-white p-6 shadow-md lg:block">
-          <h2 className="mb-4 text-xl font-semibold">Filters</h2>
+          <h2 className="mb-4 text-xl font-semibold">
+            {m.ensi_compatible_smart_devices_filters_title()}
+          </h2>
           <FilterSidebar />
         </aside>
 
         {/* Main Content */}
         <main className="flex-1 p-6">
-          <h1 className="mb-4 text-2xl font-bold">Compatible Brands</h1>
+          <h1 className="mb-4 text-2xl font-bold">
+            {m.ensi_compatible_smart_devices_main_title()}
+          </h1>
           <div className="mb-4 flex flex-col gap-4 sm:flex-row">
             <div className="relative grow">
               <Input
                 type="text"
-                placeholder="Search brands..."
+                placeholder={m.ensi_compatible_smart_devices_search_placeholder()}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
@@ -356,11 +364,17 @@ export default function EnhancedFilteredProducts() {
               }
             >
               <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Sort by" />
+                <SelectValue
+                  placeholder={m.ensi_compatible_smart_devices_sort_by_placeholder()}
+                />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="name">Sort by Name</SelectItem>
-                <SelectItem value="category">Sort by Category</SelectItem>
+                <SelectItem value="name">
+                  {m.ensi_compatible_smart_devices_sort_by_name()}
+                </SelectItem>
+                <SelectItem value="category">
+                  {m.ensi_compatible_smart_devices_sort_by_category()}
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -423,10 +437,12 @@ export default function EnhancedFilteredProducts() {
                             {brand.name}
                           </h3>
                           <p className="mb-2 text-sm text-gray-600">
-                            {brand.company || 'Unknown Company'}
+                            {brand.company ||
+                              m.ensi_compatible_smart_devices_unknown_company()}
                           </p>
                           <p className="mb-4 text-sm text-gray-500">
-                            {brand.description || 'No description available.'}
+                            {brand.description ||
+                              m.ensi_compatible_smart_devices_no_description_available()}
                           </p>
                           <div className="flex flex-wrap items-center gap-2">
                             <Badge
@@ -446,13 +462,15 @@ export default function EnhancedFilteredProducts() {
                                   ],
                                   { className: 'mr-1 h-3 w-3' }
                                 )}
-                              {capitalizeFirstLetter(
+                              {m.ensi_compatible_smart_devices_capitalize_first_letter(
                                 productsData.categories.find((cat) =>
                                   cat.compatible_brands.includes(brand)
                                 )?.category_name || 'Unknown'
                               )}
                             </Badge>
-                            <Badge variant="outline">Technologies</Badge>
+                            <Badge variant="outline">
+                              {m.ensi_compatible_smart_devices_technologies_badge()}
+                            </Badge>
                           </div>
                         </div>
                       </Link>
@@ -461,7 +479,7 @@ export default function EnhancedFilteredProducts() {
                 })
               ) : (
                 <p className="col-span-full text-center text-gray-500">
-                  No brands match your filters.
+                  {m.ensi_compatible_smart_devices_no_brands_match()}
                 </p>
               )}
             </AnimatePresence>
@@ -486,10 +504,13 @@ export default function EnhancedFilteredProducts() {
                   {selectedCategories.length + selectedTechnologies.length}
                 </Badge>
               )}
+              {m.ensi_compatible_smart_devices_filter_button()}
             </Button>
           </SheetTrigger>
           <SheetContent side="bottom" className="h-[80vh] rounded-t-3xl">
-            <h2 className="mb-4 text-lg font-semibold">Filters</h2>
+            <h2 className="mb-4 text-lg font-semibold">
+              {m.ensi_compatible_smart_devices_filters_title()}
+            </h2>
             <FilterSidebar />
           </SheetContent>
         </Sheet>

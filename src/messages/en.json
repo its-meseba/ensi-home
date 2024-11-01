@@ -266,7 +266,6 @@
   "ensi_ai_voice_assistant_join_the_future_of_smart_living": "Join the future of smart living with Ensi Home's AI Voice Assistant. Experience unparalleled convenience, accessibility, and efficiency in your daily life.",
   "ensi_ai_voice_assistant_explore_ai_solutions": "Explore AI Solutions",
 
-  
   "ensi_box_platform": "Smart Home",
   "ensi_box_title": "Ensi Home Box - The Brain of Smart Living",
   "ensi_box_description": "Experience the future of home automation with the Ensi Home Box, the central hub that brings intelligence to your living space.",
@@ -370,6 +369,87 @@
   "ensi_cloud_construction_benefit_3": "Scalable solutions for projects of any size",
   "ensi_cloud_construction_benefit_4": "Enhanced property value through advanced home automation",
   "ensi_cloud_more_about_cloud_solutions": "More About Our Cloud Solutions",
-  "ensi_cloud_sections_button": "Sections"
+  "ensi_cloud_sections_button": "Sections",
 
+  "ensi_compatible_smart_devices_overview": "Overview",
+  "ensi_compatible_smart_devices_server_systems": "Server Systems",
+  "ensi_compatible_smart_devices_ai_capabilities": "AI Capabilities",
+  "ensi_compatible_smart_devices_security": "Security",
+  "ensi_compatible_smart_devices_benefits": "Benefits",
+
+  "ensi_compatible_smart_devices_navigation_cloud_infrastructure": "Cloud Infrastructure",
+
+  "ensi_compatible_smart_devices_filters_title": "Filters",
+  "ensi_compatible_smart_devices_filters_categories": "Categories",
+  "ensi_compatible_smart_devices_filters_technologies": "Technologies",
+  "ensi_compatible_smart_devices_filters_clear": "Clear",
+
+  "ensi_compatible_smart_devices_main_title": "Compatible Brands",
+
+  "ensi_compatible_smart_devices_overview_card_title": "Cloud Infrastructure Overview",
+  "ensi_compatible_smart_devices_overview_card_description": "Our cloud infrastructure provides a robust, scalable, and secure foundation for your smart home experience:",
+  "ensi_compatible_smart_devices_overview_card_list_1": "Distributed data centers for high availability and low latency",
+  "ensi_compatible_smart_devices_overview_card_list_2": "Redundant systems to ensure 99.99% uptime",
+  "ensi_compatible_smart_devices_overview_card_list_3": "State-of-the-art encryption for data protection",
+  "ensi_compatible_smart_devices_overview_card_list_4": "Scalable architecture to accommodate growing smart home needs",
+  "ensi_compatible_smart_devices_overview_card_list_5": "Continuous monitoring and automatic updates for optimal performance",
+
+  "ensi_compatible_smart_devices_servers_user_management_title": "User Management System",
+  "ensi_compatible_smart_devices_servers_user_management_description": "Centralized user authentication and authorization, ensuring secure access to your Ensi Home ecosystem from any device.",
+
+  "ensi_compatible_smart_devices_servers_notification_server_title": "Notification Server",
+  "ensi_compatible_smart_devices_servers_notification_server_description": "Real-time notification system that keeps you informed about important events in your smart home, from security alerts to energy-saving tips.",
+
+  "ensi_compatible_smart_devices_servers_proxy_server_title": "Proxy Server",
+  "ensi_compatible_smart_devices_servers_proxy_server_description": "Maintains a secure connection between your mobile application and the Ensi Home Box, allowing you to control your smart home from anywhere in the world.",
+
+  "ensi_compatible_smart_devices_servers_data_storage_processing_title": "Data Storage and Processing",
+  "ensi_compatible_smart_devices_servers_data_storage_processing_description": "Secure storage and processing of your smart home data, enabling advanced analytics and personalized recommendations.",
+
+  "ensi_compatible_smart_devices_ai_artificial_intelligence_servers_title": "Artificial Intelligence Servers",
+  "ensi_compatible_smart_devices_ai_artificial_intelligence_servers_description": "Our AI servers power various intelligent features of your Ensi Home:",
+  "ensi_compatible_smart_devices_ai_large_language_models": "Large Language Models: Enable natural language understanding for intuitive voice commands and chatbot interactions.",
+  "ensi_compatible_smart_devices_ai_speech_recognition": "Speech Recognition: Accurately interpret voice commands in multiple languages.",
+  "ensi_compatible_smart_devices_ai_speech_generation": "Speech Generation: Provide natural-sounding voice responses and notifications.",
+  "ensi_compatible_smart_devices_ai_pattern_recognition": "Pattern Recognition: Analyze usage patterns to optimize energy consumption and enhance home security.",
+
+  "ensi_compatible_smart_devices_security_security_privacy_title": "Security and Privacy",
+  "ensi_compatible_smart_devices_security_security_privacy_description": "We prioritize the security and privacy of your data:",
+  "ensi_compatible_smart_devices_security_end_to_end_encryption": "End-to-End Encryption: All data transmitted between your devices and our servers is encrypted.",
+  "ensi_compatible_smart_devices_security_regular_security_audits": "Regular Security Audits: We conduct frequent penetration testing and security assessments.",
+  "ensi_compatible_smart_devices_security_automatic_updates": "Automatic Updates: Security patches are applied automatically to keep your system protected.",
+  "ensi_compatible_smart_devices_security_data_privacy_controls": "Data Privacy Controls: Granular controls allow you to manage what data is stored and how it's used.",
+
+  "ensi_compatible_smart_devices_benefits_title": "Benefits for Users and Construction Companies",
+  "ensi_compatible_smart_devices_benefits_for_users": "For Users:",
+  "ensi_compatible_smart_devices_benefits_user_1": "Seamless control of your smart home from anywhere",
+  "ensi_compatible_smart_devices_benefits_user_2": "Enhanced security and privacy protection",
+  "ensi_compatible_smart_devices_benefits_user_3": "Personalized AI-driven recommendations",
+  "ensi_compatible_smart_devices_benefits_user_4": "Continuous improvements through automatic updates",
+
+  "ensi_compatible_smart_devices_benefits_for_construction_companies": "For Construction Companies:",
+  "ensi_compatible_smart_devices_benefits_construction_1": "Differentiate your offerings with cutting-edge smart home technology",
+  "ensi_compatible_smart_devices_benefits_construction_2": "Long-term support and updates for installed systems",
+  "ensi_compatible_smart_devices_benefits_construction_3": "Scalable solutions for projects of any size",
+  "ensi_compatible_smart_devices_benefits_construction_4": "Enhanced property value through advanced home automation",
+
+  "ensi_compatible_smart_devices_more_about_cloud_solutions": "More About Our Cloud Solutions",
+
+  "ensi_compatible_smart_devices_sections_button": "Sections",
+
+  "ensi_compatible_smart_devices_search_placeholder": "Search brands...",
+  "ensi_compatible_smart_devices_sort_by_placeholder": "Sort by",
+  "ensi_compatible_smart_devices_sort_by_name": "Sort by Name",
+  "ensi_compatible_smart_devices_sort_by_category": "Sort by Category",
+
+  "ensi_compatible_smart_devices_no_brands_match": "No brands match your filters.",
+
+  "ensi_compatible_smart_devices_unknown_company": "Unknown Company",
+  "ensi_compatible_smart_devices_no_description_available": "No description available.",
+
+  "ensi_compatible_smart_devices_technologies_badge": "Technologies",
+
+  "ensi_compatible_smart_devices_capitalize_first_letter": "CapitalizeFirstLetter",
+
+  "ensi_compatible_smart_devices_filter_button": "Filters"
 }
