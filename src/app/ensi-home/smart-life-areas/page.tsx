@@ -17,9 +17,10 @@ import * as m from '@/paraglide/messages';
 
 const categories = [
   {
-    title: 'Apps that help save energy',
+    title: m.ensi_compatible_smart_devices_apps_that_help_save_energy_title(),
     icon: <Zap className="size-6 text-yellow-400" />,
-    description: 'Save on your energy bill while saving the planet.',
+    description:
+      m.ensi_compatible_smart_devices_apps_that_help_save_energy_description(),
     apps: [
       {
         name: 'EcoCharge',
@@ -54,9 +55,10 @@ const categories = [
     ],
   },
   {
-    title: 'Apps for a safe home',
+    title: m.ensi_compatible_smart_devices_apps_for_a_safe_home_title(),
     icon: <Lock className="size-6 text-green-500" />,
-    description: 'Feel safe at home.',
+    description:
+      m.ensi_compatible_smart_devices_apps_for_a_safe_home_description(),
     apps: [
       {
         name: 'SecureGuard',
@@ -91,9 +93,10 @@ const categories = [
     ],
   },
   {
-    title: 'Apps for a healthier life',
+    title: m.ensi_compatible_smart_devices_apps_for_a_healthier_life_title(),
     icon: <Heart className="size-6 text-red-500" />,
-    description: 'Boost your wellbeing with smart technology.',
+    description:
+      m.ensi_compatible_smart_devices_apps_for_a_healthier_life_description(),
     apps: [
       {
         name: 'FitTrack',
@@ -128,9 +131,10 @@ const categories = [
     ],
   },
   {
-    title: 'Bring the smart outdoors',
+    title: m.ensi_compatible_smart_devices_bring_the_smart_outdoors_title(),
     icon: <Trees className="size-6 text-green-600" />,
-    description: 'Extend your smart home to your garden and beyond.',
+    description:
+      m.ensi_compatible_smart_devices_bring_the_smart_outdoors_description(),
     apps: [
       {
         name: 'GardenGuru',
@@ -165,9 +169,10 @@ const categories = [
     ],
   },
   {
-    title: 'Beyond smart home',
+    title: m.ensi_compatible_smart_devices_beyond_smart_home_title(),
     icon: <Sparkles className="size-6 text-purple-500" />,
-    description: 'Discover the next level of smart living.',
+    description:
+      m.ensi_compatible_smart_devices_beyond_smart_home_description(),
     apps: [
       {
         name: 'CityConnect',
@@ -252,7 +257,7 @@ export default function SmartLifeAreas() {
       {/* Header */}
       <motion.header className="bg-white p-6 shadow-md" variants={itemVariants}>
         <h1 className="font-regular text-center text-5xl tracking-tighter md:text-7xl">
-          {m.smart_life_areas()}
+          {m.ensi_compatible_smart_devices_smart_life_areas()}
         </h1>
       </motion.header>
 
@@ -355,8 +360,7 @@ export default function SmartLifeAreas() {
         className="bg-white p-6 text-center text-gray-500 shadow-inner"
         variants={itemVariants}
       >
-        © {new Date().getFullYear()} Smart Home App Gallery. All rights
-        reserved.
+        {m.ensi_compatible_smart_devices_footer_text(new Date().getFullYear())}
       </motion.footer>
     </motion.div>
   );

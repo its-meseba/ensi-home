@@ -344,5 +344,128 @@
   "ensi_cloud_construction_benefit_3": "Her boyuttaki projeler için ölçeklenebilir çözümler",
   "ensi_cloud_construction_benefit_4": "Gelişmiş ev otomasyonu ile mülk değerini artırın",
   "ensi_cloud_more_about_cloud_solutions": "Bulut Çözümlerimiz Hakkında Daha Fazla Bilgi",
-  "ensi_cloud_sections_button": "Bölümler"
+  "ensi_cloud_sections_button": "Bölümler",
+
+  "ensi_compatible_smart_devices_overview": "Genel Bakış",
+  "ensi_compatible_smart_devices_server_systems": "Sunucu Sistemleri",
+  "ensi_compatible_smart_devices_ai_capabilities": "Yapay Zeka Yetenekleri",
+  "ensi_compatible_smart_devices_security": "Güvenlik",
+  "ensi_compatible_smart_devices_benefits": "Faydalar",
+
+  "ensi_compatible_smart_devices_navigation_cloud_infrastructure": "Bulut Altyapısı",
+
+  "ensi_compatible_smart_devices_filters_title": "Filtreler",
+  "ensi_compatible_smart_devices_filters_categories": "Kategoriler",
+  "ensi_compatible_smart_devices_filters_technologies": "Teknolojiler",
+  "ensi_compatible_smart_devices_filters_clear": "Temizle",
+
+  "ensi_compatible_smart_devices_main_title": "Uyumlu Markalar",
+
+  "ensi_compatible_smart_devices_overview_card_title": "Bulut Altyapısı Genel Bakış",
+  "ensi_compatible_smart_devices_overview_card_description": "Bulut altyapımız, akıllı ev deneyiminiz için sağlam, ölçeklenebilir ve güvenli bir temel sağlar:",
+  "ensi_compatible_smart_devices_overview_card_list_1": "Yüksek kullanılabilirlik ve düşük gecikme süresi için dağıtık veri merkezleri",
+  "ensi_compatible_smart_devices_overview_card_list_2": "%99.99 kesintisiz çalışma süresi sağlamak için yedekli sistemler",
+  "ensi_compatible_smart_devices_overview_card_list_3": "Veri koruması için son teknoloji şifreleme",
+  "ensi_compatible_smart_devices_overview_card_list_4": "Büyüyen akıllı ev ihtiyaçlarına uyum sağlamak için ölçeklenebilir mimari",
+  "ensi_compatible_smart_devices_overview_card_list_5": "Optimal performans için sürekli izleme ve otomatik güncellemeler",
+
+  "ensi_compatible_smart_devices_servers_user_management_title": "Kullanıcı Yönetim Sistemi",
+  "ensi_compatible_smart_devices_servers_user_management_description": "Tüm cihazlarınızdan Ensi Home ekosistemine güvenli erişim sağlayan merkezi kullanıcı kimlik doğrulama ve yetkilendirme.",
+
+  "ensi_compatible_smart_devices_servers_notification_server_title": "Bildirim Sunucusu",
+  "ensi_compatible_smart_devices_servers_notification_server_description": "Güvenlik uyarılarından enerji tasarrufu ipuçlarına kadar akıllı evinizdeki önemli olaylar hakkında sizi bilgilendiren gerçek zamanlı bildirim sistemi.",
+
+  "ensi_compatible_smart_devices_servers_proxy_server_title": "Proxy Sunucusu",
+  "ensi_compatible_smart_devices_servers_proxy_server_description": "Mobil uygulamanız ile Ensi Home Box arasında güvenli bir bağlantı sağlayarak, akıllı evinizi dünyanın herhangi bir yerinden kontrol etmenizi sağlar.",
+
+  "ensi_compatible_smart_devices_servers_data_storage_processing_title": "Veri Depolama ve İşleme",
+  "ensi_compatible_smart_devices_servers_data_storage_processing_description": "Gelişmiş analizler ve kişiselleştirilmiş öneriler sağlayan akıllı ev verilerinizin güvenli depolanması ve işlenmesi.",
+
+  "ensi_compatible_smart_devices_ai_artificial_intelligence_servers_title": "Yapay Zeka Sunucuları",
+  "ensi_compatible_smart_devices_ai_artificial_intelligence_servers_description": "Yapay Zeka sunucularımız, Ensi Home'un çeşitli zeki özelliklerini çalıştırır:",
+  "ensi_compatible_smart_devices_ai_large_language_models": "Büyük Dil Modelleri: Sezgisel ses komutları ve sohbet robotu etkileşimleri için doğal dil anlama sağlar.",
+  "ensi_compatible_smart_devices_ai_speech_recognition": "Konuşma Tanıma: Birden fazla dilde sesli komutları doğru bir şekilde yorumlar.",
+  "ensi_compatible_smart_devices_ai_speech_generation": "Konuşma Üretimi: Doğal sesli yanıtlar ve bildirimler sağlar.",
+  "ensi_compatible_smart_devices_ai_pattern_recognition": "Desen Tanıma: Enerji tüketimini optimize etmek ve ev güvenliğini artırmak için kullanım desenlerini analiz eder.",
+
+  "ensi_compatible_smart_devices_security_security_privacy_title": "Güvenlik ve Gizlilik",
+  "ensi_compatible_smart_devices_security_security_privacy_description": "Verilerinizin güvenliği ve gizliliği bizim için önceliklidir:",
+  "ensi_compatible_smart_devices_security_end_to_end_encryption": "Uçtan Uca Şifreleme: Cihazlarınız ile sunucularımız arasında iletilen tüm veriler şifrelenmiştir.",
+  "ensi_compatible_smart_devices_security_regular_security_audits": "Düzenli Güvenlik Denetimleri: Sık sık penetrasyon testi ve güvenlik değerlendirmeleri gerçekleştiriyoruz.",
+  "ensi_compatible_smart_devices_security_automatic_updates": "Otomatik Güncellemeler: Sisteminizin korunmasını sağlamak için güvenlik yamaları otomatik olarak uygulanır.",
+  "ensi_compatible_smart_devices_security_data_privacy_controls": "Veri Gizliliği Kontrolleri: Hangi verilerin depolanacağını ve nasıl kullanılacağını yönetmenizi sağlayan ayrıntılı kontroller.",
+
+  "ensi_compatible_smart_devices_benefits_title": "Kullanıcılar ve İnşaat Şirketleri İçin Faydalar",
+  "ensi_compatible_smart_devices_benefits_for_users": "Kullanıcılar İçin:",
+  "ensi_compatible_smart_devices_benefits_user_1": "Akıllı evinizi her yerden sorunsuzca kontrol etme",
+  "ensi_compatible_smart_devices_benefits_user_2": "Geliştirilmiş güvenlik ve gizlilik koruması",
+  "ensi_compatible_smart_devices_benefits_user_3": "Kişiselleştirilmiş AI destekli öneriler",
+  "ensi_compatible_smart_devices_benefits_user_4": "Otomatik güncellemelerle sürekli iyileştirmeler",
+
+  "ensi_compatible_smart_devices_benefits_for_construction_companies": "İnşaat Şirketleri İçin:",
+  "ensi_compatible_smart_devices_benefits_construction_1": "Keskin zekalı akıllı ev teknolojisi ile tekliflerinizi farklılaştırın",
+  "ensi_compatible_smart_devices_benefits_construction_2": "Kurulu sistemler için uzun vadeli destek ve güncellemeler",
+  "ensi_compatible_smart_devices_benefits_construction_3": "Her boyuttaki projeler için ölçeklenebilir çözümler",
+  "ensi_compatible_smart_devices_benefits_construction_4": "Gelişmiş ev otomasyonu ile mülk değerini artırın",
+
+  "ensi_compatible_smart_devices_more_about_cloud_solutions": "Bulut Çözümlerimiz Hakkında Daha Fazla Bilgi",
+
+  "ensi_compatible_smart_devices_sections_button": "Bölümler",
+
+  "ensi_compatible_smart_devices_search_placeholder": "Markaları ara...",
+  "ensi_compatible_smart_devices_sort_by_placeholder": "Sırala",
+  "ensi_compatible_smart_devices_sort_by_name": "İsimle Sırala",
+  "ensi_compatible_smart_devices_sort_by_category": "Kategoriyle Sırala",
+
+  "ensi_compatible_smart_devices_no_brands_match": "Filtrelerinizle eşleşen marka bulunamadı.",
+
+  "ensi_compatible_smart_devices_unknown_company": "Bilinmeyen Şirket",
+  "ensi_compatible_smart_devices_no_description_available": "Açıklama mevcut değil.",
+
+  "ensi_compatible_smart_devices_technologies_badge": "Teknolojiler",
+
+  "ensi_compatible_smart_devices_capitalize_first_letter": "capitalizeFirstLetter",
+
+  "ensi_compatible_smart_devices_filter_button": "Filtreler",
+
+  "ensi_cloud_modal_back_to_brands": "Markalara Geri Dön",
+  "ensi_cloud_modal_description_not_available": "Açıklama mevcut değil.",
+  "ensi_cloud_modal_no_supported_devices": "Bu markanın desteklenen cihazı yok.",
+  "ensi_cloud_modal_supported_devices": "Desteklenen Cihazlar",
+  "ensi_cloud_modal_image_of_device": "Cihazın Görüntüsü",
+  "ensi_cloud_modal_no_summary_description_available": "Özet açıklama mevcut değil.",
+  "ensi_cloud_modal_technologies": "Teknolojiler",
+  "ensi_cloud_modal_summary": "Özet",
+  "ensi_cloud_modal_filters": "Filtreler",
+  "ensi_cloud_modal_categories": "Kategoriler",
+  "ensi_cloud_modal_clear": "Temizle",
+  "ensi_cloud_modal_sort_by": "Sırala",
+  "ensi_cloud_modal_sort_by_name": "İsimle Sırala",
+  "ensi_cloud_modal_sort_by_category": "Kategoriyle Sırala",
+  "ensi_cloud_modal_no_brands_match": "Filtrelerinizle eşleşen marka bulunamadı.",
+  "ensi_cloud_modal_unknown_company": "Bilinmeyen Şirket",
+  "ensi_cloud_modal_no_description_available": "Açıklama mevcut değil.",
+  "ensi_cloud_modal_technologies_badge": "Teknolojiler",
+  "ensi_cloud_modal_capitalize_first_letter": "capitalizeFirstLetter",
+  "ensi_cloud_modal_discuss_device_integration": "Cihaz Entegrasyonunu Görüşün",
+  "ensi_cloud_modal_filter_button": "Filtreler",
+
+  "ensi_compatible_smart_devices_smart_life_areas": "Akıllı Yaşam Alanları",
+
+  "ensi_compatible_smart_devices_apps_that_help_save_energy_title": "Enerji Tasarrufu Sağlayan Uygulamalar",
+  "ensi_compatible_smart_devices_apps_that_help_save_energy_description": "Enerji faturalarınızdan tasarruf ederken gezegeni koruyun.",
+
+  "ensi_compatible_smart_devices_apps_for_a_safe_home_title": "Güvenli Ev İçin Uygulamalar",
+  "ensi_compatible_smart_devices_apps_for_a_safe_home_description": "Evde kendinizi güvende hissedin.",
+
+  "ensi_compatible_smart_devices_apps_for_a_healthier_life_title": "Daha Sağlıklı Bir Yaşam İçin Uygulamalar",
+  "ensi_compatible_smart_devices_apps_for_a_healthier_life_description": "Akıllı teknoloji ile sağlığınızı artırın.",
+
+  "ensi_compatible_smart_devices_bring_the_smart_outdoors_title": "Akıllı Dış Mekanı Getirin",
+  "ensi_compatible_smart_devices_bring_the_smart_outdoors_description": "Akıllı evinizi bahçenize ve ötesine genişletin.",
+
+  "ensi_compatible_smart_devices_beyond_smart_home_title": "Akıllı Evin Ötesinde",
+  "ensi_compatible_smart_devices_beyond_smart_home_description": "Akıllı yaşamın bir sonraki seviyesini keşfedin.",
+
+  "ensi_compatible_smart_devices_footer_text": "© {year} Akıllı Ev Uygulama Galerisi. Tüm hakları saklıdır."
 }

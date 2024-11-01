@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -14,6 +16,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+
+import * as m from '@/paraglide/messages';
 
 const productsData: ProductsData = productsDataRaw as ProductsData;
 
@@ -55,7 +59,7 @@ export default function BrandDetail({ params }: BrandDetailProps) {
                   <div className="relative aspect-[16/9] w-full">
                     <Image
                       src={brand.summary_image_url}
-                      alt={`${brand.name} summary image`}
+                      alt={`${brand.name} ${m.ensi_cloud_modal_image_of_device()}`}
                       fill
                       sizes="(max-width: 1024px) 100vw, 40vw"
                       className="rounded-lg object-cover"
@@ -65,12 +69,15 @@ export default function BrandDetail({ params }: BrandDetailProps) {
               )}
               <div className={brand.summary_image_url ? 'lg:w-3/5' : 'w-full'}>
                 <p className="mb-4 text-gray-700">
-                  {brand.description || 'Description not available.'}
+                  {brand.description ||
+                    m.ensi_cloud_modal_description_not_available()}
                 </p>
                 <Separator className="my-4" />
                 <div className="space-y-4">
                   <div>
-                    <h2 className="mb-2 text-lg font-semibold">Technologies</h2>
+                    <h2 className="mb-2 text-lg font-semibold">
+                      {m.ensi_cloud_modal_technologies()}
+                    </h2>
                     <div className="flex flex-wrap gap-2">
                       {brandTechnologies.map((tech) => (
                         <Badge key={tech} variant="secondary">
@@ -80,10 +87,12 @@ export default function BrandDetail({ params }: BrandDetailProps) {
                     </div>
                   </div>
                   <div>
-                    <h2 className="mb-2 text-lg font-semibold">Summary</h2>
+                    <h2 className="mb-2 text-lg font-semibold">
+                      {m.ensi_cloud_modal_summary()}
+                    </h2>
                     <p className="whitespace-pre-line text-gray-700">
                       {brand.summary_description ||
-                        'No summary description available.'}
+                        m.ensi_cloud_modal_no_summary_description_available()}
                     </p>
                   </div>
                 </div>
@@ -106,7 +115,7 @@ function BackLink() {
         className="inline-flex items-center text-blue-600 hover:underline"
       >
         <ArrowLeft className="mr-2 size-4" />
-        Back to Brands
+        {m.ensi_cloud_modal_back_to_brands()}
       </Link>
     </Button>
   );
@@ -120,7 +129,7 @@ function SupportedDevices({ devices }: SupportedDevicesProps) {
   if (devices.length === 0) {
     return (
       <p className="text-gray-500">
-        This brand does not have any supported devices.
+        {m.ensi_cloud_modal_no_supported_devices()}
       </p>
     );
   }
@@ -129,7 +138,7 @@ function SupportedDevices({ devices }: SupportedDevicesProps) {
     <Card>
       <CardHeader>
         <CardTitle className="text-xl font-semibold">
-          Supported Devices
+          {m.ensi_cloud_modal_supported_devices()}
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -153,7 +162,7 @@ function DeviceCard({ device }: DeviceCardProps) {
       <div className="relative aspect-square">
         <Image
           src={device.image_url || '/placeholder.jpg'}
-          alt={`Image of ${device.device_name}`}
+          alt={`${m.ensi_cloud_modal_image_of_device()} ${device.device_name}`}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
           className="object-contain p-2"

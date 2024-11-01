@@ -451,5 +451,46 @@
 
   "ensi_compatible_smart_devices_capitalize_first_letter": "CapitalizeFirstLetter",
 
-  "ensi_compatible_smart_devices_filter_button": "Filters"
+  "ensi_compatible_smart_devices_filter_button": "Filters",
+
+  "ensi_cloud_modal_back_to_brands": "Back to Brands",
+  "ensi_cloud_modal_description_not_available": "Description not available.",
+  "ensi_cloud_modal_no_supported_devices": "This brand does not have any supported devices.",
+  "ensi_cloud_modal_supported_devices": "Supported Devices",
+  "ensi_cloud_modal_image_of_device": "Image of",
+  "ensi_cloud_modal_no_summary_description_available": "No summary description available.",
+  "ensi_cloud_modal_technologies": "Technologies",
+  "ensi_cloud_modal_summary": "Summary",
+  "ensi_cloud_modal_filters": "Filters",
+  "ensi_cloud_modal_categories": "Categories",
+  "ensi_cloud_modal_clear": "Clear",
+  "ensi_cloud_modal_sort_by": "Sort by",
+  "ensi_cloud_modal_sort_by_name": "Sort by Name",
+  "ensi_cloud_modal_sort_by_category": "Sort by Category",
+  "ensi_cloud_modal_no_brands_match": "No brands match your filters.",
+  "ensi_cloud_modal_unknown_company": "Unknown Company",
+  "ensi_cloud_modal_no_description_available": "No description available.",
+  "ensi_cloud_modal_technologies_badge": "Technologies",
+  "ensi_cloud_modal_capitalize_first_letter": "CapitalizeFirstLetter",
+  "ensi_cloud_modal_discuss_device_integration": "Discuss Device Integration",
+  "ensi_cloud_modal_filter_button": "Filters",
+
+  "ensi_compatible_smart_devices_smart_life_areas": "Smart Life Areas",
+
+  "ensi_compatible_smart_devices_apps_that_help_save_energy_title": "Apps that help save energy",
+  "ensi_compatible_smart_devices_apps_that_help_save_energy_description": "Save on your energy bill while saving the planet.",
+
+  "ensi_compatible_smart_devices_apps_for_a_safe_home_title": "Apps for a safe home",
+  "ensi_compatible_smart_devices_apps_for_a_safe_home_description": "Feel safe at home.",
+
+  "ensi_compatible_smart_devices_apps_for_a_healthier_life_title": "Apps for a healthier life",
+  "ensi_compatible_smart_devices_apps_for_a_healthier_life_description": "Boost your wellbeing with smart technology.",
+
+  "ensi_compatible_smart_devices_bring_the_smart_outdoors_title": "Bring the smart outdoors",
+  "ensi_compatible_smart_devices_bring_the_smart_outdoors_description": "Extend your smart home to your garden and beyond.",
+
+  "ensi_compatible_smart_devices_beyond_smart_home_title": "Beyond smart home",
+  "ensi_compatible_smart_devices_beyond_smart_home_description": "Discover the next level of smart living.",
+
+  "ensi_compatible_smart_devices_footer_text": "© {year} Smart Home App Gallery. All rights reserved."
 }
