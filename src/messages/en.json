@@ -492,5 +492,47 @@
   "ensi_compatible_smart_devices_beyond_smart_home_title": "Beyond smart home",
   "ensi_compatible_smart_devices_beyond_smart_home_description": "Discover the next level of smart living.",
 
-  "ensi_compatible_smart_devices_footer_text": "© {year} Smart Home App Gallery. All rights reserved."
+  "ensi_compatible_smart_devices_footer_text": "© {year} Smart Home App Gallery. All rights reserved.",
+
+  "howItIsDone_title": "How It Is Done?",
+
+  "knowledge_base_how_it_is_done_understanding_your_needs_title": "1. Understanding Your Needs",
+  "knowledge_base_how_it_is_done_consultation_customization": "Consultation & Customization",
+  "knowledge_base_how_it_is_done_in_depth_consultation": "In-depth consultation to understand your specific requirements",
+  "knowledge_base_how_it_is_done_site_visits": "Site visits for accurate assessment of your space",
+  "knowledge_base_how_it_is_done_customization_options": "Customization options to tailor solutions to your needs",
+  "knowledge_base_how_it_is_done_customer_consultation": "Customer consultation",
+  "knowledge_base_how_it_is_done_home_assessment": "Home assessment",
+  
+  "knowledge_base_how_it_is_done_supplying_smart_devices_title": "2. Supplying Smart Devices",
+  "knowledge_base_how_it_is_done_procurement_quality_assurance": "Procurement & Quality Assurance",
+  "knowledge_base_how_it_is_done_procurement_process": "Efficient procurement process for all required smart devices",
+  "knowledge_base_how_it_is_done_quality_assurance_measures": "Rigorous quality assurance measures for all equipment",
+  "knowledge_base_how_it_is_done_coordination_with_timelines": "Coordination with construction timelines for seamless integration",
+  "knowledge_base_how_it_is_done_device_selection": "Smart device selection",
+  "knowledge_base_how_it_is_done_quality_assurance": "Quality assurance process",
+  
+  "knowledge_base_how_it_is_done_installation_integration_title": "3. Installation & Integration",
+  "knowledge_base_how_it_is_done_on_site_support": "On-site Support & Collaboration",
+  "knowledge_base_how_it_is_done_expert_support": "Expert on-site support during installation",
+  "knowledge_base_how_it_is_done_collaboration_with_teams": "Seamless collaboration with construction teams",
+  "knowledge_base_how_it_is_done_training_for_partners": "Comprehensive training for construction partners",
+  "knowledge_base_how_it_is_done_final_testing": "Final testing and quality checks",
+  "knowledge_base_how_it_is_done_on_site_installation": "On-site installation",
+  "knowledge_base_how_it_is_done_team_collaboration": "Team collaboration",
+  
+  "knowledge_base_how_it_is_done_collaborative_process": "Our Collaborative Process",
+  "knowledge_base_how_it_is_done_seamless_integration": "Seamless integration of smart home solutions for construction projects",
+  
+  "knowledge_base_how_it_is_done_benefits_of_process": "Benefits of Our Process",
+  "knowledge_base_how_it_is_done_minimizing_disruptions": "Minimizing disruptions to construction timelines",
+  "knowledge_base_how_it_is_done_tailored_solutions": "Tailored solutions for each unique project",
+  "knowledge_base_how_it_is_done_long_term_support": "Long-term support and maintenance",
+  
+  "knowledge_base_how_it_is_done_testimonials": "Testimonials",
+  "knowledge_base_how_it_is_done_testimonial_quote": "Working with Ensi Home has streamlined our smart home integration process. Their team’s expertise and support have been invaluable to our projects.",
+  "knowledge_base_how_it_is_done_testimonial_author": "John Doe, Lead Architect at BuildSmart Construction",
+  
+  "knowledge_base_how_it_is_done_initiate_partnership": "Initiate a Partnership Today"
+
 }

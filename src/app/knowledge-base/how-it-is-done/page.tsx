@@ -3,13 +3,14 @@
 import React from 'react';
 import Component from '@/components/common/timeline-card';
 import { CurvedBackground } from '@/components/common/CurvyBackground';
+import * as m from '@/paraglide/messages';
 
 export default function SmartHomeGuide() {
   return (
     <div className="flex flex-col items-center">
       <CurvedBackground
         imageSrc="/images/pages/knowledge-base/how-it-is-done/cover.jpg"
-        title="How It Is Done?"
+        title={m.howItIsDone_title}
       />
       <Component />
       {/* 

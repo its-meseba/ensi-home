@@ -467,5 +467,47 @@
   "ensi_compatible_smart_devices_beyond_smart_home_title": "Akıllı Evin Ötesinde",
   "ensi_compatible_smart_devices_beyond_smart_home_description": "Akıllı yaşamın bir sonraki seviyesini keşfedin.",
 
-  "ensi_compatible_smart_devices_footer_text": "© {year} Akıllı Ev Uygulama Galerisi. Tüm hakları saklıdır."
+  "ensi_compatible_smart_devices_footer_text": "© {year} Akıllı Ev Uygulama Galerisi. Tüm hakları saklıdır.",
+
+  "howItIsDone_title": "Nasıl Yapılıyor?",
+
+  "knowledge_base_how_it_is_done_understanding_your_needs_title": "1. İhtiyaçlarınızı Anlamak",
+  "knowledge_base_how_it_is_done_consultation_customization": "Danışmanlık ve Özelleştirme",
+  "knowledge_base_how_it_is_done_in_depth_consultation": "Özel gereksinimlerinizi anlamak için ayrıntılı danışma",
+  "knowledge_base_how_it_is_done_site_visits": "Alanınızın doğru değerlendirmesi için saha ziyaretleri",
+  "knowledge_base_how_it_is_done_customization_options": "İhtiyaçlarınıza göre çözümleri özelleştirme seçenekleri",
+  "knowledge_base_how_it_is_done_customer_consultation": "Müşteri danışmanlığı",
+  "knowledge_base_how_it_is_done_home_assessment": "Ev değerlendirmesi",
+  
+  "knowledge_base_how_it_is_done_supplying_smart_devices_title": "2. Akıllı Cihazların Sağlanması",
+  "knowledge_base_how_it_is_done_procurement_quality_assurance": "Satın Alma ve Kalite Güvencesi",
+  "knowledge_base_how_it_is_done_procurement_process": "Gerekli tüm akıllı cihazlar için verimli tedarik süreci",
+  "knowledge_base_how_it_is_done_quality_assurance_measures": "Tüm ekipmanlar için titiz kalite güvence önlemleri",
+  "knowledge_base_how_it_is_done_coordination_with_timelines": "Kesintisiz entegrasyon için inşaat takvimleri ile koordinasyon",
+  "knowledge_base_how_it_is_done_device_selection": "Akıllı cihaz seçimi",
+  "knowledge_base_how_it_is_done_quality_assurance": "Kalite güvence süreci",
+  
+  "knowledge_base_how_it_is_done_installation_integration_title": "3. Kurulum ve Entegrasyon",
+  "knowledge_base_how_it_is_done_on_site_support": "Saha Destek ve İş Birliği",
+  "knowledge_base_how_it_is_done_expert_support": "Kurulum sırasında uzman saha desteği",
+  "knowledge_base_how_it_is_done_collaboration_with_teams": "İnşaat ekipleri ile kesintisiz iş birliği",
+  "knowledge_base_how_it_is_done_training_for_partners": "İnşaat ortakları için kapsamlı eğitim",
+  "knowledge_base_how_it_is_done_final_testing": "Son test ve kalite kontrolleri",
+  "knowledge_base_how_it_is_done_on_site_installation": "Sahada kurulum",
+  "knowledge_base_how_it_is_done_team_collaboration": "Ekip iş birliği",
+  
+  "knowledge_base_how_it_is_done_collaborative_process": "İş Birlikçi Sürecimiz",
+  "knowledge_base_how_it_is_done_seamless_integration": "İnşaat projeleri için akıllı ev çözümlerinin kesintisiz entegrasyonu",
+  
+  "knowledge_base_how_it_is_done_benefits_of_process": "Sürecimizin Faydaları",
+  "knowledge_base_how_it_is_done_minimizing_disruptions": "İnşaat takvimlerindeki kesintileri en aza indirmek",
+  "knowledge_base_how_it_is_done_tailored_solutions": "Her benzersiz proje için özel çözümler",
+  "knowledge_base_how_it_is_done_long_term_support": "Uzun vadeli destek ve bakım",
+  
+  "knowledge_base_how_it_is_done_testimonials": "Görüşler",
+  "knowledge_base_how_it_is_done_testimonial_quote": "Ensi Home ile çalışmak, akıllı ev entegrasyon sürecimizi kolaylaştırdı. Ekibin uzmanlığı ve desteği projelerimize büyük katkı sağladı.",
+  "knowledge_base_how_it_is_done_testimonial_author": "John Doe, Baş Mimar, BuildSmart İnşaat",
+  
+  "knowledge_base_how_it_is_done_initiate_partnership": "Bir Ortaklık Başlatın"
+
 }
