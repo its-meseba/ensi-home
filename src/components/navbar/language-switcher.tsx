@@ -13,10 +13,11 @@ import {
   availableLanguageTags,
   languageTag,
 } from '@/paraglide/runtime';
+import * as message from '@/paraglide/messages';
 
 const LanguageLabel: Record<AvailableLanguageTag, string> = {
-  en: 'English',
-  tr: 'Turkish',
+  en: message.language_en(),
+  tr: message.language_tr(),
 };
 
 export const LanguageSwitcher = () => {

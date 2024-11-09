@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 import { useVisitorType } from '@/context/VisitorTypeContext';
 import { Home, Building2, Briefcase, Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import { motion, useInView } from 'framer-motion';
+import { m, motion, useInView } from 'framer-motion';
 import * as message from '@/paraglide/messages';
 
 export default function EnhancedCustomerBenefits() {
@@ -199,7 +199,9 @@ export default function EnhancedCustomerBenefits() {
               className="flex items-center justify-center"
             >
               <Home className="mr-2 size-5" />
-              <span className="hidden text-base sm:inline">Home Owner</span>
+              <span className="hidden text-base sm:inline">
+                {message.userType_homeOwner()}
+              </span>
             </TabsTrigger>
             <TabsTrigger
               value="constructionCompany"
@@ -207,7 +209,7 @@ export default function EnhancedCustomerBenefits() {
             >
               <Building2 className="mr-2 size-5" />
               <span className="hidden text-base sm:inline">
-                Construction Company
+                {message.userType_constructionCompany()}
               </span>
             </TabsTrigger>
           </TabsList>

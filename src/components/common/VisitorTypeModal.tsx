@@ -13,8 +13,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import * as m from '@/paraglide/messages';
 
 const visitorTypes = [
-  { type: 'homeOwner', label: 'Home Owner' },
-  { type: 'constructionCompany', label: 'Construction Company' },
+  { type: 'homeOwner', label: m.userType_homeOwner() },
+  { type: 'constructionCompany', label: m.userType_constructionCompany() },
 ];
 
 export function VisitorTypeModal() {
