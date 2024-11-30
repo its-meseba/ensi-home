@@ -65,7 +65,7 @@ export default function GLTFViewer({ modelUrl }: GLTFViewerProps) {
       onMouseMove={handleInteraction}
       onTouchStart={handleInteraction}
     >
-      <Canvas camera={{ position: [0, 0, 2.5] }}>
+      <Canvas camera={{ position: [2.5, 2.5, 2.5] }}>
         <ambientLight intensity={1.5} />
         <pointLight position={[0, 5, 0]} intensity={2.5} />
         <pointLight position={[-5, 5, 5]} intensity={2.0} />
@@ -79,9 +79,12 @@ export default function GLTFViewer({ modelUrl }: GLTFViewerProps) {
         </Suspense>
         <OrbitControls
           enableZoom={true}
-          minDistance={0.1875}
-          maxDistance={0.1875}
+          minDistance={15}
+          maxDistance={15}
           enableRotate={!isRotating}
+          enablePan={false}
+          enableDamping={false}
+          target={[0, 0, 0]}
         />
       </Canvas>
     </div>

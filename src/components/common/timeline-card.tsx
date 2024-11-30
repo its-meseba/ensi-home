@@ -42,14 +42,15 @@ export default function Component() {
             </ul>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               <Image
-                src="/placeholder.jpg?height=240&width=320"
+                src="/images/pages/knowledge-base/how-it-is-done/1_1.png"
                 alt={m.knowledge_base_how_it_is_done_customer_consultation()}
                 width={320}
                 height={240}
                 className="w-full rounded-lg object-cover shadow-lg"
               />
               <Image
-                src="/placeholder.jpg?height=240&width=320"
+                // src="/placeholder.jpg?height=240&width=320"
+                src="/images/pages/knowledge-base/how-it-is-done/1_2.png"
                 alt={m.knowledge_base_how_it_is_done_home_assessment()}
                 width={320}
                 height={240}
@@ -91,14 +92,16 @@ export default function Component() {
             </ul>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               <Image
-                src="/placeholder.jpg?height=240&width=320"
+                // src="/placeholder.jpg?height=240&width=320"
+                src="/images/pages/knowledge-base/how-it-is-done/2_1.png"
                 alt={m.knowledge_base_how_it_is_done_device_selection()}
                 width={320}
                 height={240}
                 className="w-full rounded-lg object-cover shadow-lg"
               />
               <Image
-                src="/placeholder.jpg?height=240&width=320"
+                // src="/placeholder.jpg?height=240&width=320"
+                src="/images/pages/knowledge-base/how-it-is-done/2_2.png"
                 alt={m.knowledge_base_how_it_is_done_quality_assurance()}
                 width={320}
                 height={240}
@@ -146,14 +149,16 @@ export default function Component() {
             </ul>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               <Image
-                src="/placeholder.jpg?height=240&width=320"
+                //  src="/placeholder.jpg?height=240&width=320"
+                src="/images/pages/knowledge-base/how-it-is-done/3_1.png"
                 alt={m.knowledge_base_how_it_is_done_on_site_installation()}
                 width={320}
                 height={240}
                 className="w-full rounded-lg object-cover shadow-lg"
               />
               <Image
-                src="/placeholder.jpg?height=240&width=320"
+                // src="/placeholder.jpg?height=240&width=320"
+                src="/images/pages/knowledge-base/how-it-is-done/3_2.png"
                 alt={m.knowledge_base_how_it_is_done_team_collaboration()}
                 width={320}
                 height={240}

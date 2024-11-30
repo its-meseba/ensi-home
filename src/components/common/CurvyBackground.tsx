@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import GradientHeader from './headers';
+import { AnimatePresence, motion } from 'framer-motion';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface CurvedBackgroundProps {
   imageSrc: string;
@@ -113,10 +115,15 @@ export const CurvedBackgroundParallax: React.FC<CurvedBackgroundProps> = ({
     </div>
   );
 };
-
 export const CurvedBackgroundParallaxHeader: React.FC<
   CurvedBackgroundProps
-> = ({ imageSrc, title, height = '45vw', maxHeight = '480px' }) => {
+> = ({
+  imageSrc,
+  title,
+  height = '45vw',
+  maxHeight = '480px',
+  hasShadow = false,
+}) => {
   const parallaxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -145,7 +152,7 @@ export const CurvedBackgroundParallaxHeader: React.FC<
           priority
         />
       </div>
-      <div className="absolute inset-0 bg-black/30" />
+      {hasShadow && <div className="absolute inset-0 bg-black/30" />}
       <div className="absolute inset-0 flex items-center justify-center">
         <h1 className="text-center text-4xl font-bold text-white md:text-6xl">
           {title}
@@ -165,18 +172,30 @@ export const CurvedBackgroundParallaxHeader: React.FC<
     </div>
   );
 };
+
 interface CurvedBackgroundProps {
-  imageSrc: string;
+  images: string[];
   title: string;
   description?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
   titleStyle?: string;
+  hasShadow?: boolean;
 }
 
 export const CurvedBackgroundParallaxHeaderVertical: React.FC<
   CurvedBackgroundProps
-> = ({ imageSrc, title, description, children, titleStyle }) => {
+> = ({
+  images,
+  title,
+  description,
+  children,
+  titleStyle,
+  hasShadow = true,
+}) => {
   const parallaxRef = useRef<HTMLDivElement>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [nextImageIndex, setNextImageIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -190,18 +209,58 @@ export const CurvedBackgroundParallaxHeaderVertical: React.FC<
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setNextImageIndex((currentImageIndex + 1) % images.length);
+
+      // Quick fade transition
+      setTimeout(() => {
+        setCurrentImageIndex(nextImageIndex);
+        setIsTransitioning(false);
+      }, 450);
+    }, 3750);
+
+    return () => clearInterval(interval);
+  }, [currentImageIndex, images.length]);
+
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      <div ref={parallaxRef} className="absolute inset-0">
-        <Image
-          src={imageSrc}
-          alt="Background"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
+      <div className="absolute inset-0">
+        <div ref={parallaxRef} className="absolute inset-0">
+          <div className="relative size-full">
+            <div
+              className="absolute inset-0 transition-opacity duration-200"
+              style={{
+                opacity: isTransitioning ? 0 : 1,
+              }}
+            >
+              <Image
+                src={images[currentImageIndex]}
+                alt={`Background ${currentImageIndex + 1}`}
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+            <div
+              className="absolute inset-0 transition-opacity duration-200"
+              style={{
+                opacity: isTransitioning ? 1 : 0,
+              }}
+            >
+              <Image
+                src={images[nextImageIndex]}
+                alt={`Background ${nextImageIndex + 1}`}
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="absolute inset-0 bg-black/30" />
+      <div className={`absolute inset-0 ${hasShadow ? 'bg-black/30' : ''}`} />
       <div className="absolute inset-0 flex flex-col items-center justify-start py-4 sm:py-6 md:py-8 lg:py-12">
         <div className="mt-24 px-4 text-center sm:mt-24 sm:px-6 md:mt-24 md:px-8 lg:mt-24">
           {titleStyle ? (

@@ -134,12 +134,18 @@ export default function MainPage() {
       {/* Introduction Section */}
       <div id="intro">
         <CurvedBackgroundParallaxHeaderVertical
-          imageSrc="/images/pages/main/background-3.png"
+          imageSrc="/images/pages/ensi-home/box/R8.jpg"
+          images={[
+            '/images/pages/ensi-home/box/R7.jpg',
+            '/images/pages/ensi-home/box/R8.jpg',
+          ]}
           title={m.main_intro_title()}
           titleStyle="text-center text-4xl font-bold text-white md:text-6xl"
           description={m.main_intro_description()}
+          hasShadow={false}
         >
           {/* <EnsiHomeBox /> */}
+          <p></p>
         </CurvedBackgroundParallaxHeaderVertical>
       </div>
 
@@ -225,21 +231,31 @@ function MobileApp() {
     </div>
   );
 }
-// EnsiHomeBox component for displaying the Ensi Home Box image
+// EnsiHomeBox component for displaying the Ensi Home Box model
 function EnsiHomeBox() {
   return (
     <div className="flex flex-col items-center">
-      <div className="relative size-[400px] ">
-        <Image
-          src="/images/pages/ensi-home/box/ensi-home-box-no-background.png"
-          alt="Ensi Home Box"
-          fill
-          className="object-contain"
-        />
+      <div className="relative size-[400px]">
+        <GLTFViewer modelUrl="/assets/models/ensi-box-3.glb" />
       </div>
     </div>
   );
 }
+
+// function EnsiHomeBox() {
+//   return (
+//     <div className="flex flex-col items-center">
+//       <div className="relative size-[400px] ">
+//         <Image
+//           src="/images/pages/ensi-home/box/ensi-home-box-no-background.png"
+//           alt="Ensi Home Box"
+//           fill
+//           className="object-contain"
+//         />
+//       </div>
+//     </div>
+//   );
+// }
 
 // AiAssistantPart component for displaying the AI Voice Assistant interface
 function AiAssistantPart() {

@@ -57,7 +57,7 @@ export default function BoxPage() {
       variants={containerVariants}
     >
       <motion.section className="mb-0" variants={itemVariants}>
-        <IntroFeature
+        <IntroFeatureWithModel
           platform={m.ensi_box_platform()}
           title={m.ensi_box_title()}
           description={m.ensi_box_description()}
@@ -75,7 +75,8 @@ export default function BoxPage() {
               description: m.ensi_box_secure_connectivity_description(),
             },
           ]}
-          imageUrl="/images/pages/ensi-home/box/ensi-home-box.png"
+          // imageUrl="/images/pages/ensi-home/box/ensi-home-box.png"
+          modelUrl="/assets/models/ensi-box-3.glb"
         />
       </motion.section>
 
