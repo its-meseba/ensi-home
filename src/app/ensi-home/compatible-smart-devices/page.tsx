@@ -96,17 +96,90 @@ const technologyIconMap: {
   thread: GitBranch,
 };
 
+function getCategoryTranslation(category: string): string {
+  switch (category) {
+    case 'lighting':
+      return m.ensi_compatible_smart_devices_category_lighting();
+    case 'video':
+      return m.ensi_compatible_smart_devices_category_video();
+    case 'music':
+      return m.ensi_compatible_smart_devices_category_music();
+    case 'appliances':
+      return m.ensi_compatible_smart_devices_category_appliances();
+    case 'security':
+      return m.ensi_compatible_smart_devices_category_security();
+    case 'climate':
+      return m.ensi_compatible_smart_devices_category_climate();
+    case 'tools':
+      return m.ensi_compatible_smart_devices_category_tools();
+    case 'internet':
+      return m.ensi_compatible_smart_devices_category_internet();
+    case 'localization':
+      return m.ensi_compatible_smart_devices_category_localization();
+    case 'energy':
+      return m.ensi_compatible_smart_devices_category_energy();
+    default:
+      return capitalizeFirstLetter(category);
+  }
+}
+
 export default function EnhancedFilteredProducts() {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(() => {
+    if (typeof window !== 'undefined') {
+      const cached = localStorage.getItem('selectedCategories');
+      return cached ? JSON.parse(cached) : [];
+    }
+    return [];
+  });
   const [selectedTechnologies, setSelectedTechnologies] = useState<string[]>(
-    []
+    () => {
+      if (typeof window !== 'undefined') {
+        const cached = localStorage.getItem('selectedTechnologies');
+        return cached ? JSON.parse(cached) : [];
+      }
+      return [];
+    }
   );
   const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortOption, setSortOption] = useState<'name' | 'category'>('name');
+  const [searchQuery, setSearchQuery] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('searchQuery') || '';
+    }
+    return '';
+  });
+  const [sortOption, setSortOption] = useState<'name' | 'category'>(() => {
+    if (typeof window !== 'undefined') {
+      return (
+        (localStorage.getItem('sortOption') as 'name' | 'category') || 'name'
+      );
+    }
+    return 'name';
+  });
   const [isCategoryFilterOpen, setIsCategoryFilterOpen] = useState(true);
   const [isTechnologyFilterOpen, setIsTechnologyFilterOpen] = useState(true);
   const [isFilterSheetOpen, setIsFilterSheetOpen] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem(
+      'selectedCategories',
+      JSON.stringify(selectedCategories)
+    );
+  }, [selectedCategories]);
+
+  useEffect(() => {
+    localStorage.setItem(
+      'selectedTechnologies',
+      JSON.stringify(selectedTechnologies)
+    );
+  }, [selectedTechnologies]);
+
+  useEffect(() => {
+    localStorage.setItem('searchQuery', searchQuery);
+  }, [searchQuery]);
+
+  useEffect(() => {
+    localStorage.setItem('sortOption', sortOption);
+  }, [sortOption]);
 
   const filteredBrands = allBrands
     .filter((brand) => {
@@ -158,8 +231,15 @@ export default function EnhancedFilteredProducts() {
     );
   };
 
-  const clearCategories = () => setSelectedCategories([]);
-  const clearTechnologies = () => setSelectedTechnologies([]);
+  const clearCategories = () => {
+    setSelectedCategories([]);
+    localStorage.removeItem('selectedCategories');
+  };
+
+  const clearTechnologies = () => {
+    setSelectedTechnologies([]);
+    localStorage.removeItem('selectedTechnologies');
+  };
 
   const getCategoryCount = (category: string) => {
     return allBrands.filter((brand) => {
@@ -236,9 +316,7 @@ export default function EnhancedFilteredProducts() {
                         React.createElement(categoryIconMap[category], {
                           className: 'mr-2 h-4 w-4',
                         })}
-                      {m.ensi_compatible_smart_devices_capitalize_first_letter(
-                        category
-                      )}
+                      {getCategoryTranslation(category)}
                     </label>
                   </div>
                   <span className="text-xs text-gray-500">
@@ -251,7 +329,7 @@ export default function EnhancedFilteredProducts() {
         </AnimatePresence>
       </div>
 
-      <div>
+      {/* <div>
         <div className="mb-2 flex items-center justify-between">
           <Button
             variant="ghost"
@@ -316,7 +394,7 @@ export default function EnhancedFilteredProducts() {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </div> */}
     </div>
   );
 
@@ -462,15 +540,15 @@ export default function EnhancedFilteredProducts() {
                                   ],
                                   { className: 'mr-1 h-3 w-3' }
                                 )}
-                              {m.ensi_compatible_smart_devices_capitalize_first_letter(
+                              {getCategoryTranslation(
                                 productsData.categories.find((cat) =>
                                   cat.compatible_brands.includes(brand)
                                 )?.category_name || 'Unknown'
                               )}
                             </Badge>
-                            <Badge variant="outline">
+                            {/* <Badge variant="outline">
                               {m.ensi_compatible_smart_devices_technologies_badge()}
-                            </Badge>
+                            </Badge> */}
                           </div>
                         </div>
                       </Link>

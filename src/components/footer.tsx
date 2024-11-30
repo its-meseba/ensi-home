@@ -61,9 +61,9 @@ export default function Footer() {
             <h3 className="mb-4 text-lg font-bold">İletişim</h3>
             <p className="text-sm">
               AYAZAĞA MAH. KEMERBURGAZ CAD. VADI ISTANBUL PARK SİTESİ 7A BLOK
-              NO: 7B. KAT 2. SOLACE. SARIYER / İSTANBUL [^3]
+              NO: 7B. KAT 2. SOLACE. SARIYER / İSTANBUL
             </p>
-            <p className="mt-2 text-sm">Email: solace@solace.com.tr [^3]</p>
+            <p className="mt-2 text-sm">Email: solace@solace.com.tr</p>
           </div>
           <div>
             <h3 className="mb-4 text-lg font-bold">Bizi Takip Edin</h3>

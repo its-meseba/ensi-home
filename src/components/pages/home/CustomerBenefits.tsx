@@ -37,7 +37,7 @@ export default function EnhancedCustomerBenefits() {
     homeOwner: {
       title: message.main_customerBenefits_homeOwner_title(),
       description: message.main_customerBenefits_homeOwner_description(),
-      image: '/images/pages/main/home-users-main.png',
+      image: '/images/pages/main/home-users-main-2.png',
       content: [
         {
           title: message.main_customerBenefits_homeOwner_content_1_title(),
@@ -175,7 +175,7 @@ export default function EnhancedCustomerBenefits() {
                   </ul>
                 </div>
                 {section.imageUrl && (
-                  <div className="md:w-1/3">
+                  <div className="md:w-2/5">
                     <Image
                       src={section.imageUrl}
                       alt={section.title}
@@ -253,7 +253,7 @@ export default function EnhancedCustomerBenefits() {
                       <Image
                         src={data.image}
                         alt={data.title}
-                        width={600}
+                        width={1000}
                         height={400}
                         className="mx-auto rounded-3xl shadow-lg"
                       />

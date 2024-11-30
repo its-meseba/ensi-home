@@ -9,7 +9,7 @@ const PhoneWrapper = ({ children }) => {
         {/* Speaker */}
         <div className="absolute left-1/2 top-2 z-10 h-1 w-12 -translate-x-1/2 rounded-full bg-gray-800" />
         {/* Camera */}
-        <div className="absolute right-20 top-1.5 z-10 size-1.5 rounded-full bg-gray-700" />
+        {/* <div className="absolute right-20 top-1.5 z-10 size-1.5 rounded-full bg-gray-700" /> */}
 
         {/* Screen */}
         <div className="size-full overflow-hidden rounded-[24px] bg-white">

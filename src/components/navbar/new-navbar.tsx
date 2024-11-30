@@ -77,10 +77,10 @@ export default function NewNavbar() {
           },
         ],
         explanation: 'Discover our comprehensive smart home solutions.',
-        otherLinks: [
-          { title: 'Compare Solutions', href: `/${locale}/solutions/compare` },
-          { title: 'Case Studies', href: `/${locale}/solutions/case-studies` },
-        ],
+        // otherLinks: [
+        //   { title: 'Compare Solutions', href: `/${locale}/solutions/compare` },
+        //   { title: 'Case Studies', href: `/${locale}/solutions/case-studies` },
+        // ],
       },
       {
         title: m.navbar_knowledgeBase(),
@@ -90,14 +90,14 @@ export default function NewNavbar() {
             title: m.navbar_knowledgeBase_faq(),
             href: `/${locale}/knowledge-base/faq`,
           },
-          {
-            title: m.navbar_knowledgeBase_howItWorks(),
-            href: `/${locale}/knowledge-base/how-it-works`,
-          },
-          {
-            title: m.navbar_knowledgeBase_technicalSupport(),
-            href: `/${locale}/knowledge-base/technical-knowledge-base`,
-          },
+          // {
+          //   title: m.navbar_knowledgeBase_howItWorks(),
+          //   href: `/${locale}/knowledge-base/how-it-works`,
+          // },
+          // {
+          //   title: m.navbar_knowledgeBase_technicalSupport(),
+          //   href: `/${locale}/knowledge-base/technical-knowledge-base`,
+          // },
           {
             title: m.navbar_knowledgeBase_contact(),
             href: `/${locale}/knowledge-base/contact`,
@@ -105,13 +105,13 @@ export default function NewNavbar() {
         ],
         explanation:
           'Find answers and learn more about our smart home ecosystem.',
-        otherLinks: [
-          {
-            title: 'Video Tutorials',
-            href: `/${locale}/knowledge-base/tutorials`,
-          },
-          { title: 'Community Forum', href: `/${locale}/community` },
-        ],
+        // otherLinks: [
+        //   {
+        //     title: 'Video Tutorials',
+        //     href: `/${locale}/knowledge-base/tutorials`,
+        //   },
+        //   { title: 'Community Forum', href: `/${locale}/community` },
+        // ],
       },
     ],
     [locale]

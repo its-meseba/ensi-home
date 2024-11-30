@@ -7,6 +7,7 @@ import Link from 'next/link';
 interface AppScreenshot {
   imageUrl: string;
   link: string;
+  title: string;
 }
 
 interface InfiniteScrollingMobileApplicationScreensProps {
@@ -18,6 +19,7 @@ const InfiniteScrollingMobileApplicationScreens: React.FC<
 > = ({ screenshots }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -56,7 +58,9 @@ const InfiniteScrollingMobileApplicationScreens: React.FC<
         {screenshots.map((screenshot, index) => (
           <div
             key={index}
-            className="mx-4 w-56 flex-none transition-transform duration-300 hover:scale-105"
+            className="group mx-4 w-56 flex-none transition-transform duration-300 hover:scale-105"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
             <Link href={screenshot.link} passHref>
               <div className="relative h-[450px] w-56 cursor-pointer overflow-hidden rounded-[2.5rem] border-8 border-gray-800 shadow-xl">
@@ -68,6 +72,14 @@ const InfiniteScrollingMobileApplicationScreens: React.FC<
                   className="rounded-[2rem] object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                <div className="absolute inset-x-0 bottom-0 translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0">
+                  <div className="p-4 text-center">
+                    <h3 className="text-lg font-semibold text-white drop-shadow-lg">
+                      {screenshot.title}
+                    </h3>
+                  </div>
+                </div>
               </div>
             </Link>
           </div>

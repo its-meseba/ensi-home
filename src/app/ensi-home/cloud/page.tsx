@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import Link from 'next/link';
 import {
   AlertCircle,
   BellRing,
@@ -26,11 +25,15 @@ const sections = [
   { id: 'servers', title: m.ensi_cloud_server_systems_title(), icon: Server },
   { id: 'ai', title: m.ensi_cloud_ai_capabilities_title(), icon: Brain },
   { id: 'security', title: m.ensi_cloud_security_title(), icon: Lock },
-  { id: 'benefits', title: m.ensi_cloud_benefits_title(), icon: Users },
+  {
+    id: 'benefits',
+    title: m.ensi_cloud_benefits_users_construction_title(),
+    icon: Users,
+  },
 ];
 
 export default function CloudPage() {
-  const [activeSection, setActiveSection] = useState('overview');
+  const [currentSection, setCurrentSection] = useState('overview');
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
@@ -42,8 +45,31 @@ export default function CloudPage() {
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
+  const handleScroll = useCallback(() => {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const sectionElements = document.querySelectorAll('section[id]');
+
+    sectionElements.forEach((section) => {
+      const sectionTop = (section as HTMLElement).offsetTop;
+      const sectionHeight = (section as HTMLElement).offsetHeight;
+
+      if (
+        scrollPosition >= sectionTop - windowHeight / 3 &&
+        scrollPosition < sectionTop + sectionHeight - windowHeight / 3
+      ) {
+        setCurrentSection(section.id);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
   const NavigationContent = ({ closeNav }: { closeNav?: () => void }) => (
-    <div className="py-4">
+    <div className="py-0 md:py-36">
       <h2 className="mb-4 px-4 text-lg font-semibold">
         {m.ensi_cloud_navigation_title()}
       </h2>
@@ -52,11 +78,14 @@ export default function CloudPage() {
           <button
             key={section.id}
             onClick={() => {
-              setActiveSection(section.id);
+              const element = document.getElementById(section.id);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
               if (closeNav) closeNav();
             }}
             className={`flex w-full items-center rounded-3xl px-4 py-2 text-sm transition-colors ${
-              activeSection === section.id
+              currentSection === section.id
                 ? 'bg-primary text-primary-foreground'
                 : 'hover:bg-muted'
             }`}
@@ -70,12 +99,12 @@ export default function CloudPage() {
   );
 
   const Content = () => (
-    <div className="container mx-auto px-4 py-8 pb-20">
+    <div className="container mx-auto px-4 py-20 md:py-36">
       <h1 className="mb-6 text-3xl font-bold">
         {m.ensi_cloud_home_cloud_infrastructure()}
       </h1>
 
-      {activeSection === 'overview' && (
+      <section id="overview" className="mb-12">
         <Card>
           <CardHeader>
             <CardTitle>{m.ensi_cloud_overview_card_title()}</CardTitle>
@@ -91,9 +120,12 @@ export default function CloudPage() {
             </ul>
           </CardContent>
         </Card>
-      )}
+      </section>
 
-      {activeSection === 'servers' && (
+      <section id="servers" className="mb-12">
+        <h2 className="mb-6 text-2xl font-semibold">
+          {m.ensi_cloud_server_systems_title()}
+        </h2>
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
             <CardHeader>
@@ -136,9 +168,9 @@ export default function CloudPage() {
             </CardContent>
           </Card>
         </div>
-      )}
+      </section>
 
-      {activeSection === 'ai' && (
+      <section id="ai" className="mb-12">
         <Card>
           <CardHeader>
             <CardTitle>
@@ -181,9 +213,9 @@ export default function CloudPage() {
             </ul>
           </CardContent>
         </Card>
-      )}
+      </section>
 
-      {activeSection === 'security' && (
+      <section id="security" className="mb-12">
         <Card>
           <CardHeader>
             <CardTitle>{m.ensi_cloud_security_privacy_title()}</CardTitle>
@@ -226,9 +258,9 @@ export default function CloudPage() {
             </ul>
           </CardContent>
         </Card>
-      )}
+      </section>
 
-      {activeSection === 'benefits' && (
+      <section id="benefits">
         <Card>
           <CardHeader>
             <CardTitle>
@@ -262,15 +294,7 @@ export default function CloudPage() {
             </div>
           </CardContent>
         </Card>
-      )}
-
-      <div className="mt-8 text-center">
-        <Link href="/contact">
-          <Button size="lg" className="px-8 py-4 text-lg">
-            {m.ensi_cloud_more_about_cloud_solutions()}
-          </Button>
-        </Link>
-      </div>
+      </section>
     </div>
   );
 
@@ -278,7 +302,7 @@ export default function CloudPage() {
     <div className="bg-background min-h-screen">
       <div className="flex">
         {isLargeScreen && (
-          <div className="bg-background h-screen w-64 overflow-y-auto rounded-r-3xl border-r">
+          <div className="bg-background sticky top-0 h-screen w-64 overflow-y-auto rounded-r-3xl border-r">
             <NavigationContent />
           </div>
         )}

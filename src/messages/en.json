@@ -128,6 +128,54 @@
   "main_appleCards_card_6_category": "Security",
   "main_appleCards_card_6_title": "Stay informed about what's happening at home, so it's never on your mind.",
 
+  "main_appleCards_card_1_inside_title": "Personalized Experience",
+  "main_appleCards_card_1_inside_description": "Discover a smart home that evolves with you. Ensi Home intuitively learns your daily routines and preferences, ensuring that every aspect of your home environment is tailored to your unique lifestyle.",
+  "main_appleCards_card_1_inside_list_1": "Adaptive Lighting Solutions",
+  "main_appleCards_card_1_inside_list_2": "Custom Temperature Settings",
+  "main_appleCards_card_1_inside_list_3": "Personalized Entertainment Systems",
+  "main_appleCards_card_1_inside_list_4": "Smart Appliance Coordination",
+  "main_appleCards_card_1_inside_footer": "With Ensi Home, your home becomes a seamless extension of yourself, providing comfort and convenience that anticipates your needs before you even realize them.",
+
+  "main_appleCards_card_2_inside_title": "Constant Access",
+  "main_appleCards_card_2_inside_description": "Stay effortlessly connected to your home from anywhere in the world. Ensi Home offers real-time monitoring and control, giving you complete peace of mind and unparalleled convenience.",
+  "main_appleCards_card_2_inside_list_1": "Real-Time Security Alerts",
+  "main_appleCards_card_2_inside_list_2": "Remote Device Management",
+  "main_appleCards_card_2_inside_list_3": "Live Video Feeds",
+  "main_appleCards_card_2_inside_list_4": "Instant Notifications",
+  "main_appleCards_card_2_inside_footer": "Whether you're at work, on vacation, or simply out for the evening, Ensi Home ensures you're always in control, providing seamless access to all your home's features at your fingertips.",
+
+  "main_appleCards_card_3_inside_title": "Efficiency",
+  "main_appleCards_card_3_inside_description": "Maximize your home's energy efficiency with Ensi Home's intelligent systems. Our smart algorithms monitor and optimize energy usage, helping you reduce waste and lower your utility bills without sacrificing comfort.",
+  "main_appleCards_card_3_inside_list_1": "Automated Energy Saving Modes",
+  "main_appleCards_card_3_inside_list_2": "Smart Scheduling",
+  "main_appleCards_card_3_inside_list_3": "Energy Consumption Analytics",
+  "main_appleCards_card_3_inside_list_4": "Optimized Appliance Performance",
+  "main_appleCards_card_3_inside_footer": "Embrace a sustainable lifestyle with Ensi Home, ensuring that your home is both eco-friendly and cost-effective, adapting dynamically to your energy needs.",
+
+  "main_appleCards_card_4_inside_title": "Advanced Voice Assistant",
+  "main_appleCards_card_4_inside_description": "Experience the future of home control with Ensi Home's cutting-edge voice assistant. Seamlessly interact with your smart home using natural language and enjoy intuitive, context-aware responses.",
+  "main_appleCards_card_4_inside_list_1": "Natural Language Processing",
+  "main_appleCards_card_4_inside_list_2": "Contextual Understanding",
+  "main_appleCards_card_4_inside_list_3": "Multi-Language Support",
+  "main_appleCards_card_4_inside_list_4": "Custom Command Creation",
+  "main_appleCards_card_4_inside_footer": "From adjusting lighting and temperature to managing your daily schedule, Ensi Home's voice assistant makes controlling your home effortless and enjoyable.",
+
+  "main_appleCards_card_5_inside_title": "Automation AI",
+  "main_appleCards_card_5_inside_description": "Let Ensi Home's AI take the reins on your daily routines. By analyzing your habits and preferences, our system creates and manages custom automation flows that simplify your life and enhance your home's functionality.",
+  "main_appleCards_card_5_inside_list_1": "Routine Learning and Adaptation",
+  "main_appleCards_card_5_inside_list_2": "Automated Task Management",
+  "main_appleCards_card_5_inside_list_3": "Smart Scheduling",
+  "main_appleCards_card_5_inside_list_4": "Proactive Suggestions",
+  "main_appleCards_card_5_inside_footer": "From morning wake-up sequences to evening relaxation settings, Ensi Home ensures your home adjusts perfectly to your daily patterns, providing a truly intelligent living environment.",
+
+  "main_appleCards_card_6_inside_title": "Security",
+  "main_appleCards_card_6_inside_description": "Experience unparalleled peace of mind with Ensi Home's comprehensive security system. Our intelligent monitoring provides 24/7 protection, giving you real-time insights into your home's safety from anywhere in the world. The advanced AI-powered system not only detects potential security concerns but also takes smart, pre-authorized actions to protect what matters most to you.",
+  "main_appleCards_card_6_inside_list_1": "24/7 Surveillance Monitoring",
+  "main_appleCards_card_6_inside_list_2": "Real-Time Security Alerts",
+  "main_appleCards_card_6_inside_list_3": "Remote Access Control",
+  "main_appleCards_card_6_inside_list_4": "Emergency Response Integration",
+  "main_appleCards_card_6_inside_footer": "With Ensi Home, you can have complete peace of mind knowing that your home is protected around the clock. Our advanced system keeps you informed of any unusual activity and provide swift responses to ensure your safety.",
+
   "main_app_title": "An app you'll love.",
   "main_app_description": "Designed to make controlling, automating and monitoring your smart home intuitive and fun.",
 
@@ -460,8 +508,6 @@
 
   "ensi_compatible_smart_devices_technologies_badge": "Technologies",
 
-  "ensi_compatible_smart_devices_capitalize_first_letter": "CapitalizeFirstLetter",
-
   "ensi_compatible_smart_devices_filter_button": "Filters",
 
   "ensi_cloud_modal_back_to_brands": "Back to Brands",
@@ -482,7 +528,6 @@
   "ensi_cloud_modal_unknown_company": "Unknown Company",
   "ensi_cloud_modal_no_description_available": "No description available.",
   "ensi_cloud_modal_technologies_badge": "Technologies",
-  "ensi_cloud_modal_capitalize_first_letter": "CapitalizeFirstLetter",
   "ensi_cloud_modal_discuss_device_integration": "Discuss Device Integration",
   "ensi_cloud_modal_filter_button": "Filters",
 
@@ -544,5 +589,14 @@
   "knowledge_base_how_it_is_done_testimonial_quote": "Working with Ensi Home has streamlined our smart home integration process. Their team’s expertise and support have been invaluable to our projects.",
   "knowledge_base_how_it_is_done_testimonial_author": "John Doe, Lead Architect at BuildSmart Construction",
 
-  "knowledge_base_how_it_is_done_initiate_partnership": "Initiate a Partnership Today"
+  "ensi_compatible_smart_devices_category_appliances": "Appliances",
+  "ensi_compatible_smart_devices_category_climate": "Climate",
+  "ensi_compatible_smart_devices_category_energy": "Energy",
+  "ensi_compatible_smart_devices_category_internet": "Internet",
+  "ensi_compatible_smart_devices_category_lighting": "Lighting",
+  "ensi_compatible_smart_devices_category_localization": "Localization",
+  "ensi_compatible_smart_devices_category_music": "Music",
+  "ensi_compatible_smart_devices_category_security": "Security",
+  "ensi_compatible_smart_devices_category_tools": "Tools",
+  "ensi_compatible_smart_devices_category_video": "Video"
 }

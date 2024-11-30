@@ -18,6 +18,7 @@ import { CurvedBackgroundParallaxHeaderVertical } from '@/components/common/Curv
 import VerticalScrollIndicator from '@/components/common/scroll-indicator-vertical';
 import * as m from '@/paraglide/messages';
 import InfiniteScrollingMobileApplicationScreens from '@/components/pages/ensi-home/mobile-application/InfiniteScrollingMobileApplicationScreens';
+import FlutterIframe from '@/components/pages/ensi-home/mobile-application/device-iframe';
 import Image from 'next/image';
 
 export default function MainPage() {
@@ -91,12 +92,38 @@ export default function MainPage() {
       description: 'Customize your app experience',
     },
     {
-      imageUrl:
-        '/images/pages/ensi-home/mobile-application/smart-automations.jpeg',
-      link: '/ensi-home/mobile-application#smart-automations',
-      title: 'Smart Automation',
-      description: 'Create powerful AI-assisted automation flows',
+      imageUrl: '/images/pages/ensi-home/mobile-application/splash-screen.jpeg',
+      link: '/ensi-home/mobile-application#device-control',
+      title: 'Device Control',
+      description: 'Complete control of all your smart devices from one place',
     },
+    {
+      imageUrl:
+        '/images/pages/ensi-home/mobile-application/voice-assistant.jpeg',
+      link: '/ensi-home/mobile-application#ai-assistant',
+      title: 'AI Assistant',
+      description: 'Natural conversation control with Ensi AI',
+    },
+    {
+      imageUrl:
+        '/images/pages/ensi-home/mobile-application/home-sub-screen.jpeg',
+      link: '/ensi-home/mobile-application#customization',
+      title: 'Custom Dashboard',
+      description: 'Your personalized home control center',
+    },
+    {
+      imageUrl: '/images/pages/ensi-home/mobile-application/preferences.jpeg',
+      link: '/ensi-home/mobile-application#personalization',
+      title: 'Preferences',
+      description: 'Customize your app experience',
+    },
+    // {
+    //   imageUrl:
+    //     '/images/pages/ensi-home/mobile-application/smart-automations.jpeg',
+    //   link: '/ensi-home/mobile-application#smart-automations',
+    //   title: 'Smart Automation',
+    //   description: 'Create powerful AI-assisted automation flows',
+    // },
   ];
 
   return (
@@ -167,6 +194,17 @@ export default function MainPage() {
 }
 
 // MobileApp component for displaying a mobile app mockup
+// function MobileApp() {
+//   return (
+//     <div className="flex flex-col items-center ">
+//       <FlutterIframe
+//         url="https://demo.ensihome.solace.com.tr"
+//         isSmallCard={true}
+//       />
+//     </div>
+//   );
+// }
+
 function MobileApp() {
   return (
     <div className="flex flex-col items-center">
@@ -187,14 +225,13 @@ function MobileApp() {
     </div>
   );
 }
-
 // EnsiHomeBox component for displaying the Ensi Home Box image
 function EnsiHomeBox() {
   return (
     <div className="flex flex-col items-center">
-      <div className="relative size-[400px]">
+      <div className="relative size-[400px] ">
         <Image
-          src="/images/pages/ensi-home/box/ensi-home-box.png"
+          src="/images/pages/ensi-home/box/ensi-home-box-no-background.png"
           alt="Ensi Home Box"
           fill
           className="object-contain"

@@ -67,7 +67,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             <div className="fixed bottom-4 left-4 z-50">
               <VisitorTypeSelector />
             </div>
-            <AIHelperButton />
+            {/* <AIHelperButton /> */}
           </AppWrapper>
           {/* </Providers> */}
         </body>

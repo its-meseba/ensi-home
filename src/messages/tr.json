@@ -128,6 +128,54 @@
   "main_appleCards_card_6_category": "Güvenlik",
   "main_appleCards_card_6_title": "Evde ne olup bittiği hakkında bilgilendirin, böylece aklınızdan çıkmaz.",
 
+  "main_appleCards_card_1_inside_title": "Sizin için özelleştirilmiş akıllı eviniz.",
+  "main_appleCards_card_1_inside_description": "Sizinle birlikte gelişen akıllı bir ev keşfedin. Ensi Home, günlük rutinlerinizi ve tercihlerinizi sezgisel olarak öğrenerek, ev ortamınızın her yönünün benzersiz yaşam tarzınıza uygun olmasını sağlar.",
+  "main_appleCards_card_1_inside_list_1": "Uyarlanabilir Aydınlatma Çözümleri",
+  "main_appleCards_card_1_inside_list_2": "Özel Sıcaklık Ayarları",
+  "main_appleCards_card_1_inside_list_3": "Kişiselleştirilmiş Eğlence Sistemleri",
+  "main_appleCards_card_1_inside_list_4": "Akıllı Cihaz Koordinasyonu",
+  "main_appleCards_card_1_inside_footer": "Ensi Home ile eviniz, ihtiyaçlarınızı siz fark etmeden önce tahmin eden, konfor ve kolaylık sunan bir uzantınız haline gelir.",
+
+  "main_appleCards_card_2_inside_title": "Her yerde evinize erişim sağlayın.",
+  "main_appleCards_card_2_inside_description": "Dünyanın neresinde olursanız olun evinize zahmetsizce bağlı kalın. Ensi Home, gerçek zamanlı izleme ve kontrol sunarak size tam bir huzur ve eşsiz bir kolaylık sağlar.",
+  "main_appleCards_card_2_inside_list_1": "Gerçek Zamanlı Güvenlik Uyarıları",
+  "main_appleCards_card_2_inside_list_2": "Uzaktan Cihaz Yönetimi",
+  "main_appleCards_card_2_inside_list_3": "Canlı Video Yayınları",
+  "main_appleCards_card_2_inside_list_4": "Anlık Bildirimler",
+  "main_appleCards_card_2_inside_footer": "İster işte, ister tatilde, ister sadece dışarıda olun, Ensi Home, evinizin tüm özelliklerine anında erişim sağlayarak her zaman kontrolün sizde olmasını sağlar.",
+
+  "main_appleCards_card_3_inside_title": "Enerji israfını ortadan kaldırın, faturanızı azaltın.",
+  "main_appleCards_card_3_inside_description": "Ensi Home'un akıllı sistemleriyle evinizin enerji verimliliğini en üst düzeye çıkarın. Akıllı algoritmalarımız enerji kullanımını izler ve optimize eder, atıkları azaltmanıza ve konforunuzdan ödün vermeden faturalarınızı düşürmenize yardımcı olur.",
+  "main_appleCards_card_3_inside_list_1": "Otomatik Enerji Tasarrufu Modları",
+  "main_appleCards_card_3_inside_list_2": "Akıllı Zamanlama",
+  "main_appleCards_card_3_inside_list_3": "Enerji Tüketimi Analitiği",
+  "main_appleCards_card_3_inside_list_4": "Optimize Edilmiş Cihaz Performansı",
+  "main_appleCards_card_3_inside_footer": "Ensi Home ile sürdürülebilir bir yaşam tarzını benimseyin. Eviniz, enerji ihtiyaçlarınıza dinamik bir şekilde uyum sağlayarak hem çevre dostu hem de ekonomik olur.",
+
+  "main_appleCards_card_4_inside_title": "Kontekstli anlama ile sorunsuz kullanılabilirlik sağlayan bir sesli asistan.",
+  "main_appleCards_card_4_inside_description": "Ensi Home'un son teknoloji sesli asistanı ile ev kontrolünün geleceğini deneyimleyin. Doğal bir dille akıllı evinizle kusursuz bir şekilde etkileşim kurun ve sezgisel, bağlama duyarlı yanıtların keyfini çıkarın.",
+  "main_appleCards_card_4_inside_list_1": "Doğal Dil İşleme",
+  "main_appleCards_card_4_inside_list_2": "Bağlamsal Anlama",
+  "main_appleCards_card_4_inside_list_3": "Çok Dilli Destek",
+  "main_appleCards_card_4_inside_list_4": "Özel Komut Oluşturma",
+  "main_appleCards_card_4_inside_footer": "Aydınlatmayı ve sıcaklığı ayarlamaktan günlük programınızı yönetmeye kadar, Ensi Home'un sesli asistanı evinizi kontrol etmeyi zahmetsiz ve keyifli hale getirir.",
+
+  "main_appleCards_card_5_inside_title": "Rutinlerinizi otomatik olarak özelleştirin.",
+  "main_appleCards_card_5_inside_description": "Günlük rutinlerinizi Ensi Home'un yapay zekasına bırakın. Alışkanlıklarınızı ve tercihlerinizi analiz eden sistemimiz, hayatınızı kolaylaştıran ve evinizin işlevselliğini artıran özel otomasyon akışları oluşturur ve yönetir.",
+  "main_appleCards_card_5_inside_list_1": "Rutin Öğrenme ve Uyarlama",
+  "main_appleCards_card_5_inside_list_2": "Otomatik Görev Yönetimi",
+  "main_appleCards_card_5_inside_list_3": "Akıllı Zamanlama",
+  "main_appleCards_card_5_inside_list_4": "Proaktif Öneriler",
+  "main_appleCards_card_5_inside_footer": "Sabah kalkış sekanslarından akşam rahatlama ayarlarına kadar, Ensi Home, günlük alışkanlıklarınıza mükemmel bir şekilde uyum sağlayarak gerçekten akıllı bir yaşam ortamı sağlar.",
+
+  "main_appleCards_card_6_inside_title": "Evde ne olup bittiği hakkında bilgilendirin, böylece aklınızdan çıkmaz.",
+  "main_appleCards_card_6_inside_description": "Ensi Home'un kapsamlı güvenlik sistemiyle eşsiz bir huzuru deneyimleyin. Akıllı izleme sistemimiz, dünyanın neresinde olursanız olun evinizin güvenliği hakkında size 7/24 bilgi sağlar. Gelişmiş yapay zeka destekli sistemimiz, yalnızca potansiyel güvenlik sorunlarını algılamakla kalmaz, aynı zamanda önceden yetkilendirilmiş akıllı eylemlerle sizin için önemli olanları korur.",
+  "main_appleCards_card_6_inside_list_1": "7/24 Gözetim İzleme",
+  "main_appleCards_card_6_inside_list_2": "Gerçek Zamanlı Güvenlik Uyarıları",
+  "main_appleCards_card_6_inside_list_3": "Uzaktan Erişim Kontrolü",
+  "main_appleCards_card_6_inside_list_4": "Acil Durum Müdahale Entegrasyonu",
+  "main_appleCards_card_6_inside_footer": "Ensi Home ile evinizin günün her saati korunduğunu bilerek tam bir huzura sahip olabilirsiniz. Gelişmiş sistemimiz, olağandışı herhangi bir etkinlikten sizi haberdar eder ve güvenliğinizi sağlamak için hızlı çözümler sunar.",
+
   "main_app_title": "Seveceğiniz bir uygulama.",
   "main_app_description": "Akıllı evinizi kontrol etmenin, otomatikleştirmenin ve izlemenin eğlenceli ve sezgisel olmasını sağlamak için tasarlandı.",
 
@@ -434,8 +482,6 @@
 
   "ensi_compatible_smart_devices_technologies_badge": "Teknolojiler",
 
-  "ensi_compatible_smart_devices_capitalize_first_letter": "capitalizeFirstLetter",
-
   "ensi_compatible_smart_devices_filter_button": "Filtreler",
 
   "ensi_cloud_modal_back_to_brands": "Markalara Geri Dön",
@@ -456,7 +502,6 @@
   "ensi_cloud_modal_unknown_company": "Bilinmeyen Şirket",
   "ensi_cloud_modal_no_description_available": "Açıklama mevcut değil.",
   "ensi_cloud_modal_technologies_badge": "Teknolojiler",
-  "ensi_cloud_modal_capitalize_first_letter": "capitalizeFirstLetter",
   "ensi_cloud_modal_discuss_device_integration": "Cihaz Entegrasyonunu Görüşün",
   "ensi_cloud_modal_filter_button": "Filtreler",
 
@@ -518,5 +563,16 @@
   "knowledge_base_how_it_is_done_testimonial_quote": "Ensi Home ile çalışmak, akıllı ev entegrasyon sürecimizi kolaylaştırdı. Ekibin uzmanlığı ve desteği projelerimize büyük katkı sağladı.",
   "knowledge_base_how_it_is_done_testimonial_author": "John Doe, Baş Mimar, BuildSmart İnşaat",
 
-  "knowledge_base_how_it_is_done_initiate_partnership": "Bir Ortaklık Başlatın"
+  "knowledge_base_how_it_is_done_initiate_partnership": "Bir Ortaklık Başlatın",
+
+  "ensi_compatible_smart_devices_category_appliances": "Ev Aletleri",
+  "ensi_compatible_smart_devices_category_climate": "İklimlendirme",
+  "ensi_compatible_smart_devices_category_energy": "Enerji",
+  "ensi_compatible_smart_devices_category_internet": "İnternet",
+  "ensi_compatible_smart_devices_category_lighting": "Aydınlatma",
+  "ensi_compatible_smart_devices_category_localization": "Konumlandırma",
+  "ensi_compatible_smart_devices_category_music": "Müzik",
+  "ensi_compatible_smart_devices_category_security": "Güvenlik",
+  "ensi_compatible_smart_devices_category_tools": "Araçlar",
+  "ensi_compatible_smart_devices_category_video": "Video"
 }

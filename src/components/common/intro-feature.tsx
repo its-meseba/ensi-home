@@ -184,7 +184,6 @@ interface IntroFeatureWithMobileAppMockupProps {
   checkPoints: { title: string; description: string }[];
   mockupUrl: string;
 }
-
 export const IntroFeatureWithMobileAppMockup = ({
   platform,
   title,
@@ -194,8 +193,8 @@ export const IntroFeatureWithMobileAppMockup = ({
 }: IntroFeatureWithMobileAppMockupProps) => (
   <div className="w-full py-20 lg:py-40">
     <div className="container mx-auto">
-      <div className="container grid grid-cols-1 items-center gap-8 rounded-lg py-8 lg:grid-cols-2">
-        <div className="flex flex-col gap-10">
+      <div className="container flex flex-col gap-8 rounded-lg py-8 lg:grid lg:grid-cols-2">
+        <div className="order-2 flex flex-col gap-10 lg:order-1">
           <div className="flex flex-col gap-4">
             <div>
               <Badge variant="outline">{platform}</Badge>
@@ -223,7 +222,7 @@ export const IntroFeatureWithMobileAppMockup = ({
             ))}
           </div>
         </div>
-        <div className="hidden aspect-square items-center justify-center rounded-md lg:flex">
+        <div className="order-1 flex aspect-square items-center justify-center rounded-md lg:order-2">
           <FlutterIframe url={mockupUrl} />
         </div>
       </div>
