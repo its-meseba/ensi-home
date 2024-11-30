@@ -75,7 +75,7 @@ export default function BoxPage() {
             description: "Stay informed about your home's status in real-time.",
           },
         ]}
-        modelUrl="/assets/models/ensi-home-box.glb" // Add the model URL
+        modelUrl="/assets/models/ensi-box.glb" // Add the model URL
       />
       <Case1
         title={m.ensi_case_studies_our_partners()}

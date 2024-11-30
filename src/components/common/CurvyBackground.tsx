@@ -170,11 +170,12 @@ interface CurvedBackgroundProps {
   title: string;
   description?: string;
   children?: React.ReactNode;
+  titleStyle?: string;
 }
 
 export const CurvedBackgroundParallaxHeaderVertical: React.FC<
   CurvedBackgroundProps
-> = ({ imageSrc, title, description, children }) => {
+> = ({ imageSrc, title, description, children, titleStyle }) => {
   const parallaxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -203,9 +204,13 @@ export const CurvedBackgroundParallaxHeaderVertical: React.FC<
       <div className="absolute inset-0 bg-black/30" />
       <div className="absolute inset-0 flex flex-col items-center justify-start py-4 sm:py-6 md:py-8 lg:py-12">
         <div className="mt-24 px-4 text-center sm:mt-24 sm:px-6 md:mt-24 md:px-8 lg:mt-24">
-          <GradientHeader level="h1" isBold={true} isDarkMode={false}>
-            {title}
-          </GradientHeader>
+          {titleStyle ? (
+            <h1 className={titleStyle}>{title}</h1>
+          ) : (
+            <GradientHeader level="h1" isBold={true} isDarkMode={false}>
+              {title}
+            </GradientHeader>
+          )}
           {description && (
             <p className="text-lg text-white sm:text-xl md:text-2xl">
               {description}

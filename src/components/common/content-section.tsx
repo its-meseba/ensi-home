@@ -47,13 +47,13 @@ const ContentItem: React.FC<ContentItemProps> = ({
       initial="hidden"
       animate={controls}
       whileHover={{ scale: 1.05 }}
-      className="group relative h-[700px] w-full overflow-hidden rounded-3xl border-2 border-gray-300 bg-white shadow-lg transition-all duration-300 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
+      className="group relative h-[500px] w-full overflow-hidden rounded-3xl border-2 border-gray-300 bg-white shadow-lg transition-all duration-300 hover:shadow-xl sm:h-[550px] md:h-[600px] lg:h-[650px] dark:border-gray-700 dark:bg-gray-800"
     >
-      <div className="relative h-[600px] w-full overflow-hidden bg-gray-50/10 p-4 dark:bg-gray-800/50">
+      <div className="relative h-[400px] w-full overflow-hidden bg-gray-50/10 p-4 sm:h-[450px] md:h-[500px] lg:h-[550px] dark:bg-gray-800/50">
         {component}
       </div>
       <motion.div
-        className="absolute inset-x-0 bottom-0 flex h-[100px] flex-col items-center justify-center space-y-2 rounded-b-3xl bg-white px-6 transition-all duration-300 group-hover:h-[120px] dark:bg-gray-800"
+        className="absolute inset-x-0 bottom-0 flex h-[100px] flex-col items-center justify-center space-y-2 rounded-b-3xl bg-white px-6 transition-all duration-300 group-hover:h-[110px] dark:bg-gray-800"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.3 }}
@@ -103,13 +103,13 @@ export const ContentSection: React.FC<ContentSectionProps> = ({ items }) => {
   };
 
   return (
-    <section ref={ref} className="w-full py-20">
-      <div className="container mx-auto px-4">
+    <section ref={ref} className="min-h-screen w-full py-20">
+      <div className="container mx-auto h-full px-4">
         <motion.h2
           variants={headingVariants}
           initial="hidden"
           animate={controls}
-          className="mb-12 text-center text-3xl font-normal tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
+          className="mb-12 text-center text-2xl font-normal tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl"
         >
           {m.main_threesome_title()}
         </motion.h2>
@@ -117,7 +117,7 @@ export const ContentSection: React.FC<ContentSectionProps> = ({ items }) => {
           variants={containerVariants}
           initial="hidden"
           animate={controls}
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+          className="grid h-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {items.map((item) => (
             <ContentItem key={item.id} {...item} />

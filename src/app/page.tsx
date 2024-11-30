@@ -15,9 +15,10 @@ import References from '@/components/pages/home/References';
 import ApplyComponent from '@/components/pages/home/ApplyNow';
 import BlogPostsSection from '@/components/pages/home/BlogAndNews';
 import { CurvedBackgroundParallaxHeaderVertical } from '@/components/common/CurvyBackground';
-import InfiniteScrollingMobileApplicationScreens from '@/components/pages/ensi-home/mobile-application/InfiniteScrollingMobileApplicationScreens';
 import VerticalScrollIndicator from '@/components/common/scroll-indicator-vertical';
 import * as m from '@/paraglide/messages';
+import InfiniteScrollingMobileApplicationScreens from '@/components/pages/ensi-home/mobile-application/InfiniteScrollingMobileApplicationScreens';
+import Image from 'next/image';
 
 export default function MainPage() {
   // Define the main content items for the ContentSection component
@@ -62,6 +63,41 @@ export default function MainPage() {
     { id: 'blog', label: m.main_scroll_indicator_blog() },
     { id: 'apply', label: m.main_scroll_indicator_apply() },
   ];
+  const appScreenshots = [
+    {
+      imageUrl: '/images/pages/ensi-home/mobile-application/splash-screen.jpeg',
+      link: '/ensi-home/mobile-application#device-control',
+      title: 'Device Control',
+      description: 'Complete control of all your smart devices from one place',
+    },
+    {
+      imageUrl:
+        '/images/pages/ensi-home/mobile-application/voice-assistant.jpeg',
+      link: '/ensi-home/mobile-application#ai-assistant',
+      title: 'AI Assistant',
+      description: 'Natural conversation control with Ensi AI',
+    },
+    {
+      imageUrl:
+        '/images/pages/ensi-home/mobile-application/home-sub-screen.jpeg',
+      link: '/ensi-home/mobile-application#customization',
+      title: 'Custom Dashboard',
+      description: 'Your personalized home control center',
+    },
+    {
+      imageUrl: '/images/pages/ensi-home/mobile-application/preferences.jpeg',
+      link: '/ensi-home/mobile-application#personalization',
+      title: 'Preferences',
+      description: 'Customize your app experience',
+    },
+    {
+      imageUrl:
+        '/images/pages/ensi-home/mobile-application/smart-automations.jpeg',
+      link: '/ensi-home/mobile-application#smart-automations',
+      title: 'Smart Automation',
+      description: 'Create powerful AI-assisted automation flows',
+    },
+  ];
 
   return (
     <section className={`min-h-screen from-gray-100 to-gray-200`}>
@@ -71,11 +107,12 @@ export default function MainPage() {
       {/* Introduction Section */}
       <div id="intro">
         <CurvedBackgroundParallaxHeaderVertical
-          imageSrc="/images/pages/main/cover2.jpg"
+          imageSrc="/images/pages/main/background-3.png"
           title={m.main_intro_title()}
+          titleStyle="text-center text-4xl font-bold text-white md:text-6xl"
           description={m.main_intro_description()}
         >
-          <EnsiHomeBox />
+          {/* <EnsiHomeBox /> */}
         </CurvedBackgroundParallaxHeaderVertical>
       </div>
 
@@ -88,7 +125,9 @@ export default function MainPage() {
 
       {/* Mobile App Section */}
       <div id="mobile-app">
-        <InfiniteScrollingMobileApplicationScreens />
+        <InfiniteScrollingMobileApplicationScreens
+          screenshots={appScreenshots}
+        />
       </div>
 
       {/* Content Section for Mobile App, Box, and AI Voice Assistant */}
@@ -109,19 +148,19 @@ export default function MainPage() {
         </div>
 
         {/* References Section */}
-        <div id="references">
+        {/* <div id="references">
           <References />
-        </div>
+        </div> */}
 
         {/* Blog Posts Section */}
-        <div id="blog">
+        {/* <div id="blog">
           <BlogPostsSection />
-        </div>
+        </div> */}
 
         {/* Apply Now Section */}
-        <div id="apply">
+        {/* <div id="apply">
           <ApplyComponent />
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -131,23 +170,36 @@ export default function MainPage() {
 function MobileApp() {
   return (
     <div className="flex flex-col items-center">
-      <div className="relative h-[600px] w-[300px] rounded-lg bg-white shadow-lg">
-        <div className="absolute left-0 top-0 size-full rounded-lg bg-white">
-          <ThreeComponentiPhoneMockup>
-            <div className="bg-white"></div>
-          </ThreeComponentiPhoneMockup>
+      <div className="relative mx-auto h-[513px] w-[256px] rounded-[2.5rem] border-8 border-gray-800 shadow-lg">
+        <div className="absolute -right-[10px] top-[90px] h-[36px] w-[2px] rounded-l-lg bg-gray-800"></div>
+        <div className="absolute -left-[10px] top-[90px] h-[36px] w-[2px] rounded-r-lg bg-gray-800"></div>
+        <div className="absolute -left-[10px] top-[137px] h-[36px] w-[2px] rounded-r-lg bg-gray-800"></div>
+        <div className="size-full overflow-hidden rounded-[2.3rem] bg-white">
+          <Image
+            src="/images/pages/ensi-home/mobile-application/home-sub-screen.jpeg"
+            alt="Ensi Home Mobile App"
+            width={256}
+            height={513}
+            className="size-full object-cover"
+          />
         </div>
-        <div className="absolute bottom-0 left-0 h-10 w-full rounded-b-lg bg-white"></div>
       </div>
     </div>
   );
 }
 
-// EnsiHomeBox component for displaying the Ensi Home Box 3D model
+// EnsiHomeBox component for displaying the Ensi Home Box image
 function EnsiHomeBox() {
   return (
     <div className="flex flex-col items-center">
-      <GLTFViewer modelUrl="/assets/models/ensi-home-box.glb" />
+      <div className="relative size-[400px]">
+        <Image
+          src="/images/pages/ensi-home/box/ensi-home-box.png"
+          alt="Ensi Home Box"
+          fill
+          className="object-contain"
+        />
+      </div>
     </div>
   );
 }

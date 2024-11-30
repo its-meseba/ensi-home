@@ -320,11 +320,11 @@ export default function NewNavbar() {
                       {m.navbar_howItIsDone()}
                     </Button>
                   </Link>
-                  <Link href={`/${locale}/blog`}>
+                  {/* <Link href={`/${locale}/blog`}>
                     <Button variant="outline" className="w-full">
                       📰 Blog
                     </Button>
-                  </Link>
+                  </Link> */}
                   <LanguageSwitcher />
                 </div>
               </nav>
@@ -381,9 +381,9 @@ export default function NewNavbar() {
                 <Link href={`/${locale}/knowledge-base/how-it-is-done`}>
                   <Button variant="primary">{m.navbar_howItIsDone()}</Button>
                 </Link>
-                <Link href={`/${locale}/blog`}>
+                {/* <Link href={`/${locale}/blog`}>
                   <Button variant="outline">📰 Blog</Button>
-                </Link>
+                </Link> */}
                 <LanguageSwitcher />
               </motion.div>
             )}

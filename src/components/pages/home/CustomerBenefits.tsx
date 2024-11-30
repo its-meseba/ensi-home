@@ -37,7 +37,7 @@ export default function EnhancedCustomerBenefits() {
     homeOwner: {
       title: message.main_customerBenefits_homeOwner_title(),
       description: message.main_customerBenefits_homeOwner_description(),
-      image: '/placeholder.jpg?height=400&width=600',
+      image: '/images/pages/main/home-users-main.png',
       content: [
         {
           title: message.main_customerBenefits_homeOwner_content_1_title(),
@@ -46,7 +46,7 @@ export default function EnhancedCustomerBenefits() {
           features: message
             .main_customerBenefits_homeOwner_content_1_features()
             .split(', '),
-          imageUrl: '/placeholder.jpg?height=200&width=300',
+          imageUrl: '/images/pages/main/home-users-ease-of-use.png',
         },
         {
           title: message.main_customerBenefits_homeOwner_content_2_title(),
@@ -55,7 +55,7 @@ export default function EnhancedCustomerBenefits() {
           features: message
             .main_customerBenefits_homeOwner_content_2_features()
             .split(', '),
-          imageUrl: '/placeholder.jpg?height=200&width=300',
+          imageUrl: '/images/pages/main/home-users-automation.png',
         },
         {
           title: message.main_customerBenefits_homeOwner_content_3_title(),
@@ -64,6 +64,7 @@ export default function EnhancedCustomerBenefits() {
           features: message
             .main_customerBenefits_homeOwner_content_3_features()
             .split(', '),
+          imageUrl: '/images/pages/main/home-users-easy-integration.png',
         },
         {
           title: message.main_customerBenefits_homeOwner_content_4_title(),
@@ -72,7 +73,16 @@ export default function EnhancedCustomerBenefits() {
           features: message
             .main_customerBenefits_homeOwner_content_4_features()
             .split(', '),
-          imageUrl: '/placeholder.jpg?height=200&width=300',
+          imageUrl: '/images/pages/main/home-users-future.png',
+        },
+        {
+          title: message.main_customerBenefits_homeOwner_content_5_title(),
+          description:
+            message.main_customerBenefits_homeOwner_content_5_description(),
+          features: message
+            .main_customerBenefits_homeOwner_content_5_features()
+            .split(', '),
+          imageUrl: '/images/pages/main/home-users-security.png',
         },
       ],
       cta: message.main_customerBenefits_homeOwner_cta(),
@@ -81,7 +91,7 @@ export default function EnhancedCustomerBenefits() {
       title: message.main_customerBenefits_constructionCompany_title(),
       description:
         message.main_customerBenefits_constructionCompany_description(),
-      image: '/placeholder.jpg?height=400&width=600',
+      image: '/images/pages/main/construction-1.png',
       content: [
         {
           title:
@@ -91,6 +101,7 @@ export default function EnhancedCustomerBenefits() {
           features: message
             .main_customerBenefits_constructionCompany_content_1_features()
             .split(', '),
+          imageUrl: '/images/pages/main/construction-main.png',
         },
         {
           title:
@@ -100,6 +111,7 @@ export default function EnhancedCustomerBenefits() {
           features: message
             .main_customerBenefits_constructionCompany_content_2_features()
             .split(', '),
+          imageUrl: '/images/pages/main/construction-growth.png',
         },
         {
           title:
@@ -109,22 +121,30 @@ export default function EnhancedCustomerBenefits() {
           features: message
             .main_customerBenefits_constructionCompany_content_3_features()
             .split(', '),
+          imageUrl: '/images/pages/main/construction-differentiation.png',
         },
-        {
-          title:
-            message.main_customerBenefits_constructionCompany_content_4_title(),
-          description:
-            message.main_customerBenefits_constructionCompany_content_4_description(),
-          features: message
-            .main_customerBenefits_constructionCompany_content_4_features()
-            .split(', '),
-        },
+        // {
+        //   title:
+        //     message.main_customerBenefits_constructionCompany_content_4_title(),
+        //   description:
+        //     message.main_customerBenefits_constructionCompany_content_4_description(),
+        //   features: message
+        //     .main_customerBenefits_constructionCompany_content_4_features()
+        //     .split(', '),
+        // },
       ],
       cta: message.main_customerBenefits_constructionCompany_cta(),
     },
   };
 
-  const renderContent = (content: typeof benefitsData.homeOwner.content) => (
+  const renderContent = (
+    content: {
+      title: any;
+      description: any;
+      features: any;
+      imageUrl?: string;
+    }[]
+  ) => (
     <div className="space-y-8">
       {content.map((section, index) => (
         <motion.div
@@ -225,7 +245,7 @@ export default function EnhancedCustomerBenefits() {
                   <h2 className="text-3xl font-normal tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                     {data.title}
                   </h2>
-                  <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-xl">
+                  <p className="text-muted-foreground mx-auto mb-8 max-w-2xl pt-4 text-xl">
                     {data.description}
                   </p>
                   {data.image && (

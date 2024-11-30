@@ -1,286 +1,328 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import DeviceAnimation from './device-animation';
-import SmartHomeApp from './mobile-app';
+import { IntroFeatureWithMobileAppMockup } from '@/components/common/intro-feature';
+import { useEffect } from 'react';
+import Image from 'next/image';
+import { Check } from 'lucide-react';
 
-// Import all animation data
-import airConditionerData from '@/animations/airConditioner.json';
-import fanData from '@/animations/fan.json';
-import lightBulbData from '@/animations/lightBulb.json';
-import speakerData from '@/animations/speaker.json';
-import televisionData from '@/animations/television.json';
-import washingMachineData from '@/animations/washingMachine.json';
-
-interface Line {
-  id: string;
-  x1: number;
-  y1: number;
-  x2: number;
-  y2: number;
-  active: boolean;
-}
-
-export default function MobileApplicationPage() {
-  const [activeDevice, setActiveDevice] = useState<string | null>(null);
-  const [activeLines, setActiveLines] = useState<{
-    appToBox: boolean;
-    boxToDevices: { [key: string]: boolean };
-  }>({
-    appToBox: false,
-    boxToDevices: {},
-  });
-
-  // Refs for app, box, and devices
-  const appRef = useRef<HTMLDivElement>(null);
-  const boxRef = useRef<HTMLDivElement>(null);
-  const parentContainerRef = useRef<HTMLDivElement>(null);
-
-  const deviceRefs: { [key: string]: React.RefObject<HTMLDivElement> } = {
-    Light: useRef<HTMLDivElement>(null),
-    'Air purifier': useRef<HTMLDivElement>(null),
-    Speaker: useRef<HTMLDivElement>(null),
-    Climate: useRef<HTMLDivElement>(null),
-    'Washing Machine': useRef<HTMLDivElement>(null),
-    TV: useRef<HTMLDivElement>(null),
-  };
-
-  const [lines, setLines] = useState<Line[]>([]);
-
-  // Handle device activation
-  const handleDeviceAction = (deviceName: string) => {
-    setActiveDevice((prevDevice) =>
-      prevDevice === deviceName ? null : deviceName
-    );
-
-    if (deviceName !== activeDevice) {
-      // Reset lines
-      setActiveLines({
-        appToBox: false,
-        boxToDevices: {},
-      });
-
-      // Activate app-to-box line
-      setTimeout(() => {
-        setActiveLines((prev) => ({
-          ...prev,
-          appToBox: true,
-        }));
-      }, 0); // Immediate activation
-
-      // Activate box-to-device line after a short delay
-      setTimeout(() => {
-        setActiveLines((prev) => ({
-          ...prev,
-          boxToDevices: { [deviceName]: true },
-        }));
-      }, 500); // 500ms delay
-    }
-  };
-
-  // Reset active lines after 5 seconds
+export default function Home() {
   useEffect(() => {
-    if (activeDevice) {
-      const timer = setTimeout(() => {
-        setActiveDevice(null);
-        setActiveLines({
-          appToBox: false,
-          boxToDevices: {},
-        });
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [activeDevice]);
-
-  // Calculate positions and draw lines
-  useEffect(() => {
-    const computeLines = () => {
-      if (
-        appRef.current &&
-        boxRef.current &&
-        Object.values(deviceRefs).every((ref) => ref.current) &&
-        parentContainerRef.current
-      ) {
-        const parentRect = parentContainerRef.current.getBoundingClientRect();
-        const appRect = appRef.current.getBoundingClientRect();
-        const boxRect = boxRef.current.getBoundingClientRect();
-
-        // Calculate center positions relative to SVG
-        const appCenter = {
-          x: appRect.right - parentRect.left, // Right edge of app
-          y: appRect.top + appRect.height / 2 - parentRect.top,
-        };
-        const boxCenter = {
-          x: boxRect.left - parentRect.left, // Left edge of box
-          y: boxRect.top + boxRect.height / 2 - parentRect.top,
-        };
-
-        // Line from app to box
-        const appToBoxLine: Line = {
-          id: 'appToBox',
-          x1: appCenter.x,
-          y1: appCenter.y,
-          x2: boxCenter.x,
-          y2: boxCenter.y,
-          active: activeLines.appToBox,
-        };
-
-        // Lines from box to devices
-        const boxToDevicesLines: Line[] = Object.entries(deviceRefs).map(
-          ([name, ref]) => {
-            const deviceRect = ref.current!.getBoundingClientRect();
-            const deviceCenter = {
-              x: deviceRect.left - parentRect.left, // Left edge of device
-              y: deviceRect.top + deviceRect.height / 2 - parentRect.top,
-            };
-            return {
-              id: `boxTo${name}`,
-              x1: boxRect.right - parentRect.left, // Right edge of box
-              y1: boxRect.top + boxRect.height / 2 - parentRect.top,
-              x2: deviceCenter.x,
-              y2: deviceCenter.y,
-              active: activeLines.boxToDevices[name] || false,
-            };
-          }
-        );
-
-        setLines([appToBoxLine, ...boxToDevicesLines]);
+    // Get the hash from the URL
+    const hash = window.location.hash;
+    if (hash) {
+      // Remove the # from the hash
+      const element = document.getElementById(hash.slice(1));
+      if (element) {
+        // Scroll to the element with smooth behavior
+        element.scrollIntoView({ behavior: 'smooth' });
       }
-    };
-
-    computeLines();
-    window.addEventListener('resize', computeLines);
-    return () => window.removeEventListener('resize', computeLines);
-  }, [activeLines, deviceRefs]);
+    }
+  }, []); // Empty dependency array means this runs once on mount
 
   return (
-    <div
-      ref={parentContainerRef}
-      className="items-between relative flex h-screen w-full flex-col justify-between bg-gray-100 p-16"
-    >
-      <svg className="pointer-events-none absolute left-0 top-0 z-10 size-full">
-        {lines.map((line) => (
-          <line
-            key={line.id}
-            x1={line.x1}
-            y1={line.y1}
-            x2={line.x2}
-            y2={line.y2}
-            stroke={line.active ? '#1D4ED8' : '#000000'} // Blue when active, black otherwise
-            strokeWidth={line.active ? 1 : 0.5}
-            strokeDasharray="6"
-            strokeLinecap="round"
-          />
-        ))}
-      </svg>
-
-      <h1 className="mb-8 text-center text-3xl font-bold text-gray-800">
-        Control your home from your phone
-      </h1>
-
-      <div className="relative flex h-[80vh] w-full flex-row items-center justify-around gap-16 bg-gray-100">
-        <div ref={appRef} className="relative">
-          <SmartHomeApp onDeviceAction={handleDeviceAction} />
-        </div>
-
-        <div className="relative flex items-center">
-          <div
-            ref={boxRef}
-            className="flex h-16 w-24 items-center justify-center rounded-md border-2 border-gray-300 bg-white"
-          >
-            <span className="text-gray-700">Central Hub</span>
-          </div>
-        </div>
-
-        <div className="flex gap-4">
-          <div className="mb-16 flex flex-col justify-around gap-16">
-            <DeviceAnimation
-              animationData={lightBulbData}
-              // className="translate-x-1/2"
-              className=""
-              isActive={activeDevice === 'Light'}
-              size="w-24 h-24"
-              deviceRef={deviceRefs.Light}
-            />
-            <DeviceAnimation
-              animationData={fanData}
-              // className="translate-x-1/2"
-              className=""
-              isActive={activeDevice === 'Air purifier'}
-              size="w-48 h-48"
-              deviceRef={deviceRefs['Air purifier']}
-            />
-            <DeviceAnimation
-              animationData={speakerData}
-              // className="translate-x-1/2"
-              className=""
-              isActive={activeDevice === 'Speaker'}
-              size="w-40 h-40"
-              deviceRef={deviceRefs.Speaker}
-            />
-          </div>
-
-          {/* Second Column of Devices */}
-          <div className="mt-16 flex flex-col justify-around gap-16">
-            <DeviceAnimation
-              animationData={airConditionerData}
-              // className="translate-x-1/2"
-              className=""
-              isActive={activeDevice === 'Climate'}
-              size="w-48 h-48"
-              deviceRef={deviceRefs.Climate}
-            />
-            <DeviceAnimation
-              animationData={washingMachineData}
-              // className="translate-x-1/2"
-              className=""
-              isActive={activeDevice === 'Washing Machine'}
-              size="w-60 h-60"
-              deviceRef={deviceRefs['Washing Machine']}
-            />
-            <DeviceAnimation
-              animationData={televisionData}
-              // className="translate-x-1/2"
-              className=""
-              isActive={activeDevice === 'TV'}
-              size="w-52 h-52"
-              deviceRef={deviceRefs.TV}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+    <main>
+      <IntroFeatureWithMobileAppMockup
+        platform="Ensi Home Mobile App"
+        title="Control Your Smart Home from Anywhere"
+        description="Experience the future of home automation with our intuitive mobile application. Manage all your smart devices, monitor energy usage, and ensure your home's security with just a few taps."
+        checkPoints={[
+          {
+            title: 'Unified Control',
+            description: 'Manage all devices from one app',
+          },
+          {
+            title: 'Energy Efficiency',
+            description: 'Monitor and optimize energy usage',
+          },
+          {
+            title: 'Enhanced Security',
+            description: 'Keep your home safe, always',
+          },
+        ]}
+        mockupUrl="https://demo.ensihome.solace.com.tr"
+      />
+      <MobileFeatures features={mobileFeatures} />
+    </main>
   );
 }
 
-// Mobile Application Page (/ensi-home/mobile-application/)
-// Purpose: To showcase the mobile app's capabilities and how it enhances user experience.
+export const mobileFeatures = [
+  {
+    id: 'device-control',
+    title: 'Control Your Devices Fully, Control Your Home Fully',
+    description:
+      'One app is all you need - no more switching between multiple apps. Take complete control of all your devices and your entire home from a single place.',
+    image: '/images/pages/ensi-home/mobile-application/splash-screen.jpeg',
+    features: [
+      {
+        id: 'one-app',
+        title: 'One App, Zero Hassle',
+        description:
+          'Say goodbye to app-hopping - everything you need in one place',
+      },
+      {
+        id: 'full-control',
+        title: 'Full Device Control',
+        description:
+          'Access every feature and setting of each device without limitations',
+      },
+      {
+        id: 'advanced-settings',
+        title: 'Advanced Device Settings',
+        description:
+          'Fine-tune and customize every parameter of your smart devices',
+      },
+    ],
+  },
+  {
+    id: 'ai-assistant',
+    title: 'Talk to Your Home with Ensi AI Assistant',
+    description:
+      'Experience a new way of home control through natural conversation. With Ensi AI Assistant, simply talk to your home from anywhere and let your AI companion understand and execute your commands intelligently.',
+    image: '/images/pages/ensi-home/mobile-application/voice-assistant.jpeg',
+    features: [
+      {
+        id: 'natural-conversation',
+        title: 'Natural Conversation Control',
+        description:
+          'Speak naturally to control your home - just like talking to a human assistant who understands your needs',
+      },
+      {
+        id: 'remote-voice',
+        title: 'Remote Voice Commands',
+        description:
+          "Control your home from anywhere through voice commands - whether you're at work, on vacation, or in bed",
+      },
+      {
+        id: 'intelligent-understanding',
+        title: 'Intelligent Understanding',
+        description:
+          'Ensi AI Assistant understands context and intent, executing complex commands and managing multiple devices intelligently',
+      },
+    ],
+  },
+  {
+    id: 'smart-automations',
+    title: 'Smart Automations',
+    description:
+      'Create powerful automations with AI assistance, ready-made templates, or build your own custom flows with complete freedom.',
+    image: '/placeholder.svg?height=600&width=300',
+    features: [
+      {
+        id: 'ai-automation',
+        title: 'AI-Powered Automation',
+        description:
+          'Let AI suggest and create intelligent automations based on your habits',
+      },
+      {
+        id: 'templates',
+        title: 'Template Library',
+        description:
+          'Choose from a variety of pre-built automation templates for quick setup',
+      },
+      {
+        id: 'custom-builder',
+        title: 'Custom Automation Builder',
+        description:
+          'Design your own complex automations with unlimited flexibility',
+      },
+    ],
+  },
+  {
+    id: 'customization',
+    title: 'Your Home, Your Way',
+    description:
+      'Take control of your entire home from one customizable dashboard. Organize and manage your devices exactly how you want them, making home control effortless and intuitive.',
+    image: '/images/pages/ensi-home/mobile-application/home-sub-screen.jpeg',
+    features: [
+      {
+        id: 'dashboard',
+        title: 'Customizable Dashboard',
+        description:
+          'Design your perfect home control center - arrange devices and controls exactly how you want them',
+      },
+      {
+        id: 'quick-actions',
+        title: 'Quick Actions',
+        description:
+          'Control multiple devices at once - turn off all lights, adjust all air conditioners, or create your own combinations',
+      },
+      {
+        id: 'organization',
+        title: 'Smart Device Organization',
+        description:
+          'Group and categorize your devices your way for quick access and efficient home management',
+      },
+    ],
+  },
+  {
+    id: 'device-setup',
+    title: 'Add Devices with Ease',
+    description:
+      'Seamlessly connect and integrate new smart devices to your home network with our intuitive device setup process. Get your devices up and running in minutes.',
+    image: '/placeholder.svg?height=600&width=300',
+    features: [
+      {
+        id: 'discovery',
+        title: 'Quick Device Discovery',
+        description:
+          'Our app automatically detects compatible smart devices nearby, making the setup process fast and hassle-free',
+      },
+      {
+        id: 'guided-setup',
+        title: 'Guided Setup Process',
+        description:
+          'Step-by-step instructions guide you through connecting and configuring each new device for optimal performance',
+      },
+      {
+        id: 'multi-device',
+        title: 'Multi-Device Support',
+        description:
+          'Add and manage multiple devices simultaneously, with support for a wide range of smart home products and brands',
+      },
+    ],
+  },
+  {
+    id: 'multi-home',
+    title: 'Multi-Home Management & Access Control',
+    description:
+      'Seamlessly manage multiple properties and share access with family and guests. Control who can access what, when, and where across all your connected homes.',
+    image: '/placeholder.svg?height=600&width=300',
+    features: [
+      {
+        id: 'property-control',
+        title: 'Multiple Property Control',
+        description:
+          'Monitor and control all your properties from a single app - perfect for managing your primary residence, vacation home, or rental properties',
+      },
+      {
+        id: 'access-control',
+        title: 'Family & Guest Access',
+        description:
+          'Invite family members and guests with customizable access levels - grant full control or limit access to specific rooms and devices',
+      },
+      {
+        id: 'user-management',
+        title: 'Advanced User Management',
+        description:
+          'Set time-based access, create user profiles, and maintain detailed access logs for complete oversight of your smart home ecosystem',
+      },
+    ],
+  },
+  {
+    id: 'personalization',
+    title: 'Personalize Your Experience',
+    description:
+      'Customize every aspect of your smart home app experience through our comprehensive preferences screen. From appearance to notifications, make the app truly yours.',
+    image: '/images/pages/ensi-home/mobile-application/preferences.jpeg',
+    features: [
+      {
+        id: 'appearance',
+        title: 'App Appearance',
+        description:
+          'Choose between light and dark hhthemes, adjust text sizes, and customize the color scheme to match your style',
+      },
+      {
+        id: 'notifications',
+        title: 'Notification Settings',
+        description:
+          "Fine-tune which alerts you receive and how they're delivered - from device status updates to security notifications",
+      },
+      {
+        id: 'regional',
+        title: 'Regional Preferences',
+        description:
+          'Set your preferred temperature units, time formats, and language to make the app feel native to your region',
+      },
+    ],
+  },
+  {
+    id: 'security',
+    title: 'Security at Your Fingertips',
+    description:
+      'Your home security, your rules - choose which smart security features to enable and maintain complete control over your privacy settings.',
+    image: '/images/pages/ensi-home/mobile-application/preferences.jpeg',
+    features: [
+      {
+        id: 'security-features',
+        title: 'Customizable Security Features',
+        description:
+          'Activate or deactivate any security feature at will - you decide what works best for your home',
+      },
+      {
+        id: 'ai-security',
+        title: 'Optional AI Assistance',
+        description:
+          'Choose when to use AI security features and when to keep things simple - the control is always yours',
+      },
+      {
+        id: 'privacy',
+        title: 'Privacy-First Controls',
+        description:
+          'Full authority over your security settings and data - nothing happens without your explicit permission',
+      },
+    ],
+  },
+];
 
-// Components:
+interface MobileFeature {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  features: {
+    id: string;
+    title: string;
+    description: string;
+  }[];
+}
 
-// Hero Section:
+interface MobileFeaturesProps {
+  features: MobileFeature[];
+}
 
-// Headline: "Control at Your Fingertips with Our Mobile App"
-// Background Image: Smartphone displaying the app interface.
-// App Overview:
-
-// Describe the app's role in controlling the smart home.
-// Features:
-
-// Remote device control.
-// Real-time monitoring.
-// Scheduling and automation.
-// User-friendly interface.
-// User Experience:
-
-// Interactive demo using device-animation.tsx and mobile-app.tsx.
-// Screenshots of different app screens.
-// Customization:
-
-// Highlight ability to customize settings per user preference.
-// Benefits for Homeowners:
-
-// Emphasize convenience, security, and efficiency.
-// Call to Action:
-
-// CTA Button: "See the App in Action" - opens a demo or video.
+export const MobileFeatures = ({ features }: MobileFeaturesProps) => (
+  <div className="w-full py-20">
+    <div className="container mx-auto">
+      {features.map((feature, index) => (
+        <div
+          id={feature.id}
+          key={feature.id}
+          className={`flex flex-col gap-16 py-16 lg:flex-row ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+        >
+          <div className="flex flex-col justify-center lg:w-1/2">
+            <h2 className="text-3xl font-bold lg:text-4xl">{feature.title}</h2>
+            <p className="mt-4 text-xl text-gray-600">{feature.description}</p>
+            <div className="mt-8 grid gap-4">
+              {feature.features.map((subFeature) => (
+                <div key={subFeature.id} className="flex items-start gap-2">
+                  <Check className="mt-1 size-5 text-green-500" />
+                  <div>
+                    <h3 className="font-semibold">{subFeature.title}</h3>
+                    <p className="text-gray-600">{subFeature.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex items-center justify-center lg:w-1/2">
+            <div className="relative mx-auto h-[600px] w-[300px] rounded-[2.5rem] border-8 border-gray-800 shadow-lg">
+              <div className="absolute -right-[10px] top-[120px] h-[65px] w-[2px] rounded-l-lg bg-gray-800"></div>
+              <div className="absolute -left-[10px] top-[120px] h-[35px] w-[2px] rounded-r-lg bg-gray-800"></div>
+              <div className="absolute -left-[10px] top-[165px] h-[35px] w-[2px] rounded-r-lg bg-gray-800"></div>
+              <div className="size-full overflow-hidden rounded-[2.3rem] bg-white">
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  width={300}
+                  height={600}
+                  className="size-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+);

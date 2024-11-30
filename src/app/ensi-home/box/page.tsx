@@ -5,7 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { IntroFeatureWithModel } from '@/components/common/intro-feature';
+import {
+  IntroFeature,
+  IntroFeatureWithModel,
+} from '@/components/common/intro-feature';
 import { Case1 } from '@/components/common/sliding-cases';
 import { Download, Zap, Shield, Maximize } from 'lucide-react';
 import * as m from '@/paraglide/messages';
@@ -54,7 +57,7 @@ export default function BoxPage() {
       variants={containerVariants}
     >
       <motion.section className="mb-0" variants={itemVariants}>
-        <IntroFeatureWithModel
+        <IntroFeature
           platform={m.ensi_box_platform()}
           title={m.ensi_box_title()}
           description={m.ensi_box_description()}
@@ -72,7 +75,7 @@ export default function BoxPage() {
               description: m.ensi_box_secure_connectivity_description(),
             },
           ]}
-          modelUrl="/assets/models/ensi-home-box.glb"
+          imageUrl="/images/pages/ensi-home/box/ensi-home-box.png"
         />
       </motion.section>
 
