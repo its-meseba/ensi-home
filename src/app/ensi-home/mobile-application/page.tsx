@@ -5,48 +5,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import { Check } from 'lucide-react';
 
-export default function Home() {
-  useEffect(() => {
-    // Get the hash from the URL
-    const hash = window.location.hash;
-    if (hash) {
-      // Remove the # from the hash
-      const element = document.getElementById(hash.slice(1));
-      if (element) {
-        // Scroll to the element with smooth behavior
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, []); // Empty dependency array means this runs once on mount
-
-  return (
-    <main>
-      <IntroFeatureWithMobileAppMockup
-        platform="Ensi Home Mobile App"
-        title="Control Your Smart Home from Anywhere"
-        description="Experience the future of home automation with our intuitive mobile application. Manage all your smart devices, monitor energy usage, and ensure your home's security with just a few taps."
-        checkPoints={[
-          {
-            title: 'Unified Control',
-            description: 'Manage all devices from one app',
-          },
-          {
-            title: 'Energy Efficiency',
-            description: 'Monitor and optimize energy usage',
-          },
-          {
-            title: 'Enhanced Security',
-            description: 'Keep your home safe, always',
-          },
-        ]}
-        mockupUrl="https://demo.ensihome.solace.com.tr"
-      />
-      <MobileFeatures features={mobileFeatures} />
-    </main>
-  );
-}
-
-export const mobileFeatures = [
+const mobileFeatures = [
   {
     id: 'device-control',
     title: 'Control Your Devices Fully, Control Your Home Fully',
@@ -281,7 +240,7 @@ interface MobileFeaturesProps {
   features: MobileFeature[];
 }
 
-export const MobileFeatures = ({ features }: MobileFeaturesProps) => (
+const MobileFeatures = ({ features }: MobileFeaturesProps) => (
   <div className="w-full py-20">
     <div className="container mx-auto">
       {features.map((feature, index) => (
@@ -326,3 +285,44 @@ export const MobileFeatures = ({ features }: MobileFeaturesProps) => (
     </div>
   </div>
 );
+
+export default function Home() {
+  useEffect(() => {
+    // Get the hash from the URL
+    const hash = window.location.hash;
+    if (hash) {
+      // Remove the # from the hash
+      const element = document.getElementById(hash.slice(1));
+      if (element) {
+        // Scroll to the element with smooth behavior
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []); // Empty dependency array means this runs once on mount
+
+  return (
+    <main>
+      <IntroFeatureWithMobileAppMockup
+        platform="Ensi Home Mobile App"
+        title="Control Your Smart Home from Anywhere"
+        description="Experience the future of home automation with our intuitive mobile application. Manage all your smart devices, monitor energy usage, and ensure your home's security with just a few taps."
+        checkPoints={[
+          {
+            title: 'Unified Control',
+            description: 'Manage all devices from one app',
+          },
+          {
+            title: 'Energy Efficiency',
+            description: 'Monitor and optimize energy usage',
+          },
+          {
+            title: 'Enhanced Security',
+            description: 'Keep your home safe, always',
+          },
+        ]}
+        mockupUrl="https://demo.ensihome.solace.com.tr"
+      />
+      <MobileFeatures features={mobileFeatures} />
+    </main>
+  );
+}
