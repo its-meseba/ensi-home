@@ -134,7 +134,7 @@ export default function MainPage() {
       {/* Introduction Section */}
       <div id="intro">
         <CurvedBackgroundParallaxHeaderVertical
-          imageSrc="/images/pages/ensi-home/box/R8.jpg"
+          // imageSrc="/images/pages/ensi-home/box/R8.jpg"
           images={[
             '/images/pages/ensi-home/box/R7.jpg',
             '/images/pages/ensi-home/box/R8.jpg',

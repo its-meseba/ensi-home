@@ -181,6 +181,7 @@ export default function FAQPage() {
         imageSrc="/images/pages/knowledge-base/faq/cover.jpg"
         title="Frequently Asked Questions"
       />
+
       <div className="container mx-auto flex max-w-7xl flex-col items-center px-4 py-16">
         <motion.h1
           className="mb-12 text-4xl font-bold text-gray-800"

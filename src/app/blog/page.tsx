@@ -15,16 +15,10 @@ const BlogPage = async () => {
     <BackgroundLines className="flex w-full flex-col items-center justify-center">
       <div className="w-full bg-gray-50 dark:bg-gray-900">
         <CurvedBackgroundParallax
-          images={[
-            '/images/pages/blog/cover.jpg',
-            '/images/pages/blog/cover.jpg',
-          ]}
           imageSrc="/images/pages/blog/cover.jpg"
           title={m.blog_welcome_title()}
-        >
-          {/* Header Section */}
-          <></>
-        </CurvedBackgroundParallax>
+        />
+        {/* Header Section */}
 
         {/* Main Content: Blog Posts */}
         {/* PUT HERE THAT HERE IS THE ARTICLES as */}

@@ -6,14 +6,56 @@ import GradientHeader from './headers';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
 
-interface CurvedBackgroundProps {
+// interface CurvedBackgroundProps {
+//   imageSrc: string;
+//   title: string;
+//   height?: string;
+//   maxHeight?: string;
+// }
+interface CurvedBackgroundProperties {
   imageSrc: string;
   title: string;
   height?: string;
   maxHeight?: string;
 }
 
-export const CurvedBackground: React.FC<CurvedBackgroundProps> = ({
+interface CurvedBackgroundPropertiesWithShadow {
+  images: string[];
+  title: string;
+  description?: string;
+  children: ReactNode;
+  titleStyle?: string;
+  hasShadow?: boolean;
+}
+
+interface CurvedBackgroundPropertiesWithImageSrc {
+  imageSrc: string;
+  title: string;
+  height?: string;
+  maxHeight?: string;
+  hasShadow?: boolean;
+}
+
+interface CurvedBackgroundWithChildrenProps {
+  images: string[];
+  title: string;
+  description?: string;
+  children: React.ReactNode;
+  titleStyle?: string;
+  hasShadow?: boolean;
+}
+
+interface CurvedBackgroundHorizontalProps {
+  imageSrc: string;
+  title: string;
+  description?: string;
+  height?: string;
+  maxHeight?: string;
+  children?: ReactNode;
+  reversed?: boolean;
+}
+
+export const CurvedBackground: React.FC<CurvedBackgroundProperties> = ({
   imageSrc,
   title,
   height = '45vw',
@@ -50,7 +92,7 @@ export const CurvedBackground: React.FC<CurvedBackgroundProps> = ({
   </div>
 );
 
-export const CurvedBackgroundParallax: React.FC<CurvedBackgroundProps> = ({
+export const CurvedBackgroundParallax: React.FC<CurvedBackgroundProperties> = ({
   imageSrc,
   title,
   height = '45vw',
@@ -115,8 +157,9 @@ export const CurvedBackgroundParallax: React.FC<CurvedBackgroundProps> = ({
     </div>
   );
 };
+
 export const CurvedBackgroundParallaxHeader: React.FC<
-  CurvedBackgroundProps
+  CurvedBackgroundPropertiesWithImageSrc
 > = ({
   imageSrc,
   title,
@@ -173,17 +216,8 @@ export const CurvedBackgroundParallaxHeader: React.FC<
   );
 };
 
-interface CurvedBackgroundProps {
-  images: string[];
-  title: string;
-  description?: string;
-  children: React.ReactNode;
-  titleStyle?: string;
-  hasShadow?: boolean;
-}
-
 export const CurvedBackgroundParallaxHeaderVertical: React.FC<
-  CurvedBackgroundProps
+  CurvedBackgroundPropertiesWithShadow
 > = ({
   images,
   title,
@@ -294,9 +328,6 @@ export const CurvedBackgroundParallaxHeaderVertical: React.FC<
     </div>
   );
 };
-interface CurvedBackgroundHorizontalProps extends CurvedBackgroundProps {
-  reversed?: boolean;
-}
 
 export const CurvedBackgroundParallaxHeaderHorizontal: React.FC<
   CurvedBackgroundHorizontalProps

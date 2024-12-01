@@ -12,16 +12,13 @@ export default function ContactPage() {
   return (
     <div className="container mx-auto px-4 py-8 md:py-16">
       <CurvedBackgroundParallax
-        images={[
-          '/images/pages/knowledge-base/contact/cover.jpg',
-          '/images/pages/knowledge-base/contact/cover.jpg',
-        ]}
+        // images={[
+        //   '/images/pages/knowledge-base/contact/cover.jpg',
+        //   '/images/pages/knowledge-base/contact/cover.jpg',
+        // ]}
         imageSrc="/images/pages/knowledge-base/contact/cover.jpg"
         title={m.contact_contact_us()}
-      >
-        {/* Header Section */}
-        <></>
-      </CurvedBackgroundParallax>
+      />
       {/* <motion.h1
         className="mb-8 text-center text-3xl font-bold md:text-4xl"
         initial={{ opacity: 0, y: -20 }}
