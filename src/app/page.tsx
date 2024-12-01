@@ -232,30 +232,30 @@ function MobileApp() {
   );
 }
 // EnsiHomeBox component for displaying the Ensi Home Box model
-function EnsiHomeBox() {
-  return (
-    <div className="flex flex-col items-center">
-      <div className="relative size-[400px]">
-        <GLTFViewer modelUrl="/assets/models/ensi-box-3.glb" />
-      </div>
-    </div>
-  );
-}
-
 // function EnsiHomeBox() {
 //   return (
 //     <div className="flex flex-col items-center">
-//       <div className="relative size-[400px] ">
-//         <Image
-//           src="/images/pages/ensi-home/box/ensi-home-box-no-background.png"
-//           alt="Ensi Home Box"
-//           fill
-//           className="object-contain"
-//         />
+//       <div className="relative size-[400px]">
+//         <GLTFViewer modelUrl="/assets/models/ensi-box-3.glb" />
 //       </div>
 //     </div>
 //   );
 // }
+
+function EnsiHomeBox() {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="relative size-[400px] ">
+        <Image
+          src="/images/pages/ensi-home/box/ensi-home-box-no-background.png"
+          alt="Ensi Home Box"
+          fill
+          className="object-contain"
+        />
+      </div>
+    </div>
+  );
+}
 
 // AiAssistantPart component for displaying the AI Voice Assistant interface
 function AiAssistantPart() {
