@@ -1,5 +1,6 @@
 'use client';
 
+import * as m from '@/paraglide/messages';
 import { IntroFeatureWithMobileAppMockup } from '@/components/common/intro-feature';
 import { useEffect } from 'react';
 import Image from 'next/image';
@@ -8,217 +9,233 @@ import { Check } from 'lucide-react';
 const mobileFeatures = [
   {
     id: 'device-control',
-    title: 'Control Your Devices Fully, Control Your Home Fully',
-    description:
-      'One app is all you need - no more switching between multiple apps. Take complete control of all your devices and your entire home from a single place.',
+    title: m.ensi_mobileApp_mobileFeatures_device_control_title(),
+    description: m.ensi_mobileApp_mobileFeatures_device_control_description(),
     image: '/images/pages/ensi-home/mobile-application/splash-screen.jpeg',
     features: [
       {
         id: 'one-app',
-        title: 'One App, Zero Hassle',
+        title:
+          m.ensi_mobileApp_mobileFeatures_device_control_feature_one_app_title(),
         description:
-          'Say goodbye to app-hopping - everything you need in one place',
+          m.ensi_mobileApp_mobileFeatures_device_control_feature_one_app_description(),
       },
       {
         id: 'full-control',
-        title: 'Full Device Control',
+        title:
+          m.ensi_mobileApp_mobileFeatures_device_control_feature_full_control_title(),
         description:
-          'Access every feature and setting of each device without limitations',
+          m.ensi_mobileApp_mobileFeatures_device_control_feature_full_control_description(),
       },
       {
         id: 'advanced-settings',
-        title: 'Advanced Device Settings',
+        title:
+          m.ensi_mobileApp_mobileFeatures_device_control_feature_advanced_settings_title(),
         description:
-          'Fine-tune and customize every parameter of your smart devices',
+          m.ensi_mobileApp_mobileFeatures_device_control_feature_advanced_settings_description(),
       },
     ],
   },
   {
     id: 'ai-assistant',
-    title: 'Talk to Your Home with Ensi AI Assistant',
-    description:
-      'Experience a new way of home control through natural conversation. With Ensi AI Assistant, simply talk to your home from anywhere and let your AI companion understand and execute your commands intelligently.',
+    title: m.ensi_mobileApp_mobileFeatures_ai_assistant_title(),
+    description: m.ensi_mobileApp_mobileFeatures_ai_assistant_description(),
     image: '/images/pages/ensi-home/mobile-application/voice-assistant.jpeg',
     features: [
       {
         id: 'natural-conversation',
-        title: 'Natural Conversation Control',
+        title:
+          m.ensi_mobileApp_mobileFeatures_ai_assistant_feature_natural_conversation_title(),
         description:
-          'Speak naturally to control your home - just like talking to a human assistant who understands your needs',
+          m.ensi_mobileApp_mobileFeatures_ai_assistant_feature_natural_conversation_description(),
       },
       {
         id: 'remote-voice',
-        title: 'Remote Voice Commands',
+        title:
+          m.ensi_mobileApp_mobileFeatures_ai_assistant_feature_remote_voice_title(),
         description:
-          "Control your home from anywhere through voice commands - whether you're at work, on vacation, or in bed",
+          m.ensi_mobileApp_mobileFeatures_ai_assistant_feature_remote_voice_description(),
       },
       {
         id: 'intelligent-understanding',
-        title: 'Intelligent Understanding',
+        title:
+          m.ensi_mobileApp_mobileFeatures_ai_assistant_feature_intelligent_understanding_title(),
         description:
-          'Ensi AI Assistant understands context and intent, executing complex commands and managing multiple devices intelligently',
+          m.ensi_mobileApp_mobileFeatures_ai_assistant_feature_intelligent_understanding_description(),
       },
     ],
   },
   {
     id: 'smart-automations',
-    title: 'Smart Automations',
+    title: m.ensi_mobileApp_mobileFeatures_smart_automations_title(),
     description:
-      'Create powerful automations with AI assistance, ready-made templates, or build your own custom flows with complete freedom.',
+      m.ensi_mobileApp_mobileFeatures_smart_automations_description(),
     image: '/placeholder.svg?height=600&width=300',
     features: [
       {
         id: 'ai-automation',
-        title: 'AI-Powered Automation',
+        title:
+          m.ensi_mobileApp_mobileFeatures_smart_automations_feature_ai_automation_title(),
         description:
-          'Let AI suggest and create intelligent automations based on your habits',
+          m.ensi_mobileApp_mobileFeatures_smart_automations_feature_ai_automation_description(),
       },
       {
         id: 'templates',
-        title: 'Template Library',
+        title:
+          m.ensi_mobileApp_mobileFeatures_smart_automations_feature_templates_title(),
         description:
-          'Choose from a variety of pre-built automation templates for quick setup',
+          m.ensi_mobileApp_mobileFeatures_smart_automations_feature_templates_description(),
       },
       {
         id: 'custom-builder',
-        title: 'Custom Automation Builder',
+        title:
+          m.ensi_mobileApp_mobileFeatures_smart_automations_feature_custom_builder_title(),
         description:
-          'Design your own complex automations with unlimited flexibility',
+          m.ensi_mobileApp_mobileFeatures_smart_automations_feature_custom_builder_description(),
       },
     ],
   },
   {
     id: 'customization',
-    title: 'Your Home, Your Way',
-    description:
-      'Take control of your entire home from one customizable dashboard. Organize and manage your devices exactly how you want them, making home control effortless and intuitive.',
+    title: m.ensi_mobileApp_mobileFeatures_customization_title(),
+    description: m.ensi_mobileApp_mobileFeatures_customization_description(),
     image: '/images/pages/ensi-home/mobile-application/home-sub-screen.jpeg',
     features: [
       {
         id: 'dashboard',
-        title: 'Customizable Dashboard',
+        title:
+          m.ensi_mobileApp_mobileFeatures_customization_feature_dashboard_title(),
         description:
-          'Design your perfect home control center - arrange devices and controls exactly how you want them',
+          m.ensi_mobileApp_mobileFeatures_customization_feature_dashboard_description(),
       },
       {
         id: 'quick-actions',
-        title: 'Quick Actions',
+        title:
+          m.ensi_mobileApp_mobileFeatures_customization_feature_quick_actions_title(),
         description:
-          'Control multiple devices at once - turn off all lights, adjust all air conditioners, or create your own combinations',
+          m.ensi_mobileApp_mobileFeatures_customization_feature_quick_actions_description(),
       },
       {
         id: 'organization',
-        title: 'Smart Device Organization',
+        title:
+          m.ensi_mobileApp_mobileFeatures_customization_feature_organization_title(),
         description:
-          'Group and categorize your devices your way for quick access and efficient home management',
+          m.ensi_mobileApp_mobileFeatures_customization_feature_organization_description(),
       },
     ],
   },
   {
     id: 'device-setup',
-    title: 'Add Devices with Ease',
-    description:
-      'Seamlessly connect and integrate new smart devices to your home network with our intuitive device setup process. Get your devices up and running in minutes.',
+    title: m.ensi_mobileApp_mobileFeatures_device_setup_title(),
+    description: m.ensi_mobileApp_mobileFeatures_device_setup_description(),
     image: '/placeholder.svg?height=600&width=300',
     features: [
       {
         id: 'discovery',
-        title: 'Quick Device Discovery',
+        title:
+          m.ensi_mobileApp_mobileFeatures_device_setup_feature_discovery_title(),
         description:
-          'Our app automatically detects compatible smart devices nearby, making the setup process fast and hassle-free',
+          m.ensi_mobileApp_mobileFeatures_device_setup_feature_discovery_description(),
       },
       {
         id: 'guided-setup',
-        title: 'Guided Setup Process',
+        title:
+          m.ensi_mobileApp_mobileFeatures_device_setup_feature_guided_setup_title(),
         description:
-          'Step-by-step instructions guide you through connecting and configuring each new device for optimal performance',
+          m.ensi_mobileApp_mobileFeatures_device_setup_feature_guided_setup_description(),
       },
       {
         id: 'multi-device',
-        title: 'Multi-Device Support',
+        title:
+          m.ensi_mobileApp_mobileFeatures_device_setup_feature_multi_device_title(),
         description:
-          'Add and manage multiple devices simultaneously, with support for a wide range of smart home products and brands',
+          m.ensi_mobileApp_mobileFeatures_device_setup_feature_multi_device_description(),
       },
     ],
   },
   {
     id: 'multi-home',
-    title: 'Multi-Home Management & Access Control',
-    description:
-      'Seamlessly manage multiple properties and share access with family and guests. Control who can access what, when, and where across all your connected homes.',
+    title: m.ensi_mobileApp_mobileFeatures_multi_home_title(),
+    description: m.ensi_mobileApp_mobileFeatures_multi_home_description(),
     image: '/placeholder.svg?height=600&width=300',
     features: [
       {
         id: 'property-control',
-        title: 'Multiple Property Control',
+        title:
+          m.ensi_mobileApp_mobileFeatures_multi_home_feature_property_control_title(),
         description:
-          'Monitor and control all your properties from a single app - perfect for managing your primary residence, vacation home, or rental properties',
+          m.ensi_mobileApp_mobileFeatures_multi_home_feature_property_control_description(),
       },
       {
         id: 'access-control',
-        title: 'Family & Guest Access',
+        title:
+          m.ensi_mobileApp_mobileFeatures_multi_home_feature_access_control_title(),
         description:
-          'Invite family members and guests with customizable access levels - grant full control or limit access to specific rooms and devices',
+          m.ensi_mobileApp_mobileFeatures_multi_home_feature_access_control_description(),
       },
       {
         id: 'user-management',
-        title: 'Advanced User Management',
+        title:
+          m.ensi_mobileApp_mobileFeatures_multi_home_feature_user_management_title(),
         description:
-          'Set time-based access, create user profiles, and maintain detailed access logs for complete oversight of your smart home ecosystem',
+          m.ensi_mobileApp_mobileFeatures_multi_home_feature_user_management_description(),
       },
     ],
   },
   {
     id: 'personalization',
-    title: 'Personalize Your Experience',
-    description:
-      'Customize every aspect of your smart home app experience through our comprehensive preferences screen. From appearance to notifications, make the app truly yours.',
+    title: m.ensi_mobileApp_mobileFeatures_personalization_title(),
+    description: m.ensi_mobileApp_mobileFeatures_personalization_description(),
     image: '/images/pages/ensi-home/mobile-application/preferences.jpeg',
     features: [
       {
         id: 'appearance',
-        title: 'App Appearance',
+        title:
+          m.ensi_mobileApp_mobileFeatures_personalization_feature_appearance_title(),
         description:
-          'Choose between light and dark hhthemes, adjust text sizes, and customize the color scheme to match your style',
+          m.ensi_mobileApp_mobileFeatures_personalization_feature_appearance_description(),
       },
       {
         id: 'notifications',
-        title: 'Notification Settings',
+        title:
+          m.ensi_mobileApp_mobileFeatures_personalization_feature_notifications_title(),
         description:
-          "Fine-tune which alerts you receive and how they're delivered - from device status updates to security notifications",
+          m.ensi_mobileApp_mobileFeatures_personalization_feature_notifications_description(),
       },
       {
         id: 'regional',
-        title: 'Regional Preferences',
+        title:
+          m.ensi_mobileApp_mobileFeatures_personalization_feature_regional_title(),
         description:
-          'Set your preferred temperature units, time formats, and language to make the app feel native to your region',
+          m.ensi_mobileApp_mobileFeatures_personalization_feature_regional_description(),
       },
     ],
   },
   {
     id: 'security',
-    title: 'Security at Your Fingertips',
-    description:
-      'Your home security, your rules - choose which smart security features to enable and maintain complete control over your privacy settings.',
+    title: m.ensi_mobileApp_mobileFeatures_security_title(),
+    description: m.ensi_mobileApp_mobileFeatures_security_description(),
     image: '/images/pages/ensi-home/mobile-application/preferences.jpeg',
     features: [
       {
         id: 'security-features',
-        title: 'Customizable Security Features',
+        title:
+          m.ensi_mobileApp_mobileFeatures_security_feature_security_features_title(),
         description:
-          'Activate or deactivate any security feature at will - you decide what works best for your home',
+          m.ensi_mobileApp_mobileFeatures_security_feature_security_features_description(),
       },
       {
         id: 'ai-security',
-        title: 'Optional AI Assistance',
+        title:
+          m.ensi_mobileApp_mobileFeatures_security_feature_ai_security_title(),
         description:
-          'Choose when to use AI security features and when to keep things simple - the control is always yours',
+          m.ensi_mobileApp_mobileFeatures_security_feature_ai_security_description(),
       },
       {
         id: 'privacy',
-        title: 'Privacy-First Controls',
+        title: m.ensi_mobileApp_mobileFeatures_security_feature_privacy_title(),
         description:
-          'Full authority over your security settings and data - nothing happens without your explicit permission',
+          m.ensi_mobileApp_mobileFeatures_security_feature_privacy_description(),
       },
     ],
   },
@@ -247,7 +264,7 @@ const MobileFeatures = ({ features }: MobileFeaturesProps) => (
         <div
           id={feature.id}
           key={feature.id}
-          className={`flex flex-col gap-16 py-16 lg:flex-row ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+          className={`flex flex-col gap-16 py-16 lg:flex-row ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''} rounded-xl border lg:border-0 `}
         >
           <div className="flex flex-col justify-center lg:w-1/2">
             <h2 className="text-3xl font-bold lg:text-4xl">{feature.title}</h2>
@@ -275,6 +292,7 @@ const MobileFeatures = ({ features }: MobileFeaturesProps) => (
                   alt={feature.title}
                   width={300}
                   height={600}
+                  quality={100}
                   className="size-full object-cover"
                 />
               </div>
@@ -303,21 +321,27 @@ export default function Home() {
   return (
     <main>
       <IntroFeatureWithMobileAppMockup
-        platform="Ensi Home Mobile App"
-        title="Control Your Smart Home from Anywhere"
-        description="Experience the future of home automation with our intuitive mobile application. Manage all your smart devices, monitor energy usage, and ensure your home's security with just a few taps."
+        platform={m.ensi_mobileApp_intro_feature_with_mobileApp_mockup_platform()}
+        title={m.ensi_mobileApp_intro_feature_with_mobileApp_mockup_title()}
+        description={m.ensi_mobileApp_intro_feature_with_mobileApp_mockup_description()}
         checkPoints={[
           {
-            title: 'Unified Control',
-            description: 'Manage all devices from one app',
+            title:
+              m.ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_unified_control_title(),
+            description:
+              m.ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_unified_control_description(),
           },
           {
-            title: 'Energy Efficiency',
-            description: 'Monitor and optimize energy usage',
+            title:
+              m.ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_energy_efficiency_title(),
+            description:
+              m.ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_energy_efficiency_description(),
           },
           {
-            title: 'Enhanced Security',
-            description: 'Keep your home safe, always',
+            title:
+              m.ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_enhanced_security_title(),
+            description:
+              m.ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_enhanced_security_description(),
           },
         ]}
         mockupUrl="https://demo.ensihome.solace.com.tr"

@@ -272,8 +272,10 @@ export const CurvedBackgroundParallaxHeaderVertical: React.FC<
               <Image
                 src={images[currentImageIndex]}
                 alt={`Background ${currentImageIndex + 1}`}
-                layout="fill"
-                objectFit="cover"
+                fill
+                quality={100}
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                 priority
               />
             </div>
@@ -286,8 +288,10 @@ export const CurvedBackgroundParallaxHeaderVertical: React.FC<
               <Image
                 src={images[nextImageIndex]}
                 alt={`Background ${nextImageIndex + 1}`}
-                layout="fill"
-                objectFit="cover"
+                fill
+                quality={100}
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                 priority
               />
             </div>

@@ -16,6 +16,7 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
 import * as m from '@/paraglide/messages';
+import { routes, getLocalizedRoutes } from '@/app/routes';
 
 export default function NewNavbar() {
   const locale = m.locale();
@@ -50,37 +51,11 @@ export default function NewNavbar() {
         title: m.navbar_solutions(),
         spanFirst: true,
         description: m.navbar_solutions_descriptions(),
-        items: [
-          {
-            title: m.navbar_solutions_ensiBox(),
-            href: `/${locale}/ensi-home/box`,
-          },
-          {
-            title: m.navbar_solutions_ensiMobileApp(),
-            href: `/${locale}/ensi-home/mobile-application`,
-          },
-          {
-            title: m.navbar_solutions_ensiVoiceAssistant(),
-            href: `/${locale}/ensi-home/ai-voice-assistant`,
-          },
-          {
-            title: m.navbar_solutions_cloud(),
-            href: `/${locale}/ensi-home/cloud`,
-          },
-          {
-            title: m.navbar_solutions_smartLiving(),
-            href: `/${locale}/ensi-home/smart-life-areas`,
-          },
-          {
-            title: m.navbar_solutions_supportedDevices(),
-            href: `/${locale}/ensi-home/compatible-smart-devices`,
-          },
-        ],
+        items: routes.solutions.map((route) => ({
+          title: m[route.messageKey](),
+          href: `/${locale}${route.path}`,
+        })),
         explanation: 'Discover our comprehensive smart home solutions.',
-        // otherLinks: [
-        //   { title: 'Compare Solutions', href: `/${locale}/solutions/compare` },
-        //   { title: 'Case Studies', href: `/${locale}/solutions/case-studies` },
-        // ],
       },
       {
         title: m.navbar_knowledgeBase(),

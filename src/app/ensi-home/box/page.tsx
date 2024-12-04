@@ -1,34 +1,9 @@
 'use client';
-
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  IntroFeature,
-  IntroFeatureWithModel,
-} from '@/components/common/intro-feature';
-import { Case1 } from '@/components/common/sliding-cases';
-import { Download, Zap, Shield, Maximize } from 'lucide-react';
+import { IntroFeatureWithModel } from '@/components/common/intro-feature';
+import { Check } from 'lucide-react';
 import * as m from '@/paraglide/messages';
-
-const logos = [
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-  '/images/logo/small.svg',
-];
+import { useEffect } from 'react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -48,199 +23,229 @@ const itemVariants = {
   },
 };
 
+const boxFeatures = [
+  // First section with 2 images
+  {
+    id: 'key-features',
+    title: m.ensi_box_key_features(),
+    description: m.ensi_box_description(),
+    images: [
+      {
+        src: '/images/pages/ensi-home/box/R1.jpg',
+        alt: 'Ensi Box Key Features',
+      },
+      {
+        src: '/images/pages/ensi-home/box/R5.jpg',
+        alt: 'Ensi Box Features Overview',
+      },
+    ],
+    features: [
+      {
+        id: 'centralized-control',
+        title: m.ensi_box_centralized_control_feature_title(),
+        description: m.ensi_box_centralized_control_feature_description(),
+      },
+      {
+        id: 'secure-connectivity',
+        title: m.ensi_box_secure_connectivity_feature_title(),
+        description: m.ensi_box_secure_connectivity_feature_description(),
+      },
+      {
+        id: 'high-compatibility',
+        title: m.ensi_box_high_compatibility_feature_title(),
+        description: m.ensi_box_high_compatibility_feature_description(),
+      },
+    ],
+  },
+  // Second section with 1 image
+  {
+    id: 'technical-specs',
+    title: m.ensi_box_technical_specifications(),
+    description:
+      'Advanced hardware specifications designed for optimal smart home performance',
+    images: [
+      {
+        src: '/images/pages/ensi-home/box/cpu.png',
+        alt: 'Ensi Box Technical Specifications',
+      },
+    ],
+    features: [
+      {
+        id: 'processor-memory',
+        title: 'Processing Power',
+        description: m.ensi_box_processor(),
+      },
+      {
+        id: 'storage',
+        title: 'Storage Capacity',
+        description: m.ensi_box_storage(),
+      },
+      {
+        id: 'connectivity',
+        title: 'Connectivity Options',
+        description: m.ensi_box_connectivity(),
+      },
+    ],
+  },
+  // Third section with 2 images
+  {
+    id: 'in-action',
+    title: m.ensi_box_in_action(),
+    description: 'See how Ensi Home Box transforms everyday living spaces',
+    images: [
+      {
+        src: '/images/pages/ensi-home/box/in-action-1.jpeg',
+        alt: m.ensi_box_in_living_room_alt(),
+      },
+      {
+        src: '/images/pages/ensi-home/box/in-action-2.jpeg',
+        alt: m.ensi_box_in_kitchen_alt(),
+      },
+    ],
+    features: [
+      {
+        id: 'living-room',
+        title: 'Living Room Integration',
+        description:
+          'Smart lighting, climate control, and entertainment system integration',
+      },
+      {
+        id: 'kitchen',
+        title: 'Kitchen Automation',
+        description: 'Automated appliances and smart cooking assistance',
+      },
+      {
+        id: 'security',
+        title: 'Home Security',
+        description: 'Advanced security features and monitoring capabilities',
+      },
+    ],
+  },
+];
+
+interface BoxFeature {
+  id: string;
+  title: string;
+  description: string;
+  images: {
+    src: string;
+    alt: string;
+  }[];
+  features: {
+    id: string;
+    title: string;
+    description: string;
+  }[];
+}
+
+interface BoxFeaturesProps {
+  features: BoxFeature[];
+}
+
+const BoxFeatures = ({ features }: BoxFeaturesProps) => (
+  <div className="w-full py-8 sm:py-20">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {features.map((feature, index) => (
+        <>
+          <div
+            id={feature.id}
+            key={feature.id}
+            className="flex flex-col gap-8 py-8 sm:gap-16 sm:py-16"
+          >
+            <div className="flex flex-col justify-center">
+              <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
+                {feature.title}
+              </h2>
+              <p className="mt-3 text-base text-gray-600 sm:mt-4 sm:text-xl">
+                {feature.description}
+              </p>
+              <div className="mt-6 grid gap-4 sm:mt-8">
+                {feature.features.map((subFeature) => (
+                  <div key={subFeature.id} className="flex items-start gap-2">
+                    <Check className="mt-1 size-4 shrink-0 text-green-500 sm:size-5" />
+                    <div>
+                      <h3 className="text-sm font-semibold sm:text-base">
+                        {subFeature.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 sm:text-base">
+                        {subFeature.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div
+              className={`grid gap-4 sm:gap-6 ${feature.images.length > 1 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'}`}
+            >
+              {feature.images.map((image, imgIndex) => (
+                <div
+                  key={imgIndex}
+                  className="flex items-center justify-center"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={1200}
+                    height={800}
+                    quality={100}
+                    className="h-auto w-full rounded-lg object-cover shadow-lg"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Placeholder for additional sections */}
+          {index < features.length - 1 && (
+            <div className="py-8 sm:py-16">
+              {/* Placeholder for custom section */}
+              <div className="flex h-24 w-full items-center justify-center rounded-lg bg-gray-100 sm:h-32">
+                <p className="text-sm text-gray-500 sm:text-base">
+                  Additional Section Placeholder
+                </p>
+              </div>
+            </div>
+          )}
+        </>
+      ))}
+    </div>
+  </div>
+);
+
 export default function BoxPage() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.getElementById(hash.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+
   return (
-    <motion.div
-      className="container mx-auto px-4 py-0"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <motion.section className="mb-0" variants={itemVariants}>
-        <IntroFeatureWithModel
-          platform={m.ensi_box_platform()}
-          title={m.ensi_box_title()}
-          description={m.ensi_box_description()}
-          checkPoints={[
-            {
-              title: m.ensi_box_centralized_control_title(),
-              description: m.ensi_box_centralized_control_description(),
-            },
-            {
-              title: m.ensi_box_high_compatibility_title(),
-              description: m.ensi_box_high_compatibility_description(),
-            },
-            {
-              title: m.ensi_box_secure_connectivity_title(),
-              description: m.ensi_box_secure_connectivity_description(),
-            },
-          ]}
-          // imageUrl="/images/pages/ensi-home/box/ensi-home-box.png"
-          modelUrl="/assets/models/ensi-box-3.glb"
-        />
-      </motion.section>
-
-      <motion.section className="mb-16" variants={containerVariants}>
-        <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
-          {m.ensi_box_key_features()}
-        </motion.h2>
-        <motion.div
-          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
-          variants={containerVariants}
-        >
-          {[
-            {
-              icon: <Zap className="mr-2" />,
-              title: m.ensi_box_centralized_control_feature_title(),
-              description: m.ensi_box_centralized_control_feature_description(),
-            },
-            {
-              icon: <Shield className="mr-2" />,
-              title: m.ensi_box_secure_connectivity_feature_title(),
-              description: m.ensi_box_secure_connectivity_feature_description(),
-            },
-            {
-              icon: <Maximize className="mr-2" />,
-              title: m.ensi_box_high_compatibility_feature_title(),
-              description: m.ensi_box_high_compatibility_feature_description(),
-            },
-            {
-              icon: <Download className="mr-2" />,
-              title: m.ensi_box_scalability_feature_title(),
-              description: m.ensi_box_scalability_feature_description(),
-            },
-          ].map((feature, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center">
-                    {feature.icon}
-                    {feature.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>{feature.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.section>
-
-      <motion.section className="mb-16" variants={containerVariants}>
-        <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
-          {m.ensi_box_technical_specifications()}
-        </motion.h2>
-        <motion.div className="bg-muted rounded-lg p-6" variants={itemVariants}>
-          <ul className="list-inside list-disc space-y-2">
-            <li>{m.ensi_box_processor()}</li>
-            <li>{m.ensi_box_memory()}</li>
-            <li>{m.ensi_box_storage()}</li>
-            <li>{m.ensi_box_connectivity()}</li>
-            <li>{m.ensi_box_ports()}</li>
-            <li>{m.ensi_box_power()}</li>
-          </ul>
-          <Button className="mt-4">
-            <Download className="mr-2 size-4" />{' '}
-            {m.ensi_box_download_full_specifications()}
-          </Button>
-        </motion.div>
-      </motion.section>
-
-      <motion.section className="mb-16" variants={containerVariants}>
-        <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
-          {m.ensi_box_integration_process()}
-        </motion.h2>
-        <motion.div
-          className="grid grid-cols-1 gap-8 md:grid-cols-2"
-          variants={containerVariants}
-        >
-          <motion.div variants={itemVariants}>
-            <h3 className="mb-4 text-xl font-semibold">
-              {m.ensi_box_easy_installation()}
-            </h3>
-            <p className="mb-4">{m.ensi_box_easy_installation_description()}</p>
-            <ol className="list-inside list-decimal space-y-2">
-              <li>{m.ensi_box_site_assessment_and_planning()}</li>
-              <li>{m.ensi_box_wiring_and_infrastructure_setup()}</li>
-              <li>{m.ensi_box_box_installation_and_configuration()}</li>
-              <li>{m.ensi_box_device_pairing_and_system_testing()}</li>
-              <li>{m.ensi_box_user_training_and_handover()}</li>
-            </ol>
-          </motion.div>
-          <motion.div variants={itemVariants}>
-            <Image
-              src="/placeholder.jpg?height=300&width=400"
-              alt={m.ensi_box_in_action_alt_living_room()}
-              width={400}
-              height={300}
-              className="rounded-lg"
-            />
-          </motion.div>
-        </motion.div>
-      </motion.section>
-
-      <motion.section className="mb-16" variants={containerVariants}>
-        <motion.h2 className="mb-8 text-3xl font-bold" variants={itemVariants}>
-          {m.ensi_box_in_action()}
-        </motion.h2>
-        <motion.div
-          className="grid grid-cols-1 gap-6 md:grid-cols-3"
-          variants={containerVariants}
-        >
-          {[
-            {
-              src: '/placeholder.jpg?height=200&width=300',
-              alt: m.ensi_box_in_living_room_alt(),
-            },
-            {
-              src: '/placeholder.jpg?height=200&width=300',
-              alt: m.ensi_box_in_kitchen_alt(),
-            },
-            {
-              src: '/placeholder.jpg?height=200&width=300',
-              alt: m.ensi_box_in_home_office_alt(),
-            },
-          ].map((image, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={300}
-                height={200}
-                className="rounded-lg"
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.section>
-
-      <motion.section
-        className="mb-16 text-center"
-        variants={containerVariants}
-      >
-        <motion.h2 className="mb-4 text-3xl font-bold" variants={itemVariants}>
-          {m.ensi_box_ready_to_transform_your_home()}
-        </motion.h2>
-        <motion.p className="mb-8" variants={itemVariants}>
-          {m.ensi_box_get_in_touch()}
-        </motion.p>
-        <motion.div variants={itemVariants}>
-          <Link href="/contact">
-            <Button size="lg">
-              {m.ensi_box_contact_us_for_technical_details()}
-            </Button>
-          </Link>
-        </motion.div>
-      </motion.section>
-
-      <motion.section variants={itemVariants}>
-        <Case1
-          title={m.ensi_box_our_partners()}
-          logos={logos}
-          interval={3000}
-        />
-      </motion.section>
-    </motion.div>
+    <main>
+      <IntroFeatureWithModel
+        platform={m.ensi_box_platform()}
+        title={m.ensi_box_title()}
+        description={m.ensi_box_description()}
+        checkPoints={[
+          {
+            title: m.ensi_box_centralized_control_title(),
+            description: m.ensi_box_centralized_control_description(),
+          },
+          {
+            title: m.ensi_box_high_compatibility_title(),
+            description: m.ensi_box_high_compatibility_description(),
+          },
+          {
+            title: m.ensi_box_secure_connectivity_title(),
+            description: m.ensi_box_secure_connectivity_description(),
+          },
+        ]}
+        modelUrl="/assets/models/ensi-box-3.glb"
+      />
+      <BoxFeatures features={boxFeatures} />
+    </main>
   );
 }

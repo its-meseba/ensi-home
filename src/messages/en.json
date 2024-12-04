@@ -4,16 +4,16 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "locale": "en",
   "app_name": "ensi-home",
-  "sign_in": "Sign in",
-  "theme_toggle_label": "theme toggle",
+  "sign_in": "Sign In",
+  "theme_toggle_label": "Theme Toggle",
   "my_account": "My Account",
-  "upgrade_to_pro_cta": "Upgrade to pro",
-  "log_out": "Log out",
-  "you_are_a_pro": "You are pro!",
-  "input_placeholder": "Type your name ...",
+  "upgrade_to_pro_cta": "Upgrade to Pro",
+  "log_out": "Log Out",
+  "you_are_a_pro": "You are a pro!",
+  "input_placeholder": "Type your name…",
   "submit_form": "Submit",
   "meta_title": "Ensi Home",
-  "meta_description": "Ensi Home is a company that produces the central brain system of smart home devices, orchestrating smart home devices.",
+  "meta_description": "Ensi Home is a company that produces the central brain system for smart home devices, orchestrating and coordinating them.",
   "meta_keyword_ensi": "Ensi Home",
   "meta_keyword_ensi_home": "Ensi Home Smart Home Systems",
   "meta_keyword_ensi_starter": "Ensi Home Starter",
@@ -25,7 +25,7 @@
   "meta_keyword_ensi_next_auth": "Ensi Home Next-auth",
   "meta_keyword_ensi_prisma": "Ensi Home Prisma",
   "get_started": "Get Started",
-  "github": "Github",
+  "github": "GitHub",
   "discover": "Discover",
   "buy": "Buy",
   "home": "Home",
@@ -41,7 +41,7 @@
   "how_it_works": "How It Works",
   "faq": "FAQ",
   "technical_support": "Technical Support",
-  "contact_with_us": "How it is Done?",
+  "contact_with_us": "How It Is Done?",
   "faqSectionOne_question0": "What is Ensi Home?",
   "faqSectionOne_answer0": "Ensi Home is a smart home hub that acts as the brain of your smart home system, orchestrating and controlling all your smart devices and appliances from a single platform.",
   "faqSectionOne_question1": "How does Ensi Home integrate with my existing smart devices?",
@@ -74,7 +74,7 @@
   "faqSectionOne_answer14": "Ensi Home is available for purchase on our official website and at select authorized retailers nationwide.",
 
   "navbar_main": "🏠 Main Page",
-  "navbar_howItIsDone": "How is it Done?",
+  "navbar_howItIsDone": "How It Is Done?",
   "navbar_solutions": "Solutions Ensi Home",
   "navbar_solutions_ensiBox": "• Ensi Home Box",
   "navbar_solutions_ensiMobileApp": "• Ensi Home App",
@@ -86,7 +86,7 @@
   "navbar_solutions_descriptions": "Get detailed information about our Ensi Home solutions.",
   "navbar_knowledgeBase": "Knowledge Base",
   "navbar_knowledgeBase_faq": "• FAQ",
-  "navbar_knowledgeBase_howItWorks": "• How it Works",
+  "navbar_knowledgeBase_howItWorks": "• How It Works",
   "navbar_knowledgeBase_technicalSupport": "• Technical Support",
   "navbar_knowledgeBase_contact": "• Contact",
   "navbar_knowledgeBase_descriptions": "Find answers and learn more about our smart home ecosystem!",
@@ -106,8 +106,8 @@
   "main_scroll_indicator_blog": "Blog",
   "main_scroll_indicator_apply": "Apply",
 
-  "main_intro_title": "We present Ensi Home",
-  "main_intro_description": "a Complete Smart Home Solution",
+  "main_intro_title": "We Present Ensi Home",
+  "main_intro_description": "A Complete Smart Home Solution",
 
   "main_appleCards_title": "Ensi Home Personalized for You",
   "main_appleCards_card_1_category": "Personalized Experience",
@@ -123,7 +123,7 @@
   "main_appleCards_card_4_title": "A voice assistant that provides seamless usability with contextual understanding.",
 
   "main_appleCards_card_5_category": "Automation AI",
-  "main_appleCards_card_5_title": "Autonomously automate your ruitines.",
+  "main_appleCards_card_5_title": "Autonomously automate your routines.",
 
   "main_appleCards_card_6_category": "Security",
   "main_appleCards_card_6_title": "Stay informed about what's happening at home, so it's never on your mind.",
@@ -174,41 +174,41 @@
   "main_appleCards_card_6_inside_list_2": "Real-Time Security Alerts",
   "main_appleCards_card_6_inside_list_3": "Remote Access Control",
   "main_appleCards_card_6_inside_list_4": "Emergency Response Integration",
-  "main_appleCards_card_6_inside_footer": "With Ensi Home, you can have complete peace of mind knowing that your home is protected around the clock. Our advanced system keeps you informed of any unusual activity and provide swift responses to ensure your safety.",
+  "main_appleCards_card_6_inside_footer": "With Ensi Home, you can have complete peace of mind knowing that your home is protected around the clock. Our advanced system keeps you informed of any unusual activity and provides swift responses to ensure your safety.",
 
-  "main_app_title": "An app you'll love.",
+  "main_app_title": "An App You'll Love.",
   "main_app_description": "Designed to make controlling, automating and monitoring your smart home intuitive and fun.",
 
-  "main_threesome_title": "What makes Ensi Home?",
+  "main_threesome_title": "What Makes Ensi Home?",
   "main_threesome_mobileApp": "Mobile Application",
-  "main_threesome_mobileApp_button": "Take a look",
+  "main_threesome_mobileApp_button": "Take a Look",
   "main_threesome_box": "Box",
   "main_threesome_box_button": "View the Box",
-  "main_threesome_voiceAssistant": "AI Voice Assistant ",
-  "main_threesome_voiceAssistant_button": "Get more Details",
+  "main_threesome_voiceAssistant": "AI Voice Assistant",
+  "main_threesome_voiceAssistant_button": "Get More Details",
 
-  "main_orchestrator_title": "The orchestrator",
-  "main_orchestrator_description": "Ensi Home is the orchestra conductor of your Smart House. It will always make your house reachable, not just available.",
-  "main_orchestrator_button": "Your Smart Companion in your House!",
+  "main_orchestrator_title": "The Orchestrator",
+  "main_orchestrator_description": "Ensi Home is the orchestra conductor of your Smart House, ensuring it is always accessible and intelligently managed.",
+  "main_orchestrator_button": "Your Smart Companion in Your House!",
 
   "main_blog_and_news": "Latest News and Insights",
-  "main_blog_and_news_read_more": "Read more",
+  "main_blog_and_news_read_more": "Read More",
 
-  "main_get_ensi": "Get an Ensi Home now!",
-  "main_get_description": "Apply now and we will reach out to you",
+  "main_get_ensi": "Get an Ensi Home Now!",
+  "main_get_description": "Apply now and we will reach out to you.",
   "main_get_email": "E-mail",
   "main_get_email_placeholder": "Enter your e-mail",
   "main_get_button": "Apply Now",
 
   "main_customerBenefits_constructionCompany_title": "Benefits for Construction Companies",
-  "main_customerBenefits_constructionCompany_description": "Revolutionize your projects with Ensi Home's innovative construction solutions",
+  "main_customerBenefits_constructionCompany_description": "Revolutionize your projects with Ensi Home's innovative construction solutions.",
   "main_customerBenefits_constructionCompany_cta": "Partner with Ensi Home",
 
   "main_customerBenefits_constructionCompany_content_1_title": "Competitive Differentiation",
   "main_customerBenefits_constructionCompany_content_1_description": "Smart home features attract a broader audience, including younger, tech-oriented buyers and environmentally conscious consumers. Adding these features can expand the company's market share by appealing to luxury or high-end buyers.",
   "main_customerBenefits_constructionCompany_content_1_features": "Attracts Tech-Savvy Buyers, Appeals to Eco-Conscious Consumers, Expands Market Share, Targets Luxury Market",
 
-  "main_customerBenefits_constructionCompany_content_2_title": "Competitive Differentiation",
+  "main_customerBenefits_constructionCompany_content_2_title": "Innovation and Alignment with Modern Trends",
   "main_customerBenefits_constructionCompany_content_2_description": "Offering smart home features sets the company apart from competitors by showcasing innovation and alignment with modern trends.",
   "main_customerBenefits_constructionCompany_content_2_features": "Showcases Innovation, Aligns with Modern Trends, Differentiates from Competitors, Enhances Brand Image",
 
@@ -217,7 +217,7 @@
   "main_customerBenefits_constructionCompany_content_3_features": "Commands Higher Market Prices, Attracts Premium Buyers, Offers Enhanced Functionality, Boosts Property Efficiency",
 
   "main_customerBenefits_homeOwner_title": "Benefits for Home Owners",
-  "main_customerBenefits_homeOwner_description": "Experience the future of sustainable living with Ensi Home",
+  "main_customerBenefits_homeOwner_description": "Experience the future of sustainable living with Ensi Home.",
   "main_customerBenefits_homeOwner_cta": "Contact Us",
 
   "main_customerBenefits_homeOwner_content_1_title": "Ease of Use and Natural Interaction",
@@ -325,6 +325,115 @@
   "ensi_ai_voice_assistant_join_the_future_of_smart_living": "Join the future of smart living with Ensi Home's AI Voice Assistant. Experience unparalleled convenience, accessibility, and efficiency in your daily life.",
   "ensi_ai_voice_assistant_explore_ai_solutions": "Explore AI Solutions",
 
+  "ensi_mobileApp_intro_feature_with_mobileApp_mockup_platform": "Ensi Home Mobile App",
+  "ensi_mobileApp_intro_feature_with_mobileApp_mockup_title": "Control Your Smart Home from Anywhere",
+  "ensi_mobileApp_intro_feature_with_mobileApp_mockup_description": "Experience the future of home automation with our intuitive mobile application. Manage all your smart devices, monitor energy usage, and ensure your home's security with just a few taps.",
+
+  "ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_unified_control_title": "Unified Control",
+  "ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_unified_control_description": "Manage all devices from one app",
+
+  "ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_energy_efficiency_title": "Energy Efficiency",
+  "ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_energy_efficiency_description": "Monitor and optimize energy usage",
+
+  "ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_enhanced_security_title": "Enhanced Security",
+  "ensi_mobileApp_intro_feature_with_mobileApp_mockup_checkPoints_enhanced_security_description": "Keep your home safe, always",
+
+  "ensi_mobileApp_mobileFeatures_device_control_title": "Control Your Devices Fully, Control Your Home Fully",
+  "ensi_mobileApp_mobileFeatures_device_control_description": "One app is all you need - no more switching between multiple apps. Take complete control of all your devices and your entire home from a single place.",
+
+  "ensi_mobileApp_mobileFeatures_device_control_feature_one_app_title": "One App, Zero Hassle",
+  "ensi_mobileApp_mobileFeatures_device_control_feature_one_app_description": "Say goodbye to app-hopping - everything you need in one place",
+
+  "ensi_mobileApp_mobileFeatures_device_control_feature_full_control_title": "Full Device Control",
+  "ensi_mobileApp_mobileFeatures_device_control_feature_full_control_description": "Access every feature and setting of each device without limitations",
+
+  "ensi_mobileApp_mobileFeatures_device_control_feature_advanced_settings_title": "Advanced Device Settings",
+  "ensi_mobileApp_mobileFeatures_device_control_feature_advanced_settings_description": "Fine-tune and customize every parameter of your smart devices",
+
+  "ensi_mobileApp_mobileFeatures_ai_assistant_title": "Talk to Your Home with Ensi AI Assistant",
+  "ensi_mobileApp_mobileFeatures_ai_assistant_description": "Experience a new way of home control through natural conversation. With Ensi AI Assistant, simply talk to your home from anywhere and let your AI companion understand and execute your commands intelligently.",
+
+  "ensi_mobileApp_mobileFeatures_ai_assistant_feature_natural_conversation_title": "Natural Conversation Control",
+  "ensi_mobileApp_mobileFeatures_ai_assistant_feature_natural_conversation_description": "Speak naturally to control your home - just like talking to a human assistant who understands your needs",
+
+  "ensi_mobileApp_mobileFeatures_ai_assistant_feature_remote_voice_title": "Remote Voice Commands",
+  "ensi_mobileApp_mobileFeatures_ai_assistant_feature_remote_voice_description": "Control your home from anywhere through voice commands - whether you're at work, on vacation, or in bed",
+
+  "ensi_mobileApp_mobileFeatures_ai_assistant_feature_intelligent_understanding_title": "Intelligent Understanding",
+  "ensi_mobileApp_mobileFeatures_ai_assistant_feature_intelligent_understanding_description": "Ensi AI Assistant understands context and intent, executing complex commands and managing multiple devices intelligently",
+
+  "ensi_mobileApp_mobileFeatures_smart_automations_title": "Smart Automations",
+  "ensi_mobileApp_mobileFeatures_smart_automations_description": "Create powerful automations with AI assistance, ready-made templates, or build your own custom flows with complete freedom.",
+
+  "ensi_mobileApp_mobileFeatures_smart_automations_feature_ai_automation_title": "AI-Powered Automation",
+  "ensi_mobileApp_mobileFeatures_smart_automations_feature_ai_automation_description": "Let AI suggest and create intelligent automations based on your habits",
+
+  "ensi_mobileApp_mobileFeatures_smart_automations_feature_templates_title": "Template Library",
+  "ensi_mobileApp_mobileFeatures_smart_automations_feature_templates_description": "Choose from a variety of pre-built automation templates for quick setup",
+
+  "ensi_mobileApp_mobileFeatures_smart_automations_feature_custom_builder_title": "Custom Automation Builder",
+  "ensi_mobileApp_mobileFeatures_smart_automations_feature_custom_builder_description": "Design your own complex automations with unlimited flexibility",
+
+  "ensi_mobileApp_mobileFeatures_customization_title": "Your Home, Your Way",
+  "ensi_mobileApp_mobileFeatures_customization_description": "Take control of your entire home from one customizable dashboard. Organize and manage your devices exactly how you want them, making home control effortless and intuitive.",
+
+  "ensi_mobileApp_mobileFeatures_customization_feature_dashboard_title": "Customizable Dashboard",
+  "ensi_mobileApp_mobileFeatures_customization_feature_dashboard_description": "Design your perfect home control center - arrange devices and controls exactly how you want them",
+
+  "ensi_mobileApp_mobileFeatures_customization_feature_quick_actions_title": "Quick Actions",
+  "ensi_mobileApp_mobileFeatures_customization_feature_quick_actions_description": "Control multiple devices at once - turn off all lights, adjust all air conditioners, or create your own combinations",
+
+  "ensi_mobileApp_mobileFeatures_customization_feature_organization_title": "Smart Device Organization",
+  "ensi_mobileApp_mobileFeatures_customization_feature_organization_description": "Group and categorize your devices your way for quick access and efficient home management",
+
+  "ensi_mobileApp_mobileFeatures_device_setup_title": "Add Devices with Ease",
+  "ensi_mobileApp_mobileFeatures_device_setup_description": "Seamlessly connect and integrate new smart devices to your home network with our intuitive device setup process. Get your devices up and running in minutes.",
+
+  "ensi_mobileApp_mobileFeatures_device_setup_feature_discovery_title": "Quick Device Discovery",
+  "ensi_mobileApp_mobileFeatures_device_setup_feature_discovery_description": "Our app automatically detects compatible smart devices nearby, making the setup process fast and hassle-free",
+
+  "ensi_mobileApp_mobileFeatures_device_setup_feature_guided_setup_title": "Guided Setup Process",
+  "ensi_mobileApp_mobileFeatures_device_setup_feature_guided_setup_description": "Step-by-step instructions guide you through connecting and configuring each new device for optimal performance",
+
+  "ensi_mobileApp_mobileFeatures_device_setup_feature_multi_device_title": "Multi-Device Support",
+  "ensi_mobileApp_mobileFeatures_device_setup_feature_multi_device_description": "Add and manage multiple devices simultaneously, with support for a wide range of smart home products and brands",
+
+  "ensi_mobileApp_mobileFeatures_multi_home_title": "Multi-Home Management & Access Control",
+  "ensi_mobileApp_mobileFeatures_multi_home_description": "Seamlessly manage multiple properties and share access with family and guests. Control who can access what, when, and where across all your connected homes.",
+
+  "ensi_mobileApp_mobileFeatures_multi_home_feature_property_control_title": "Multiple Property Control",
+  "ensi_mobileApp_mobileFeatures_multi_home_feature_property_control_description": "Monitor and control all your properties from a single app - perfect for managing your primary residence, vacation home, or rental properties",
+
+  "ensi_mobileApp_mobileFeatures_multi_home_feature_access_control_title": "Family & Guest Access",
+  "ensi_mobileApp_mobileFeatures_multi_home_feature_access_control_description": "Invite family members and guests with customizable access levels - grant full control or limit access to specific rooms and devices",
+
+  "ensi_mobileApp_mobileFeatures_multi_home_feature_user_management_title": "Advanced User Management",
+  "ensi_mobileApp_mobileFeatures_multi_home_feature_user_management_description": "Set time-based access, create user profiles, and maintain detailed access logs for complete oversight of your smart home ecosystem",
+
+  "ensi_mobileApp_mobileFeatures_personalization_title": "Personalize Your Experience",
+  "ensi_mobileApp_mobileFeatures_personalization_description": "Customize every aspect of your smart home app experience through our comprehensive preferences screen. From appearance to notifications, make the app truly yours.",
+
+  "ensi_mobileApp_mobileFeatures_personalization_feature_appearance_title": "App Appearance",
+  "ensi_mobileApp_mobileFeatures_personalization_feature_appearance_description": "Choose between light and dark themes, adjust text sizes, and customize the color scheme to match your style",
+
+  "ensi_mobileApp_mobileFeatures_personalization_feature_notifications_title": "Notification Settings",
+  "ensi_mobileApp_mobileFeatures_personalization_feature_notifications_description": "Fine-tune which alerts you receive and how they're delivered - from device status updates to security notifications",
+
+  "ensi_mobileApp_mobileFeatures_personalization_feature_regional_title": "Regional Preferences",
+  "ensi_mobileApp_mobileFeatures_personalization_feature_regional_description": "Set your preferred temperature units, time formats, and language to make the app feel native to your region",
+
+  "ensi_mobileApp_mobileFeatures_security_title": "Security at Your Fingertips",
+  "ensi_mobileApp_mobileFeatures_security_description": "Your home security, your rules - choose which smart security features to enable and maintain complete control over your privacy settings.",
+
+  "ensi_mobileApp_mobileFeatures_security_feature_security_features_title": "Customizable Security Features",
+  "ensi_mobileApp_mobileFeatures_security_feature_security_features_description": "Activate or deactivate any security feature at will - you decide what works best for your home",
+
+  "ensi_mobileApp_mobileFeatures_security_feature_ai_security_title": "Optional AI Assistance",
+  "ensi_mobileApp_mobileFeatures_security_feature_ai_security_description": "Choose when to use AI security features and when to keep things simple - the control is always yours",
+
+  "ensi_mobileApp_mobileFeatures_security_feature_privacy_title": "Privacy-First Controls",
+  "ensi_mobileApp_mobileFeatures_security_feature_privacy_description": "Full authority over your security settings and data - nothing happens without your explicit permission",
+
   "ensi_box_platform": "Smart Home",
   "ensi_box_title": "Ensi Home Box - The Brain of Smart Living",
   "ensi_box_description": "Experience the future of home automation with the Ensi Home Box, the central hub that brings intelligence to your living space.",
@@ -354,11 +463,11 @@
   "ensi_box_integration_process": "Integration Process",
   "ensi_box_easy_installation": "Easy Installation",
   "ensi_box_easy_installation_description": "The Ensi Home Box is designed for seamless integration during the construction phase or as an upgrade to existing homes. Our team of experts ensures a smooth installation process, minimizing disruption to your daily life.",
-  "ensi_box_site_assessment_and_planning": "Site assessment and planning",
-  "ensi_box_wiring_and_infrastructure_setup": "Wiring and infrastructure setup",
-  "ensi_box_box_installation_and_configuration": "Box installation and configuration",
-  "ensi_box_device_pairing_and_system_testing": "Device pairing and system testing",
-  "ensi_box_user_training_and_handover": "User training and handover",
+  "ensi_box_site_assessment_and_planning": "Site Assessment and Planning",
+  "ensi_box_wiring_and_infrastructure_setup": "Wiring and Infrastructure Setup",
+  "ensi_box_box_installation_and_configuration": "Box Installation and Configuration",
+  "ensi_box_device_pairing_and_system_testing": "Device Pairing and System Testing",
+  "ensi_box_user_training_and_handover": "User Training and Handover",
   "ensi_box_in_action": "Ensi Home Box in Action",
   "ensi_box_in_living_room_alt": "Ensi Home Box in Living Room",
   "ensi_box_in_kitchen_alt": "Ensi Home Box in Kitchen",
@@ -526,26 +635,26 @@
   "ensi_cloud_modal_sort_by_category": "Sort by Category",
   "ensi_cloud_modal_no_brands_match": "No brands match your filters.",
   "ensi_cloud_modal_unknown_company": "Unknown Company",
-  "ensi_cloud_modal_no_description_available": "No description available.",
+  "ensi_cloud_modal_no_description_available": "Description not available.",
   "ensi_cloud_modal_technologies_badge": "Technologies",
   "ensi_cloud_modal_discuss_device_integration": "Discuss Device Integration",
   "ensi_cloud_modal_filter_button": "Filters",
 
   "ensi_compatible_smart_devices_smart_life_areas": "Smart Life Areas",
 
-  "ensi_compatible_smart_devices_apps_that_help_save_energy_title": "Apps that help save energy",
+  "ensi_compatible_smart_devices_apps_that_help_save_energy_title": "Apps that Help Save Energy",
   "ensi_compatible_smart_devices_apps_that_help_save_energy_description": "Save on your energy bill while saving the planet.",
 
-  "ensi_compatible_smart_devices_apps_for_a_safe_home_title": "Apps for a safe home",
+  "ensi_compatible_smart_devices_apps_for_a_safe_home_title": "Apps for a Safe Home",
   "ensi_compatible_smart_devices_apps_for_a_safe_home_description": "Feel safe at home.",
 
-  "ensi_compatible_smart_devices_apps_for_a_healthier_life_title": "Apps for a healthier life",
+  "ensi_compatible_smart_devices_apps_for_a_healthier_life_title": "Apps for a Healthier Life",
   "ensi_compatible_smart_devices_apps_for_a_healthier_life_description": "Boost your wellbeing with smart technology.",
 
-  "ensi_compatible_smart_devices_bring_the_smart_outdoors_title": "Bring the smart outdoors",
+  "ensi_compatible_smart_devices_bring_the_smart_outdoors_title": "Bring the Smart Outdoors",
   "ensi_compatible_smart_devices_bring_the_smart_outdoors_description": "Extend your smart home to your garden and beyond.",
 
-  "ensi_compatible_smart_devices_beyond_smart_home_title": "Beyond smart home",
+  "ensi_compatible_smart_devices_beyond_smart_home_title": "Beyond Smart Home",
   "ensi_compatible_smart_devices_beyond_smart_home_description": "Discover the next level of smart living.",
 
   "ensi_compatible_smart_devices_footer_text": "© {year} Smart Home App Gallery. All rights reserved.",
@@ -557,25 +666,25 @@
   "knowledge_base_how_it_is_done_in_depth_consultation": "In-depth consultation to understand your specific requirements",
   "knowledge_base_how_it_is_done_site_visits": "Site visits for accurate assessment of your space",
   "knowledge_base_how_it_is_done_customization_options": "Customization options to tailor solutions to your needs",
-  "knowledge_base_how_it_is_done_customer_consultation": "Customer consultation",
-  "knowledge_base_how_it_is_done_home_assessment": "Home assessment",
+  "knowledge_base_how_it_is_done_customer_consultation": "Customer Consultation",
+  "knowledge_base_how_it_is_done_home_assessment": "Home Assessment",
 
   "knowledge_base_how_it_is_done_supplying_smart_devices_title": "2. Supplying Smart Devices",
   "knowledge_base_how_it_is_done_procurement_quality_assurance": "Procurement & Quality Assurance",
   "knowledge_base_how_it_is_done_procurement_process": "Efficient procurement process for all required smart devices",
   "knowledge_base_how_it_is_done_quality_assurance_measures": "Rigorous quality assurance measures for all equipment",
   "knowledge_base_how_it_is_done_coordination_with_timelines": "Coordination with construction timelines for seamless integration",
-  "knowledge_base_how_it_is_done_device_selection": "Smart device selection",
-  "knowledge_base_how_it_is_done_quality_assurance": "Quality assurance process",
+  "knowledge_base_how_it_is_done_device_selection": "Smart Device Selection",
+  "knowledge_base_how_it_is_done_quality_assurance": "Quality Assurance Process",
 
   "knowledge_base_how_it_is_done_installation_integration_title": "3. Installation & Integration",
   "knowledge_base_how_it_is_done_on_site_support": "On-site Support & Collaboration",
   "knowledge_base_how_it_is_done_expert_support": "Expert on-site support during installation",
-  "knowledge_base_how_it_is_done_collaboration_with_teams": "Seamless collaboration with construction teams",
-  "knowledge_base_how_it_is_done_training_for_partners": "Comprehensive training for construction partners",
-  "knowledge_base_how_it_is_done_final_testing": "Final testing and quality checks",
-  "knowledge_base_how_it_is_done_on_site_installation": "On-site installation",
-  "knowledge_base_how_it_is_done_team_collaboration": "Team collaboration",
+  "knowledge_base_how_it_is_done_collaboration_with_teams": "Seamless Collaboration with Construction Teams",
+  "knowledge_base_how_it_is_done_training_for_partners": "Comprehensive Training for Construction Partners",
+  "knowledge_base_how_it_is_done_final_testing": "Final Testing and Quality Checks",
+  "knowledge_base_how_it_is_done_on_site_installation": "On-site Installation",
+  "knowledge_base_how_it_is_done_team_collaboration": "Team Collaboration",
 
   "knowledge_base_how_it_is_done_collaborative_process": "Our Collaborative Process",
   "knowledge_base_how_it_is_done_seamless_integration": "Seamless integration of smart home solutions for construction projects",
