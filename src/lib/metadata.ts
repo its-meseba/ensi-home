@@ -1,12 +1,26 @@
 import { Metadata } from 'next';
 
+type OpenGraphType =
+  | 'website'
+  | 'article'
+  | 'book'
+  | 'profile'
+  | 'music.song'
+  | 'music.album'
+  | 'music.playlist'
+  | 'music.radio_station'
+  | 'video.movie'
+  | 'video.episode'
+  | 'video.tv_show'
+  | 'video.other';
+
 type MetadataProps = {
   title?: string;
   description?: string;
   keywords?: string[];
   image?: string;
   url?: string;
-  type?: string;
+  type?: OpenGraphType;
 };
 
 const defaultMetadata = {
@@ -15,7 +29,7 @@ const defaultMetadata = {
   keywords: ['smart home', 'IoT', 'automation', 'technology'],
   image: '/images/og-image.jpg',
   url: 'https://solace.com.tr',
-  type: 'website',
+  type: 'website' as OpenGraphType,
 };
 
 export function generateMetadata({

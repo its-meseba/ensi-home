@@ -35,7 +35,7 @@ export default function ContactPage() {
       variants={containerVariants}
     >
       <CurvedBackgroundParallax
-        imageSrc="/images/pages/knowledge-base/contact/cover.jpg"
+        imageSrc="/images/pages/knowledge-base/contact/contact.jpg"
         title={m.contact_contact_us()}
       />
 
