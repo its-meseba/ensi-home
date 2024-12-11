@@ -16,10 +16,10 @@ export const routes = {
     //   path: '/ensi-home/smart-life-areas',
     //   messageKey: 'navbar_solutions_smartLiving',
     // },
-    {
-      path: '/ensi-home/compatible-smart-devices',
-      messageKey: 'navbar_solutions_supportedDevices',
-    },
+    // {
+    //   path: '/ensi-home/compatible-smart-devices',
+    //   messageKey: 'navbar_solutions_supportedDevices',
+    // },
   ],
   knowledgeBase: [
     { path: '/knowledge-base/faq', messageKey: 'navbar_knowledgeBase_faq' },
