@@ -489,6 +489,7 @@
   "ensi_cloud_security_title": "Security",
   "ensi_cloud_benefits_title": "Benefits",
   "ensi_cloud_navigation_title": "Cloud Infrastructure",
+
   "ensi_cloud_home_cloud_infrastructure": "Ensi Home Cloud Infrastructure",
   "ensi_cloud_overview_card_title": "Cloud Infrastructure Overview",
   "ensi_cloud_overview_card_description": "Our cloud infrastructure provides a robust, scalable, and secure foundation for your smart home experience:",
@@ -707,5 +708,104 @@
   "ensi_compatible_smart_devices_category_music": "Music",
   "ensi_compatible_smart_devices_category_security": "Security",
   "ensi_compatible_smart_devices_category_tools": "Tools",
-  "ensi_compatible_smart_devices_category_video": "Video"
+  "ensi_compatible_smart_devices_category_video": "Video",
+
+  "ensi_compatible_smart_devices_category_lights": "Lights",
+  "ensi_compatible_smart_devices_category_radiators": "Radiators",
+  "ensi_compatible_smart_devices_category_boiler": "Boiler",
+  "ensi_compatible_smart_devices_category_thermostat": "Thermostat",
+  "ensi_compatible_smart_devices_category_air_conditioner": "Air Conditioner",
+  "ensi_compatible_smart_devices_category_curtain": "Curtain",
+  "ensi_compatible_smart_devices_category_human_sensor": "Human Sensor",
+  "ensi_compatible_smart_devices_category_motion_sensor": "Motion Sensor",
+  "ensi_compatible_smart_devices_category_camera": "Camera",
+  "ensi_compatible_smart_devices_category_speaker": "Speaker",
+  "ensi_compatible_smart_devices_category_microphone": "Microphone",
+  "ensi_compatible_smart_devices_category_white_goods": "White Goods",
+  "ensi_compatible_smart_devices_category_coffee_and_tea_machine": "Coffee and Tea Machine",
+  "ensi_compatible_smart_devices_category_smart_plug": "Smart Plug",
+  "ensi_compatible_smart_devices_category_garden_irrigation": "Garden Irrigation",
+  "ensi_compatible_smart_devices_category_smart_lock": "Smart Lock",
+  "ensi_compatible_smart_devices_category_air_quality_sensor": "Air Quality Sensor",
+  "ensi_compatible_smart_devices_category_fire_alarm": "Fire Alarm",
+  "ensi_compatible_smart_devices_category_water_leak_sensor": "Water Leak Sensor",
+  "ensi_compatible_smart_devices_category_meters": "Meters",
+  "ensi_compatible_smart_devices_category_door_and_window_monitor": "Door and Window Monitor",
+  "ensi_compatible_smart_devices_category_knx_switch_board": "KNX Switch Board",
+  "ensi_compatible_smart_devices_category_robot_vacuum": "Robot Vacuum",
+  "ensi_compatible_smart_devices_category_lawn_mower": "Lawn Mower",
+
+  "faqSection_page_title": "Frequently Asked Questions",
+  "faqSection_header_text": "We want to have your question!",
+  "faqSection_search_placeholder": "Search FAQs...",
+  "faqSection_button_show_more_questions": "Show More Questions",
+  "faqSection_heading_browse_by_category": "Browse by Category",
+  "faqSection_heading_cant_find": "Can't find what you're looking for?",
+  "faqSection_button_contact_us": "Contact Us",
+
+  "faqSection_categories_getting_started_title": "Getting Started",
+  "faqSection_categories_getting_started_link": "All articles in Getting Started",
+  "faqSection_categories_getting_started_item_1": "How do I set up my Ensi Home system?",
+  "faqSection_categories_getting_started_item_2": "What devices are compatible with Ensi Home?",
+  "faqSection_categories_getting_started_item_3": "How to connect my first smart device?",
+
+  "faqSection_categories_mobile_application_title": "Mobile Application",
+  "faqSection_categories_mobile_application_link": "All articles about Mobile Application",
+  "faqSection_categories_mobile_application_item_1": "How to download the Ensi Home app?",
+  "faqSection_categories_mobile_application_item_2": "Setting up remote access",
+  "faqSection_categories_mobile_application_item_3": "Customizing your dashboard",
+
+  "faqSection_categories_ai_voice_assistant_title": "AI Voice Assistant",
+  "faqSection_categories_ai_voice_assistant_link": "All articles about AI Voice Assistant",
+  "faqSection_categories_ai_voice_assistant_item_1": "How to activate the AI voice assistant?",
+  "faqSection_categories_ai_voice_assistant_item_2": "Voice commands for Ensi Home",
+  "faqSection_categories_ai_voice_assistant_item_3": "Personalizing your AI assistant",
+
+  "faqSection_categories_security_title": "Security",
+  "faqSection_categories_security_link": "All articles about Security",
+  "faqSection_categories_security_item_1": "Ensi Home security features",
+  "faqSection_categories_security_item_2": "Setting up smart locks",
+  "faqSection_categories_security_item_3": "Configuring security cameras",
+
+  "faqSection_categories_energy_management_title": "Energy Management",
+  "faqSection_categories_energy_management_link": "All articles about Energy Management",
+  "faqSection_categories_energy_management_item_1": "Monitoring energy consumption",
+  "faqSection_categories_energy_management_item_2": "Setting up energy-saving routines",
+  "faqSection_categories_energy_management_item_3": "Integrating solar panels with Ensi Home",
+
+  "faqSection_categories_advanced_settings_title": "Advanced Settings",
+  "faqSection_categories_advanced_settings_link": "All articles about Advanced Settings",
+  "faqSection_categories_advanced_settings_item_1": "Configuring Ensi Home Box",
+  "faqSection_categories_advanced_settings_item_2": "Creating custom automations",
+  "faqSection_categories_advanced_settings_item_3": "Integrating third-party devices",
+
+  "faqSection_faq_question_1": "What is Ensi Home?",
+  "faqSection_faq_answer_1": "Ensi Home is a comprehensive smart home system that integrates various smart devices, AI voice assistance, and energy management features to create a more comfortable, efficient, and secure living environment.",
+
+  "faqSection_faq_question_2": "How does the Ensi Home Box work?",
+  "faqSection_faq_answer_2": "The Ensi Home Box serves as the central hub for your smart home system. It connects and controls all your smart devices, processes data locally for enhanced privacy, and enables seamless integration between different smart home components.",
+
+  "faqSection_faq_question_3": "Can I control my Ensi Home system when I'm away?",
+  "faqSection_faq_answer_3": "Yes, you can control your Ensi Home system remotely using the Ensi Home mobile application. This allows you to monitor and manage your smart home from anywhere with an internet connection.",
+
+  "faqSection_faq_question_4": "How secure is the Ensi Home system?",
+  "faqSection_faq_answer_4": "Ensi Home prioritizes security with end-to-end encryption, regular security updates, and local data processing. We also offer advanced security features like smart locks and camera integration to enhance your home's physical security.",
+
+  "faqSection_faq_question_5": "What energy-saving features does Ensi Home offer?",
+  "faqSection_faq_answer_5": "Ensi Home provides various energy-saving features, including smart thermostat control, automated lighting schedules, energy consumption monitoring, and integration with solar panel systems for optimized energy usage.",
+
+  "faqSection_faq_question_6": "How do I set up my Ensi Home system?",
+  "faqSection_faq_answer_6": "Setting up your Ensi Home system is easy. Start by installing the Ensi Home Box, download the mobile app, and follow the step-by-step instructions to connect your smart devices and configure your preferences.",
+
+  "faqSection_faq_question_7": "What types of devices can I connect to Ensi Home?",
+  "faqSection_faq_answer_7": "Ensi Home is compatible with a wide range of smart devices, including lights, thermostats, locks, cameras, sensors, and appliances from various manufacturers. Check our compatibility list for specific device models.",
+
+  "faqSection_faq_question_8": "How does the AI voice assistant work?",
+  "faqSection_faq_answer_8": "The Ensi Home AI voice assistant uses natural language processing to understand and execute your voice commands. You can control devices, ask questions, and set up routines using voice interactions.",
+
+  "faqSection_faq_question_9": "Can Ensi Home integrate with other smart home platforms?",
+  "faqSection_faq_answer_9": "Yes, Ensi Home can integrate with popular smart home platforms like Google Home, Amazon Alexa, and Apple HomeKit, allowing you to use your preferred voice assistant and expand your smart home ecosystem.",
+
+  "faqSection_faq_question_10": "What kind of customer support does Ensi Home provide?",
+  "faqSection_faq_answer_10": "Ensi Home offers comprehensive customer support, including 24/7 online chat, phone support, email assistance, and an extensive knowledge base. We also provide professional installation services if needed."
 }

@@ -12,10 +12,10 @@ export const routes = {
       messageKey: 'navbar_solutions_ensiVoiceAssistant',
     },
     { path: '/ensi-home/cloud', messageKey: 'navbar_solutions_cloud' },
-    {
-      path: '/ensi-home/smart-life-areas',
-      messageKey: 'navbar_solutions_smartLiving',
-    },
+    // {
+    //   path: '/ensi-home/smart-life-areas',
+    //   messageKey: 'navbar_solutions_smartLiving',
+    // },
     {
       path: '/ensi-home/compatible-smart-devices',
       messageKey: 'navbar_solutions_supportedDevices',

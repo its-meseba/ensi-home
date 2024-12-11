@@ -75,7 +75,7 @@
 
   "navbar_main": "🏠 Ana Sayfa",
   "navbar_howItIsDone": "Nasıl Yapılıyor?",
-  "navbar_solutions": "Çözümlerimiz: Ensi Home",
+  "navbar_solutions": "Çözümlerimiz Ensi Home",
   "navbar_solutions_ensiBox": "• Ensi Home Kutusu",
   "navbar_solutions_ensiMobileApp": "• Ensi Home Mobil Uygulaması",
   "navbar_solutions_ensiVoiceAssistant": "• Ensi Home Sesli Asistanı",
@@ -683,5 +683,104 @@
   "ensi_compatible_smart_devices_category_music": "Müzik",
   "ensi_compatible_smart_devices_category_security": "Güvenlik",
   "ensi_compatible_smart_devices_category_tools": "Araçlar",
-  "ensi_compatible_smart_devices_category_video": "Video"
+  "ensi_compatible_smart_devices_category_video": "Video",
+
+  "ensi_compatible_smart_devices_category_lights": "Işıklar",
+  "ensi_compatible_smart_devices_category_radiators": "Radyatörler",
+  "ensi_compatible_smart_devices_category_boiler": "Kazan",
+  "ensi_compatible_smart_devices_category_thermostat": "Termostat",
+  "ensi_compatible_smart_devices_category_air_conditioner": "Klima",
+  "ensi_compatible_smart_devices_category_curtain": "Perde",
+  "ensi_compatible_smart_devices_category_human_sensor": "İnsan Sensörü",
+  "ensi_compatible_smart_devices_category_motion_sensor": "Hareket Sensörü",
+  "ensi_compatible_smart_devices_category_camera": "Kamera",
+  "ensi_compatible_smart_devices_category_speaker": "Hoparlör",
+  "ensi_compatible_smart_devices_category_microphone": "Mikrofon",
+  "ensi_compatible_smart_devices_category_white_goods": "Beyaz Eşyalar",
+  "ensi_compatible_smart_devices_category_coffee_and_tea_machine": "Kahve ve Çay Makinesi",
+  "ensi_compatible_smart_devices_category_smart_plug": "Akıllı Priz",
+  "ensi_compatible_smart_devices_category_garden_irrigation": "Bahçe Sulama",
+  "ensi_compatible_smart_devices_category_smart_lock": "Akıllı Kilit",
+  "ensi_compatible_smart_devices_category_air_quality_sensor": "Hava Kalitesi Sensörü",
+  "ensi_compatible_smart_devices_category_fire_alarm": "Yangın Alarmı",
+  "ensi_compatible_smart_devices_category_water_leak_sensor": "Su Kaçağı Sensörü",
+  "ensi_compatible_smart_devices_category_meters": "Sayaçlar",
+  "ensi_compatible_smart_devices_category_door_and_window_monitor": "Kapı ve Pencere Monitörü",
+  "ensi_compatible_smart_devices_category_knx_switch_board": "KNX Anahtar Panosu",
+  "ensi_compatible_smart_devices_category_robot_vacuum": "Robot Süpürge",
+  "ensi_compatible_smart_devices_category_lawn_mower": "Çim Biçme Makinesi",
+
+  "faqSection_page_title": "Sıkça Sorulan Sorular",
+  "faqSection_header_text": "Sorularınızı almak istiyoruz!",
+  "faqSection_search_placeholder": "SSS Ara...",
+  "faqSection_button_show_more_questions": "Daha Fazla Soru Göster",
+  "faqSection_heading_browse_by_category": "Kategoriye Göre Göz Atın",
+  "faqSection_heading_cant_find": "Aradığınızı bulamıyor musunuz?",
+  "faqSection_button_contact_us": "Bize Ulaşın",
+
+  "faqSection_categories_getting_started_title": "Başlarken",
+  "faqSection_categories_getting_started_link": "Başlarken'daki tüm makaleler",
+  "faqSection_categories_getting_started_item_1": "Ensi Home sistemimi nasıl kurabilirim?",
+  "faqSection_categories_getting_started_item_2": "Ensi Home ile hangi cihazlar uyumludur?",
+  "faqSection_categories_getting_started_item_3": "İlk akıllı cihazımı nasıl bağlarım?",
+
+  "faqSection_categories_mobile_application_title": "Mobil Uygulama",
+  "faqSection_categories_mobile_application_link": "Mobil Uygulama ile ilgili tüm makaleler",
+  "faqSection_categories_mobile_application_item_1": "Ensi Home uygulamasını nasıl indiririm?",
+  "faqSection_categories_mobile_application_item_2": "Uzaktan erişimi nasıl kurarım?",
+  "faqSection_categories_mobile_application_item_3": "Gösterge tabanımı nasıl özelleştiririm?",
+
+  "faqSection_categories_ai_voice_assistant_title": "Yapay Zeka Sesli Asistan",
+  "faqSection_categories_ai_voice_assistant_link": "Yapay Zeka Sesli Asistan ile ilgili tüm makaleler",
+  "faqSection_categories_ai_voice_assistant_item_1": "Yapay zeka sesli asistanını nasıl etkinleştiririm?",
+  "faqSection_categories_ai_voice_assistant_item_2": "Ensi Home için ses komutları",
+  "faqSection_categories_ai_voice_assistant_item_3": "Yapay zeka asistanınızı nasıl kişiselleştirirsiniz?",
+
+  "faqSection_categories_security_title": "Güvenlik",
+  "faqSection_categories_security_link": "Güvenlik ile ilgili tüm makaleler",
+  "faqSection_categories_security_item_1": "Ensi Home güvenlik özellikleri",
+  "faqSection_categories_security_item_2": "Akıllı kilitleri nasıl kurarım?",
+  "faqSection_categories_security_item_3": "Güvenlik kameralarını nasıl yapılandırırım?",
+
+  "faqSection_categories_energy_management_title": "Enerji Yönetimi",
+  "faqSection_categories_energy_management_link": "Enerji Yönetimi ile ilgili tüm makaleler",
+  "faqSection_categories_energy_management_item_1": "Enerji tüketimini nasıl izlerim?",
+  "faqSection_categories_energy_management_item_2": "Enerji tasarruf rutinlerini nasıl kurarım?",
+  "faqSection_categories_energy_management_item_3": "Ensi Home ile güneş panellerini nasıl entegre ederim?",
+
+  "faqSection_categories_advanced_settings_title": "Gelişmiş Ayarlar",
+  "faqSection_categories_advanced_settings_link": "Gelişmiş Ayarlar ile ilgili tüm makaleler",
+  "faqSection_categories_advanced_settings_item_1": "Ensi Home Box'ı nasıl yapılandırırım?",
+  "faqSection_categories_advanced_settings_item_2": "Özel otomasyonlar nasıl oluşturulur?",
+  "faqSection_categories_advanced_settings_item_3": "Üçüncü taraf cihazları nasıl entegre ederim?",
+
+  "faqSection_faq_question_1": "Ensi Home nedir?",
+  "faqSection_faq_answer_1": "Ensi Home, çeşitli akıllı cihazları, yapay zeka ses asistanını ve enerji yönetim özelliklerini entegre eden kapsamlı bir akıllı ev sistemidir ve daha konforlu, verimli ve güvenli bir yaşam ortamı yaratır.",
+
+  "faqSection_faq_question_2": "Ensi Home Box nasıl çalışır?",
+  "faqSection_faq_answer_2": "Ensi Home Box, akıllı ev sisteminiz için merkezi bir merkez görevi görür. Tüm akıllı cihazlarınızı bağlar ve kontrol eder, yerel veri işleme sayesinde artırılmış gizlilik sağlar ve farklı akıllı ev bileşenleri arasında sorunsuz entegrasyon imkanı sunar.",
+
+  "faqSection_faq_question_3": "Ensi Home sistemimi uzakta iken kontrol edebilir miyim?",
+  "faqSection_faq_answer_3": "Evet, Ensi Home mobil uygulamasını kullanarak Ensi Home sisteminizi uzaktan kontrol edebilirsiniz. Bu, internet bağlantısı olan her yerden akıllı evinizi izlemenize ve yönetmenize olanak tanır.",
+
+  "faqSection_faq_question_4": "Ensi Home sistemi ne kadar güvenlidir?",
+  "faqSection_faq_answer_4": "Ensi Home, uçtan uca şifreleme, düzenli güvenlik güncellemeleri ve yerel veri işleme ile güvenliği ön planda tutar. Ayrıca, akıllı kilitler ve kamera entegrasyonu gibi gelişmiş güvenlik özellikleri sunarak evinizin fiziksel güvenliğini artırır.",
+
+  "faqSection_faq_question_5": "Ensi Home hangi enerji tasarrufu özelliklerini sunuyor?",
+  "faqSection_faq_answer_5": "Ensi Home, akıllı termostat kontrolü, otomatik aydınlatma programları, enerji tüketimi izleme ve güneş paneli sistemleri ile entegrasyon gibi çeşitli enerji tasarrufu özellikleri sunarak enerji kullanımını optimize eder.",
+
+  "faqSection_faq_question_6": "Ensi Home sistemimi nasıl kurabilirim?",
+  "faqSection_faq_answer_6": "Ensi Home sisteminizi kurmak kolaydır. Önce Ensi Home Box'ı kurun, mobil uygulamayı indirin ve akıllı cihazlarınızı bağlamak ve tercihlerinizi yapılandırmak için adım adım talimatları takip edin.",
+
+  "faqSection_faq_question_7": "Ensi Home'a hangi tür cihazları bağlayabilirim?",
+  "faqSection_faq_answer_7": "Ensi Home, çeşitli üreticilerin ışıkları, termostatları, kilitleri, kameraları, sensörleri ve cihazları dahil olmak üzere geniş bir yelpazedeki akıllı cihazlarla uyumludur. Belirli cihaz modelleri için uyumluluk listemizi kontrol edin.",
+
+  "faqSection_faq_question_8": "Yapay zeka sesli asistanı nasıl çalışır?",
+  "faqSection_faq_answer_8": "Ensi Home yapay zeka sesli asistanı, doğal dil işleme kullanarak ses komutlarınızı anlar ve uygular. Sesli etkileşimler kullanarak cihazları kontrol edebilir, sorular sorabilir ve rutinler oluşturabilirsiniz.",
+
+  "faqSection_faq_question_9": "Ensi Home, diğer akıllı ev platformlarıyla entegre olabilir mi?",
+  "faqSection_faq_answer_9": "Evet, Ensi Home, Google Home, Amazon Alexa ve Apple HomeKit gibi popüler akıllı ev platformlarıyla entegre olabilir, böylece tercih ettiğiniz sesli asistanı kullanabilir ve akıllı ev ekosisteminizi genişletebilirsiniz.",
+
+  "faqSection_faq_question_10": "Ensi Home hangi tür müşteri desteği sunuyor?",
+  "faqSection_faq_answer_10": "Ensi Home, 7/24 çevrimiçi sohbet, telefon desteği, e-posta yardımı ve kapsamlı bir bilgi tabanı dahil olmak üzere kapsamlı müşteri desteği sunar. Ayrıca, gerekirse profesyonel kurulum hizmetleri de sağlar."
 }

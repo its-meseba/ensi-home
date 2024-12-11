@@ -18,123 +18,117 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { FaqVanishingInput } from '@/components/pages/knowledge-base/faq/faq-vanishing-input';
 import Link from 'next/link';
-import { CurvedBackground } from '@/components/common/CurvyBackground';
+import {
+  CurvedBackground,
+  CurvedBackgroundParallax,
+} from '@/components/common/CurvyBackground';
+import * as m from '@/paraglide/messages';
 
 const categories = [
   {
-    title: 'Getting Started',
+    title: m.faqSection_categories_getting_started_title(),
     icon: <Home className="size-5" />,
     items: [
-      'How do I set up my Ensi Home system?',
-      'What devices are compatible with Ensi Home?',
-      'How to connect my first smart device?',
+      m.faqSection_categories_getting_started_item_1(),
+      m.faqSection_categories_getting_started_item_2(),
+      m.faqSection_categories_getting_started_item_3(),
     ],
-    link: 'All articles in Getting Started',
+    link: m.faqSection_categories_getting_started_link(),
   },
   {
-    title: 'Mobile Application',
+    title: m.faqSection_categories_mobile_application_title(),
     icon: <Smartphone className="size-5" />,
     items: [
-      'How to download the Ensi Home app?',
-      'Setting up remote access',
-      'Customizing your dashboard',
+      m.faqSection_categories_mobile_application_item_1(),
+      m.faqSection_categories_mobile_application_item_2(),
+      m.faqSection_categories_mobile_application_item_3(),
     ],
-    link: 'All articles about Mobile Application',
+    link: m.faqSection_categories_mobile_application_link(),
   },
   {
-    title: 'AI Voice Assistant',
+    title: m.faqSection_categories_ai_voice_assistant_title(),
     icon: <Mic className="size-5" />,
     items: [
-      'How to activate the AI voice assistant?',
-      'Voice commands for Ensi Home',
-      'Personalizing your AI assistant',
+      m.faqSection_categories_ai_voice_assistant_item_1(),
+      m.faqSection_categories_ai_voice_assistant_item_2(),
+      m.faqSection_categories_ai_voice_assistant_item_3(),
     ],
-    link: 'All articles about AI Voice Assistant',
+    link: m.faqSection_categories_ai_voice_assistant_link(),
   },
   {
-    title: 'Security',
+    title: m.faqSection_categories_security_title(),
     icon: <Shield className="size-5" />,
     items: [
-      'Ensi Home security features',
-      'Setting up smart locks',
-      'Configuring security cameras',
+      m.faqSection_categories_security_item_1(),
+      m.faqSection_categories_security_item_2(),
+      m.faqSection_categories_security_item_3(),
     ],
-    link: 'All articles about Security',
+    link: m.faqSection_categories_security_link(),
   },
   {
-    title: 'Energy Management',
+    title: m.faqSection_categories_energy_management_title(),
     icon: <Zap className="size-5" />,
     items: [
-      'Monitoring energy consumption',
-      'Setting up energy-saving routines',
-      'Integrating solar panels with Ensi Home',
+      m.faqSection_categories_energy_management_item_1(),
+      m.faqSection_categories_energy_management_item_2(),
+      m.faqSection_categories_energy_management_item_3(),
     ],
-    link: 'All articles about Energy Management',
+    link: m.faqSection_categories_energy_management_link(),
   },
   {
-    title: 'Advanced Settings',
+    title: m.faqSection_categories_advanced_settings_title(),
     icon: <Settings className="size-5" />,
     items: [
-      'Configuring Ensi Home Box',
-      'Creating custom automations',
-      'Integrating third-party devices',
+      m.faqSection_categories_advanced_settings_item_1(),
+      m.faqSection_categories_advanced_settings_item_2(),
+      m.faqSection_categories_advanced_settings_item_3(),
     ],
-    link: 'All articles about Advanced Settings',
+    link: m.faqSection_categories_advanced_settings_link(),
   },
 ];
 
 const faqItems = [
   {
-    question: 'What is Ensi Home?',
-    answer:
-      'Ensi Home is a comprehensive smart home system that integrates various smart devices, AI voice assistance, and energy management features to create a more comfortable, efficient, and secure living environment.',
+    question: m.faqSection_faq_question_1(),
+    answer: m.faqSection_faq_answer_1(),
   },
   {
-    question: 'How does the Ensi Home Box work?',
-    answer:
-      'The Ensi Home Box serves as the central hub for your smart home system. It connects and controls all your smart devices, processes data locally for enhanced privacy, and enables seamless integration between different smart home components.',
+    question: m.faqSection_faq_question_2(),
+    answer: m.faqSection_faq_answer_2(),
   },
   {
-    question: "Can I control my Ensi Home system when I'm away?",
-    answer:
-      'Yes, you can control your Ensi Home system remotely using the Ensi Home mobile application. This allows you to monitor and manage your smart home from anywhere with an internet connection.',
+    question: m.faqSection_faq_question_3(),
+    answer: m.faqSection_faq_answer_3(),
   },
   {
-    question: 'How secure is the Ensi Home system?',
-    answer:
-      "Ensi Home prioritizes security with end-to-end encryption, regular security updates, and local data processing. We also offer advanced security features like smart locks and camera integration to enhance your home's physical security.",
+    question: m.faqSection_faq_question_4(),
+    answer: m.faqSection_faq_answer_4(),
   },
   {
-    question: 'What energy-saving features does Ensi Home offer?',
-    answer:
-      'Ensi Home provides various energy-saving features, including smart thermostat control, automated lighting schedules, energy consumption monitoring, and integration with solar panel systems for optimized energy usage.',
+    question: m.faqSection_faq_question_5(),
+    answer: m.faqSection_faq_answer_5(),
   },
   {
-    question: 'How do I set up my Ensi Home system?',
-    answer:
-      'Setting up your Ensi Home system is easy. Start by installing the Ensi Home Box, download the mobile app, and follow the step-by-step instructions to connect your smart devices and configure your preferences.',
+    question: m.faqSection_faq_question_6(),
+    answer: m.faqSection_faq_answer_6(),
   },
   {
-    question: 'What types of devices can I connect to Ensi Home?',
-    answer:
-      'Ensi Home is compatible with a wide range of smart devices, including lights, thermostats, locks, cameras, sensors, and appliances from various manufacturers. Check our compatibility list for specific device models.',
+    question: m.faqSection_faq_question_7(),
+    answer: m.faqSection_faq_answer_7(),
   },
   {
-    question: 'How does the AI voice assistant work?',
-    answer:
-      'The Ensi Home AI voice assistant uses natural language processing to understand and execute your voice commands. You can control devices, ask questions, and set up routines using voice interactions.',
+    question: m.faqSection_faq_question_8(),
+    answer: m.faqSection_faq_answer_8(),
   },
   {
-    question: 'Can Ensi Home integrate with other smart home platforms?',
-    answer:
-      'Yes, Ensi Home can integrate with popular smart home platforms like Google Home, Amazon Alexa, and Apple HomeKit, allowing you to use your preferred voice assistant and expand your smart home ecosystem.',
+    question: m.faqSection_faq_question_9(),
+    answer: m.faqSection_faq_answer_9(),
   },
   {
-    question: 'What kind of customer support does Ensi Home provide?',
-    answer:
-      'Ensi Home offers comprehensive customer support, including 24/7 online chat, phone support, email assistance, and an extensive knowledge base. We also provide professional installation services if needed.',
+    question: m.faqSection_faq_question_10(),
+    answer: m.faqSection_faq_answer_10(),
   },
-  // ... (remaining 15 FAQ items)
+  // ... (diğer SSS öğeleri)
 ];
 
 const containerVariants = {
@@ -172,14 +166,14 @@ export default function FAQPage() {
 
   return (
     <motion.div
-      className="w-full bg-gradient-to-b from-gray-50 to-gray-200"
+      className="w-full"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <CurvedBackground
-        imageSrc="/images/pages/knowledge-base/faq/cover.jpg"
-        title="Frequently Asked Questions"
+      <CurvedBackgroundParallax
+        imageSrc="/images/pages/knowledge-base/faq/faq.png"
+        title={m.faqSection_page_title()}
       />
 
       <div className="container mx-auto flex max-w-7xl flex-col items-center px-4 py-16">
@@ -187,7 +181,7 @@ export default function FAQPage() {
           className="mb-12 text-4xl font-bold text-gray-800"
           variants={itemVariants}
         >
-          We want to have your question!
+          {m.faqSection_header_text()}
         </motion.h1>
 
         <motion.div className="w-full max-w-2xl" variants={itemVariants}>
@@ -202,7 +196,7 @@ export default function FAQPage() {
             className="mb-6 text-2xl font-bold text-gray-800"
             variants={itemVariants}
           >
-            Some of the Questions You Asked
+            {m.faqSection_heading_browse_by_category()}
           </motion.h2>
           <motion.div
             className="mb-6 flex items-center"
@@ -211,7 +205,7 @@ export default function FAQPage() {
             <Search className="mr-2 size-5 text-gray-400" />
             <Input
               type="text"
-              placeholder="Search FAQs..."
+              placeholder={m.faqSection_search_placeholder()}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full"
@@ -263,17 +257,17 @@ export default function FAQPage() {
           {!showAllQuestions && filteredFAQs.length > 10 && (
             <motion.div className="mt-6 text-center" variants={itemVariants}>
               <Button onClick={() => setShowAllQuestions(true)}>
-                Show More Questions
+                {m.faqSection_button_show_more_questions()}
               </Button>
             </motion.div>
           )}
         </motion.div>
 
-        <motion.h2
+        {/* <motion.h2
           className="mb-8 text-3xl font-bold text-gray-800"
           variants={itemVariants}
         >
-          Browse by Category
+          {m.faqSection_heading_browse_by_category()}
         </motion.h2>
         <motion.div
           className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
@@ -309,16 +303,16 @@ export default function FAQPage() {
               </Card>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
-        <motion.div className="mt-16 text-center" variants={itemVariants}>
+        {/* <motion.div className="mt-16 text-center" variants={itemVariants}>
           <h3 className="mb-4 text-xl font-semibold text-gray-800">
-            Can&apos;t find what you&apos;re looking for?
+            {m.faqSection_heading_cant_find()}
           </h3>
           <Button asChild>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/contact">{m.faqSection_button_contact_us()}</Link>
           </Button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
   );
