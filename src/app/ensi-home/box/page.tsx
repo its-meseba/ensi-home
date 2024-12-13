@@ -1,251 +1,316 @@
 'use client';
-import Image from 'next/image';
+
 import { IntroFeatureWithModel } from '@/components/common/intro-feature';
-import { Check } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 import * as m from '@/paraglide/messages';
-import { useEffect } from 'react';
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
-
-const boxFeatures = [
-  // First section with 2 images
-  {
-    id: 'key-features',
-    title: m.ensi_box_key_features(),
-    description: m.ensi_box_description(),
-    images: [
-      {
-        src: '/images/pages/ensi-home/box/R1.jpg',
-        alt: 'Ensi Box Key Features',
-      },
-      {
-        src: '/images/pages/ensi-home/box/R5.jpg',
-        alt: 'Ensi Box Features Overview',
-      },
-    ],
-    features: [
-      {
-        id: 'centralized-control',
-        title: m.ensi_box_centralized_control_feature_title(),
-        description: m.ensi_box_centralized_control_feature_description(),
-      },
-      {
-        id: 'secure-connectivity',
-        title: m.ensi_box_secure_connectivity_feature_title(),
-        description: m.ensi_box_secure_connectivity_feature_description(),
-      },
-      {
-        id: 'high-compatibility',
-        title: m.ensi_box_high_compatibility_feature_title(),
-        description: m.ensi_box_high_compatibility_feature_description(),
-      },
-    ],
-  },
-  // Second section with 1 image
-  {
-    id: 'technical-specs',
-    title: m.ensi_box_technical_specifications(),
-    description:
-      'Advanced hardware specifications designed for optimal smart home performance',
-    images: [
-      {
-        src: '/images/pages/ensi-home/box/cpu.png',
-        alt: 'Ensi Box Technical Specifications',
-      },
-    ],
-    features: [
-      {
-        id: 'processor-memory',
-        title: 'Processing Power',
-        description: m.ensi_box_processor(),
-      },
-      {
-        id: 'storage',
-        title: 'Storage Capacity',
-        description: m.ensi_box_storage(),
-      },
-      {
-        id: 'connectivity',
-        title: 'Connectivity Options',
-        description: m.ensi_box_connectivity(),
-      },
-    ],
-  },
-  // Third section with 2 images
-  {
-    id: 'in-action',
-    title: m.ensi_box_in_action(),
-    description: 'See how Ensi Home Box transforms everyday living spaces',
-    images: [
-      {
-        src: '/images/pages/ensi-home/box/in-action-1.jpeg',
-        alt: m.ensi_box_in_living_room_alt(),
-      },
-      {
-        src: '/images/pages/ensi-home/box/in-action-2.jpeg',
-        alt: m.ensi_box_in_kitchen_alt(),
-      },
-    ],
-    features: [
-      {
-        id: 'living-room',
-        title: 'Living Room Integration',
-        description:
-          'Smart lighting, climate control, and entertainment system integration',
-      },
-      {
-        id: 'kitchen',
-        title: 'Kitchen Automation',
-        description: 'Automated appliances and smart cooking assistance',
-      },
-      {
-        id: 'security',
-        title: 'Home Security',
-        description: 'Advanced security features and monitoring capabilities',
-      },
-    ],
-  },
-];
-
-interface BoxFeature {
-  id: string;
-  title: string;
-  description: string;
-  images: {
-    src: string;
-    alt: string;
-  }[];
-  features: {
-    id: string;
-    title: string;
-    description: string;
-  }[];
-}
-
-interface BoxFeaturesProps {
-  features: BoxFeature[];
-}
-
-const BoxFeatures = ({ features }: BoxFeaturesProps) => (
-  <div className="w-full py-8 sm:py-20">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      {features.map((feature, index) => (
-        <>
-          <div
-            id={feature.id}
-            key={feature.id}
-            className="flex flex-col gap-8 py-8 sm:gap-16 sm:py-16"
-          >
-            <div className="flex flex-col justify-center">
-              <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
-                {feature.title}
-              </h2>
-              <p className="mt-3 text-base text-gray-600 sm:mt-4 sm:text-xl">
-                {feature.description}
-              </p>
-              <div className="mt-6 grid gap-4 sm:mt-8">
-                {feature.features.map((subFeature) => (
-                  <div key={subFeature.id} className="flex items-start gap-2">
-                    <Check className="mt-1 size-4 shrink-0 text-green-500 sm:size-5" />
-                    <div>
-                      <h3 className="text-sm font-semibold sm:text-base">
-                        {subFeature.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 sm:text-base">
-                        {subFeature.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div
-              className={`grid gap-4 sm:gap-6 ${feature.images.length > 1 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1'}`}
-            >
-              {feature.images.map((image, imgIndex) => (
-                <div
-                  key={imgIndex}
-                  className="flex items-center justify-center"
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={1200}
-                    height={800}
-                    quality={100}
-                    className="h-auto w-full rounded-lg object-cover shadow-lg"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Placeholder for additional sections */}
-          {index < features.length - 1 && (
-            <div className="py-8 sm:py-16">
-              {/* Placeholder for custom section */}
-              <div className="flex h-24 w-full items-center justify-center rounded-lg bg-gray-100 sm:h-32">
-                <p className="text-sm text-gray-500 sm:text-base">
-                  Additional Section Placeholder
-                </p>
-              </div>
-            </div>
-          )}
-        </>
-      ))}
-    </div>
-  </div>
-);
+import { cn } from '@/lib/utils';
+import GLTFViewer from '@/components/pages/box/gltf-viewer';
+import { CurvedBackgroundParallaxHeaderVertical } from '@/components/common/CurvyBackground';
+import { Check } from 'lucide-react';
+import {
+  Cpu,
+  Microchip,
+  Wifi,
+  Power,
+  Shield,
+  Zap,
+  Network,
+} from 'lucide-react';
 
 export default function BoxPage() {
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const element = document.getElementById(hash.slice(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, []);
-
   return (
-    <main>
-      <IntroFeatureWithModel
-        platform={m.ensi_box_platform()}
-        title={m.ensi_box_title()}
-        description={m.ensi_box_description()}
-        checkPoints={[
-          {
-            title: m.ensi_box_centralized_control_title(),
-            description: m.ensi_box_centralized_control_description(),
-          },
-          {
-            title: m.ensi_box_high_compatibility_title(),
-            description: m.ensi_box_high_compatibility_description(),
-          },
-          {
-            title: m.ensi_box_secure_connectivity_title(),
-            description: m.ensi_box_secure_connectivity_description(),
-          },
-        ]}
-        modelUrl="/assets/models/ensi-box-3.glb"
-      />
-      <BoxFeatures features={boxFeatures} />
+    <main className="relative w-full">
+      {/* Section 1: Hero with Curved Background */}
+      <section id="hero">
+        <CurvedBackgroundParallaxHeaderVertical
+          images={['/images/pages/ensi-home/box/hero-bg.jpg']}
+          title="Orchestration Conductor of Your Smart Home"
+          titleStyle="text-center text-4xl font-bold text-white md:text-6xl"
+          description="Seamlessly orchestrating your smart home experience with advanced technology and elegant design"
+          hasShadow={false}
+        >
+          {/* <GLTFViewer modelUrl="/assets/models/ensi-box-3.glb" /> */}
+          <></>
+        </CurvedBackgroundParallaxHeaderVertical>
+      </section>
+
+      {/* Section 2: 3D Model Display */}
+      <section
+        id="model"
+        className="flex min-h-screen w-full flex-col items-center justify-center"
+      >
+        <h2 className="mb-4 text-3xl font-bold">Ensi Home Box</h2>
+        <p className="text-muted-foreground mb-8 max-w-2xl text-center">
+          The central hub of your smart home ecosystem
+        </p>
+        <GLTFViewer modelUrl="/assets/models/ensi-box-3.glb" />
+      </section>
+
+      {/* Section 3: Installation Options */}
+      <section id="installation" className="w-full py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* 3.1 Ornamental Installation */}
+          <div className="mb-32">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid items-center gap-12 lg:grid-cols-2"
+            >
+              {/* Text Content - Left Side */}
+              <div className="flex flex-col gap-6">
+                <h3 className="text-3xl font-bold">Elegant Visibility</h3>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Transform your living space with the Ensi Home Box as a
+                  sophisticated centerpiece. Designed to be both functional and
+                  aesthetically pleasing, it serves as a statement piece that
+                  reflects your commitment to modern living while providing easy
+                  access to its smart features.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-2">
+                    <div className="bg-primary rounded-full p-1">
+                      <Check className="size-4 text-white" />
+                    </div>
+                    <span>Seamless integration with modern interiors</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="bg-primary rounded-full p-1">
+                      <Check className="size-4 text-white" />
+                    </div>
+                    <span>Easy access to touch controls</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="bg-primary rounded-full p-1">
+                      <Check className="size-4 text-white" />
+                    </div>
+                    <span>Status LED indicators</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Image - Right Side */}
+              <div className="relative aspect-square overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/pages/ensi-home/box/ornamental.jpg"
+                  alt="Ornamental Installation"
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* 3.2 Electric Board Installation */}
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid items-center gap-12 lg:grid-cols-2"
+            >
+              {/* Image - Left Side */}
+              <div className="relative aspect-square overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/pages/ensi-home/box/electric-board.jpg"
+                  alt="Electric Board Installation"
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
+              {/* Text Content - Right Side */}
+              <div className="flex flex-col gap-6">
+                <h3 className="text-3xl font-bold">Professional Integration</h3>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  For those preferring a minimalist approach, the Ensi Home Box
+                  can be seamlessly integrated into your home&apos;s electrical
+                  board. This installation method ensures all the power of smart
+                  home control while maintaining a clean, uncluttered living
+                  space.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-2">
+                    <div className="bg-primary rounded-full p-1">
+                      <Check className="size-4 text-white" />
+                    </div>
+                    <span>Hidden installation in electrical cabinet</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="bg-primary rounded-full p-1">
+                      <Check className="size-4 text-white" />
+                    </div>
+                    <span>Professional wiring integration</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div className="bg-primary rounded-full p-1">
+                      <Check className="size-4 text-white" />
+                    </div>
+                    <span>Remote access via mobile app</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Technical Specifications and Features */}
+      <section
+        id="specifications"
+        className="w-full bg-slate-50/50 py-24 dark:bg-slate-900/50"
+      >
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="space-y-16"
+          >
+            {/* Section Header */}
+            <div className="text-center">
+              <h2 className="text-4xl font-bold">Technical Excellence</h2>
+              <p className="text-muted-foreground mt-4 text-lg">
+                Advanced hardware specifications designed for optimal smart home
+                performance
+              </p>
+            </div>
+
+            <div className="grid gap-16 lg:grid-cols-2">
+              {/* Technical Specifications */}
+              <div className="space-y-8">
+                <h3 className="text-2xl font-semibold">
+                  Technical Specifications
+                </h3>
+                <div className="grid gap-6">
+                  <SpecCard
+                    icon={<Cpu className="size-5" />}
+                    title="Processing Unit"
+                    specs={[
+                      'Quad-core ARM Cortex-A55 @ 2.0GHz',
+                      'Neural Processing Unit (NPU)',
+                      'Hardware encryption module',
+                    ]}
+                  />
+                  <SpecCard
+                    icon={<Microchip className="size-5" />}
+                    title="Memory & Storage"
+                    specs={[
+                      '4GB LPDDR4X RAM',
+                      '32GB eMMC 5.1 flash storage',
+                      'Expandable via USB 3.0',
+                    ]}
+                  />
+                  <SpecCard
+                    icon={<Wifi className="size-5" />}
+                    title="Connectivity"
+                    specs={[
+                      'Wi-Fi 6 (802.11ax)',
+                      'Bluetooth 5.2',
+                      'Gigabit Ethernet',
+                      'Zigbee 3.0 & Z-Wave Plus',
+                    ]}
+                  />
+                  <SpecCard
+                    icon={<Power className="size-5" />}
+                    title="Power & Performance"
+                    specs={[
+                      '12V DC input',
+                      'Low power standby mode',
+                      'UPS support',
+                    ]}
+                  />
+                </div>
+              </div>
+
+              {/* Key Features */}
+              <div className="space-y-8">
+                <h3 className="text-2xl font-semibold">Key Features</h3>
+                <div className="grid gap-6">
+                  <FeatureCard
+                    icon={<Shield className="size-5" />}
+                    title="Advanced Security"
+                    description="Enterprise-grade encryption and secure boot process protect your smart home network"
+                    benefits={[
+                      'End-to-end encryption',
+                      'Secure element chip',
+                      'Regular security updates',
+                    ]}
+                  />
+                  <FeatureCard
+                    icon={<Zap className="size-5" />}
+                    title="Real-time Processing"
+                    description="Local processing capabilities for faster response times and enhanced privacy"
+                    benefits={[
+                      'Edge computing support',
+                      'Offline functionality',
+                      'Low latency responses',
+                    ]}
+                  />
+                  <FeatureCard
+                    icon={<Network className="size-5" />}
+                    title="Universal Compatibility"
+                    description="Works seamlessly with major smart home ecosystems and protocols"
+                    benefits={[
+                      'Multi-protocol support',
+                      'Easy device pairing',
+                      'Expandable ecosystem',
+                    ]}
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </main>
   );
 }
+
+const SpecCard = ({
+  icon,
+  title,
+  specs,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  specs: string[];
+}) => (
+  <div className="rounded-lg border bg-white p-4 dark:bg-slate-800">
+    <div className="flex items-center gap-4">
+      {icon}
+      <h4 className="font-semibold">{title}</h4>
+    </div>
+    <ul className="list-disc pl-6">
+      {specs.map((spec, index) => (
+        <li key={index}>{spec}</li>
+      ))}
+    </ul>
+  </div>
+);
+
+const FeatureCard = ({
+  icon,
+  title,
+  description,
+  benefits,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  benefits: string[];
+}) => (
+  <div className="rounded-lg border bg-white p-4 dark:bg-slate-800">
+    <div className="flex items-center gap-4">
+      {icon}
+      <h4 className="font-semibold">{title}</h4>
+    </div>
+    <p className="text-muted-foreground text-sm">{description}</p>
+    <ul className="list-disc pl-6">
+      {benefits.map((benefit, index) => (
+        <li key={index}>{benefit}</li>
+      ))}
+    </ul>
+  </div>
+);

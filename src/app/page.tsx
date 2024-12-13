@@ -139,6 +139,7 @@ export default function MainPage() {
             '/images/pages/ensi-home/box/R7.jpg',
             '/images/pages/ensi-home/box/R8.jpg',
           ]}
+          activateAnimation={false}
           title={m.main_intro_title()}
           titleStyle="text-center text-4xl font-bold text-white md:text-6xl"
           description={m.main_intro_description()}
@@ -215,9 +216,9 @@ function MobileApp() {
   return (
     <div className="flex flex-col items-center">
       <div className="relative mx-auto h-[513px] w-[256px] rounded-[2.5rem] border-8 border-gray-800 shadow-lg">
-        <div className="absolute -right-[10px] top-[90px] h-[36px] w-[2px] rounded-l-lg bg-gray-800"></div>
-        <div className="absolute -left-[10px] top-[90px] h-[36px] w-[2px] rounded-r-lg bg-gray-800"></div>
-        <div className="absolute -left-[10px] top-[137px] h-[36px] w-[2px] rounded-r-lg bg-gray-800"></div>
+        <div className="absolute left-[10px] top-[90px] h-[36px] w-[2px] rounded-l-lg bg-gray-800"></div>
+        <div className="absolute right-[10px] top-[90px] h-[36px] w-[2px] rounded-r-lg bg-gray-800"></div>
+        <div className="absolute left-[10px] top-[137px] h-[36px] w-[2px] rounded-r-lg bg-gray-800"></div>
         <div className="size-full overflow-hidden rounded-[2.3rem] bg-white">
           <Image
             src="/images/pages/ensi-home/mobile-application/home-sub-screen.jpeg"

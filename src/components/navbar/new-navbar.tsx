@@ -27,6 +27,7 @@ export default function NewNavbar() {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (window.innerWidth <= 1024) return; // Disable on mobile
       const currentScrollY = window.scrollY;
       if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
         setIsCollapsed(true);
@@ -105,6 +106,14 @@ export default function NewNavbar() {
         stiffness: 500,
         damping: 30,
       },
+      '@media (max-width: 1024px)': {
+        width: '100%',
+        height: '60px',
+        borderRadius: '0',
+        left: '0',
+        right: '0',
+        top: '0',
+      },
     },
     collapsed: {
       width: '60px',
@@ -116,6 +125,13 @@ export default function NewNavbar() {
         type: 'spring',
         stiffness: 500,
         damping: 30,
+      },
+      '@media (max-width: 1024px)': {
+        width: '100%',
+        height: '60px',
+        borderRadius: '0',
+        right: '0',
+        top: '0',
       },
     },
   };
@@ -242,33 +258,29 @@ export default function NewNavbar() {
       initial="expanded"
       animate={isCollapsed ? 'collapsed' : 'expanded'}
       variants={navVariants}
+      transition={{ duration: 0 }}
     >
       <div className="relative flex size-full items-center px-4 py-2">
         {/* Small screen layout */}
         <div className="flex w-full items-center lg:hidden">
           <Link href={`/${locale}`} className="mr-auto">
             <Image
-              src={
-                isCollapsed ? '/images/logo/small.svg' : '/images/logo/full.svg'
-              }
+              src="/images/logo/full.svg"
               alt="Ensi Home"
-              width={isCollapsed ? 40 : 100}
+              width={100}
               height={40}
-              className="transition-all duration-300 ease-in-out"
             />
           </Link>
           <Sheet>
             <SheetTrigger asChild>
-              {isCollapsed ? null : (
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="relative z-50"
-                  aria-label="Toggle menu"
-                >
-                  <Menu className="size-6" />
-                </Button>
-              )}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="relative z-50"
+                aria-label="Toggle menu"
+              >
+                <Menu className="size-6" />
+              </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex h-full flex-col">
@@ -309,26 +321,17 @@ export default function NewNavbar() {
 
         {/* Large screen layout */}
         <div className="hidden w-full items-center justify-between lg:flex">
-          <AnimatePresence mode="wait">
-            {!isCollapsed && (
-              <motion.nav
-                key="nav"
-                variants={contentVariants}
-                initial="collapsed"
-                animate="expanded"
-                exit="collapsed"
-                className="flex items-center space-x-6"
-              >
-                <ul className="flex items-center space-x-2">
-                  {navigationItems.map((item) => (
-                    <li key={item.title} className="relative">
-                      <NavItem item={item} />
-                    </li>
-                  ))}
-                </ul>
-              </motion.nav>
-            )}
-          </AnimatePresence>
+          <nav
+            className={`flex items-center space-x-6 ${isCollapsed ? 'hidden' : ''}`}
+          >
+            <ul className="flex items-center space-x-2">
+              {navigationItems.map((item) => (
+                <li key={item.title} className="relative">
+                  <NavItem item={item} />
+                </li>
+              ))}
+            </ul>
+          </nav>
           <Link
             href={`/${locale}`}
             className="absolute left-1/2 -translate-x-1/2"
@@ -343,26 +346,17 @@ export default function NewNavbar() {
               className="transition-all duration-300 ease-in-out"
             />
           </Link>
-          <AnimatePresence mode="wait">
-            {!isCollapsed && (
-              <motion.div
-                key="actions"
-                variants={contentVariants}
-                initial="collapsed"
-                animate="expanded"
-                exit="collapsed"
-                className="flex items-center space-x-4"
-              >
-                <Link href={`/${locale}/knowledge-base/how-it-is-done`}>
-                  <Button variant="primary">{m.navbar_howItIsDone()}</Button>
-                </Link>
-                {/* <Link href={`/${locale}/blog`}>
-                  <Button variant="outline">📰 Blog</Button>
-                </Link> */}
-                <LanguageSwitcher />
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <div
+            className={`flex items-center space-x-4 ${isCollapsed ? 'hidden' : ''}`}
+          >
+            <Link href={`/${locale}/knowledge-base/how-it-is-done`}>
+              <Button variant="primary">{m.navbar_howItIsDone()}</Button>
+            </Link>
+            {/* <Link href={`/${locale}/blog`}>
+              <Button variant="outline">📰 Blog</Button>
+            </Link> */}
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </motion.header>

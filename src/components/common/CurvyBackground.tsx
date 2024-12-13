@@ -26,6 +26,7 @@ interface CurvedBackgroundPropertiesWithShadow {
   children: ReactNode;
   titleStyle?: string;
   hasShadow?: boolean;
+  activateAnimation?: boolean;
 }
 
 interface CurvedBackgroundPropertiesWithImageSrc {
@@ -225,6 +226,7 @@ export const CurvedBackgroundParallaxHeaderVertical: React.FC<
   children,
   titleStyle,
   hasShadow = true,
+  activateAnimation = true,
 }) => {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -244,19 +246,16 @@ export const CurvedBackgroundParallaxHeaderVertical: React.FC<
   }, []);
 
   useEffect(() => {
+    if (!activateAnimation || images.length <= 1) return;
+
     const interval = setInterval(() => {
       setIsTransitioning(true);
-      setNextImageIndex((currentImageIndex + 1) % images.length);
-
-      // Quick fade transition
-      setTimeout(() => {
-        setCurrentImageIndex(nextImageIndex);
-        setIsTransitioning(false);
-      }, 450);
-    }, 3750);
+      setCurrentImageIndex(nextImageIndex);
+      setNextImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentImageIndex, images.length]);
+  }, [activateAnimation, nextImageIndex, images.length]);
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
