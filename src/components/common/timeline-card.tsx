@@ -5,7 +5,7 @@ import React from 'react';
 import { Timeline } from '@/components/ui/timeline';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ChevronRight, Users, Package, Wrench } from 'lucide-react';
+import { ChevronRight, Users, Package, Wrench, Link } from 'lucide-react';
 import { motion } from 'framer-motion';
 import * as m from '@/paraglide/messages';
 
@@ -241,12 +241,16 @@ export default function Component() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
       >
+        {/* <Link href="/knowledge-base/contact"> */}
         <Button
           size="lg"
           className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-6 py-3 text-base font-semibold shadow-md transition-all duration-300 hover:shadow-lg sm:px-8 sm:py-4 sm:text-lg"
+          onClick={() => (window.location.href = '/knowledge-base/contact')}
         >
           {m.knowledge_base_how_it_is_done_initiate_partnership()}
+          <Link className="ml-2 size-5" />
         </Button>
+        {/* </Link> */}
       </motion.div>
     </div>
   );

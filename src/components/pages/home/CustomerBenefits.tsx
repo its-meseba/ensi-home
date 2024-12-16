@@ -15,6 +15,7 @@ import { Home, Building2, Briefcase, Check, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { m, motion, useInView } from 'framer-motion';
 import * as message from '@/paraglide/messages';
+import Link from 'next/link';
 
 export default function EnhancedCustomerBenefits() {
   const { visitorType, setVisitorType } = useVisitorType();
@@ -262,13 +263,15 @@ export default function EnhancedCustomerBenefits() {
                 </div>
                 {renderContent(data.content)}
                 <div className="mt-12 flex justify-center">
-                  <Button
-                    size="lg"
-                    className="flex items-center px-8 py-6 text-lg"
-                  >
-                    {data.cta}
-                    <ArrowRight className="ml-2 size-5" />
-                  </Button>
+                  <Link href="/knowledge-base/contact">
+                    <Button
+                      size="lg"
+                      className="flex items-center px-8 py-6 text-lg"
+                    >
+                      {data.cta}
+                      <ArrowRight className="ml-2 size-5" />
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             </TabsContent>
