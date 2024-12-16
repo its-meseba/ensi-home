@@ -68,23 +68,29 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-bold">Bizi Takip Edin</h3>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" asChild>
+              {/* <Button variant="ghost" size="icon" asChild>
                 <a href="#" aria-label="Facebook">
                   <Facebook className="size-5" />
                 </a>
-              </Button>
-              <Button variant="ghost" size="icon" asChild>
+              </Button> */}
+              {/* <Button variant="ghost" size="icon" asChild>
                 <a href="#" aria-label="Twitter">
                   <Twitter className="size-5" />
                 </a>
-              </Button>
+              </Button> */}
               <Button variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Instagram">
+                <a
+                  href="https://www.instagram.com/solace.tech/"
+                  aria-label="Instagram"
+                >
                   <Instagram className="size-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="LinkedIn">
+                <a
+                  href="https://www.linkedin.com/company/reach-solace/"
+                  aria-label="LinkedIn"
+                >
                   <Linkedin className="size-5" />
                 </a>
               </Button>

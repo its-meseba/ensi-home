@@ -70,7 +70,7 @@ export default function ContactPage() {
               {m.contact_connect_with_us()}
             </h3>
             <a
-              href="https://www.linkedin.com/company/ensihome"
+              href="https://www.linkedin.com/company/reach-solace/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-blue-600 hover:underline"
@@ -80,7 +80,7 @@ export default function ContactPage() {
             </a>
 
             <a
-              href="https://www.linkedin.com/company/ensihome"
+              href="https://www.instagram.com/solace.tech/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center pt-4 text-blue-600 hover:underline"
