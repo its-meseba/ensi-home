@@ -8,6 +8,8 @@ import * as THREE from 'three';
 
 interface GLTFViewerProps {
   modelUrl: string;
+  height?: string;
+  width?: string;
 }
 
 const Model = React.memo(
@@ -36,7 +38,11 @@ function Loader() {
   );
 }
 
-export default function GLTFViewer({ modelUrl }: GLTFViewerProps) {
+export default function GLTFViewer({
+  modelUrl,
+  height = '50vh',
+  width = '50vh',
+}: GLTFViewerProps) {
   const [isRotating, setIsRotating] = useState(true);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -92,7 +98,7 @@ export default function GLTFViewer({ modelUrl }: GLTFViewerProps) {
   return (
     <div
       ref={containerRef}
-      style={{ height: '50vh', width: '50vh', overflow: 'hidden' }}
+      style={{ height: height, width: width, overflow: 'hidden' }}
       onClick={handleInteraction}
       onMouseMove={handleInteraction}
       onTouchStart={handleInteraction}
