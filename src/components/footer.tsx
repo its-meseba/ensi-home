@@ -96,6 +96,29 @@ export default function Footer() {
               </Button>
             </div>
           </div>
+          <div>
+            <h3 className="mb-4 text-lg font-bold">Yasal</h3>
+            <ul className="space-y-2">
+              <li>
+                <Button
+                  variant="link"
+                  className="text-primary-foreground h-auto p-0"
+                  asChild
+                >
+                  <a href="/legal">Yasal Bilgiler</a>
+                </Button>
+              </li>
+              <li>
+                <Button
+                  variant="link"
+                  className="text-primary-foreground h-auto p-0"
+                  asChild
+                >
+                  <a href="/legal/privacy-policy">Gizlilik Politikası</a>
+                </Button>
+              </li>
+            </ul>
+          </div>
         </div>
         <Separator className="bg-primary-foreground/20 my-6" />
         <div className="flex flex-col items-center justify-between text-sm md:flex-row">
@@ -106,14 +129,7 @@ export default function Footer() {
               className="text-primary-foreground h-auto p-0"
               asChild
             >
-              <a href="/privacy-policy">Gizlilik Politikası</a>
-            </Button>
-            <Button
-              variant="link"
-              className="text-primary-foreground h-auto p-0"
-              asChild
-            >
-              <a href="/terms-of-service">Kullanım Şartları</a>
+              <a href="/legal/privacy-policy">Gizlilik Politikası</a>
             </Button>
           </div>
         </div>
