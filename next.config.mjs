@@ -3,6 +3,8 @@ import withMDX from '@next/mdx'; // {{ edit_1 }}
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Cloud Run image (Dockerfile sets NEXT_STANDALONE=1); Vercel-style builds stay unchanged.
+  ...(process.env.NEXT_STANDALONE === '1' ? { output: 'standalone' } : {}),
   images: {
     dangerouslyAllowSVG: true,
     // remotePatterns: [

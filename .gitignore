@@ -47,3 +47,8 @@ sitemap-*.xml
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+.env*
+
+cloudrun-env.yaml
+cloudrun-secrets.txt
+.cloudrun-out
